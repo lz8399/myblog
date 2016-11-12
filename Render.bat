@@ -1,0 +1,3 @@
+hugo --buildDrafts -v
+
+puase

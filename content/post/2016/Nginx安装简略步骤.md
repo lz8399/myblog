@@ -18,9 +18,10 @@ title = "Nginx安装简略步骤"
 
 
 ### 安装依赖
-    $ yum install -y zlib 
-    $ yum install -y pcre
+    $ yum install -y zlib-devel 
+    $ yum install -y pcre-devel
     $ yum install -y ssl
+    $ yum install -y gcc
 
 ### 编译&安装
     $ ./configure

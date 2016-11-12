@@ -33,8 +33,11 @@
         {{ with .Site.Social.reddit }}
             <li><a target="_blank" href="{{ . }}"><i class="fa fa-reddit fa-lg"></i></a></li>
         {{ end }}
-		{{ with .Site.Social.github }}
+        {{ with .Site.Social.github }}
             <li><a target="_blank" href="{{ . }}"><i class="fa fa-github fa-lg"></i></a></li>
+        {{ end }}
+        {{ with .Site.Social.weibo }}
+            <li><a target="_blank" href="{{ . }}"><i class="fa fa-weibo fa-lg"></i></a></li>
         {{ end }}
     </ul>
 </div>

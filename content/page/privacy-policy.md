@@ -1,10 +1,10 @@
 +++
-author = "author"
+author = "Neil Wong"
 date = "2016-03-15T18:21:33-07:00"
 description = "description"
 draft = false
-tags = ["tag1", "tag2"]
+tags = []
 title = "Privacy Policy"
 +++
 
-Privacy policy here.
+转载请注明出处：http://dawnarc.com
