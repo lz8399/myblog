@@ -1,6 +1,6 @@
-baseurl                 = "http://www.dawnarc.com/"
+baseurl                 = "https://www.example.com/"
 languageCode            = "en-us"
-title                   = "玄冬Wong"
+title                   = "Hugo Phlat Theme"
 theme                   = "hugo-phlat-theme"
 
 [permalinks]
@@ -41,15 +41,13 @@ theme                   = "hugo-phlat-theme"
 
 # Social media icons and links that appear in the footer
 [social]
-    twitter             = "https://twitter.com/idealsland"
-    googleplus          = "https://plus.google.com/111340706178390411568"
-    linkedin            = "https://cn.linkedin.com/in/neil-wong-648b6486"
-    youtube             = ""
-    paypal              = ""
-	facebook            = "https://www.facebook.com/koanland"
+    twitter             = "https://www.twitter.com/NAME_HERE"
+    googleplus          = "https://plus.google.com/NAME_HERE"
+    linkedin            = "https://www.linkedin.com/in/NAME_HERE"
+    youtube             = "https://www.youtube.com/users/NAME_HERE"
+    paypal              = "https://paypal.me/NAME_HERE"
     instagram           = ""
     reddit              = ""
-    email               = "mailto:aigo@mail.com"
-    pinterest           = "https://www.pinterest.com/wangaiguo/"
+    email               = ""
+    pinterest           = ""
     wordpress           = ""
-	github              = "https://github.com/dawnarc"
