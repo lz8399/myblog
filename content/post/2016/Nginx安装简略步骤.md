@@ -1,20 +1,14 @@
-+++
-author = "Neil Wong"
-tags = [
-  "nginx",
-  "linux",
-  "install",
-]
-categories = [
-  "Linux",
-  "Http",
-]
-draft = true
-description = "description"
-date = "2016-05-26T22:30:02+08:00"
-title = "Nginx安装简略步骤"
-
-+++
+---
+title: "Nginx安装简略步骤"
+date: "2016-05-26T22:30:02+08:00"
+tags:
+- nginx
+- linux
+- install
+categories:
+- Linux
+- Http
+---
 
 
 ### 安装依赖

@@ -1,19 +1,13 @@
-+++
-draft = true
-description = "description"
-author = "Neil Wong"
-tags = [
-  "TortoiseGit",
-  "Git",
-]
-categories = [
-  "Git",
-  "Version Control",
-]
-date = "2016-06-16T20:14:40+08:00"
-title = "[TortoiseGit]fetch和merge操作"
-
-+++
+---
+title: "[TortoiseGit]fetch和merge操作"
+date: "2016-06-16T20:14:40+08:00"
+tags:
+- TortoiseGit
+- Git
+categories:
+- Git
+- Version Control
+---
 
 {{< figure src="/img/20161110-TortoiseGit：fetch和merge操作-01.png" width="388" height="513" >}}
 
