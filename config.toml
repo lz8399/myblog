@@ -17,8 +17,8 @@ languageCode = "en-us"
 title = "玄冬Wong"
 theme = "hugo-tranquilpeak-theme"
 disqusShortname = "dawnarc"
-# googleAnalytics = "UA-123-45"
-paginate = 7
+googleAnalytics = "UA-78064851-2"
+paginate = 15
 canonifyurls = true
 defaultContentLanguage = "en-us"
 
