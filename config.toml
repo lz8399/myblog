@@ -107,6 +107,12 @@ defaultContentLanguage = "en-us"
   name = "Weibo"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-weibo\"></i>"
   url = "http://weibo.com/koanland"
+[[menu.links]]
+  weight = 0
+  identifier = "linkedin"
+  name = "Linkedin"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-linkedin\"></i>"
+  url = "http://www.linkedin.com/in/neil-wong-648b6486"
 
 
 [[menu.misc]]
