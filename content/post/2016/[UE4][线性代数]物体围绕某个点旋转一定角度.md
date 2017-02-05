@@ -2,7 +2,7 @@
 title= "[UE4][线性代数]物体围绕某个点旋转一定角度"
 date= "2016-06-08T18:15:02+08:00"
 categories= ["UnrealEngine4"]
-tags= ["UE4"]
+tags= ["UE4", "Math"]
 +++
 
 2D上的点围绕某另一个点旋转：

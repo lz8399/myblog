@@ -5,6 +5,7 @@ categories= ["UnrealEngine4"]
 tags= ["UE4"]
 +++
 
+keywords: Viewport, Resize, Callback, Event
 
 1，在BeginPlay()函数中添加绑定事件：
 
