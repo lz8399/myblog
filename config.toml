@@ -113,6 +113,12 @@ defaultContentLanguage = "en-us"
   name = "Linkedin"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-linkedin\"></i>"
   url = "http://www.linkedin.com/in/neil-wong-648b6486"
+[[menu.links]]
+  weight = 0
+  identifier = "pinterest"
+  name = "Pinterest"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-pinterest\"></i>"
+  url = "https://www.pinterest.com/wangaiguo/"
 
 
 [[menu.misc]]

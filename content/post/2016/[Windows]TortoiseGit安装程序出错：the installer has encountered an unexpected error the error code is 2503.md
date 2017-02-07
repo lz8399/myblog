@@ -3,6 +3,7 @@ title: "[Windows]TortoiseGit安装程序出错：the installer has encountered a
 date: "2016-09-11T22:36:40+08:00"
 categories:
 - Windows
+- Version Control
 tags:
 - TortoiseGit
 ---
