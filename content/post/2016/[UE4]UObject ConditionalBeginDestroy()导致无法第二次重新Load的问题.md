@@ -32,4 +32,8 @@ tags:
 
     Obj->AddToRoot();
 
-注：如果一个UObject是SpawnActor创建出来的，那么执行Destroy()之后，再次执行Spawn是可以正常创建出来的。这点和LoadObject有区别。
+注：如果执行了`AddToRoot()`，那么退出程序前需要执行`RemoveFromRoot()`，否则在引擎在清理内存时会错误。(www.dawnarc.com)
+
+如果一个UObject是SpawnActor创建出来的，那么执行Destroy()之后，再次执行Spawn是可以正常创建出来的。这点和LoadObject有区别。
+
+

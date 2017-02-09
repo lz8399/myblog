@@ -14,6 +14,6 @@ tags:
 
 这样设置以后，角色就可以忽视一切障碍物或者刚体来进行移动了。
 
-另外Mesh也提供了接口来禁用刚体，但是一般情况都是将刚体加载角色蓝图中，而不是加载角色的Mesh上，所以这种不适用常规情况。
+另外Mesh也提供了接口来禁用刚体，但是一般情况都是将刚体加到角色蓝图中，而不是加载角色的Mesh上，所以这种不适用常规情况。
 
     MyCharacter->GetMesh()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
