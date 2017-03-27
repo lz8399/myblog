@@ -3,7 +3,6 @@ title: "[Windows]TortoiseGit安装程序出错：the installer has encountered a
 date: "2016-09-11T22:36:40+08:00"
 categories:
 - Windows
-- Version Control
 tags:
 - TortoiseGit
 ---
@@ -16,6 +15,6 @@ tags:
 `win8、win10的权限问题`
 
 #### 解决办法：
-命令行运行 
+管理员模式下的命令行运行 
 
     msiexec /package E:\TortoiseGit-2.2.0.0-64bit.msi

@@ -5,6 +5,8 @@ categories:
 - ZBrush
 tags:
 - ZBrush
+- Modeling
+- Sculpting
 ---
 
 先打开PolyFrame右上角的Fill角标，然后再关闭PolayFrame左上角的Line角标。单击来打开或关闭角标。

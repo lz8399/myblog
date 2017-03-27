@@ -1,5 +1,5 @@
 ---
-title: "[UE4][Material]动态创建材质并设置材质参数属性(Parameter)"
+title: "[UE4][Material]使用蓝图和CPP动态创建材质并设置材质参数属性(Parameter)"
 date: "2016-11-27T22:20:40+08:00"
 categories:
 - UnrealEngine4
@@ -7,6 +7,8 @@ tags:
 - UE4
 - Material
 ---
+
+#### 蓝图方式：
 
 
 使用StarterContent中的椅子作为演示示例的模型：
@@ -46,5 +48,19 @@ tags:
  
 每当靠近这个椅子时，椅子的颜色就会随机变化一次。
 
-其中的参数名：ColorSeats，实在Chair的材质中定义的可编辑参数：
+其中的参数名：ColorSeats，是在Chair的材质中定义的可编辑参数：
 {{< figure src="/img/20161127-[UE4][Material]动态创建材质并设置材质参数属性(Parameter)/[UE4][Material]动态创建材质并设置材质参数属性(Parameter)-12.jpg">}}  
+
+#### C++方式：
+MaterialInstance.h
+
+    /**
+     * Internal interface for setting / updating values for material instances.
+     */
+    void SetVectorParameterValueInternal(FName ParameterName, FLinearColor Value);
+    bool SetVectorParameterByIndexInternal(int32 ParameterIndex, FLinearColor Value);
+    bool SetScalarParameterByIndexInternal(int32 ParameterIndex, float Value);
+    void SetScalarParameterValueInternal(FName ParameterName, float Value);
+    void SetTextureParameterValueInternal(FName ParameterName, class UTexture* Value);
+    void SetFontParameterValueInternal(FName ParameterName, class UFont* FontValue, int32 FontPage);
+    void ClearParameterValuesInternal(const bool bAllParameters = true);

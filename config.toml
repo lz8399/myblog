@@ -82,7 +82,7 @@ defaultContentLanguage = "en-us"
   identifier = "github"
   name = "GitHub"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
-  url = "https://github.com/dawnarc"
+  url = "https://github.com/dawnarc/CV"
 [[menu.links]]
   weight = 1
   identifier = "stackoverflow"

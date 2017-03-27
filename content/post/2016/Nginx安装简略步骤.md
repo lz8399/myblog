@@ -2,7 +2,6 @@
 title: "Nginx安装简略步骤"
 date: "2016-05-26T22:30:02+08:00"
 categories:
-- Http
 - Linux
 tags:
 - nginx
