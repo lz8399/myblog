@@ -28,5 +28,5 @@ tags:
     hugo server --buildDrafts
     hugo server --theme=hugo_theme_robust --buildDrafts
 
-或者将publish目录下的所有文件拷贝到web服务器的相应目录下，比如nginx/html/
+或者执行完第2步之后，将publish目录下的所有文件拷贝到web服务器的相应目录下，比如nginx/html/
 

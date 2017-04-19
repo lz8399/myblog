@@ -49,7 +49,7 @@ tags:
 13，然后将actor蓝图设置为Movable
 ![This is an image](/img/[UE4]如何制作RTS游戏中的角色脚下圆环/[UE4]如何制作RTS游戏中的角色脚下圆环-15.jpg)
 
-14，这样设置完成了，之后就可以讲这个actor蓝图spawn到场景中并attach到人物的身上，并设置后相对坐标即可
+14，这样设置完成了，之后就可以将这个actor蓝图spawn到场景中并attach到人物的身上，并设置后相对坐标即可
 ![This is an image](/img/[UE4]如何制作RTS游戏中的角色脚下圆环/[UE4]如何制作RTS游戏中的角色脚下圆环-16.jpg)
 
 ![This is an image](/img/[UE4]如何制作RTS游戏中的角色脚下圆环/[UE4]如何制作RTS游戏中的角色脚下圆环-17.jpg)

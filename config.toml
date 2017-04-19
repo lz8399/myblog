@@ -76,6 +76,12 @@ defaultContentLanguage = "en-us"
   name = "About"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-question\"></i>"
   url = "/#about"
+[[menu.main]]
+  weight = 0
+  identifier = "rss"
+  name = "RSS"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-rss\"></i>"
+  url = "/index.xml"
 
 [[menu.links]]
   weight = 0
@@ -119,14 +125,20 @@ defaultContentLanguage = "en-us"
   name = "Pinterest"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-pinterest\"></i>"
   url = "https://www.pinterest.com/wangaiguo/"
-
-
-[[menu.misc]]
+[[menu.links]]
   weight = 0
-  identifier = "rss"
-  name = "RSS"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-rss\"></i>"
-  url = "/index.xml"
+  identifier = "steam"
+  name = "Steam"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-steam\"></i>"
+  url = "http://steamcommunity.com/id/dawnarc"
+[[menu.links]]
+  weight = 0
+  identifier = "artstation"
+  name = "ArtStation"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-artstation\"></i>"
+  url = "https://www.artstation.com/artist/dawnarc"
+
+
 
 [params]
   # Customize date format use to render blog post date, categories and other

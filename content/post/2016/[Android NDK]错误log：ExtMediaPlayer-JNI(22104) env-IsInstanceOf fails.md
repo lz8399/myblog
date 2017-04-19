@@ -8,7 +8,7 @@ tags:
 - Error
 ---
 
-如果你的android app出现一下两种错误log提示，并不影响你的app运行，如果你的app崩溃，可以忽略下面两种log。
+如果你的android app出现以下两种错误log提示，并不影响你的app运行，如果你的app崩溃，可以忽略下面两种log。
 
     10-17 16:59:29.263: E/ExtMediaPlayer-JNI(22104): env->IsInstanceOf fails
     10-17 16:59:29.263: E/MediaPlayer-JNI(22104): JNIMediaPlayerFactory: bIsQCMediaPlayerPresent 0
