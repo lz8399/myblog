@@ -41,8 +41,11 @@ DynaMesh之前，Resolution的值为多少，则分辨率就是多少。比如�
 #### DynaMesh的4个参数作用
 {{< figure src="/img/20170305-[ZBrush]DynaMesh使用/[ZBrush]DynaMesh使用-09.jpg">}}
 1，Groups：如果mesh有多个分组，点击此按钮可以让分组之前的界限更明显；
+
 2，Polish：让物体表面更平滑；
+
 3，Blur：Project按钮启用时生效，值越多，模糊掉的细节越多，值越小，模糊掉的细节越少；
+
 4，Project：重新绘制Mesh网格，比如当你的mesh网格拉伸扭曲了，可以通过此按钮将表面重新恢复均匀；
 
 ### Freeze SubDivision Levels的意义
