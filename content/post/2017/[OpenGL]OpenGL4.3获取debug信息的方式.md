@@ -5,6 +5,7 @@ categories:
 - OpenGL
 tags:
 - Graphics
+- OpenGL
 ---
 
 Keywords：debug、opengl、调试、message

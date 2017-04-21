@@ -5,6 +5,7 @@ categories:
 - Shading
 tags:
 - Graphics
+- OpenGL
 ---
 
 《OpenGL 4 Shading Language Cookbook, Second Edition》
