@@ -40,13 +40,11 @@ DynaMesh之前，Resolution的值为多少，则分辨率就是多少。比如�
 
 #### DynaMesh的4个参数作用
 {{< figure src="/img/20170305-[ZBrush]DynaMesh使用/[ZBrush]DynaMesh使用-09.jpg">}}
-1，Groups：如果mesh有多个分组，点击此按钮可以让分组之前的界限更明显；
 
-2，Polish：让物体表面更平滑；
-
-3，Blur：Project按钮启用时生效，值越多，模糊掉的细节越多，值越小，模糊掉的细节越少；
-
-4，Project：重新绘制Mesh网格，比如当你的mesh网格拉伸扭曲了，可以通过此按钮将表面重新恢复均匀；
+* `Groups`：如果mesh有多个分组，点击此按钮可以让分组之前的界限更明显；
+* `Polish`：让物体表面更平滑；
+* `Blur`：Project按钮启用时生效，值越多，模糊掉的细节越多，值越小，模糊掉的细节越少；
+* `Project`：重新绘制Mesh网格，比如当你的mesh网格拉伸扭曲了，可以通过此按钮将表面重新恢复均匀；如果想让两个Group合并编辑（两个不同Group在没有合并的情况下，同时编辑），也需要打开Project并执行Re-DynaMesh。
 
 ### Freeze SubDivision Levels的意义
 {{< figure src="/img/20170305-[ZBrush]DynaMesh使用/[ZBrush]DynaMesh使用-10.jpg">}}
@@ -79,6 +77,7 @@ MeshInsert Dot Brush使用完毕以后，然后关闭Freeze SubDivision Levels�
 
 
 #### Re-DynaMesh的实际应用
+##### 1，网格重新拓扑
 当模型网格被拉坏以后，比如这样：
 {{< figure src="/img/20170305-[ZBrush]DynaMesh使用/[ZBrush]DynaMesh使用-18.jpg">}}
 
@@ -94,6 +93,13 @@ MeshInsert Dot Brush使用完毕以后，然后关闭Freeze SubDivision Levels�
 
 也可以关闭DynaMesh再启用DynaMesh（双击两次，启用前需要Del Lower），通过切换状态来实现网格重新拓扑：
 {{< figure src="/img/20170305-[ZBrush]DynaMesh使用/[ZBrush]DynaMesh使用-22.jpg">}}
- 
+
+##### 2，合并编辑两个Group。
+两个PolyGroup，默认是只能同时编辑一个的，就是说笔刷刷上去，默认只对一个Group有效：
+{{< figure src="/img/20170305-[ZBrush]DynaMesh使用/[ZBrush]DynaMesh使用-23.jpg">}}
+{{< figure src="/img/20170305-[ZBrush]DynaMesh使用/[ZBrush]DynaMesh使用-24.jpg">}}
+
+如果想让笔刷同时对两个Group有效且两个Group不合并，那么就可以就可以按上面的例子一样，打开Project之后在执行Re-DynaMesh，这样就可以同时编辑两个Group。
+{{< figure src="/img/20170305-[ZBrush]DynaMesh使用/[ZBrush]DynaMesh使用-25.jpg">}}
  
 
