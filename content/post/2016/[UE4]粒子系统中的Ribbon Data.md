@@ -9,6 +9,6 @@ tags:
 
 keyword: **Particle Systems, Ribbon Data**
 
-UE4粒子系统的Ribbon Data用法
+UE4粒子系统的Ribbon Data用法。这个Emitter组件用来制作拖尾效果最佳，比如带尾巴的法术球（魔兽的奥术飞弹）特效。
 
 Creating a Ribbon Emitter：https://www.youtube.com/watch?v=jBUF6at1s1o

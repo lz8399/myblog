@@ -26,6 +26,9 @@ Clay。适用场景：填充和堆叠表面。
 ClayBuildup。适用场景：方块状的填充和堆叠表面
 {{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-06.png">}}
 
+ClayTubes。和ClayBuildup类似，但是不会累计堆叠起来，连续在一个位置刷多次，只会堆叠一层，而ClayBuildup没刷一次就会叠加一层。
+{{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-06-2.png">}}
+
 TrimDynamic。适用场景：对大块的凹凸表面进行抹平
 {{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-07.png">}}
 
@@ -46,3 +49,10 @@ Inflat 膨胀笔刷
 
 Clip 剪切不要的部位
 {{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-13.png">}}
+
+Move Topological ：Move笔刷的变种，如果有两根须状物，且彼此相隔非常近，那么用Move笔刷对某个须状物移动时，会影响到相邻的须状物，使其一起移动，而Move Topological可以只移动一个须状物，可以通过参数设置影响的范围，只对影响范围内的部位进行移动。当然也可以用Mask蒙板来实现这种效果，根据需求看那种更方便。
+{{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-14.png">}}
+
+Slash笔刷。不在默认的笔刷面板中，打开位置：LightBox -》 Brush -》 Slash，里面有3个ZB自带的Slash笔刷。Slash2笔刷可以用来做层叠效果，比如衣服褶皱、石头层级等。
+{{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-15.png">}}
+

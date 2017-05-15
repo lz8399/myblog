@@ -7,7 +7,9 @@ tags:
 - UE4
 ---
 
-1，	现在资源浏览器中新建一个蓝图，类型选择Actor即可
+keywords：UE4、粒子特效、粒子、Particle、Emitter、移动、Move
+
+1，	先在资源浏览器中新建一个蓝图，类型选择Actor即可
 {{< figure src="/img/20160920-[UE4]粒子系统的移动逻辑编写/[UE4]粒子系统的移动逻辑编写-01.jpg">}}
 
 {{< figure src="/img/20160920-[UE4]粒子系统的移动逻辑编写/[UE4]粒子系统的移动逻辑编写-02.jpg">}}
