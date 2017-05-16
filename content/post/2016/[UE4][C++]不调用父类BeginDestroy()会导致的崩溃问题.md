@@ -1,5 +1,5 @@
 ---
-title: "[UE4][CPP]不调用父类BeginDestroy()会导致的崩溃问题"
+title: "[UE4][C++]不调用父类BeginDestroy()会导致的崩溃问题"
 date: "2016-11-01T23:23:40+08:00"
 categories:
 - UnrealEngine4

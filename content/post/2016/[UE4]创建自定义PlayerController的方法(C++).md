@@ -1,5 +1,5 @@
 +++
-title= "[UE4]创建自定义PlayerController的方法(CPP)"
+title= "[UE4]创建自定义PlayerController的方法(C++)"
 date= "2016-06-02T18:15:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]

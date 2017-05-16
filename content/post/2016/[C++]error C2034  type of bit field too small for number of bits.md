@@ -1,5 +1,5 @@
 ---
-title: "[CPP]error C2034  type of bit field too small for number of bits"
+title: "[C++]error C2034  type of bit field too small for number of bits"
 date: "2016-10-02T13:40:40+08:00"
 categories:
 - C++

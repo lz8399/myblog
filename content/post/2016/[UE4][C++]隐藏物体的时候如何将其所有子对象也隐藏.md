@@ -1,5 +1,5 @@
 ---
-title: "[UE4][CPP]隐藏物体的时候如何将其所有子对象也隐藏"
+title: "[UE4][C++]隐藏物体的时候如何将其所有子对象也隐藏"
 date: "2016-10-25T23:25:40+08:00"
 categories:
 - UnrealEngine4

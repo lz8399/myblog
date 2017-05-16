@@ -1,5 +1,5 @@
 ---
-title: "[UE4]如何查看蓝图中的某个组件(Component)对应的CPP类名字"
+title: "[UE4]如何查看蓝图中的某个组件(Component)对应的C++类名字"
 date: "2016-09-24T16:37:40+08:00"
 categories:
 - UnrealEngine4

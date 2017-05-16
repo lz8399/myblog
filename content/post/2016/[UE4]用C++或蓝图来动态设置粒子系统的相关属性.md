@@ -1,5 +1,5 @@
 ---
-title: "[UE4]用CPP或蓝图来动态设置粒子系统的相关属性"
+title: "[UE4]用C++或蓝图来动态设置粒子系统的相关属性"
 date: "2016-10-05T13:58:40+08:00"
 categories:
 - UnrealEngine4

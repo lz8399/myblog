@@ -1,5 +1,5 @@
 ---
-title: "[UE4]用CPP如何动态创建TextRender"
+title: "[UE4]用C++如何动态创建TextRender"
 date: "2016-08-15T23:07:40+08:00"
 categories:
 - UnrealEngine4

@@ -1,5 +1,5 @@
 +++
-title= "[UE4]Cpp的K2 API和普通API有什么区别"
+title= "[UE4]C++的K2 API和普通API有什么区别"
 date= "2016-05-29T15:08:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4", "API"]

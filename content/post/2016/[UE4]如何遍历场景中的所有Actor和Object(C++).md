@@ -1,5 +1,5 @@
 +++
-title= "[UE4]如何遍历场景中的所有Actor和Object(CPP)"
+title= "[UE4]如何遍历场景中的所有Actor和Object(C++)"
 date= "2016-09-29T19:43:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4", "API"]

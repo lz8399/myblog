@@ -1,5 +1,5 @@
 ---
-title: "[UE4]如何动态修改调整UMG组件的位置坐标(CPP和蓝图)"
+title: "[UE4]如何动态修改调整UMG组件的位置坐标(C++和蓝图)"
 date: "2016-10-18T23:48:40+08:00"
 categories:
 - UnrealEngine4

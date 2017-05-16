@@ -1,5 +1,5 @@
 ---
-title: "[CPP]protobuf中对中文编码与解析"
+title: "[C++]protobuf中对中文编码与解析"
 date: "2016-09-11T02:43:40+08:00"
 categories:
 - C++

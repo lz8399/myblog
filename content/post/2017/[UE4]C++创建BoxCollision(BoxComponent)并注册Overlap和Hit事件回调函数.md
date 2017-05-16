@@ -1,5 +1,5 @@
 ---
-title: "[UE4]CPP创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数"
+title: "[UE4]C++创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数"
 date: "2017-05-15T23:31:02+08:00"
 categories:
 - UnrealEngine4
@@ -8,7 +8,7 @@ tags:
 - API
 ---
 
-keywords: UE4、Overlap、Hit、Event、Callback、C++、Blueprint、Box Collision、BoxComponent、SphereComponent
+keywords: UE4、Overlap、Hit、Event、Callback、C++、Blueprint、Box Collision、BoxComponent、SphereComponent、Trace Channel
 
 ### BoxComponent的Overlap事件
 ##### 1，C++中的代码编写
@@ -190,4 +190,6 @@ Component自身提供的检测函数有：
 
 更多参考：
 https://docs.unrealengine.com/latest/INT/Engine/Blueprints/UserGuide/Events/index.html#eventhit
+
+提醒：<font color=red>4.12的碰撞有bug，会导致Hit事件不触发，建议用最新版本</font>。
 

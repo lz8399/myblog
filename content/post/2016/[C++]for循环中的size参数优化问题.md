@@ -1,5 +1,5 @@
 ---
-title: "[CPP]for循环中的size参数优化问题"
+title: "[C++]for循环中的size参数优化问题"
 date: "2016-10-11T22:11:40+08:00"
 categories:
 - C++

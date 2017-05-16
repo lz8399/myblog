@@ -1,5 +1,5 @@
 ---
-title: "[UE4]用CPP如何创建Box Collision"
+title: "[UE4]用C++如何创建Box Collision"
 date: "2016-08-03T15:53:40+08:00"
 categories:
 - UnrealEngine4
