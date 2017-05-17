@@ -17,7 +17,7 @@ Dam_Standard。相当于Standard的反向操作，挖掉表面。
 Move。讲表面隆起或下压，或者拖动某个局部位置。
 {{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-03.png">}}
 
-Smooth。适用场景：进行局部的光华。默认快捷键是按住shift键不放。
+Smooth。适用场景：进行局部的光滑。默认快捷键是按住shift键不放。
 {{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-04.png">}}
 
 Clay。适用场景：填充和堆叠表面。
@@ -54,5 +54,11 @@ Move Topological ：Move笔刷的变种，如果有两根须状物，且彼此�
 {{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-14.png">}}
 
 Slash笔刷。不在默认的笔刷面板中，打开位置：LightBox -》 Brush -》 Slash，里面有3个ZB自带的Slash笔刷。Slash2笔刷可以用来做层叠效果，比如衣服褶皱、石头层级等。
-{{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-15.png">}}
+{{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-15.jpg">}}
 
+每种笔刷，还有一个选项：Brush -》 Depth，可以设置笔刷的深度、重力影响等等。
+{{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-16.jpg">}}
+{{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-17.jpg">}}
+
+Brush -》 Modifiers也有一些调整笔刷效果的选项
+{{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-18.jpg">}}

@@ -1,5 +1,5 @@
 ---
-title: "[UE4][Material]使用蓝图和CPP动态创建材质并设置材质参数属性(Parameter)"
+title: "[UE4][Material]使用蓝图和C++动态创建材质并设置材质参数属性(Parameter)"
 date: "2016-11-27T22:20:40+08:00"
 categories:
 - UnrealEngine4
