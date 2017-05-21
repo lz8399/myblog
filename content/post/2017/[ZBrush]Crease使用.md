@@ -49,3 +49,6 @@ Tool -》 Geometry -》 Crease -》 Crease
 
 细分后，之前编辑的CreaseCurve位置，就不会被平滑掉。
 {{< figure src="/img/20170423-[ZBrush]Crease使用/[ZBrush]Crease使用-13.jpg">}}
+
+其他资料：  
+http://www.zbrushcn.com/jinjie/ruhe-kabian.html

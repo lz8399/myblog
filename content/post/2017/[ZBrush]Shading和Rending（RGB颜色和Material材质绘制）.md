@@ -10,8 +10,6 @@ tags:
 ---
 
 
-{{< figure src="/img/20170520-[ZBrush]Shading和Rending（RGB颜色和Material绘制）/[ZBrush]Shading和Rending（RGB颜色和Material绘制）-01.jpg">}}
-
 Keywords：RGB、MRGB、Vertex Shading、Rending、顶点着色、UV、Material、材质
 
 ZBrush提供了直接在模型表面绘制颜色和材质的功能。  
