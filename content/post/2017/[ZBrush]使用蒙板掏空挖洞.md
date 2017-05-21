@@ -17,7 +17,7 @@ Keywords： Mask、MaskPen、DynaMesh、掏空、挖洞
 这里演示掏空一个圆柱，所以我们可以使用InsertCylinder笔刷：
 {{< figure src="/img/20170413-[ZBrush]使用蒙板掏空挖洞/[ZBrush]使用蒙板掏空挖洞-02.jpg">}}
 
-按住Alt键（相当于反向操作），再一个面板上拉出一个圆柱。默认圆柱只有单面：
+按住Alt键（相当于反向操作），在一个面板上拉出一个圆柱。默认圆柱只有单面：
 {{< figure src="/img/20170413-[ZBrush]使用蒙板掏空挖洞/[ZBrush]使用蒙板掏空挖洞-03.jpg">}}
 
 再点击Tool -》 Display Properties -》 Double，就可以看到双面：

@@ -9,6 +9,7 @@ tags:
 - Sculpting
 ---
 
+Keywords：挤出、Extract、合并、Merge、掏空、挖洞
 
 #### Extract（挤出）
 现在模型上画一个mask（按住Ctrl+鼠标左键）

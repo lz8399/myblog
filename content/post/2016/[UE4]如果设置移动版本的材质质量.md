@@ -9,6 +9,7 @@ tags:
 ---
 
 Key：android、mobile、material、building、low quality
+
 现在版本的UE4编译android版本时，默认使用的是最高特效，如果想是为了低配设备编译，可以在Project Settings –》 Engine –》 Rendering -》Mobile中，去掉HDR和Shadowing
 {{< figure src="/img/20161021-[UE4]如果设置移动版本的材质质量.jpg">}}
 
