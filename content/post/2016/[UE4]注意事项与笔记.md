@@ -34,3 +34,5 @@ File -> New C++ Class -> 选择None，然后即可创建自己C++代码
 8，如果同一批美术材质，在两个不同工程下的渲染效果不一样，比如同一个粒子特效，实际效果在两个工程中有差异，则可能是工程的设置项问题。解决办法：将两个工程中的Config/DefaultEngine.ini中的[/Script/Engine.RendererSettings]配置参数，设置统一即可。
 
 9，如果spawn出来的actor执行了AddToRoot操作，那么，需要GameInstance::Shutdown()中执行RemoveFromRoot，否则退出UE4Editor时会出现崩溃。另外，在GameMode和GameInstance的BeginDestroy()中执行是不行的，因为垃圾回收过程发生在BeginDestroy()执行之前。
+
+10，[2017-06-17]安装VS2017时，需要勾选Windows SDK 8.1，如果只勾选最新的SDK 10，则UE4工程无法生成VS工程文件。

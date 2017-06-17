@@ -13,7 +13,7 @@ tags:
 Keywords：RGB、MRGB、Vertex Shading、Rending、顶点着色、UV、Material、材质
 
 ZBrush提供了直接在模型表面绘制颜色和材质的功能。  
-优点：这样可以快速出渲染效果。如果用标准的次时代流程，涉及到分UV、贴图制作，周期较长。  
+优点：这样可以快速出渲染效果。如果用标准的次时代流程，涉及到分UV、贴图烘培，周期较长。  
 缺点：zb上直接制作出来的材质，无法导入第三方图形引擎中，只能用zb查看效果。
 
 ##### 绘制准备工作
@@ -27,7 +27,7 @@ ZBrush提供了直接在模型表面绘制颜色和材质的功能。
 3，关掉Alpha：
 {{< figure src="/img/20170520-[ZBrush]Shading和Rending（RGB颜色和Material绘制）/[ZBrush]Shading和Rending（RGB颜色和Material绘制）-04.jpg">}}
 
-4，固话所有Layer。因为着色时不能有Layer：
+4，固化所有Layer。因为着色时不能有Layer：
 {{< figure src="/img/20170520-[ZBrush]Shading和Rending（RGB颜色和Material绘制）/[ZBrush]Shading和Rending（RGB颜色和Material绘制）-05.jpg">}}
 
 5，关掉Zadd，打开Rgb ：
@@ -50,7 +50,7 @@ ZBrush提供了直接在模型表面绘制颜色和材质的功能。
 * Best：效果最贴近真实渲染效果，但是相应速度较慢。
 * Preview：渲染效果比Best差一点，但是速度快一点。
 * Fast：去掉了灯光，速度更快，但是效果就差很多。
-* Flat：隐藏掉了了模型的纹理，已纯平表面来显示绘制的效果，适合来观察颜色涂抹的均匀程度。
+* Flat：隐藏掉了了模型的纹理，以纯平表面来显示绘制的效果，适合来观察颜色涂抹的均匀程度。
 
 四中模式的效果依次是：
 {{< figure src="/img/20170520-[ZBrush]Shading和Rending（RGB颜色和Material绘制）/[ZBrush]Shading和Rending（RGB颜色和Material绘制）-10.jpg">}}

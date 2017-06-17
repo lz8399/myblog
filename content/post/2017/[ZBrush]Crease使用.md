@@ -11,11 +11,11 @@ tags:
 
 Tool -》 Geometry -》 Crease -》 Crease
 {{< figure src="/img/20170423-[ZBrush]Crease使用/[ZBrush]Crease使用-01.jpg">}}
-##### 作用：
+##### 作用：  
 当执行平滑或者细分时，希望模型局部位置的细节不被平滑掉，则可以使用Crease。
 
-##### 用法：
-1，先用套索选出需要被保护的细节部分：
+##### 用法：  
+1，先用套索(SelectLasso笔刷)选出需要被保护的细节部分：
 {{< figure src="/img/20170423-[ZBrush]Crease使用/[ZBrush]Crease使用-02.jpg">}}
 {{< figure src="/img/20170423-[ZBrush]Crease使用/[ZBrush]Crease使用-03.jpg">}}
 

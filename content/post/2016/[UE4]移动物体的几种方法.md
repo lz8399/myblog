@@ -8,6 +8,10 @@ tags:
 - API
 ---
 
+keywords: UE4、Movement
+
+作者：@玄冬Wong
+
 1，
 
     Actor->SetActorLocation()
@@ -32,3 +36,21 @@ tags:
     
 其中WorldDirection时方向，ScaleValue是速率倍速，bForce是忽略Controller中的IgnoreMoveInput属性值，强制移动。
 
+
+6，
+
+    void UCharacterMovementComponent::AddImpulse( FVector Impulse, bool bVelocityChange )
+
+AddImpulse一般用来做投掷、爆炸、击飞等物理效果。添加的是一个瞬间的力，之后就不需要每帧做处理了。
+
+7，
+
+    void UCharacterMovementComponent::AddForce( FVector Force )
+
+如果想让物体保持移动，需要每帧都执行AddForce()函数，也就说如果加速度是实时变化的，那么就可以用AddForce。
+两者的区别可以参考：  
+https://forums.unrealengine.com/showthread.php?29496-Addforce-and-addimpulse  
+`AddForce accounts for delta time and should be used for applying force over more than one frame, AddImpulse does not account for delta time and should be used for single 'pushes', like from an explosion or being thrown by a player. The reason is that if you use AddForce for throwing or an explosion, how far the object moves depends on the framerate at the exact frame the force was applied, rather than being independent of framerate like AddImpulse is.`
+
+参考：  
+https://forums.unrealengine.com/showthread.php?29496-Addforce-and-addimpulse

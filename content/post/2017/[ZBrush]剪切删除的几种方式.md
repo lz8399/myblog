@@ -53,7 +53,7 @@ Keywords：ZBrush、Delete、Clip、Hide、Close Hole
 最后补充：按住Ctrl + Shift是选中显示的部位，其余部分隐藏掉；按住Ctrl + Shift + Alt正好相反。
 {{< figure src="/img/20170507-[ZBrush]剪切删除的几种方式/[ZBrush]剪切删除的几种方式-13.jpg">}}
 
-#####使用ClipRect笔刷
+##### 使用ClipRect笔刷
 这里我们使用zb自带的一个齿轮模型来演示：
 {{< figure src="/img/20170507-[ZBrush]剪切删除的几种方式/[ZBrush]剪切删除的几种方式-14.jpg">}}
 
@@ -70,7 +70,7 @@ Keywords：ZBrush、Delete、Clip、Hide、Close Hole
 但这样剪切的出来的模型的布线有问题：剪切后的截面，布线很乱，因为ClipRect笔刷做的操作是将待删除的部分压扁，所以被删除部分的布线还遗留在模型上。
 {{< figure src="/img/20170507-[ZBrush]剪切删除的几种方式/[ZBrush]剪切删除的几种方式-19.jpg">}}
 
-针对这种非常不规则的模型，剪切删除时最好使用TrimLasso，用其剪切删除的界面，不会遗留不干净的布线。
+<font color=red>针对这种非常不规则的模型，剪切删除时最好使用TrimLasso，用其剪切删除的界面，不会遗留不干净的布线。</font>
 
 ##### 使用TrimLasso笔刷
 1，用相同方式选中TrimLasso笔刷：先点击TrimLasso，然后再按住Ctrl + Shift：
