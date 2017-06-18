@@ -16,5 +16,5 @@ tags:
 {{< figure src="/img/20170319-[ZBrush]自定义菜单的显示颜色/[ZBrush]自定义菜单的显示颜色-02.jpg">}}
 
 编辑之后，如果不保存，下次重启zb会自动重置为默认颜色，所以编辑后再保存一下：
-Preferences -》 Store Config
+Preferences -》 Config -》 Store Config
 {{< figure src="/img/20170319-[ZBrush]自定义菜单的显示颜色/[ZBrush]自定义菜单的显示颜色-03.jpg">}}

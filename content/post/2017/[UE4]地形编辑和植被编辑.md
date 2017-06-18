@@ -14,3 +14,6 @@ https://docs.unrealengine.com/latest/INT/Engine/Landscape/index.html
 
 植被编辑  
 https://docs.unrealengine.com/latest/INT/Engine/Foliage/index.html
+
+Procedural Foliage Tool Quick Start  
+https://docs.unrealengine.com/latest/INT/Engine/OpenWorldTools/ProceduralFoliage/QuickStart/index.html

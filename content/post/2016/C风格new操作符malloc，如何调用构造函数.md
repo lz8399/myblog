@@ -1,7 +1,7 @@
 +++
 title= "C风格new操作符malloc，如何调用构造函数"
 date= "2016-06-04T17:40:02+08:00"
-categories= ["C/C++"]
+categories= ["C++"]
 tags= ["Clang"]
 +++
 
