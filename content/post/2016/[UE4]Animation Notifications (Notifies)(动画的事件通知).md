@@ -8,7 +8,11 @@ tags:
 - UE4
 ---
 
-Animation Notifications (Notifies)
+keyword: AnimNotify、Animation Notify
 
+Animation Notifications (Notifies)  
 https://docs.unrealengine.com/latest/INT/Engine/Animation/Sequences/Notifies/
 
+
+ue4中动画通知的几种方式  
+http://blog.csdn.net/yangxuan0261/article/details/52097917
