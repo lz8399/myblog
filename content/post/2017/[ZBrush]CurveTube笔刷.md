@@ -17,7 +17,7 @@ tags:
 {{< figure src="/img/20170416-[ZBrush]CurveTube笔刷/[ZBrush]CurveTube笔刷-03.jpg">}}
 
 
-如果修改曲线的粗细，调整Draw Size之后，点击下斑马线即可：
+如果要修改曲线的粗细，调整Draw Size之后，点击下斑马线即可：
 {{< figure src="/img/20170416-[ZBrush]CurveTube笔刷/[ZBrush]CurveTube笔刷-04.jpg">}}
 {{< figure src="/img/20170416-[ZBrush]CurveTube笔刷/[ZBrush]CurveTube笔刷-05.jpg">}}
 

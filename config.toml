@@ -118,7 +118,7 @@ defaultContentLanguage = "en-us"
   identifier = "linkedin"
   name = "Linkedin"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-linkedin\"></i>"
-  url = "http://www.linkedin.com/in/neil-wong-648b6486"
+  url = "http://www.linkedin.com/in/dawnarc/"
 [[menu.links]]
   weight = 0
   identifier = "pinterest"

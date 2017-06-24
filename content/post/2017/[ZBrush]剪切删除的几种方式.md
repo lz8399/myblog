@@ -83,3 +83,29 @@ Keywords：ZBrush、Delete、Clip、Hide、Close Hole
 {{< figure src="/img/20170507-[ZBrush]剪切删除的几种方式/[ZBrush]剪切删除的几种方式-22.jpg">}}
 
 ClipRect和TrimLasso一个区别是：<font color=red>使用前者时不需要转换为PolyMesh3D，而使用后者时需要转换为PolyMesh3D。</font>
+
+##### 使用Lasso的注意事项
+{{< figure src="/img/20170507-[ZBrush]剪切删除的几种方式/[ZBrush]剪切删除的几种方式-23.jpg">}}
+
+Lasso有两种款选模式，一种是逆时针，一种顺时针。  
+<font color=red>逆时针框选表示删除款选的部分；顺时针表示删除框选以外的部分。</font>
+
+* 逆时针  
+    {{< figure src="/img/20170507-[ZBrush]剪切删除的几种方式/[ZBrush]剪切删除的几种方式-24.jpg">}}
+    {{< figure src="/img/20170507-[ZBrush]剪切删除的几种方式/[ZBrush]剪切删除的几种方式-25.jpg">}}
+
+* 顺时针  
+    注意，顺时针时，起点和终点分别要越过模型下方边界和上方边界
+    {{< figure src="/img/20170507-[ZBrush]剪切删除的几种方式/[ZBrush]剪切删除的几种方式-26.jpg">}}
+    {{< figure src="/img/20170507-[ZBrush]剪切删除的几种方式/[ZBrush]剪切删除的几种方式-27.jpg">}}
+
+    如果没有超过模型的上下边界，则剪切效果有乱掉。因为顺时针时，剪切操作相当于：以起点和终点的连接为平面，将框选之外的部分压扁到该平面上，所以若起点和终点没有覆盖模型的上下边界，模型的上下部位在压扁过程中会漏掉。
+    {{< figure src="/img/20170507-[ZBrush]剪切删除的几种方式/[ZBrush]剪切删除的几种方式-28.jpg">}}
+    {{< figure src="/img/20170507-[ZBrush]剪切删除的几种方式/[ZBrush]剪切删除的几种方式-29.jpg">}}
+    
+使用Curve的方式与Lasso类似，也有顺时针和顺时针方向的问题：
+{{< figure src="/img/20170507-[ZBrush]剪切删除的几种方式/[ZBrush]剪切删除的几种方式-30.jpg">}}
+{{< figure src="/img/20170507-[ZBrush]剪切删除的几种方式/[ZBrush]剪切删除的几种方式-31.jpg">}}
+{{< figure src="/img/20170507-[ZBrush]剪切删除的几种方式/[ZBrush]剪切删除的几种方式-32.jpg">}}
+{{< figure src="/img/20170507-[ZBrush]剪切删除的几种方式/[ZBrush]剪切删除的几种方式-33.jpg">}}
+{{< figure src="/img/20170507-[ZBrush]剪切删除的几种方式/[ZBrush]剪切删除的几种方式-34.jpg">}}
