@@ -38,7 +38,7 @@ Polish。适用场景：希望抹平的同时，把凹下去的地方填充起�
 hPolish。适用场景：大面积的抹平
 {{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-09.png">}}
 
-Pinch。适用场景：讲表面聚拢起来
+Pinch。适用场景：将表面聚拢起来
 {{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-10.png">}}
 
 SnakeHook。使用场景：比如想拉出尖刺或鱼鳍状的形状时，用此笔刷。
@@ -47,7 +47,7 @@ SnakeHook。使用场景：比如想拉出尖刺或鱼鳍状的形状时，用�
 Inflat 膨胀笔刷
 {{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-12.png">}}
 
-Clip 剪切不要的部位
+Clip 剪切删除选定的部位。一个使用曲线框选，一个是用矩形框框选，如果两者的Stroke如果选一样的，那么两者就没有区别，提供两种Clip笔刷主要是为了方便快速切换（比如用一个快捷键快速切换在另外一种Clip笔刷，而不需要在同一个Clip笔刷下切换Stroke）
 {{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-13.png">}}
 
 Move Topological ：Move笔刷的变种，如果有两根须状物，且彼此相隔非常近，那么用Move笔刷对某个须状物移动时，会影响到相邻的须状物，使其一起移动，而Move Topological可以只移动一个须状物，可以通过参数设置影响的范围，只对影响范围内的部位进行移动。当然也可以用Mask蒙板来实现这种效果，根据需求看那种更方便。
@@ -62,3 +62,9 @@ Slash笔刷。不在默认的笔刷面板中，打开位置：LightBox -》 Brus
 
 Brush -》 Modifiers也有一些调整笔刷效果的选项
 {{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-18.jpg">}}
+
+我设置的常用笔刷快捷键（Alt+字母键）：  
+QWERT：Dam_Standard、<font color=red>被zb占用</font>、ClipCurve、ClipRect、TrimDynamic  
+ASDF：Move、Clay、ClayBuildup、ClayTubes  
+ZXCV：<font color=red>被zb占用</font>、Polish、hPolish、Pinch  
+
