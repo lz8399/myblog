@@ -8,7 +8,7 @@ tags:
 ---
 
 下载：  
-https://dev.mysql.com/downloads/mysql/s
+https://dev.mysql.com/downloads/mysql/
 
 解压后执行（管理员命令行）：
 

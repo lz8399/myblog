@@ -1,5 +1,5 @@
 ---
-title: "[ZBrush]Curve Stroke画直线、曲线、折现的方法"
+title: "[ZBrush]Curve Stroke画直线、曲线、折线的方法"
 date: "2017-06-25T00:35:40+08:00"
 categories:
 - ZBrush
