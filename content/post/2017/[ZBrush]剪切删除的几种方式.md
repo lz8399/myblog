@@ -103,7 +103,7 @@ Lasso有两种款选模式，一种是逆时针，一种顺时针。
     {{< figure src="/img/20170507-[ZBrush]剪切删除的几种方式/[ZBrush]剪切删除的几种方式-28.jpg">}}
     {{< figure src="/img/20170507-[ZBrush]剪切删除的几种方式/[ZBrush]剪切删除的几种方式-29.jpg">}}
     
-使用Curve的方式与Lasso类似，由于直线没有顺时针逆时针的概念，所以zb用黑色阴影标识哪一遍被删除：<font color=red>直线有阴影的一边会被删除，没有阴影的一边会被保留。</font>
+使用Curve的方式与Lasso类似，由于直线没有顺时针逆时针的概念，所以zb用黑色阴影标识哪一边被删除：<font color=red>直线有阴影的一边会被删除，没有阴影的一边会被保留。</font>
 {{< figure src="/img/20170507-[ZBrush]剪切删除的几种方式/[ZBrush]剪切删除的几种方式-30.jpg">}}
 {{< figure src="/img/20170507-[ZBrush]剪切删除的几种方式/[ZBrush]剪切删除的几种方式-31.jpg">}}
 {{< figure src="/img/20170507-[ZBrush]剪切删除的几种方式/[ZBrush]剪切删除的几种方式-32.jpg">}}

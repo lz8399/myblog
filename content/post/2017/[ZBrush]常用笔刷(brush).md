@@ -67,7 +67,7 @@ Brush -》 Modifiers也有一些调整笔刷效果的选项
 {{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-19.jpg">}}
 
 我设置的常用笔刷快捷键（Alt+字母键）：  
-QWERT：Dam_Standard、<font color=red>被zb占用</font>、ClipCurve、ClipRect、TrimDynamic  
-ASDF：Move、Clay、ClayBuildup、ClayTubes  
+QWERT：Dam_Standard、<font color=red>被zb占用</font>、ClipCurve、ClipRect、TrimLasso  
+ASDFG：Move、Clay、ClayBuildup、ClayTubes、TrimDynamic  
 ZXCV：<font color=red>被zb占用</font>、Polish、hPolish、Pinch  
 
