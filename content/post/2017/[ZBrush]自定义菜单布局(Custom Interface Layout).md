@@ -9,6 +9,8 @@ tags:
 - Sculpting
 --- 
 
+keyword：zbrush、Customize UI、Interface Layout、Menu Button
+
 ##### 设置button大小
 安装zb后，默认的按钮宽度是44，效果如图：
 {{< figure src="/img/20170702-[ZBrush]自定义菜单布局(Custom Interface Layout)/[ZBrush]自定义菜单布局(Custom Interface Layout)-01.jpg">}}
@@ -38,8 +40,31 @@ Perferences -》 Interface -》 UI -》 修改Buttons Size，或者取消Wide Bu
 ##### 还原UI布局
 如果不小心删除了某个菜单按钮，或者想还原为默认设置，可以点击：  
 Preferences -》 Config -》 Restore Custom UI或者Restore Standard UI，前者是自己上次保存的UI布局，后者是系统的初始UI布局。
+{{< figure src="/img/20170702-[ZBrush]自定义菜单布局(Custom Interface Layout)/[ZBrush]自定义菜单布局(Custom Interface Layout)-07.jpg">}}
 
+##### 如何将新笔刷加入Quick Pick面板
+以TrimSmoothBorder为例，这是zb自带的笔刷，但是不在Quick Pick面板钟，而是在Pixologic\ZBrush 4R7\ZBrushes\Trim\目录下
+{{< figure src="/img/20170702-[ZBrush]自定义菜单布局(Custom Interface Layout)/[ZBrush]自定义菜单布局(Custom Interface Layout)-08.jpg">}}
+
+先将TrimSmoothBorder.zbp拷贝到Pixologic\ZBrush 4R7\ZStartup\BrushPresets\目录下
+{{< figure src="/img/20170702-[ZBrush]自定义菜单布局(Custom Interface Layout)/[ZBrush]自定义菜单布局(Custom Interface Layout)-09.jpg">}}
+{{< figure src="/img/20170702-[ZBrush]自定义菜单布局(Custom Interface Layout)/[ZBrush]自定义菜单布局(Custom Interface Layout)-10.jpg">}}
+
+然后重启zb，再次打开quick pich，就可以在末尾看到新加入的笔刷
+{{< figure src="/img/20170702-[ZBrush]自定义菜单布局(Custom Interface Layout)/[ZBrush]自定义菜单布局(Custom Interface Layout)-11.jpg">}}
+
+这个使用就可以选择一次该笔刷后，在Brush菜单下看到最近使用的历史笔刷，然后就可以按住Ctrl+Alt键来拖抓到快捷栏中
+{{< figure src="/img/20170702-[ZBrush]自定义菜单布局(Custom Interface Layout)/[ZBrush]自定义菜单布局(Custom Interface Layout)-12.jpg">}}
+{{< figure src="/img/20170702-[ZBrush]自定义菜单布局(Custom Interface Layout)/[ZBrush]自定义菜单布局(Custom Interface Layout)-13.jpg">}}
+
+##### 如何保存UI布局
+点击Preferences -》 Config -》Store Config，表示将当前UI设置保存zb的默认设置，也就是说以后每次启动就使用这个设置。Save UI表示导入当前UI布局的配置文件。
+{{< figure src="/img/20170702-[ZBrush]自定义菜单布局(Custom Interface Layout)/[ZBrush]自定义菜单布局(Custom Interface Layout)-14.jpg">}}
 
 其他参考文档：  
 CUSTOM INTERFACE  
 http://docs.pixologic.com/user-guide/customizing-zbrush/interface-layout/custom-interface/
+
+视频教程：  
+Zbrush Customize UI  
+https://www.youtube.com/watch?v=Jr3XNnctUfI

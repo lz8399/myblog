@@ -13,3 +13,7 @@ tags:
 如何使用Clip笔刷的案例教程  
 zbrush clipping brush Tutorial  
 https://www.youtube.com/watch?v=hfJ6HWx5qy0
+
+如何自定义界面菜单布局  
+Zbrush Customize UI  
+https://www.youtube.com/watch?v=Jr3XNnctUfI
