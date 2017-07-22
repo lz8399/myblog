@@ -23,3 +23,7 @@ https://dev.mysql.com/downloads/mysql/
     net start mysql
     
 注意：MySQL官方的5.7绿色版中没有my.ini或my.cnf文件，不知道为什么，在网上找个my.ini文件复制过来放在安装目录下即可。
+
+修改root密码（首次安装后root还未修改的情况下，即密码为空）
+
+    mysqladmin -u root -p password 123456

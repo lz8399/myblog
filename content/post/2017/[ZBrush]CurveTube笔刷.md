@@ -81,7 +81,7 @@ CurveTube笔刷可以拉出一条管道装的模型。
 这样画出来的曲线效果为：
 {{< figure src="/img/20170416-[ZBrush]CurveTube笔刷/[ZBrush]CurveTube笔刷-24.jpg">}}
 
-#####设置曲线横截面的边的条数
+##### 设置曲线横截面的边的条数
 Brush -》 Modifiers -》 Brush Modifier，比如修改为4，那么曲线的横截面的边的条数只有4条，画出来的曲线相当于一个立方体。这个数值越大，则曲线的横截面越接近圆形。
 {{< figure src="/img/20170416-[ZBrush]CurveTube笔刷/[ZBrush]CurveTube笔刷-25.jpg">}}
 {{< figure src="/img/20170416-[ZBrush]CurveTube笔刷/[ZBrush]CurveTube笔刷-26.jpg">}}
@@ -107,7 +107,7 @@ Brush -》 Modifiers -》 Brush Modifier，比如修改为4，那么曲线的横
 比如在做毛发时，头发比较密集，如果Curve Snap Distance设为0，则新画的曲线不会自动连接旧的曲线。
 
 ##### ZRemesherGuides使用
-CurveTube笔刷是每画一条斑马线，曲线就会立即出现；而ZRemesherGuides可以先多次间断的编辑斑马线，等编辑后之后，在生成曲线。
+CurveTube笔刷是每画一条斑马线，曲线就会立即出现；而ZRemesherGuides可以先多次间断的编辑斑马线，等编辑后之后，再生成曲线。
 1，先切换到ZRemesher笔刷
 {{< figure src="/img/20170416-[ZBrush]CurveTube笔刷/[ZBrush]CurveTube笔刷-32.jpg">}}
 
