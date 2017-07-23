@@ -8,7 +8,7 @@ tags:
 - Modeling
 - Sculpting
 ---
-Stand
+Stand。默认笔刷，表面突起
 {{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-01.png">}}
 
 Dam_Standard。相当于Standard的反向操作，挖掉表面。

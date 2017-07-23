@@ -11,7 +11,7 @@ tags:
 
 Keyword：ZBrush、SliceCurve、Mask、Group
 
-1，新建一个球，并转换为PolyMesh3D
+1，新建一个Sphere3D，并转换为PolyMesh3D
 {{< figure src="/img/20170721-[ZBrush]SliceCurve、Mask、Group综合使用实例：制作头盔/[ZBrush]SliceCurve、Mask、Group综合使用实例：制作头盔-01.jpg">}}
 
 2，使用SliceCurve笔刷（选中一次后再按住Ctrl + Shift），并将Stroke选择为Curve
