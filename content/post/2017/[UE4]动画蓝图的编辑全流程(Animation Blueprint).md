@@ -17,13 +17,13 @@ UE4版本：4.16
 1，准备好动作和模型
 {{< figure src="/img/20170617-[UE4]动画蓝图的编辑流程(Animation Blueprint)/[UE4]动画蓝图的编辑流程(Animation Blueprint)-01.jpg">}}
 
-2，新建一个一个Blend Space 1D
+2，新建一个Blend Space 1D
 {{< figure src="/img/20170617-[UE4]动画蓝图的编辑流程(Animation Blueprint)/[UE4]动画蓝图的编辑流程(Animation Blueprint)-02.jpg">}}
 
-然后在跳出的菜单钟选择骨骼
+然后在跳出的菜单中选择骨骼
 {{< figure src="/img/20170617-[UE4]动画蓝图的编辑流程(Animation Blueprint)/[UE4]动画蓝图的编辑流程(Animation Blueprint)-03.jpg">}}
 
-3，打开Blend Space 1D钟，分别将待机、行走、跑步三个动作拖拽到下方面板钟
+3，打开Blend Space 1D蓝图，分别将待机、行走、跑步三个动作拖拽到下方面板钟
 {{< figure src="/img/20170617-[UE4]动画蓝图的编辑流程(Animation Blueprint)/[UE4]动画蓝图的编辑流程(Animation Blueprint)-04.jpg">}}
 
 修改驱动属性名为Speed，默认为None，这个属性名为是后面编辑动画蓝图使用的属性名。
@@ -90,7 +90,7 @@ UE4版本：4.16
 {{< figure src="/img/20170617-[UE4]动画蓝图的编辑流程(Animation Blueprint)/[UE4]动画蓝图的编辑流程(Animation Blueprint)-27.jpg">}}
 {{< figure src="/img/20170617-[UE4]动画蓝图的编辑流程(Animation Blueprint)/[UE4]动画蓝图的编辑流程(Animation Blueprint)-28.jpg">}}
 
-9，到此，动画蓝图和角色蓝天编辑完成，可以在C++中使用刚刚新建的角色蓝图。
+9，到此，动画蓝图和角色蓝图编辑完成，可以在C++中使用刚刚新建的角色蓝图。
 
     ATopDownTestGameMode::ATopDownTestGameMode()
     {
@@ -126,7 +126,7 @@ __解决办法__：
 然后在从该Slot中连接到Final Animation Pose中：
 {{< figure src="/img/20170617-[UE4]动画蓝图的编辑流程(Animation Blueprint)/[UE4]动画蓝图的编辑流程(Animation Blueprint)-31.jpg">}}
 
-如果想修改该Slot节点的Slot名字，可以在属性面变钟修改：
+如果想修改该Slot节点的Slot名字，可以在属性面板中修改：
 {{< figure src="/img/20170617-[UE4]动画蓝图的编辑流程(Animation Blueprint)/[UE4]动画蓝图的编辑流程(Animation Blueprint)-32.jpg">}}
 
 如何在C++代码中指定Montage的Slot名字，还没研究过。但是可以通过AnimSequence动态创建一个Montage对象，并指定Slot名字：

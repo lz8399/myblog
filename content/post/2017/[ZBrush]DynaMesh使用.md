@@ -99,7 +99,7 @@ MeshInsert Dot Brush使用完毕以后，然后关闭Freeze SubDivision Levels�
 {{< figure src="/img/20170305-[ZBrush]DynaMesh使用/[ZBrush]DynaMesh使用-23.jpg">}}
 {{< figure src="/img/20170305-[ZBrush]DynaMesh使用/[ZBrush]DynaMesh使用-24.jpg">}}
 
-如果想让笔刷同时对两个Group有效且两个Group不合并，那么就可以就可以按上面的例子一样，打开Project之后在执行Re-DynaMesh，这样就可以同时编辑两个Group。
+如果想让笔刷同时对两个Group有效且两个Group不合并，那么可以按上面的例子一样，打开Project之后再执行Re-DynaMesh，这样就可以同时编辑两个Group。
 {{< figure src="/img/20170305-[ZBrush]DynaMesh使用/[ZBrush]DynaMesh使用-25.jpg">}}
  
 

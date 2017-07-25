@@ -1,5 +1,5 @@
 ---
-title: "[ZBrush]SliceCurve、Mask、Group综合使用实例：制作头盔"
+title: "[ZBrush]SliceCurve、Mask、Group综合使用实例：制作层叠效果"
 date: "2017-07-21T00:30:42+08:00"
 categories:
 - ZBrush
@@ -33,7 +33,7 @@ Keyword：ZBrush、SliceCurve、Mask、Group
 7，然后按住Ctrl键不放，并按住用鼠标左键不放，框选住整个模型，表示用当前部分被mask，不可编辑。
 {{< figure src="/img/20170721-[ZBrush]SliceCurve、Mask、Group综合使用实例：制作头盔/[ZBrush]SliceCurve、Mask、Group综合使用实例：制作头盔-08.jpg">}}
 
-8，然后再按住Ctrl+Shift+Alt键不放，再鼠标单击下空白区域，表示选择隐藏的部分。
+8，然后再按住Ctrl+Shift键不放，再鼠标单击下空白区域，表示显示被隐藏的部分。
 {{< figure src="/img/20170721-[ZBrush]SliceCurve、Mask、Group综合使用实例：制作头盔/[ZBrush]SliceCurve、Mask、Group综合使用实例：制作头盔-09.jpg">}}
 
 9，然后再缩小脸部尺寸，点击Tool -》 Deformation -》 Size
