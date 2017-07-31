@@ -53,3 +53,11 @@ Table键：显示/隐藏左右的小菜单面板。
 
 ##### 模型居中显示(2017-05-16)
 F键：比如当模型被缩放到很小或者很大后，想快速让模型居中并以适当大小显示，则可以按F键。
+
+
+##### 常用快捷键
+Shift + F：显示或隐藏网格（PolyFrame）
+D：Dynamic（Tool -》 Geometry -》 Dynamic Subdiv -》 Dynamic）。shift + D取消Dynamic
+
+
+

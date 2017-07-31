@@ -15,7 +15,7 @@ keyword：zbrush、Customize UI、Interface Layout、Menu Button
 安装zb后，默认的按钮宽度是44，效果如图：
 {{< figure src="/img/20170702-[ZBrush]自定义菜单布局(Custom Interface Layout)/[ZBrush]自定义菜单布局(Custom Interface Layout)-01.jpg">}}
 
-如果想让菜单布局更紧凑，缩短button的宽度，可以坐如下修改：  
+如果想让菜单布局更紧凑，缩短button的宽度，可以作如下修改：  
 Perferences -》 Interface -》 UI -》 修改Buttons Size，或者取消Wide Buttons
 {{< figure src="/img/20170702-[ZBrush]自定义菜单布局(Custom Interface Layout)/[ZBrush]自定义菜单布局(Custom Interface Layout)-02.jpg">}}
 
@@ -34,7 +34,7 @@ Perferences -》 Interface -》 UI -》 修改Buttons Size，或者取消Wide Bu
 {{< figure src="/img/20170702-[ZBrush]自定义菜单布局(Custom Interface Layout)/[ZBrush]自定义菜单布局(Custom Interface Layout)-06.jpg">}}
 
 ##### 按钮删除
-如果要删除界面上的菜单按钮，同样按住Ctrl + Alt键不放，鼠标左键点击笔刷菜单并按住不放，将菜单拖拽到视图界面中（就是编辑模型的主视图）或者该按钮不可防止的区域中。
+如果要删除界面上的菜单按钮，同样按住Ctrl + Alt键不放，鼠标左键点击笔刷菜单并按住不放，将菜单拖拽到视图界面中（就是编辑模型的主视图）或者该按钮不可放置的区域中。
 
 
 ##### 还原UI布局
@@ -58,7 +58,7 @@ Preferences -》 Config -》 Restore Custom UI或者Restore Standard UI，前者
 {{< figure src="/img/20170702-[ZBrush]自定义菜单布局(Custom Interface Layout)/[ZBrush]自定义菜单布局(Custom Interface Layout)-13.jpg">}}
 
 ##### 如何保存UI布局
-点击Preferences -》 Config -》Store Config，表示将当前UI设置保存zb的默认设置，也就是说以后每次启动就使用这个设置。Save UI表示导入当前UI布局的配置文件。
+点击Preferences -》 Config -》Store Config，表示将当前UI设置保存zb的默认设置，也就是说以后每次启动就使用这个设置。Save UI表示导出当前UI布局的配置文件。
 {{< figure src="/img/20170702-[ZBrush]自定义菜单布局(Custom Interface Layout)/[ZBrush]自定义菜单布局(Custom Interface Layout)-14.jpg">}}
 
 其他参考文档：  

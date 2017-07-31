@@ -18,4 +18,4 @@ Tool -》 Deformation
 * Polish By Groups：光滑（按Group平滑）
 * Polish By Crisp Edges：光滑（按边界平滑）
 * Size：体积扩大与缩小（忽略对称选项）
-* Inflate：膨胀、充气
+* Inflate：膨胀、充气。比如圆环，想把环增粗，但又不想改变圆环的直径 则可以用Inflate。

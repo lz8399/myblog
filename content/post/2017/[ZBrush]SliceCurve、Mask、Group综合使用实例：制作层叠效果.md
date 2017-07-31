@@ -30,7 +30,7 @@ Keyword：ZBrush、SliceCurve、Mask、Group
 {{< figure src="/img/20170721-[ZBrush]SliceCurve、Mask、Group综合使用实例：制作头盔/[ZBrush]SliceCurve、Mask、Group综合使用实例：制作头盔-06.jpg">}}
 {{< figure src="/img/20170721-[ZBrush]SliceCurve、Mask、Group综合使用实例：制作头盔/[ZBrush]SliceCurve、Mask、Group综合使用实例：制作头盔-07.jpg">}}
 
-7，然后按住Ctrl键不放，并按住用鼠标左键不放，框选住整个模型，表示用当前部分被mask，不可编辑。
+7，然后按住Ctrl键不放，并按住用鼠标左键不放，框选住整个模型，表示当前部分被mask，不可编辑。
 {{< figure src="/img/20170721-[ZBrush]SliceCurve、Mask、Group综合使用实例：制作头盔/[ZBrush]SliceCurve、Mask、Group综合使用实例：制作头盔-08.jpg">}}
 
 8，然后再按住Ctrl+Shift键不放，再鼠标单击下空白区域，表示显示被隐藏的部分。
@@ -41,7 +41,7 @@ Keyword：ZBrush、SliceCurve、Mask、Group
 
 {{< figure src="/img/20170721-[ZBrush]SliceCurve、Mask、Group综合使用实例：制作头盔/[ZBrush]SliceCurve、Mask、Group综合使用实例：制作头盔-11.jpg">}}
 
-10，最后用鼠标再空白区域按住鼠标左键拖拽一下，来取消mask。
+10，最后在空白区域按住鼠标左键拖拽一下，来取消mask。
 {{< figure src="/img/20170721-[ZBrush]SliceCurve、Mask、Group综合使用实例：制作头盔/[ZBrush]SliceCurve、Mask、Group综合使用实例：制作头盔-12.jpg">}}
 
 11，最后按下shift+F，隐藏网格。结束
