@@ -1,5 +1,5 @@
 ---
-title: "[ZBrush]ZModeler常用操作示例"
+title: "[ZBrush]ZModeler常用操作案例"
 date: "2017-07-30T15:31:42+08:00"
 categories:
 - ZBrush
@@ -37,7 +37,7 @@ Keyword：zbrush、zmodeler
 {{< figure src="/img/20170731-[ZBrush]ZModeler常用操作示例/[ZBrush]ZModeler常用操作示例-08.jpg">}}
 
 ##### Inset（Island内插入）
-比如我们想在上面实例的圆柱截面上，插入一根线，效果如下：
+比如我们想在上面示例的圆柱截面上，插入一根线，效果如下：
 {{< figure src="/img/20170731-[ZBrush]ZModeler常用操作示例/[ZBrush]ZModeler常用操作示例-09.jpg">}}
 
 方式：按住空格键不放，弹出菜单中，Action选择Inset、Target选择Flat Island、Modifiers选择Inset Region
@@ -99,7 +99,7 @@ ZModeler的卡边方式：鼠标悬停在线上，Edge Actions选择Bevel，Targ
 以此案例为例，如果圆柱底部的边也需要做同样的卡边，直接单击底部的边线即可：
 {{< figure src="/img/20170731-[ZBrush]ZModeler常用操作示例/[ZBrush]ZModeler常用操作示例-28.jpg">}}
 
-之后再执行Dynamic，边线就不会过度平滑：
+之后再执行Dynamic，棱角就不会被过度平滑：
 {{< figure src="/img/20170731-[ZBrush]ZModeler常用操作示例/[ZBrush]ZModeler常用操作示例-29.jpg">}}
 
 Bevel另外一种常用方式是，将Modifiers选择为Two Rows，如果觉得两条不够，还可以选择Four Rows、Eight Rows。
@@ -133,7 +133,7 @@ Bevel另外一种常用方式是，将Modifiers选择为Two Rows，如果觉得�
 这里我们需要的是横向上的polyloop，所以等显示横向黄线时，按住鼠标拖拽，即可形成一段polyloop：
 {{< figure src="/img/20170731-[ZBrush]ZModeler常用操作示例/[ZBrush]ZModeler常用操作示例-40.jpg">}}
 
-然后再选择QMesh，在这个polyloop拖拽，即可创建出套环效果：
+然后再选择QMesh，在这个polyloop上按住鼠标左键拖拽，即可创建出套环效果：
 {{< figure src="/img/20170731-[ZBrush]ZModeler常用操作示例/[ZBrush]ZModeler常用操作示例-41.jpg">}}
 
 ##### Delete（删除）
@@ -157,7 +157,7 @@ Bevel另外一种常用方式是，将Modifiers选择为Two Rows，如果觉得�
 方式：按住鼠标不放之后，拖拽鼠标之前，按住Ctrl键。
 
 ##### 2，Move继续操作
-比如已经move一次，然后在move一次时，会看到多出来一条线，效果如下：
+比如已经move一次，然后再move一次时，会看到多出来一条线，效果如下：
 {{< figure src="/img/20170731-[ZBrush]ZModeler常用操作示例/[ZBrush]ZModeler常用操作示例-47.jpg">}}
 
 如果想接着上次的Move，继续Move，比如这样：
@@ -189,8 +189,8 @@ Bevel另外一种常用方式是，将Modifiers选择为Two Rows，如果觉得�
 那么执行Dynamic后的效果，左右两边棱角结构也会有差异：
 {{< figure src="/img/20170731-[ZBrush]ZModeler常用操作示例/[ZBrush]ZModeler常用操作示例-56.jpg">}}
 
-要解决这个问题，可以在Dynamic之前，在右面的对应位置，不上一条edge。
+要解决这个问题，可以在Dynamic之前，在右面的对应位置，加上一条edge。
 
 ##### 其他参考
-Polygon Actions的各个用法：  
+Polygon各个Actions的用法：  
 http://docs.pixologic.com/user-guide/3d-modeling/modeling-basics/creating-meshes/zmodeler/zmodeler-actions/polygon-actions/
