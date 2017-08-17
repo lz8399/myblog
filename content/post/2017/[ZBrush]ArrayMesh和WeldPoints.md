@@ -1,5 +1,5 @@
 ---
-title: "[ZBrush]ArrayMesh和WeldPoint"
+title: "[ZBrush]ArrayMesh和WeldPoints"
 date: "2017-08-16T10:40:42+08:00"
 categories:
 - ZBrush
