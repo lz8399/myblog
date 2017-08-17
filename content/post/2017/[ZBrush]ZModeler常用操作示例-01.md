@@ -1,5 +1,5 @@
 ---
-title: "[ZBrush]ZModeler常用操作案例"
+title: "[ZBrush]ZModeler常用操作案例-01"
 date: "2017-07-30T15:31:42+08:00"
 categories:
 - ZBrush
@@ -33,17 +33,23 @@ Keyword：zbrush、zmodeler
 然后按住空格键不放，弹出菜单中，Action选择Move，Target选择Flat Island。
 {{< figure src="/img/20170731-[ZBrush]ZModeler常用操作示例/[ZBrush]ZModeler常用操作示例-07.jpg">}}
 
-然后可以按住鼠标不放，上下移动来压扁或者拉长模型
+然后可以鼠标悬停在面上，按住鼠标不放，上下移动来压扁或者拉长模型
 {{< figure src="/img/20170731-[ZBrush]ZModeler常用操作示例/[ZBrush]ZModeler常用操作示例-08.jpg">}}
 
 ##### Inset（Island内插入）
 比如我们想在上面示例的圆柱截面上，插入一根线，效果如下：
 {{< figure src="/img/20170731-[ZBrush]ZModeler常用操作示例/[ZBrush]ZModeler常用操作示例-09.jpg">}}
 
-方式：按住空格键不放，弹出菜单中，Action选择Inset、Target选择Flat Island、Modifiers选择Inset Region
+方式：先将鼠标悬停在面上，按住空格键不放，弹出菜单中，Action选择Inset、Target选择Flat Island、Modifiers选择Inset Region
 {{< figure src="/img/20170731-[ZBrush]ZModeler常用操作示例/[ZBrush]ZModeler常用操作示例-10.jpg">}}
 
-
+<font color=red>注意：鼠标要悬停在面上且出现一根黄线后再拖动，否则就是另外一种效果。</font>  
+未出现黄线：
+{{< figure src="/img/20170731-[ZBrush]ZModeler常用操作示例/[ZBrush]ZModeler常用操作示例-10-1.jpg">}}
+{{< figure src="/img/20170731-[ZBrush]ZModeler常用操作示例/[ZBrush]ZModeler常用操作示例-10-2.jpg">}}
+出现黄线：
+{{< figure src="/img/20170731-[ZBrush]ZModeler常用操作示例/[ZBrush]ZModeler常用操作示例-10-3.jpg">}}
+{{< figure src="/img/20170731-[ZBrush]ZModeler常用操作示例/[ZBrush]ZModeler常用操作示例-10-4.jpg">}}
 ##### Inset（Polygroup内插入）
 如果想在一个某个Polygroup内部插入，则将Target选择为Polygroup Island，否则每次只能从圆柱体截面的最外面插入。
 {{< figure src="/img/20170731-[ZBrush]ZModeler常用操作示例/[ZBrush]ZModeler常用操作示例-11.jpg">}}
