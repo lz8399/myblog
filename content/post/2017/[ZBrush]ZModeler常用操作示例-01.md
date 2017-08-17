@@ -1,5 +1,5 @@
 ---
-title: "[ZBrush]ZModeler常用操作案例-01"
+title: "[ZBrush]ZModeler常用操作示例-01"
 date: "2017-07-30T15:31:42+08:00"
 categories:
 - ZBrush
