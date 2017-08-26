@@ -38,3 +38,6 @@ Keywords: ZBrush、PolyGroups
 效果：
 {{< figure src="/img/20170118-[ZBrush]PolyGroups使用/[ZBrush]PolyGroups使用-09.jpg">}}
 
+##### 隐藏Group
+如果想要暂时隐藏某些Group，只让某个Group单独显示，以方便编辑，那么可以这样：
+按住Ctrl+Shift键，然后单击需要单独现实的Group，那么该Group之外的所有Group都会隐藏，然后接着再单击一次，则是反向效果：当前Group隐藏掉，其他Group都显示。如果要全部显示，再空白区域按住Ctrl+Shift单击一次。

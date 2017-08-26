@@ -11,7 +11,7 @@ tags= ["UE4"]
     SpawnInfo.Instigator = Instigator;	
     SpawnInfo.ObjectFlags |= RF_Transient;	// We never want to save player controllers into a map
     SpawnInfo.bDeferConstruction = true;
-    APlayerController* NewPC = GetWorld()->SpawnActor<APlayerController>(PlayerControllerClass, SpawnLocation, SpawnRotation, SpawnInfo);
+    AMyPlayerController* NewPC = GetWorld()->SpawnActor<AMyPlayerController>(AMyPlayerController::StaticClass(), SpawnLocation, SpawnRotation, SpawnInfo);
 
 参考自AGameMode::SpawnPlayerController()函数：
 

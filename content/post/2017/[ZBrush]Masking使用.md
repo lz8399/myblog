@@ -64,3 +64,36 @@ Tool -》 Masking -》 Inverse。快捷键Ctrl + I。
 
 如果只想对当前雕刻的那一面起作用，打开：Brush -》 Auto Masking -》 BackfaceMask。
 {{< figure src="/img/20170118-[ZBrush]Masking使用/[ZBrush]Masking使用-16.jpg">}}
+
+##### Group Masking
+**反选**  
+如下图，两个Group，一个被Mask了，一个没有Mask。
+{{< figure src="/img/20170118-[ZBrush]Masking使用/[ZBrush]Masking使用-17.jpg">}}
+如果想反向Mask，即：没有被Mask的Group被Mask，被Mask的Group取消Mask。可以在空白区域点击以下鼠标，即可完成切换。
+{{< figure src="/img/20170118-[ZBrush]Masking使用/[ZBrush]Masking使用-18.jpg">}}
+
+**取消**  
+如果要取消所有的Mask，可以在空白区域拖拽以下鼠标。
+{{< figure src="/img/20170118-[ZBrush]Masking使用/[ZBrush]Masking使用-19.jpg">}}
+{{< figure src="/img/20170118-[ZBrush]Masking使用/[ZBrush]Masking使用-20.jpg">}}
+
+**Mask时排除单个Group**  
+如果所有Group都没有被Mask，希望将某个Group之外的所有Group都Mask，可以先打开Move模式（W键）
+{{< figure src="/img/20170118-[ZBrush]Masking使用/[ZBrush]Masking使用-21.jpg">}}
+然后单击以下想要不被Mask的Group
+{{< figure src="/img/20170118-[ZBrush]Masking使用/[ZBrush]Masking使用-22.jpg">}}
+{{< figure src="/img/20170118-[ZBrush]Masking使用/[ZBrush]Masking使用-23.jpg">}}
+
+**全选**  
+按住Ctrl键，框选所有Group
+{{< figure src="/img/20170118-[ZBrush]Masking使用/[ZBrush]Masking使用-24.jpg">}}
+
+##### 单面Masking
+默认情况下，两个间隔距离非常近的面，如果对其中一个进行mask，则对面的mask也会被mask
+{{< figure src="/img/20170118-[ZBrush]Masking使用/[ZBrush]Masking使用-25.jpg">}}
+{{< figure src="/img/20170118-[ZBrush]Masking使用/[ZBrush]Masking使用-26.jpg">}}
+
+如果希望mask的时候，背对的面不被mask，点击：Brush -》 AutoMasking -》 BackFaceMask。  
+<font color=red>注意：点击的时候按住Ctrl键，表示对Mask笔刷生效。点击的时候选择的是哪个笔刷，则对哪个笔刷生效。</font>
+{{< figure src="/img/20170118-[ZBrush]Masking使用/[ZBrush]Masking使用-27.jpg">}}
+

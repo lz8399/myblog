@@ -94,12 +94,12 @@ MeshInsert Dot Brush使用完毕以后，然后关闭Freeze SubDivision Levels�
 也可以关闭DynaMesh再启用DynaMesh（双击两次，启用前需要Del Lower），通过切换状态来实现网格重新拓扑：
 {{< figure src="/img/20170305-[ZBrush]DynaMesh使用/[ZBrush]DynaMesh使用-22.jpg">}}
 
-##### 2，合并编辑两个Group。
-两个PolyGroup，默认是只能同时编辑一个的，就是说笔刷刷上去，默认只对一个Group有效：
+##### 2，Group的Mask取消。
+两个PolyGroup，当有一个被Mask时（判断是否被Mask，看颜色，颜色加深的就表示被Mask了），则其不可编辑，就是说笔刷刷上去，对该Group无效：
 {{< figure src="/img/20170305-[ZBrush]DynaMesh使用/[ZBrush]DynaMesh使用-23.jpg">}}
 {{< figure src="/img/20170305-[ZBrush]DynaMesh使用/[ZBrush]DynaMesh使用-24.jpg">}}
 
-如果想让笔刷同时对两个Group有效且两个Group不合并，那么可以按上面的例子一样，打开Project之后再执行Re-DynaMesh，这样就可以同时编辑两个Group。
+如果要取消Group的Mask效果，在空白区域拖拽一下鼠标，类似Re-DynaMesh操作。这样就可以同时编辑多个Group。
 {{< figure src="/img/20170305-[ZBrush]DynaMesh使用/[ZBrush]DynaMesh使用-25.jpg">}}
  
 
