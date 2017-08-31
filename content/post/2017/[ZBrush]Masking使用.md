@@ -31,6 +31,15 @@ Tool -》 Masking -》 Inverse。快捷键Ctrl + I。
 ##### 取消mask
 在模型之外的空白区域，点击：Ctrl + 鼠标左键
 
+##### 抹掉Mask
+如果想把Mask区域擦除一部分，可以按住Ctrl + Alt + 鼠标左键。
+{{< figure src="/img/20170118-[ZBrush]Masking使用/[ZBrush]Masking使用-06-1.jpg">}}
+{{< figure src="/img/20170118-[ZBrush]Masking使用/[ZBrush]Masking使用-06-2.jpg">}}
+
+##### Mask区域精度
+如果想让Mask的笔刷刷的时候，精度更精确，也就是说渐变效果不明显，笔刷size多大，mask范围就多大，则可以降低Focal Shift的值。
+{{< figure src="/img/20170118-[ZBrush]Masking使用/[ZBrush]Masking使用-06-3.jpg">}}
+
 ##### Mask的羽化与锐化
 原始mask：
 {{< figure src="/img/20170118-[ZBrush]Masking使用/[ZBrush]Masking使用-07.jpg">}}

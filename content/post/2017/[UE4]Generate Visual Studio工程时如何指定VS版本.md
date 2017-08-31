@@ -14,6 +14,18 @@ UE4 generate visual studio project file cmd
     "%UE4PATH%\Engine\Build\BatchFiles\GenerateProjectFiles.bat" %~dp0\MyProject.uproject -2017
 
 <font color=red>注意：GenerateProjectFiles.bat在源码编译的UE4中，Launcher安装版本的UE4没有GenerateProjectFiles.bat。</font>
+
+【2017-08-31记】  
+今天发现4.17版本用上述方法貌似有问题，会打印一个警告，且最终没有生成任何文件：
+
+     warning MSB3884: Could not find rule set file "ManagedMinimumRules.ruleset"
+     
+解决办法：  
+执行以下命令，末尾参数2017即表示指定VS2017：
+
+    D:/UnrealEngine-4.17.1-release/Engine/Binaries/DotNET/UnrealBuildTool.exe  -projectfiles -project="D:/MyProject/MyProject.uproject" -game -engine -progress -2017
+    
+另外UnrealBuildTool.exe在Launcher安装版本也存在，不需要源码编译的版本。
     
 参考：  
 https://answers.unrealengine.com/questions/579186/what-about-visual-studio-2017-in-ue4.html
