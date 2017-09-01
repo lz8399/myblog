@@ -1,5 +1,5 @@
 ---
-title: "[UE4]如果设置移动版本的材质质量"
+title: "[UE4]如何设置移动版本的材质质量"
 date: "2016-10-21T22:13:40+08:00"
 categories:
 - UnrealEngine4

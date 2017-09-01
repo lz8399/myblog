@@ -1,5 +1,5 @@
 +++
-title= "[UE4]如果获取两点之间的寻路路径(Vector数组)"
+title= "[UE4]如何获取两点之间的寻路路径(Vector数组)"
 date= "2016-06-13T12:18:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
