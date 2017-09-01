@@ -34,7 +34,7 @@ keywords: UE4、Movement
 
     APawn->AddMovementInput(FVector WorldDirection, float ScaleValue = 1.0f, bool bForce = false);
     
-其中WorldDirection时方向，ScaleValue是速率倍速，bForce是忽略Controller中的IgnoreMoveInput属性值，强制移动。
+其中WorldDirection是方向，ScaleValue是速率倍速，bForce表示是否忽略Controller中的IgnoreMoveInput属性值，强制移动。
 
 
 6，
