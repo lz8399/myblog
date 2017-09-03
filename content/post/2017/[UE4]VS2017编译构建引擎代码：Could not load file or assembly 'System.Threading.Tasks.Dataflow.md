@@ -37,4 +37,5 @@ tags:
     Unhandled Exception: Microsoft.Build.Shared.InternalErrorException: MSB0001: Internal MSBuild Error: Throwing from logger shutdown
     =============
     
-原因：没有安装.NET Framework
+原因：没有安装Microsoft Build Tools 2015，vs2017安装器没有包含这个工具，需要单独下载安装：    
+https://www.microsoft.com/en-us/download/details.aspx?id=48159

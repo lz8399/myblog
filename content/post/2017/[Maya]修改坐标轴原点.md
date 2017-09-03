@@ -1,5 +1,5 @@
 +++
-title= "[Maya]修改坐标轴心点"
+title= "[Maya]修改坐标轴原点"
 date= "2017-08-29T20:21:40+08:00"
 categories= ["Maya"]
 tags= ["Modeling"]
