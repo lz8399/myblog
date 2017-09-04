@@ -2,7 +2,7 @@
 title= "[Algorithms]算法题：多个字母任意组合多个新字符串"
 date= "2017-09-03T20:22:28+08:00"
 categories= ["Algorithms"]
-tags= ["Algorithms"]
+tags= ["Algorithms-String"]
 +++
 
 题目：  
