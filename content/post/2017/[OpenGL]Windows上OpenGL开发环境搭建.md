@@ -2,13 +2,15 @@
 title= "[OpenGL]Windows上OpenGL开发环境搭建"
 date= "2017-09-05T16:38:28+08:00"
 categories= ["OpenGL"]
-tags= ["OpenGL"]
+tags= ["Graphics", "OpenGL"]
 +++
 
 
 转载请注明出处：http://www.dawnarc.com/
 
-1，OpenGL Loader Generator下载安装
+网上资料很多都是基于Cygwin来搭建的环境，这里介绍一种非Cygwin搭建Windows上的OpenGL开发环境。
+
+1，OpenGL Loader Generator下载安装  
 OpenGL Loader是一个标准规范，定义了如何在运行时期间加载OpenGL相关函数的指针。 
 这是windows上开发OpenGL程序才需要的lib，因为从1.1版本开始，windows不在对OpenGL
 后续版本的 ABI(application binary interface)提供支持（可能是微软的DX出来后与OGL商业竞争吧），所以开发者无法直接获取OGL新版本的相关函数，不过有好心人写了工具，在运行时期间获取OGL的新版函数，这里介绍两个开源库：  
