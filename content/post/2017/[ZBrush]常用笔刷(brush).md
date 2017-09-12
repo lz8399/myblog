@@ -11,7 +11,7 @@ tags:
 Stand。默认笔刷，表面突起，按住Alt则是凹陷，反向操作。
 {{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-01.png">}}
 
-Dam_Standard。Standard的加强版，且与Standard方向相反，默认是凹陷操作，如果突起按住。同样参数下，Dam_Standard突起或者开挖的强度更大。
+Dam_Standard。Standard的加强版，且与Standard方向相反，默认是凹陷操作，如果想突起按住Alt键。同样参数下，Dam_Standard突起或者开挖的强度更大。
 {{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-02.png">}}
 
 Move。讲表面隆起或下压，或者拖动某个局部位置。

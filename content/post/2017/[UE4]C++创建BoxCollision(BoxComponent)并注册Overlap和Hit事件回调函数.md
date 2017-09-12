@@ -124,7 +124,7 @@ MyCharacter.cpp的构造函数中：
 然后点击Preset下的New：
 {{< figure src="/img/20170515-[UE4]C++创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数/[UE4]C++创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数-06.jpg">}}
 
-Name自己定义，这里的Name就是之前C++代码中设置ProfileName中的名字；CollisionEnabled设置为Collision Enabled；ObjectType设置为上面步骤添加的记录；因为我么这里需要的是Hit事件，不需要Overlap，所以这里的Collision Response设置为Block。
+Name自己定义，这里的Name就是之前C++代码中设置ProfileName中的名字；CollisionEnabled设置为Collision Enabled；ObjectType设置为上面步骤添加的记录；因为我们这里需要的是Hit事件，不需要Overlap，所以这里的Collision Response设置为Block。
 {{< figure src="/img/20170515-[UE4]C++创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数/[UE4]C++创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数-07.jpg">}}
 
 点击Accept之后，就在Preset列表中多了一条记录

@@ -30,7 +30,7 @@ http://glad.dav1d.de/
 https://github.com/g-truc/glm/releases
 
 4，下载GLFW  
-这是一个包含了OpenGL, OpenGL ES和Vulkan的跨平台的开源库，有个库你就可以访问他们的最新函数。
+这是一个提供了OpenGL, OpenGL ES和Vulkan相关接口的跨平台的开源库，有这个库你就可以访问他们的最新API。
 https://github.com/glfw/glfw/releases
 
 5，新建一个C++工程并设置OpenGL相关的头文件和静态库
@@ -41,7 +41,7 @@ https://github.com/glfw/glfw/releases
 指定静态库的目录
 {{< figure src="/img/20170905-[OpenGL]Windows上OpenGL开发环境搭建/[OpenGL]Windows上OpenGL开发环境搭建-02.jpg">}}
 
-在代码需要包含的头文件已经lib：
+在代码需要包含的头文件以及lib：
 
     #include <KHR/khrplatform.h>
     #include <glad/glad.h>

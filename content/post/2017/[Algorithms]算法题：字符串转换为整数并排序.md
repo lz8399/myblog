@@ -34,7 +34,12 @@ tags= ["Algorithms-String", "Algorithms-Sorting"]
             for (size_t i = 0; i < len; i++)
             {
                 char c = str.at(i);
-                int iv = atoi(&c);
+                //判断是不是阿拉伯数字
+                if (c < 48 || c > 57)
+                {
+                    continue;
+                }
+                int iv = c - 48;
                 val += pow(10, (len - 1 - i)) * iv;
             }
 

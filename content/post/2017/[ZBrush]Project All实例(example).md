@@ -15,7 +15,7 @@ Keywords：ZBrush, Project All, Mask, 布线, 投射
 Project All实际应用：
 我们假设有一个布线过的高分模型，但是局部的布线有问题，我们想只对这些局部的重新拓扑，这时就可以使用Project All功能。
 
-演示：
+步骤：  
 1，假设存在一个高分模型，Resolution为128，此时在SubTool中复制一个：
 Tool -》 SubTool -》Duplicate
 {{< figure src="/img/20170416-[ZBrush]Project All实例(example)/[ZBrush]Project All实例(example)-01.jpg">}}
