@@ -8,7 +8,7 @@ tags:
 - API
 ---
 
-keywords: UE4、Overlap、Hit、Event、Callback、C++、Blueprint、Box Collision、BoxComponent、SphereComponent、Trace Channel
+keywords: UE4、Overlap、Hit、Event、Callback、C++、Blueprint、Box Collision、BoxComponent、SphereComponent、Trace Channel、碰撞
 
 ### BoxComponent的Overlap事件
 ##### 1，C++中的代码编写

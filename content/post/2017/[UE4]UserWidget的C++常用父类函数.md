@@ -1,5 +1,5 @@
 ---
-title: "[UE4]UserWidge的C++常用父类函数"
+title: "[UE4]UserWidget的C++常用父类函数"
 date: "2017-05-31T14:13:40+08:00"
 categories:
 - UnrealEngine4

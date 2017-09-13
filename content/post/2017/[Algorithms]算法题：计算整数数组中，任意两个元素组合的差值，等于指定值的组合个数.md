@@ -19,26 +19,25 @@ tags= ["Algorithms-Search"]
         a.push_back(1);
         a.push_back(5);
         a.push_back(3);
+        a.push_back(12);
         a.push_back(4);
+        a.push_back(6);
+        a.push_back(9);
         a.push_back(2);
 
-        int k = 2;
+        int k = 3;
 
         int count = 0;
         std::vector<std::vector<int>> paired_eles(a.size(), std::vector<int>());
         for (size_t i = 0; i < a.size(); i++)
         {
-            for (size_t j = i; j < a.size(); j++)
+            for (size_t j = i + 1; j < a.size(); j++)
             {
-                if (i == j)
-                {
-                    continue;
-                }
-
                 if (abs(a[i] - a[j]) == k)
                 {
                     paired_eles[i].push_back(j);
                     count++;
+                    std::cout << a[i] << "," << a[j] << std::endl;
                 }
             }
         }
@@ -50,5 +49,10 @@ tags= ["Algorithms-Search"]
 
 输出结果：
 
-    3
+    1,4
+    5,2
+    3,6
+    12,9
+    6,9
+    5
     

@@ -5,7 +5,7 @@ categories= ["UnrealEngine4"]
 tags= ["UE4"]
 +++
 
-例子：
+一种不推荐的写法：
 
     FActorSpawnParameters SpawnInfo;
     SpawnInfo.Instigator = Instigator;	
@@ -35,3 +35,9 @@ tags= ["UE4"]
 
         return NewPC;
     }
+    
+推荐写法：
+
+    AMyPlayerController* PC = GetWorld()->SpawnActor<AMyPlayerController>(SpawnLoc, SpawnRot);
+
+因为FActorSpawnParameters的参数非常多，如果自己设置，很可能有些参数设置不不正确导致不可预期的效果。
