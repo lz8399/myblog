@@ -12,7 +12,7 @@ tags:
 问题：
 安装launcher时报错，error 2503 2502
 
-解决版本：
+解决办法：
 管理员模式下的CMD中执行命令：
 
     msiexec /package EpicGamesLauncherInstaller-2.12.24-3321064.msi
