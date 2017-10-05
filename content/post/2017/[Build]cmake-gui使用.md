@@ -20,11 +20,11 @@ tags= ["CMake"]
 {{< figure src="/img/20170906-[Build]cmake-gui使用/[Build]cmake-gui使用-04.jpg">}}
 
 ##### CMAKE相关的配置说明
-+ CMAKE_CONFIGURATION_TYPES**
-CMAKE_CONFIGURATION_TYPES表示VS上的Solution Configurations（Debug/Release等）选项
++ CMAKE_CONFIGURATION_TYPES  
+表示VS上的Solution Configurations（Debug/Release等）选项
 {{< figure src="/img/20170906-[Build]cmake-gui使用/[Build]cmake-gui使用-05.jpg">}}
 
-+ CMAKE_INSTALL_PREFIX
++ CMAKE_INSTALL_PREFIX  
 表示编译后存放的目录，以方便FIND_XXX()方式来查找。
 
 ##### 删除临时文件
