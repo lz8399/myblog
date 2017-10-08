@@ -71,6 +71,39 @@ tags= ["Modeling"]
 然后选中两个物体。
 {{< figure src="/img/20170831-[Maya]Snap操作/[Maya]Snap操作-24.jpg">}}
 
-然后再按住shift键+鼠标右键，选择Target Weld Tool。即可完成缝合
+然后执行Combine（Mesh -》 Combine）
 {{< figure src="/img/20170831-[Maya]Snap操作/[Maya]Snap操作-25.jpg">}}
+
+然后框选要缝合的点。  
+<font color=red>注意：一定要框选，如果一个个单击则选择的是单个点，而不是两个重合的点。</font>
 {{< figure src="/img/20170831-[Maya]Snap操作/[Maya]Snap操作-26.jpg">}}
+
+然后执行Merge，则可以将两个点合并
+{{< figure src="/img/20170831-[Maya]Snap操作/[Maya]Snap操作-27.jpg">}}
+
+为了验证是否真的合并，可以点击选择一个点上下拖动，看是否合并成功
+{{< figure src="/img/20170831-[Maya]Snap操作/[Maya]Snap操作-28.jpg">}}
+{{< figure src="/img/20170831-[Maya]Snap操作/[Maya]Snap操作-29.jpg">}}
+
+如果不成功，则效果是这样的：
+{{< figure src="/img/20170831-[Maya]Snap操作/[Maya]Snap操作-30.jpg">}}
+
+##### Snap to Points 案例2
+假设有这样一个模型
+{{< figure src="/img/20170831-[Maya]Snap操作/[Maya]Snap操作-31.jpg">}}
+
+我们希望下面两条左右两条边变为垂直而不是倾斜，比如这样
+{{< figure src="/img/20170831-[Maya]Snap操作/[Maya]Snap操作-32.jpg">}}
+
+做法：
+1，先选中边
+{{< figure src="/img/20170831-[Maya]Snap操作/[Maya]Snap操作-33.jpg">}}
+2，再选中要移动的轴向
+{{< figure src="/img/20170831-[Maya]Snap操作/[Maya]Snap操作-34.jpg">}}
+3，按住V键不放，并且按住鼠标中间（滚轮），沿选中轴向的方向回来拖动。来回拖动的幅度可能要大一点，幅度小了可能吸附的幅度也较小，看不出效果。
+{{< figure src="/img/20170831-[Maya]Snap操作/[Maya]Snap操作-35.jpg">}}
+拖动过程中，边会自动吸附相应的位置，直到吸附在的我们想要的垂直效果的位置，即算完成。
+{{< figure src="/img/20170831-[Maya]Snap操作/[Maya]Snap操作-36.jpg">}}
+
+`还有另外一种方式来代替上面的第2步和第3步，方式如下：
+按住V键不放，然后鼠标左键单击要移动的轴向箭头并按住不放，然后再沿轴向方向来回拖动。`

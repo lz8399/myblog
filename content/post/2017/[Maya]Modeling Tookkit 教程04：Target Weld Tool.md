@@ -8,7 +8,8 @@ tags= ["Modeling"]
 
 Maya版本为2018
 
-注意：执行Target Weld之前，情确保需要缝合的两个点是同一个Object（可以通过Mesh -》 Combine来缝合），否则无法缝合。  
+注意：<font color=red>执行Target Weld之前，情确保需要缝合的两个点是同一个Object（可以通过Mesh -》 Combine将两个Object合并为一个Object），否则无法缝合。</font>
+
 假设有这样一个模型
 {{< figure src="/img/20171005-[Maya]Modeling Tookkit 教程04：Target Weld Tool/[Maya]Modeling Tookkit 教程04：Target Weld Tool-01.jpg">}}
 
