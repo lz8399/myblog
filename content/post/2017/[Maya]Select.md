@@ -38,3 +38,46 @@ Maya版本为2018
 选择一个面，然后按住shift键，鼠标左键双击另外一个不相邻的面，则表示选中两个面之间的所有面。
 {{< figure src="/img/20170909-[Maya]Select/[Maya]Select-10.jpg">}}
 {{< figure src="/img/20170909-[Maya]Select/[Maya]Select-11.jpg">}}
+
+选择共点面
+比如圆柱体的上下两个面
+{{< figure src="/img/20170909-[Maya]Select/[Maya]Select-12.jpg">}}
+
+批量选择共点面方式有多种：
+
++ 方式1：直接框选  
+    {{< figure src="/img/20170909-[Maya]Select/[Maya]Select-13.jpg">}}
+    缺点是投射的方向也会被框选
+    {{< figure src="/img/20170909-[Maya]Select/[Maya]Select-14.jpg">}}
+
++ 方式2：To Faces  
+    先切换至Vertex，然后选中中心点，按住Ctrl+鼠标右键，选择To Faces -》 To Faces。
+    {{< figure src="/img/20170909-[Maya]Select/[Maya]Select-15.jpg">}}
+    {{< figure src="/img/20170909-[Maya]Select/[Maya]Select-16.jpg">}}
+    {{< figure src="/img/20170909-[Maya]Select/[Maya]Select-17.jpg">}}
+
+
+    同样的方式也可以用来选中共点线，即To Edges。  
+    还可以选择共点点，即To Vertices。  
+
++ 方式3：Ctrl + F11  
+    选中中心点，然后按Ctrl + F11
+    {{< figure src="/img/20170909-[Maya]Select/[Maya]Select-18.jpg">}}
+    {{< figure src="/img/20170909-[Maya]Select/[Maya]Select-19.jpg">}}
+
+    同样的方式，Ctrl + F10是选中所有的共点边
+    {{< figure src="/img/20170909-[Maya]Select/[Maya]Select-20.jpg">}}
+
+    Ctrl + F9是从选中的面或线中选取关联的所有点。  
+    比如这里选中了了圆柱顶部的所有面，现在想选中这些面相关的所有点，则可以按Ctrl+F9
+    {{< figure src="/img/20170909-[Maya]Select/[Maya]Select-21.jpg">}}
+    {{< figure src="/img/20170909-[Maya]Select/[Maya]Select-22.jpg">}}
+
+##### Lasso 套索
+先按Q键，切换到Select Tool模式，然后按住Ctrl+Shift+鼠标右键，选择Lasso
+{{< figure src="/img/20170909-[Maya]Select/[Maya]Select-23.jpg">}}
+
+然后就可以用套索选择点、线、面了。
+{{< figure src="/img/20170909-[Maya]Select/[Maya]Select-24.jpg">}}
+{{< figure src="/img/20170909-[Maya]Select/[Maya]Select-25.jpg">}}
+

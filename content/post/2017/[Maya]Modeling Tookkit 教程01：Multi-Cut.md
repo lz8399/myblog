@@ -48,5 +48,24 @@ Multi-Cut有个参数叫Snap Step，表示在卡边（绘制顶点和边线）�
 {{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程01：Multi-Cut/[Maya]Modeling Tookkit 教程01：Multi-Cut-15.jpg">}}
 {{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程01：Multi-Cut/[Maya]Modeling Tookkit 教程01：Multi-Cut-16.jpg">}}
 
+##### Keyboard/Mouse Shortcuts
+不同的Tool激活后，对应的快捷键提示也会变化，比如Multi-Cut的快捷键如下：
+{{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程01：Multi-Cut/[Maya]Modeling Tookkit 教程01：Multi-Cut-17.jpg">}}
+
+##### Extrude 挤压
+Modeling Toolkit提供了更加快捷的挤压操作：按住Shift + 鼠标左键。  
+打开Multi-Cut之后，再切换到Move Tool（W键），然后就可以操作要挤压的vertex或者edge或者face。
+
++ 挤压顶点：
+{{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程01：Multi-Cut/[Maya]Modeling Tookkit 教程01：Multi-Cut-18.jpg">}}
+
++ 挤压线：
+{{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程01：Multi-Cut/[Maya]Modeling Tookkit 教程01：Multi-Cut-19.jpg">}}
+
++ 挤压面：
+{{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程01：Multi-Cut/[Maya]Modeling Tookkit 教程01：Multi-Cut-20.jpg">}}
+
+
+
 
 

@@ -54,3 +54,16 @@ Shift + 鼠标右键 -》 Create Polygon Tool，或者点击菜单 Mesh Tool -�
 {{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-18.jpg">}}
 {{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-19.jpg">}}
 {{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-20.jpg">}}
+
+##### Insert Edge Loop
+Mesh Tool -》 Insert Edge Loop，或者按住shift+ 鼠标右键-》 Insert Edge Loop Tool，其作用是画出一条环形的线。
+{{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-21.jpg">}}
+{{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-22.jpg">}}
+
+效果
+{{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-23.jpg">}}
+{{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-24.jpg">}}
+
+但是这条环线只穿越四角面，三角面和五角面则会让其终止。比如如下情形：
+{{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-25.jpg">}}
+{{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-26.jpg">}}

@@ -75,3 +75,13 @@ Combine和Separate的菜单位置再Mesh目录下：
 
 其中，镜像时控制顶点缝合的属性是Merge Threshold
 {{< figure src="/img/20171002-[Maya]Mesh/[Maya]Mesh-24.jpg">}}
+
+##### Fill Hole
+假设有这样一个模型，上面有个洞
+{{< figure src="/img/20171002-[Maya]Mesh/[Maya]Mesh-25.jpg">}}
+现在需要补洞，先选中洞的一条边（随便一条即可），然后点击Mesh -》 Fill Hole，或者按住shift键+鼠标右键 -》 Fill Hole，即可完成补洞。
+{{< figure src="/img/20171002-[Maya]Mesh/[Maya]Mesh-26.jpg">}}
+{{< figure src="/img/20171002-[Maya]Mesh/[Maya]Mesh-27.jpg">}}
+{{< figure src="/img/20171002-[Maya]Mesh/[Maya]Mesh-28.jpg">}}
+
+
