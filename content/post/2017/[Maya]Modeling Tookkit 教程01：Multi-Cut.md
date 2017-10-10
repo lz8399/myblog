@@ -6,11 +6,12 @@ tags= ["Modeling"]
 +++
 
 Maya版本为2018
+
 点击右上角的Toolkit图标，打开Modeling Toolkit面板。
 {{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程01：Multi-Cut/[Maya]Modeling Tookkit 教程01：Multi-Cut-01.jpg">}}
 {{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程01：Multi-Cut/[Maya]Modeling Tookkit 教程01：Multi-Cut-02.jpg">}}
 
-下面讲解Multi-Cut的用法。
+下面讲解Multi-Cut的用法。  
 先新建一个正方体
 {{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程01：Multi-Cut/[Maya]Modeling Tookkit 教程01：Multi-Cut-03.jpg">}}
 然后点击Multi-Cut
