@@ -20,8 +20,12 @@ tags= ["Shading", "Graphics", "OpenGL"]
 
 3，编译Shader代码到Shader对象中
 
+    // Load the source code into the shader object
     const GLchar* codeArray[] = {codeStr.c_str()};
     glShaderSource(vertShader, 1, codeArray, NULL);
+
+    // Compile the shader
+    glCompileShader( fragShader );
 
 4，Shader链接  
 4.1 创建program对象

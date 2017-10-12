@@ -7,7 +7,7 @@ tags= ["Modeling"]
 
 Maya版本为2018
 
-要使用Quad Draw，必须先保证场景用有个存在的Mesh或者Live Surface。  
+要使用Quad Draw，必须先保证场景有个存在的Mesh或者Live Surface。  
 这里我们先新建一个Plane。
 {{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程02：Quad Draw/[Maya]Modeling Tookkit 教程02：Quad Draw-01.jpg">}}
 
