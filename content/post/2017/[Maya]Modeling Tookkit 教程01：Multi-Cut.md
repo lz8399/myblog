@@ -28,7 +28,7 @@ Maya版本为2018
 绘制过程中，起点和终点必须都在原有的模型得到边或者顶点上，如果终点还没有连接其他顶点或边线，则表示绘制还没结束，此时可以接着修改当前新顶点的位置：光标悬停在顶点上，顶点变成红色后，按住鼠标左键拖动。
 {{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程01：Multi-Cut/[Maya]Modeling Tookkit 教程01：Multi-Cut-08.jpg">}}
 
-当终点连接顶点或者边线后，则可以完成这一次绘制，单击鼠标右键，表示绘制结束
+当终点连接顶点或者边线后，则可以完成这一次绘制，鼠标右键单击物体，表示绘制结束
 {{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程01：Multi-Cut/[Maya]Modeling Tookkit 教程01：Multi-Cut-09.jpg">}}
 {{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程01：Multi-Cut/[Maya]Modeling Tookkit 教程01：Multi-Cut-10.jpg">}}
 
@@ -39,6 +39,15 @@ Maya版本为2018
 
 来回移动光标，该黄线会自动跟随光标移动，等确定位置后，单击下鼠标左键，即可绘制出一条环绕的边线。
 {{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程01：Multi-Cut/[Maya]Modeling Tookkit 教程01：Multi-Cut-13.jpg">}}
+
+
+##### 绘制投射环线
+按住鼠标左键拖拽
+{{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程01：Multi-Cut/[Maya]Modeling Tookkit 教程01：Multi-Cut-13-02.jpg">}}
+脱出一条线后松开鼠标，就可以在物体上投射出一条环线
+{{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程01：Multi-Cut/[Maya]Modeling Tookkit 教程01：Multi-Cut-13-03.jpg">}}
+划线的时候，如果希望直线以固定角度旋转，拖拽鼠标左键的时候按住Shift。默认旋转间隔为10度，修改Snap Step，值表示多少度，例如60就表示每次旋转的间隔为60度。
+{{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程01：Multi-Cut/[Maya]Modeling Tookkit 教程01：Multi-Cut-13-04.jpg">}}
 
 ##### Snap Step （按住Shift键才生效）
 Multi-Cut有个参数叫Snap Step，表示在卡边（绘制顶点和边线）时，光标可以自动吸附边线的均等份位置上，前提时按住Shift键。  

@@ -17,3 +17,11 @@ Maya新建物体后，默认是没有材质效果的，如果想看下简单的�
 
 左边为默认着色效果，右边为Blinn材质的着色效果。
 {{< figure src="/img/20171008-[Maya]Lighting & Shading/[Maya]Lighting & Shading-03.jpg">}}
+
+##### Two Sided Lighting
+默认情况下，如果删除了模型的某个面，则其内部的面会显示为黑色，这样的好处是可以观察法线方向。
+{{< figure src="/img/20171008-[Maya]Lighting & Shading/[Maya]Lighting & Shading-04.jpg">}}
+
+如果希望内部的面也像正常面一样显示为灰色，则点击Lighting -》 Two Sided Lighting
+{{< figure src="/img/20171008-[Maya]Lighting & Shading/[Maya]Lighting & Shading-05.jpg">}}
+{{< figure src="/img/20171008-[Maya]Lighting & Shading/[Maya]Lighting & Shading-06.jpg">}}

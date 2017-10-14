@@ -13,6 +13,8 @@ keywords= ["UE4", "Replication", "Relicate", "reliable", "RPC", "RTS Movement", 
 需要现在unrealengine官网上注册并加入github开发组才有权限进入下面地址。  
 https://github.com/EpicGames/UnrealEngine/tags  
 
+{{< alert warning >}}注意：编译专用服务器，只能用源码编译版本的引擎，安装版本的引擎无法编译Server。{{< /alert >}}
+
 
 打开页面后下载一个最新的release版本，解压出来后先运行Setup.bat，会自动下载资源文件，大概有几个G，下载完以后，然后再运行GenerateProjectFiles.bat，会生成VS工程文件，这里假设你已经安装好了VS，我用的vs2015旗舰版，生成完以后打开VS，build类型选择debuggame editor或者development editor，并编译。
  
