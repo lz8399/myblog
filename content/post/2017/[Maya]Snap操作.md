@@ -18,6 +18,11 @@ tags= ["Modeling"]
 {{< figure src="/img/20170831-[Maya]Snap操作/[Maya]Snap操作-05.jpg">}}
 {{< figure src="/img/20170831-[Maya]Snap操作/[Maya]Snap操作-06.jpg">}}
 
+##### Snap To Grids 技巧1
+比如你想用Multi-Cut沿着网格投射出一条线，但是你希望的投射线段的起点对应的Grid网格正好再模型内部且周围点和线较多（途中黄圈部位），这是你把鼠标悬停在这个网格位置处，maya不一定会自动帮你吸附到这个网格，这个时候的解决办法为：
+从模型外的网格投射，然后再删掉不想要的部分。比如把图中两个红圈所示的位置当作起点进行投射，这样maya就会自动帮你吸附在这两个位置处。
+{{< figure src="/img/20170831-[Maya]Snap操作/[Maya]Snap操作-06-02.jpg">}}
+
 ##### Snap To Curves（快捷键C按住不放）
 假设有个场景有个平面物体。我们在物体旁边画一条曲线。  
 先点击：Create -》 Curve Tools -》 CV Curve Tool，
