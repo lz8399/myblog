@@ -42,6 +42,23 @@ Shift + 鼠标右键 -》 Create Polygon Tool，或者点击菜单 Mesh Tool -�
 {{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-14.jpg">}}
 重复这些步骤直至所有桥接的边完成。
 
+##### Append To Polygon的注意事项
+如果物体的洞的边沿线上有较多的点，例如这样
+{{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-14-02.jpg">}}
+那么append的时候，应该以这些点为基准逐个逐个append
+{{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-14-03.jpg">}}
+{{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-14-04.jpg">}}
+{{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-14-05.jpg">}}
+{{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-14-06.jpg">}}
+
+如果这些布线不是想要的，则可以删掉再重新布线
+{{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-14-07.jpg">}}
+{{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-14-08.jpg">}}
+
+{{< alert danger >}}如果是直接越过这些点一次性append完成，则这些点不会被缝合{{< /alert >}}
+{{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-14-09.jpg">}}
+{{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-14-10.jpg">}}
+
 ##### Multi-Cut（快捷键Ctrl+shift+X，对应maya旧版本中的Cut Face Tool）
 点击Mesh Tools -》 Multi-Cut，然后再按住鼠标左键不放拖动
 {{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-15.jpg">}}

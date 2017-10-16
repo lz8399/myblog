@@ -25,3 +25,5 @@ Maya新建物体后，默认是没有材质效果的，如果想看下简单的�
 如果希望内部的面也像正常面一样显示为灰色，则点击Lighting -》 Two Sided Lighting
 {{< figure src="/img/20171008-[Maya]Lighting & Shading/[Maya]Lighting & Shading-05.jpg">}}
 {{< figure src="/img/20171008-[Maya]Lighting & Shading/[Maya]Lighting & Shading-06.jpg">}}
+但是不建议这样做，因为这样做出来的模型倒入引擎后，模型会显示为半透明，当然在引擎中可以调整贴图属性来修复模型透明的问题，比如在UE4中可以通过Blend Mode属性，但是这种搞法终究不正规。
+

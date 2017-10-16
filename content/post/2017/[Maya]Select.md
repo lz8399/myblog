@@ -81,3 +81,21 @@ Maya版本为2018
 {{< figure src="/img/20170909-[Maya]Select/[Maya]Select-24.jpg">}}
 {{< figure src="/img/20170909-[Maya]Select/[Maya]Select-25.jpg">}}
 
+##### 加选、减选、强制加选
+以Face面选择为例，此方式同样适用与点和边的选择
+
++ 加选：Shift+鼠标左键框选。如果框选的区域之前未选中，则框选后变为选中
+{{< figure src="/img/20170909-[Maya]Select/[Maya]Select-26.jpg">}}
+{{< figure src="/img/20170909-[Maya]Select/[Maya]Select-27.jpg">}}
+{{< figure src="/img/20170909-[Maya]Select/[Maya]Select-28.jpg">}}
+
++ 减选：Ctrl+鼠标左键框选。如果框选的区域之前已经选中，则框选后变为未选中
+{{< figure src="/img/20170909-[Maya]Select/[Maya]Select-29.jpg">}}
+{{< figure src="/img/20170909-[Maya]Select/[Maya]Select-30.jpg">}}
+{{< figure src="/img/20170909-[Maya]Select/[Maya]Select-31.jpg">}}
+
++ 强制加选：Ctrl+Shift+鼠标左键框选。不管框选的点线面有没被选中，统一变为选中
+{{< figure src="/img/20170909-[Maya]Select/[Maya]Select-32.jpg">}}
+{{< figure src="/img/20170909-[Maya]Select/[Maya]Select-33.jpg">}}
+{{< figure src="/img/20170909-[Maya]Select/[Maya]Select-34.jpg">}}
+
