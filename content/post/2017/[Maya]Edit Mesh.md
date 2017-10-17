@@ -10,7 +10,7 @@ Maya版本为2018
 {{< figure src="/img/20170908-[Maya]Edit Mesh/[Maya]Edit Mesh-01.jpg">}}
 
 ##### Extrude 挤压
-表示在原有问题上挤压出新的形状。
+表示在原有物体上挤压出新的形状。
 先选中需要挤压的面
 {{< figure src="/img/20170908-[Maya]Edit Mesh/[Maya]Edit Mesh-02.jpg">}}
 
@@ -39,6 +39,25 @@ Thickness=3
 {{< figure src="/img/20170908-[Maya]Edit Mesh/[Maya]Edit Mesh-12.jpg">}}
 然后鼠标悬停在输入栏，光标会变成表示可左右拖动的样式，然后按住鼠标左键左右拖动
 {{< figure src="/img/20170908-[Maya]Edit Mesh/[Maya]Edit Mesh-13.jpg">}}
+
+##### Extrude挤压和Scale伸缩结合使用
+假设我们想用圆柱体挤压出这样的效果
+{{< figure src="/img/20170908-[Maya]Edit Mesh/[Maya]Edit Mesh-13-02.jpg">}}
+
+方式如下：  
+先选中面，然后Ctrl+E挤压
+{{< figure src="/img/20170908-[Maya]Edit Mesh/[Maya]Edit Mesh-13-03.jpg">}}
+{{< figure src="/img/20170908-[Maya]Edit Mesh/[Maya]Edit Mesh-13-04.jpg">}}
+
+此时不用拖动坐标轴，而是按下R键切换到Scale模式
+{{< figure src="/img/20170908-[Maya]Edit Mesh/[Maya]Edit Mesh-13-05.jpg">}}
+
+然后按住中间的黄色小方块拖拽
+{{< figure src="/img/20170908-[Maya]Edit Mesh/[Maya]Edit Mesh-13-06.jpg">}}
+
+然后再按Ctrl+E，然后再拖动向上的坐标轴
+{{< figure src="/img/20170908-[Maya]Edit Mesh/[Maya]Edit Mesh-13-07.jpg">}}
+{{< figure src="/img/20170908-[Maya]Edit Mesh/[Maya]Edit Mesh-13-08.jpg">}}
 
 ##### Extract提取
 表示将面从物体中分离并提取出来。
