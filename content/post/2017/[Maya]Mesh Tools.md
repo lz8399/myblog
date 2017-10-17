@@ -59,6 +59,10 @@ Shift + 鼠标右键 -》 Create Polygon Tool，或者点击菜单 Mesh Tool -�
 {{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-14-09.jpg">}}
 {{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-14-10.jpg">}}
 
+{{< alert success >}}补洞后焊接还有另外一种处理方式：把边挤压多次（例如当前示例中需要挤压4次），每挤压一次，手动将两边的顶点焊接一下。挤压的时候记得按住V键，确保挤压出来的点与目标位置吸附在一起。{{< /alert >}}
+{{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-14-11.jpg">}}
+{{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-14-12.jpg">}}
+
 ##### Multi-Cut（快捷键Ctrl+shift+X，对应maya旧版本中的Cut Face Tool）
 点击Mesh Tools -》 Multi-Cut，然后再按住鼠标左键不放拖动
 {{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-15.jpg">}}

@@ -99,3 +99,10 @@ Maya版本为2018
 {{< figure src="/img/20170909-[Maya]Select/[Maya]Select-33.jpg">}}
 {{< figure src="/img/20170909-[Maya]Select/[Maya]Select-34.jpg">}}
 
+##### 全选和取消全选
+快捷键Ctrl + Shift + A，表示选中场景内所有的模型。
+Alt + D，取消所有选择。
+{{< figure src="/img/20170909-[Maya]Select/[Maya]Select-35.jpg">}}
+
+
+

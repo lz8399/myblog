@@ -84,4 +84,11 @@ Combine和Separate的菜单位置再Mesh目录下：
 {{< figure src="/img/20171002-[Maya]Mesh/[Maya]Mesh-27.jpg">}}
 {{< figure src="/img/20171002-[Maya]Mesh/[Maya]Mesh-28.jpg">}}
 
+##### Mesh Smooth
+{{< figure src="/img/20171002-[Maya]Mesh/[Maya]Mesh-29.jpg">}}
+一个正方体被Smooth之后的效果：
+{{< figure src="/img/20171002-[Maya]Mesh/[Maya]Mesh-30.jpg">}}
+
+可以多次执行Smooth，执行次数越多则模型会圆滑：
+{{< figure src="/img/20171002-[Maya]Mesh/[Maya]Mesh-31.jpg">}}
 
