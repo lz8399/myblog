@@ -63,7 +63,7 @@ CPP：
 登陆界面：
 {{< figure src="/img/20170225-[UE4]RTS游戏的位移同步示例（Replication和RPC）/[UE4]RTS游戏的位移同步示例（Replication和RPC）-02.jpg">}}
 
-多个客户端脸上服务端的最终情景：
+多个客户端连上服务端的最终情景：
 {{< figure src="/img/20170225-[UE4]RTS游戏的位移同步示例（Replication和RPC）/[UE4]RTS游戏的位移同步示例（Replication和RPC）-03.jpg">}}
 
 #### 同步相关的基础概念

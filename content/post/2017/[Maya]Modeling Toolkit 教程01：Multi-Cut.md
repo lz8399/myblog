@@ -1,5 +1,5 @@
 +++
-title= "[Maya]Modeling Tookkit 教程01：Multi-Cut"
+title= "[Maya]Modeling Toolkit 教程01：Multi-Cut"
 date= "2017-10-02T19:37:40+08:00"
 categories= ["Maya"]
 tags= ["Modeling"]

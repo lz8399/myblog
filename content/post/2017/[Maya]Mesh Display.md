@@ -19,3 +19,7 @@ Maya版本为2018
 如果希望将这些黑色面的法线方向反转，选中面以后，点击：Mesh Display -》 Reverse。
 {{< figure src="/img/20171017-[Maya]Mesh Display/[Maya]Mesh Display-04.jpg">}}
 {{< figure src="/img/20171017-[Maya]Mesh Display/[Maya]Mesh Display-05.jpg">}}
+
+Reverse的Hotbox为：按住Shift+鼠标右键 -》 Face Normals -》 Reverse Normals。
+{{< figure src="/img/20171017-[Maya]Mesh Display/[Maya]Mesh Display-06.jpg">}}
+{{< figure src="/img/20171017-[Maya]Mesh Display/[Maya]Mesh Display-07.jpg">}}

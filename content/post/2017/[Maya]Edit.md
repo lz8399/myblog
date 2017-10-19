@@ -34,5 +34,33 @@ tags= ["Modeling"]
 ##### Duplicated Special 特殊复制（Ctrl + Shift + D）
 {{< figure src="/img/20170829-[Maya]Edit/[Maya]Edit-08.jpg">}}
 
-打开其参数面板后，可以设置复制时旋转的角度和个数，然后一次性生成。相当于Shift+D的批量执行。
+打开其参数面板后，可以设置复制时旋转的角度和个数等信息，然后一次性生成。相当于Shift+D的批量执行。
 {{< figure src="/img/20170829-[Maya]Edit/[Maya]Edit-09.jpg">}}
+
+##### Duplicated Special之Instance
+假设我们有这个细分级别为20的圆柱
+{{< figure src="/img/20170829-[Maya]Edit/[Maya]Edit-10.jpg">}}
+
+现在只保留一个细分段，其他都删掉
+{{< figure src="/img/20170829-[Maya]Edit/[Maya]Edit-11.jpg">}}
+
+然后设置参数：
+
++ Geometry type修改为Instance；
++ 修改旋转角度，因为我们细分级别是20,360度除以20等于18；
++ 复制一圈需要20个，所以还需要再复制19个。
+{{< figure src="/img/20170829-[Maya]Edit/[Maya]Edit-12.jpg">}}
+
+这样复制出来的的每个小块，就可以同时编辑了
+{{< figure src="/img/20170829-[Maya]Edit/[Maya]Edit-13.jpg">}}
+
+比如选中任意某个顶点，就会自动选中一圈的所有顶点
+{{< figure src="/img/20170829-[Maya]Edit/[Maya]Edit-14.jpg">}}
+
+移动一个顶点，其他顶点也会做轴对称移动
+{{< figure src="/img/20170829-[Maya]Edit/[Maya]Edit-15.jpg">}}
+
+操作面或线时也会有轴对称变化的效果
+{{< figure src="/img/20170829-[Maya]Edit/[Maya]Edit-16.jpg">}}
+
+{{< alert warning >}}注意：复制出来的对象都是一个个独立的Object，如果要最终合并下，需要执行Combine。{{< /alert >}}

@@ -40,7 +40,7 @@ Thickness=3
 然后鼠标悬停在输入栏，光标会变成表示可左右拖动的样式，然后按住鼠标左键左右拖动
 {{< figure src="/img/20170908-[Maya]Edit Mesh/[Maya]Edit Mesh-13.jpg">}}
 
-##### Extrude挤压和Scale伸缩结合使用
+##### 平面内卡环线的技巧：Extrude挤压和Scale伸缩结合使用
 假设我们想用圆柱体挤压出这样的效果
 {{< figure src="/img/20170908-[Maya]Edit Mesh/[Maya]Edit Mesh-13-02.jpg">}}
 
@@ -58,6 +58,9 @@ Thickness=3
 然后再按Ctrl+E，然后再拖动向上的坐标轴
 {{< figure src="/img/20170908-[Maya]Edit Mesh/[Maya]Edit Mesh-13-07.jpg">}}
 {{< figure src="/img/20170908-[Maya]Edit Mesh/[Maya]Edit Mesh-13-08.jpg">}}
+
+这种方式同样可以用凹槽效果的底边卡线
+{{< figure src="/img/20170908-[Maya]Edit Mesh/[Maya]Edit Mesh-13-09.jpg">}}
 
 ##### Extract提取
 表示将面从物体中分离并提取出来。

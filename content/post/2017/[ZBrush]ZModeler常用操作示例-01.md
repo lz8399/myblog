@@ -88,7 +88,7 @@ Keyword：zbrush、zmodeler
 {{< figure src="/img/20170731-[ZBrush]ZModeler常用操作示例/[ZBrush]ZModeler常用操作示例-21.jpg">}}
 {{< figure src="/img/20170731-[ZBrush]ZModeler常用操作示例/[ZBrush]ZModeler常用操作示例-22.jpg">}}
 
-##### Bevel（卡边）
+##### Bevel（倒角）
 一个模型的棱角如果不卡边，比如这样：
 {{< figure src="/img/20170731-[ZBrush]ZModeler常用操作示例/[ZBrush]ZModeler常用操作示例-23.jpg">}}
 

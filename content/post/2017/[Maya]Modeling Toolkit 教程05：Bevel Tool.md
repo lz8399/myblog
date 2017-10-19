@@ -1,5 +1,5 @@
 +++
-title= "[Maya]Modeling Tookkit 教程05：Bevel Tool"
+title= "[Maya]Modeling Toolkit 教程05：Bevel Tool"
 date= "2017-10-06T09:58:40+08:00"
 categories= ["Maya"]
 tags= ["Modeling"]
@@ -26,6 +26,10 @@ Maya版本为2018
 也可以把Offset as Fraction关掉，通过Offset来设置倒角的大小，效果一样。
 {{< figure src="/img/20171006-[Maya]Modeling Tookkit 教程05：Bevel Tool/[Maya]Modeling Tookkit 教程05：Bevel Tool-07.jpg">}}
 {{< figure src="/img/20171006-[Maya]Modeling Tookkit 教程05：Bevel Tool/[Maya]Modeling Tookkit 教程05：Bevel Tool-08.jpg">}}
+
+##### Segments 倒角密度
+{{< figure src="/img/20171006-[Maya]Modeling Tookkit 教程05：Bevel Tool/[Maya]Modeling Tookkit 教程05：Bevel Tool-08-02.jpg">}}
+{{< figure src="/img/20171006-[Maya]Modeling Tookkit 教程05：Bevel Tool/[Maya]Modeling Tookkit 教程05：Bevel Tool-08-03.jpg">}}
 
 ##### Depth 倒角方向
 {{< figure src="/img/20171006-[Maya]Modeling Tookkit 教程05：Bevel Tool/[Maya]Modeling Tookkit 教程05：Bevel Tool-09.jpg">}}

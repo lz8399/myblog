@@ -1,5 +1,5 @@
 +++
-title= "[Maya]Modeling Tookkit 教程02：Quad Draw"
+title= "[Maya]Modeling Toolkit 教程02：Quad Draw"
 date= "2017-10-02T22:09:40+08:00"
 categories= ["Maya"]
 tags= ["Modeling"]
