@@ -27,7 +27,7 @@ Toolkit中的Symmetry是用来控制对称的，默认是关闭的
 {{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程03：Symmetry Tool/[Maya]Modeling Tookkit 教程03：Symmetry Tool-07.jpg">}}
 {{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程03：Symmetry Tool/[Maya]Modeling Tookkit 教程03：Symmetry Tool-08.jpg">}}
 
-+ 方式2：W键+鼠标右键
++ 方式2：W键+鼠标左键
 {{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程03：Symmetry Tool/[Maya]Modeling Tookkit 教程03：Symmetry Tool-09.jpg">}}
 {{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程03：Symmetry Tool/[Maya]Modeling Tookkit 教程03：Symmetry Tool-10.jpg">}}
 
