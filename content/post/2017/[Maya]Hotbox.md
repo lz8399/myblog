@@ -5,6 +5,8 @@ categories= ["Maya"]
 tags= ["Modeling"]
 +++
 
+Maya版本为2018
+
 Hotbox是maya的招牌功能，用的熟练可以提高建模效率。
 
 按下空格键不放，会弹出快捷菜单
@@ -14,10 +16,33 @@ Hotbox是maya的招牌功能，用的熟练可以提高建模效率。
 {{< figure src="/img/20170831-[Maya]Hotbox/[Maya]Hotbox-02.jpg">}}
 
 按住Ctrl或者Shift或者Ctrl+Shift，再按鼠标右键都可以弹出hotbox菜单，选中的组件类型（Vertex、Edge、Face）不同，弹出的菜单也不同。
-另外按之前基础操作类型（Q、W、E、R键），弹出的hotbox菜单也可能不同。例如下面三种菜单是Select Tool模式（Q键）下，选中Face后，分别按Shift、Ctrl、Ctrl+Shift，再按鼠标右键时的菜单：
+
+##### 选中Vertex
+分别按Shift、Ctrl，再按鼠标右键时的菜单：（选中Vertex后，Ctrl+Shift+右键无任何菜单）
 {{< figure src="/img/20170831-[Maya]Hotbox/[Maya]Hotbox-03.jpg">}}
+
+##### 选中Edge
+分别按Shift、Ctrl，再按鼠标右键时的菜单：
 {{< figure src="/img/20170831-[Maya]Hotbox/[Maya]Hotbox-04.jpg">}}
+
+##### 选中Face
+分别按Shift、Ctrl，再按鼠标右键时的菜单：
 {{< figure src="/img/20170831-[Maya]Hotbox/[Maya]Hotbox-05.jpg">}}
 
+Vertex、Edge、Face三者的Ctrl+鼠标右键相同：
+{{< figure src="/img/20170831-[Maya]Hotbox/[Maya]Hotbox-06.jpg">}}
+
+##### Q、W、E、R（即Select、Move、Rotate、Scale四种模式与点、线、面是否选中无关）+鼠标左键
+Q键+鼠标左键，或者Ctrl+Shift+鼠标右键。
+{{< figure src="/img/20170831-[Maya]Hotbox/[Maya]Hotbox-07.jpg">}}
+
+W键+鼠标左键
+{{< figure src="/img/20170831-[Maya]Hotbox/[Maya]Hotbox-08.jpg">}}
+
+E键+鼠标左键
+{{< figure src="/img/20170831-[Maya]Hotbox/[Maya]Hotbox-09.jpg">}}
+
+R键+鼠标左键
+{{< figure src="/img/20170831-[Maya]Hotbox/[Maya]Hotbox-10.jpg">}}
 
 
