@@ -76,6 +76,34 @@ Combine和Separate的菜单位置再Mesh目录下：
 其中，镜像时控制顶点缝合的属性是Merge Threshold
 {{< figure src="/img/20171002-[Maya]Mesh/[Maya]Mesh-24.jpg">}}
 
+##### Mirror的相关参数
+假设有这样一个物体，现在需要做镜像处理
+{{< figure src="/img/20171002-[Maya]Mesh/[Maya]Mesh-24-02.jpg">}}
+{{< figure src="/img/20171002-[Maya]Mesh/[Maya]Mesh-24-03.jpg">}}
+
+期望的效果如下：以世界坐标轴原点为基准，在X轴方向做对称
+{{< figure src="/img/20171002-[Maya]Mesh/[Maya]Mesh-24-04.jpg">}}
+
+则需要修改的参数为：
+
++ Mirror Axis Position修改为World
++ Combine With Original取消勾选
+{{< figure src="/img/20171002-[Maya]Mesh/[Maya]Mesh-24-05.jpg">}}
+
+如果期望效果如下：以物体自身坐标轴原点为基准，在X轴方向上做对称。
+{{< figure src="/img/20171002-[Maya]Mesh/[Maya]Mesh-24-06.jpg">}}
+
+则需要修改的参数为：
+
++ Mirror Axis Position修改为Object
++ Combine With Original取消勾选
+{{< figure src="/img/20171002-[Maya]Mesh/[Maya]Mesh-24-07.jpg">}}
+
+{{< alert danger >}} 注意，如果物体的结构比较复杂或者不规则时，镜像时需要关掉Cut Geometry，否则maya会自动刚你 {{< /alert >}}
+
+官方文档：Mirror Settings  
+https://knowledge.autodesk.com/support/maya-lt/learn-explore/caas/CloudHelp/cloudhelp/2016/ENU/MayaLT/files/GUID-E66AE3D8-3B9C-4D4E-9A3E-5BDAFCD67F1D-htm.html
+
 ##### Fill Hole
 假设有这样一个模型，上面有个洞
 {{< figure src="/img/20171002-[Maya]Mesh/[Maya]Mesh-25.jpg">}}

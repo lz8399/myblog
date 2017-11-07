@@ -5,7 +5,10 @@ categories= ["Maya"]
 tags= ["Modeling"]
 +++
 
-布线结构
+结构预览
 {{< figure src="/img/20171029-[Maya]复杂结构的倒角硬化/[Maya]复杂结构的倒角硬化-01.jpg">}}
-平滑后效果
 {{< figure src="/img/20171029-[Maya]复杂结构的倒角硬化/[Maya]复杂结构的倒角硬化-02.jpg">}}
+{{< figure src="/img/20171029-[Maya]复杂结构的倒角硬化/[Maya]复杂结构的倒角硬化-03.jpg">}}
+
+布线结构
+{{< figure src="/img/20171029-[Maya]复杂结构的倒角硬化/[Maya]复杂结构的倒角硬化-04.jpg">}}

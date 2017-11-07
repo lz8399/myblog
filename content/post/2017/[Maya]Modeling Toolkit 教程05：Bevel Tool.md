@@ -37,6 +37,23 @@ Maya版本为2018
 {{< figure src="/img/20171006-[Maya]Modeling Tookkit 教程05：Bevel Tool/[Maya]Modeling Tookkit 教程05：Bevel Tool-11.jpg">}}
 
 
+##### Bevel的Hotbox
+选中Edge后，Shift按住不放+鼠标右键
+{{< figure src="/img/20171006-[Maya]Modeling Tookkit 教程05：Bevel Tool/[Maya]Modeling Tookkit 教程05：Bevel Tool-12.jpg">}}
 
-polyBevel  
+##### Bevel处理棱角的三种效果
+假设一个正方体，准备对其三条边线进行倒角
+{{< figure src="/img/20171006-[Maya]Modeling Tookkit 教程05：Bevel Tool/[Maya]Modeling Tookkit 教程05：Bevel Tool-13.jpg">}}
+分3中情况：
+
++ 1，选中三条边同时倒角。这样棱角就是一个三角形
+{{< figure src="/img/20171006-[Maya]Modeling Tookkit 教程05：Bevel Tool/[Maya]Modeling Tookkit 教程05：Bevel Tool-14.jpg">}}
++ 2，三条边线逐个倒角。
+{{< figure src="/img/20171006-[Maya]Modeling Tookkit 教程05：Bevel Tool/[Maya]Modeling Tookkit 教程05：Bevel Tool-15.jpg">}}
++ 3，先选中两条边进行倒角，然后再对第三条倒角。这样棱角就是一个正方形
+{{< figure src="/img/20171006-[Maya]Modeling Tookkit 教程05：Bevel Tool/[Maya]Modeling Tookkit 教程05：Bevel Tool-16.jpg">}}
+
+{{< alert danger >}} 不建议用第二种和第三种，因为这样会产生五边面，结构复杂了以后要处理很多五边面、六边面。 {{< /alert >}}
+
+##### polyBevel官方文档  
 https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2018/ENU/Maya-Modeling/files/GUID-40E32F44-1EB9-4DC6-8EE4-6A013EEC626F-htm.html

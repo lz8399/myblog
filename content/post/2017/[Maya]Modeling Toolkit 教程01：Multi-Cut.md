@@ -32,6 +32,10 @@ Maya版本为2018
 {{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程01：Multi-Cut/[Maya]Modeling Tookkit 教程01：Multi-Cut-09.jpg">}}
 {{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程01：Multi-Cut/[Maya]Modeling Tookkit 教程01：Multi-Cut-10.jpg">}}
 
+##### 边线上添加顶点
+在边线上点击后可以按住鼠标，回来拖动来移动新添加的顶点的位置，此时会有个百分比显示当前顶点在边线上的位置。
+{{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程01：Multi-Cut/[Maya]Modeling Tookkit 教程01：Multi-Cut-10-02.jpg">}}
+
 ##### 绘制环绕边线
 光标悬停在某条边线，边线变红色，按住Ctrl键不放，此时会出现一条黄色的环绕边线
 {{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程01：Multi-Cut/[Maya]Modeling Tookkit 教程01：Multi-Cut-11.jpg">}}
