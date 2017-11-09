@@ -53,7 +53,11 @@ UMG使用步骤如下：
 再找到Parent Class，设置为之前创建的C++类：MyUserWidget。
 {{< figure src="/img/20171108-[UE4]UMG使用实例(C++)/[UE4]UMG使用实例(C++)-13.jpg">}}
 
-##### 3，编写自定义UserWidget的C++代码
+##### 3，添加图片资源
+我这里使用两张PNG图片，导入UE4即可。
+{{< figure src="/img/20171108-[UE4]UMG使用实例(C++)/[UE4]UMG使用实例(C++)-13-02.jpg">}}
+
+##### 4，编写自定义UserWidget的C++代码
 添加需要的头文件，比如我们在头文件中使用了UImage，那么需要指明这个UImage所在的头文件。例如：
 
 	#include "Components/Image.h"

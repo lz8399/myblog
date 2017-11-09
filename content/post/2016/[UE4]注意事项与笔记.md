@@ -189,3 +189,21 @@ FVector::GetMin()和FVector::GetMax()，两个API的作用分别是获取x、y�
 【2017-06-17】  
 安装VS2017时，需要勾选Windows SDK 8.1，如果只勾选最新的SDK 10，则UE4工程无法生成VS工程文件。
 
+【2017-11-09】
+Instanced Static Mesh  
+Instancing是UE4批量渲染提供的一种性能优化机制，比如一片森林，一种只有3种形态的树木（Mesh），但每种树木在场景中会出现200棵。
+unity5.4也提供了类似的功能：Instancing。
+
+相关资料：  
+Instanced Static Mesh Decreasing performance!  
+https://forums.unrealengine.com/development-discussion/blueprint-visual-scripting/40156-instanced-static-mesh-decreasing-performance/page2
+
+UE4 Optimization: Instancing  
+https://www.youtube.com/watch?v=oMIbV2rQO4k
+
+Instanced Static Mesh  
+https://docs.unrealengine.com/latest/INT/BlueprintAPI/Components/InstancedStaticMesh/
+
+Blueprint Generating Procedural Rooms | Live Training | Unreal Engine  
+https://www.youtube.com/watch?v=mI7eYXMJ5eI
+
