@@ -140,3 +140,20 @@ Thickness=3
 
 这样就挖出了一个特殊形状的开口
 {{< figure src="/img/20170908-[Maya]Edit Mesh/[Maya]Edit Mesh-43.jpg">}}
+
+##### Detach Component 分离组件
+假设有个球形，选中一圈线
+{{< figure src="/img/20170908-[Maya]Edit Mesh/[Maya]Edit Mesh-44.jpg">}}
+
+然后执行：Edit Mesh -》 Detach
+{{< figure src="/img/20170908-[Maya]Edit Mesh/[Maya]Edit Mesh-45.jpg">}}
+
+或者按住Shift + 鼠标右键 -》 Detach Components
+{{< figure src="/img/20170908-[Maya]Edit Mesh/[Maya]Edit Mesh-46.jpg">}}
+
+然后切换到面选中模式，双击某个面，选中整个被分离出来的Component
+{{< figure src="/img/20170908-[Maya]Edit Mesh/[Maya]Edit Mesh-47.jpg">}}
+{{< figure src="/img/20170908-[Maya]Edit Mesh/[Maya]Edit Mesh-48.jpg">}}
+
+然后就可以拖动这个Component。此时两个Components仍然属于同一个Object。
+{{< figure src="/img/20170908-[Maya]Edit Mesh/[Maya]Edit Mesh-49.jpg">}}

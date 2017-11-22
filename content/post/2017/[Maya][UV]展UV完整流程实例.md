@@ -54,7 +54,7 @@ Maya版本为2018.1
 {{< figure src="/img/20171103-[Maya][UV]展UV完整流程实例/[Maya][UV]展UV完整流程实例-11.jpg">}}
 {{< figure src="/img/20171103-[Maya][UV]展UV完整流程实例/[Maya][UV]展UV完整流程实例-12.jpg">}}
 
-然后再将圆柱曲面切开：随便选中一条纵向的边线，然后再执行：Cut and Sew-》 Cut。
+然后再将圆柱曲面切开：随便选中一条纵向的边线（实际应用中最好选择位置隐蔽的线，这样不容易看出接缝），然后再执行：Cut and Sew-》 Cut。
 {{< figure src="/img/20171103-[Maya][UV]展UV完整流程实例/[Maya][UV]展UV完整流程实例-13.jpg">}}
 {{< figure src="/img/20171103-[Maya][UV]展UV完整流程实例/[Maya][UV]展UV完整流程实例-14.jpg">}}
 
@@ -108,13 +108,27 @@ Maya版本为2018.1
 这时的拉伸程度相比之前要好一些
 {{< figure src="/img/20171103-[Maya][UV]展UV完整流程实例/[Maya][UV]展UV完整流程实例-30.jpg">}}
 
-##### 7，导出UV
-确定UV分好以后，就可以导出UV。  
+##### 7，UV预览
+确定UV分好以后，就生成UV快照。
 点击UV Editor顶部的照相机按钮
 {{< figure src="/img/20171103-[Maya][UV]展UV完整流程实例/[Maya][UV]展UV完整流程实例-31.jpg">}}
 
 弹出面板中设置相应参数，比如贴图格式（通用格式是PNG），贴图大小、是否抗锯齿等等。
 {{< figure src="/img/20171103-[Maya][UV]展UV完整流程实例/[Maya][UV]展UV完整流程实例-32.jpg">}}
 
-然后点击Apply，就会自动在指定路径名下面生成UV贴图，然后就可以扔到SP或DDO等材质工具中使用。
+然后点击Apply，就会自动在指定路径名下面生成UV快照文件。
 {{< figure src="/img/20171103-[Maya][UV]展UV完整流程实例/[Maya][UV]展UV完整流程实例-33.jpg">}}
+
+##### UV的作用
+UV制作完了，之后有什么用？这时你就可以继续次世代后面的流程：烘焙贴图。因为烘焙贴图时需要模型的UV信息。
+{{< alert info >}}
+Maya中可以烘焙法线，SP中也可以烘焙法线。如果要在SP中烘焙法线，选中整个对象，然后导出为obj文件，然后再将这个obj文件导入SP，然后就可以在SP中用以前面制作的UV来生成法线贴图。
+{{< /alert >}}
+
+##### 导出obj
+选中需要导出的object对象之后，然后点击：File -》 Export Selection或者Export All，导出格式选择OBJexport。
+{{< figure src="/img/20171103-[Maya][UV]展UV完整流程实例/[Maya][UV]展UV完整流程实例-34.jpg">}}
+{{< figure src="/img/20171103-[Maya][UV]展UV完整流程实例/[Maya][UV]展UV完整流程实例-35.jpg">}}
+
+
+在建模软件中，在导出obj文件之前，除了制作UV，还需要制作Color ID；也可以将UV和Color ID分别导入两个不同的Obj中，SP等材质软件烘焙时，可以指定多个不同的obj文件。之后我再写篇文章如何制作Color ID。

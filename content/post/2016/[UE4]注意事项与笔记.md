@@ -207,3 +207,11 @@ https://docs.unrealengine.com/latest/INT/BlueprintAPI/Components/InstancedStatic
 Blueprint Generating Procedural Rooms | Live Training | Unreal Engine  
 https://www.youtube.com/watch?v=mI7eYXMJ5eI
 
+【2017-11-18T23:10】
+如何导入Maya、3D Max、Blender动画的Blend Shape(Morph Targets)
+
+FBX Morph Target Pipeline
+https://docs.unrealengine.com/latest/INT/Engine/Content/FBX/MorphTargets/
+
+Morph Target Previewer  
+https://docs-origin.unrealengine.com/latest/INT/Engine/Animation/Persona/MorphTargetPreviewer/

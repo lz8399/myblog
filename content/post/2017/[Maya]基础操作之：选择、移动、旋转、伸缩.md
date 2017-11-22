@@ -10,8 +10,8 @@ Keywords：Maya、选择、移动、旋转、伸缩、Select、Move、Rotate、S
 
 如下图所示，图标从上到下依次是：
 Select Tool（快捷键Q）
-Lasso Tool
-Paint Selection Tool
+Lasso Tool（套索工具）
+Paint Selection Tool（选择笔刷工具）
 Move Tool（快捷键W）
 Rotate Tool（快捷键E）
 Scale Tool（快捷键R）
@@ -90,6 +90,16 @@ Lasso套索工具提供了任意选择方式，比如需要选中的点不在一
 ##### Scale Tool
 Scale的操作与Move操作类似，只是效果是拉伸，而不是移动。
 {{< figure src="/img/20170828-[Maya]基础操作之：选择、移动、旋转、伸缩/[Maya]基础操作之：选择、移动、旋转、伸缩-23.jpg">}}
+
+**利用Scale Tool进行对齐处理**  
+加入有些点不在一条直线上，我没想让这些点对齐到一条直线上。
+{{< figure src="/img/20170828-[Maya]基础操作之：选择、移动、旋转、伸缩/[Maya]基础操作之：选择、移动、旋转、伸缩-23-01.jpg">}}
+
+那么先选中这些点，然后切换到Scale模式
+{{< figure src="/img/20170828-[Maya]基础操作之：选择、移动、旋转、伸缩/[Maya]基础操作之：选择、移动、旋转、伸缩-23-02.jpg">}}
+
+然后拖动指定的轴（比如这里希望水平对齐，让每个点上下移动，那么就拖动蓝色的Z轴），就可以让这些点在对齐到一条直线上。
+{{< figure src="/img/20170828-[Maya]基础操作之：选择、移动、旋转、伸缩/[Maya]基础操作之：选择、移动、旋转、伸缩-23-03.jpg">}}
 
 ##### Paint Selection Tool
 Paint Selection Tool相当于笔刷式的框选工具，以选择面为例，切换到Paint Selection Tool之后，可以看到一个红色圆圈，表示笔刷的大小。
