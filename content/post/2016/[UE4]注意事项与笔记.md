@@ -109,7 +109,7 @@ AActor::GetWorldTimerManager().SetTimerForNextTick()
 设置下一个tick期间执行的回调函数。
 
 AActor::ForceNetUpdate()  
-强制将当前actor的数据更新到客户端。
+强制并立即将当前actor的数据更新到客户端。
 
 UPritimiComponent::MoveIngoreActors  
 如果希望当前actor移动或者触发Overlap事件时，忽略掉和某些Component之前的物理计算，则可以将这些Component加入MoveIngoreActors。
@@ -215,3 +215,40 @@ https://docs.unrealengine.com/latest/INT/Engine/Content/FBX/MorphTargets/
 
 Morph Target Previewer  
 https://docs-origin.unrealengine.com/latest/INT/Engine/Animation/Persona/MorphTargetPreviewer/
+
+【2017-12-07T19:01】  
+4.18的Build.cs编译错误：  
+error : g:\Source\Work\Game20171205\program\client\TestTD\Source\TestTD\TestTD.Build.cs(31,9) : error CS0246: 未能找到类型或命名空间名称“FileReference”(是否缺少 using 指令或程序集引用?)
+
+解决办法：  
+在Build.cs中添加命令空间：  
+using Tools.DotNETCommon;
+
+【2017-12-07T19:45】  
+UE4继承Protobuf 3.5版本时的一些问题  
+错误：wire_format_lite.h(863): error C4146: unary minus operator applied to unsigned type, result still unsigned  
+解决办法：先切换到去3.4版本
+
+错误：type_traits(605): error C4647: behavior change: __is_pod(google::protobuf::internal::AuxillaryParseTableField) has different value in previous versions  
+解决办法：  
+修改generated_messages_table_driven.h  
+将  
+static_assert(std::is_pod<AuxillaryParseTableField>::value, "");  
+注释掉
+
+UE4集成3.X版本的protobuf有一些问题，建议能用2.x版本就用2.x版本。
+
+相关参考：  
+https://github.com/hanbim520/protobuffer-for-Unreal-Engine-4-/issues/1  
+https://medium.com/@0xflarion/using-ue4-w-google-protocol-buffers-ae7cab820d84
+
+【2017-12-08T18:57】  
+BUILD FAILED：gradle\rungradle.bat" :app:assembleDebug
+
+4.18安卓项目发送到手机上的时候出现错误代码 ExceptionUtils.PrintExceptionInfo: ERROR: cmd.exe failed with args /c "D:\Stage - kornelis\ARcore\HelloARSample 4.18\Intermediate/Android/APK\gradle\rungradle.bat" :app:assembleDebug ExceptionUtils.PrintExceptionInfo: 
+
+解决方案：  
+1，双击NVPACK/android-sdk-windows/tools/android.bat  
+2，点击"Deselect All"，取消所有选中  
+3，勾选：Extras/Android Support Repository，然后点击Install。  
+

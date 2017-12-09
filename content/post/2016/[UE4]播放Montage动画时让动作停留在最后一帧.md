@@ -23,4 +23,6 @@ tags:
 
     ACharacter::GetMesh()->bPauseAnims = true;
 
-`注意：正常播放完AnimSequence时，只要不是设置为循环播放，播放完以后会自动停留在最后一帧。只有播放Montage时才需要设置以上属性。`
+{{< alert warning >}}
+注意：正常播放完AnimSequence时，只要不是设置为循环播放，播放完以后会自动停留在最后一帧。只有播放Montage时才需要设置以上属性。
+{{< /alert >}}

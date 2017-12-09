@@ -91,8 +91,13 @@ Maya版本为2018.1
 {{< figure src="/img/20171103-[Maya][UV]展UV完整流程实例/[Maya][UV]展UV完整流程实例-24.jpg">}}
 {{< figure src="/img/20171103-[Maya][UV]展UV完整流程实例/[Maya][UV]展UV完整流程实例-25.jpg">}}
 {{< figure src="/img/20171103-[Maya][UV]展UV完整流程实例/[Maya][UV]展UV完整流程实例-26.jpg">}}
-
 到此，UV就分好了。
+
+Layout的相关参数（按住Shift键单击Layout）
+{{< figure src="/img/20171103-[Maya][UV]展UV完整流程实例/[Maya][UV]展UV完整流程实例-26-01.jpg">}}
+常用参数
+
++ Shell Padding：UV壳之间的间隔
 
 ##### 6，检测贴图拉伸（棋盘格）
 点击UV编辑器中的Textures -》 Checker Map，来检测UV拉伸是否严重
