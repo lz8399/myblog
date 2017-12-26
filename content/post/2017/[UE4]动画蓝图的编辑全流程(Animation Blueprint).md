@@ -129,15 +129,3 @@ __解决办法__：
 如果想修改该Slot节点的Slot名字，可以在属性面板中修改：
 {{< figure src="/img/20170617-[UE4]动画蓝图的编辑流程(Animation Blueprint)/[UE4]动画蓝图的编辑流程(Animation Blueprint)-32.jpg">}}
 
-如何在C++代码中指定Montage的Slot名字，还没研究过。但是可以通过AnimSequence动态创建一个Montage对象，并指定Slot名字：
-
-    USkeletalMeshComponent *Mesh = MyActor->FindComponentByClass<USkeletalMeshComponent>();
-    if (Mesh)
-    {
-        UAnimInstance *AnimInst = Mesh->GetAnimInstance();
-        if (AnimInst)
-        {
-            UAnimMontage* Mtg = AnimInst->PlaySlotAnimationAsDynamicMontage(MyAnimSequence, TEXT("MySlotName"), 0.1f, 0.1f, 1.0f, 30.0f);
-        }
-    }
-

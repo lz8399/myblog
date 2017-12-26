@@ -225,7 +225,7 @@ error : g:\Source\Work\Game20171205\program\client\TestTD\Source\TestTD\TestTD.B
 using Tools.DotNETCommon;
 
 【2017-12-07T19:45】  
-UE4继承Protobuf 3.5版本时的一些问题  
+UE4集成Protobuf 3.5版本时的一些问题  
 错误：wire_format_lite.h(863): error C4146: unary minus operator applied to unsigned type, result still unsigned  
 解决办法：先切换到去3.4版本
 
@@ -236,7 +236,7 @@ UE4继承Protobuf 3.5版本时的一些问题
 static_assert(std::is_pod<AuxillaryParseTableField>::value, "");  
 注释掉
 
-UE4集成3.X版本的protobuf有一些问题，建议能用2.x版本就用2.x版本。
+UE4集成3.X版本的protobuf有一些问题（比如无法静态链接protobuf-lite.lib），建议能用2.x版本就用2.x版本。
 
 相关参考：  
 https://github.com/hanbim520/protobuffer-for-Unreal-Engine-4-/issues/1  
