@@ -207,7 +207,7 @@ https://docs.unrealengine.com/latest/INT/BlueprintAPI/Components/InstancedStatic
 Blueprint Generating Procedural Rooms | Live Training | Unreal Engine  
 https://www.youtube.com/watch?v=mI7eYXMJ5eI
 
-【2017-11-18T23:10】
+【2017-11-18T23:10】  
 如何导入Maya、3D Max、Blender动画的Blend Shape(Morph Targets)
 
 FBX Morph Target Pipeline
@@ -225,9 +225,9 @@ error : g:\Source\Work\Game20171205\program\client\TestTD\Source\TestTD\TestTD.B
 using Tools.DotNETCommon;
 
 【2017-12-07T19:45】  
-UE4继承Protobuf 3.5版本时的一些问题  
+UE4集成Protobuf 3.5版本时的一些问题  
 错误：wire_format_lite.h(863): error C4146: unary minus operator applied to unsigned type, result still unsigned  
-解决办法：先切换到去3.4版本
+解决办法：disable warning或者切换到3.4版本
 
 错误：type_traits(605): error C4647: behavior change: __is_pod(google::protobuf::internal::AuxillaryParseTableField) has different value in previous versions  
 解决办法：  

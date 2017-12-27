@@ -1,11 +1,11 @@
 ---
-title: "[SP]完美法线烘培的SP插件-Normal Fix"
+title: "[Map-Baking]完美法线烘培的SP插件-Normal Fix"
 date: "2017-08-16T14:33:40+08:00"
 categories:
-- Substance
+- Map-Baking
 tags:
 - SubstancePainter
-- Asset
+- Textures
 - Material
 ---
 

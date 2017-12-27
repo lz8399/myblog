@@ -14,7 +14,7 @@ Maya版本为2018
 下面讲解Multi-Cut的用法。  
 先新建一个正方体
 {{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程01：Multi-Cut/[Maya]Modeling Tookkit 教程01：Multi-Cut-03.jpg">}}
-然后点击Multi-Cut
+然后点击Multi-Cut（快捷键Ctrl + Shift + X）
 {{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程01：Multi-Cut/[Maya]Modeling Tookkit 教程01：Multi-Cut-04.jpg">}}
 
 ##### 绘制单条边线

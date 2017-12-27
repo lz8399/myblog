@@ -2,7 +2,7 @@
 title= "[Map-Baking]SP烘焙法线贴图：使用Cage处理UV接缝"
 date= "2017-12-02T21:52:40+08:00"
 categories= ["Map-Baking"]
-tags= ["Map-Baking", "Maya"]
+tags= ["Map-Baking", "Maya", "SubstancePainter", "Textures"]
 keywords= ["Substance Painter", "Normals Maps Baking", "UV seams", "Cage", "烘焙法线贴图", "接缝"]
 +++
 
@@ -17,6 +17,9 @@ Keywords：Substance Painter、Normals Maps Baking、UV seams、Cage、烘焙法
 
 硬边低模
 {{< figure src="/img/20171202-[Map-Baking]SP烘焙法线贴图：使用Cage处理UV接缝/[Map-Baking]SP烘焙法线贴图：使用Cage处理UV接缝-02.jpg">}}
+
+低模UV，因为全部是硬边，这里全部切开
+{{< figure src="/img/20171202-[Map-Baking]SP烘焙法线贴图：使用Cage处理UV接缝/[Map-Baking]SP烘焙法线贴图：使用Cage处理UV接缝-02-01.jpg">}}
 
 平均法线的Cage
 {{< figure src="/img/20171202-[Map-Baking]SP烘焙法线贴图：使用Cage处理UV接缝/[Map-Baking]SP烘焙法线贴图：使用Cage处理UV接缝-03.jpg">}}

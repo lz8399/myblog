@@ -28,7 +28,7 @@ tags:
 
 这样就能正确加载了。
 但是这样有个问题：会发现，过几秒以后，再次使用这个UObject时会出现指针非法的错误，原因是刚刚自己New的UObject被引擎从内存中回收了。
-如果禁止引擎对该UObject自动垃圾回收，而是我们自己手动执行？执行下AddToRoot：
+如何禁止引擎对该UObject自动垃圾回收，而是我们自己手动执行？执行下AddToRoot：
 
     Obj->AddToRoot();
 
