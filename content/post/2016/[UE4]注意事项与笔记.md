@@ -7,7 +7,7 @@ tags:
 - UE4
 ---
 
-我的老博客中的UE4文章  
+我的老博客中的UE4文章（一百八十多篇，未迁移，和此博客的UE4文章不重叠）  
 http://aigo.iteye.com/category/347833
 
 【2015-12-06】  
@@ -236,7 +236,7 @@ UE4集成Protobuf 3.5版本时的一些问题
 static_assert(std::is_pod<AuxillaryParseTableField>::value, "");  
 注释掉
 
-UE4集成3.X版本的protobuf有一些问题，建议能用2.x版本就用2.x版本。
+UE4集成3.X版本的protobuf有一些问题（比如无法静态链接protobuf-lite.lib），建议能用2.x版本就用2.x版本。
 
 相关参考：  
 https://github.com/hanbim520/protobuffer-for-Unreal-Engine-4-/issues/1  
@@ -252,3 +252,51 @@ BUILD FAILED：gradle\rungradle.bat" :app:assembleDebug
 2，点击"Deselect All"，取消所有选中  
 3，勾选：Extras/Android Support Repository，然后点击Install。  
 
+
+【2017-12-21T16:27】  
+1，GameMode无法在游戏运行过程中切换，只能在编辑器的WorldSettings或者Project Settings中切换。
+
+2，How can I get the current map name? 获取当前地图的名称。
+
+	GetWorld()->GetMapName();
+
+但是这种方式获取的名字有引擎自动添加的前缀，比如在内容浏览器中场景名为test_scene，用此API获取的名字为xxx_test_scene。
+
+3，UEngine::Browse和UEngine::LoadMap都是用于客户端本地加载场景，区别是：前者是对后者的封装：包括判断当前WorldContext是否有挂起未完成的LoadMap请求。
+
+【2017-12-25T14:31】  
+角色蓝图的摄像机无法编辑的问题  
+问题现象：在角色蓝图中，如果选中摄像机组件后，Detail面板中为空，相关参数看不见，可能该角色蓝图是在纯蓝图项目创建的，此时再指定其父类为C++ Character class，则会出现这种情况：即父类C++中暴露的Camera属性在蓝图中不可编辑。  
+解决办法：重新建一个空白角色蓝图，然后再指定其父类C++ class，然后再编辑。
+
+【2017-12-26T15:04】  
+问题现象：在GameMode::BeginPlay()函数中，SpawnActor多个角色，但是有的角色没有显示，但是隐藏的角色能用TObjectIterator遍历出来。  
+可能原因：SpawnActor时的Z坐标太低，穿插了地面。  
+解决办法：SpawnActor时Z坐标调高。  
+
+【2017-12-27T16:21】  
+如何限定UPROPERTY值的范围(Range)
+
+	///Specifies the lowest that the value slider should represent.
+	UIMin
+
+	///Specifies the highest that the value slider should represent.
+	UIMax
+
+	///Specifies the minimum value that may be entered for the property.
+	ClampMin
+
+	///Specifies the maximum value that may be entered for the property.
+	ClampMax
+ 
+示例
+
+	UPROPERTY(EditAnywhere, Category = "Test", meta=(ClampMin = "0.0", ClampMax = "300.0", UIMin = "0.0", UIMax = "300.0"))
+
+【2017-12-27T17:31】  
+如何修改角色的移动速度
+
+	if (UCharacterMovementComponent* Movement = MyCharacter->GetCharacterMovement())
+	{
+		Movement->MaxWalkSpeed *= 0.5;
+	}

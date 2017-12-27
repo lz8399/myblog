@@ -28,8 +28,9 @@ keywords: UE4、Movement
 
     GetWorld()->GetNavigationSystem()->SimpleMoveToLocation(Controller, DestLocation);
 
-前提条件是你使用了Navigation组件并build了地形
-
+{{< alert danger >}}
+注意：如果使用Controller->MoveTo或者使用NavigationSystem的Move函数，前提条件是你使用了Navigation组件并build了地形，否则无效。
+{{< /alert >}}
 5，
 
     APawn->AddMovementInput(FVector WorldDirection, float ScaleValue = 1.0f, bool bForce = false);
