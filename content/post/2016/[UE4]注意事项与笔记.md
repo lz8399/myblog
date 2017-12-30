@@ -126,9 +126,6 @@ Unity3D提供的类似封装为：function TransformDirection (direction : Vecto
 
 CharacterMovementComponent一些重要接口：IsWalkable()、PhysWalking()、PhysFlying()、PhysCustom()
 
- 
-
- 
 
 【2017-02-28】  
 
@@ -300,3 +297,6 @@ BUILD FAILED：gradle\rungradle.bat" :app:assembleDebug
 	{
 		Movement->MaxWalkSpeed *= 0.5;
 	}
+	
+【2017-12-28T13:57】  
+如果UMG中的一个button，在游戏运行时，鼠标一放上去鼠标光标就消失，原因是button的`IsFocusable`属性设置为false。
