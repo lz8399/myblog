@@ -12,10 +12,10 @@ tags:
 
 
     /* Draw rectangle use line
-        @CenterLoc location of rectangle center
-        @Rot rotation of rectangle
-        @Angle angle of diagonal
-        @half of diagonal lenght.
+        @CenterLoc, location of rectangle center
+        @Rot, rotation of rectangle
+        @Angle, angle of diagonal
+        @DiagonalHalve, half of diagonal lenght.
     */
     void DrawDebugTrangle(const FVector& CenterLoc, const FRotator& Rot, float Angle, float DiagonalHalve)
     {
