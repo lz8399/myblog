@@ -75,7 +75,7 @@ SpawnActor()有个参数：FActorSpawnParameters，这个参数中有很多属�
 APawn::GetActorEyesViewPoint();
 
 
-获取模型缸体尺寸的相关API  
+获取模型刚体尺寸的相关API  
 AActor::GetSimpleCollisionXXXX()
 比如：AActor::GetSimpleCollisionHalfHeight()、AActor::GetSimpleCollisionRadius()
 
