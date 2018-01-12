@@ -43,7 +43,7 @@ tags= ["UE4"]
     
 ##### 方式一：SpawnActor时使用默认FActorSpawnParameters。
 
-     AMyAIController* PC = GetWorld()->SpawnActor<AMyAIController>(SpawnLoc, SpawnRot);
+     AMyAIController* PC = GetWorld()->SpawnActor<AMyAIController>(AMyAIController::StaticClass(), SpawnLoc, SpawnRot);
      
 不要自己设置FActorSpawnParameters，因为AIController和PlayerController表现不一样。
 
