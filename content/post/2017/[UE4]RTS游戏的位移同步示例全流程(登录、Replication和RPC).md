@@ -79,9 +79,9 @@ CPP：
 ##### Role
 每个Actor有个公开属性：AActor::Role。表示当前Actor的作用权限，枚举值有：
 
-+ ROLE_SimulatedProxy：表示当前Actor是一个模拟服务端的Actor状态Object，无法修改服务端上的数据，也没有权限执行远程函数（Reliable标识的UFUNCTION）。
++ ROLE_SimulatedProxy：表示当前Actor是一个模拟服务端的Actor状态Object，无法修改服务端上的数据，也没有权限执行远程函数（Reliable标识的UFUNCTION）。DedicatedServer服务器中创建的对象，都是ROLE_Authority，这些对象映射在客户端上的对象则都是ROLE_SimulatedProxy。
 + ROLE_AutonomousProxy：与ROLE_SimulatedProxy相似，区别是ROLE_AutonomousProxy有权限执行远程函数，但是远程函数必须是该Object身上的，其他Object上的远程函数没有权限执行。
-+ ROLE_Authority：最高权限，即可以修改Server上的属性，又可以执行任何Objecct身上的远程函数。
++ ROLE_Authority：最高权限，即可以修改Server上的属性，又可以执行任何Objecct身上的远程函数。Standalone服务器中，所有对象都是ROLE_Authority。
 
 ##### 关键函数
 
