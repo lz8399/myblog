@@ -26,7 +26,7 @@ UE4还写莫名其妙的bug，这些bug可能是与引擎升级有关，可参�
 【2016-05-15】  
 如果项目中使用了LoadClass<T>，那么蓝图相关的class构造函数中不要执行和实例化对象相关的操作，因为当执行LoadClass时也会把对应class的构造函数执行一遍（即使我们没有手动执行spawn或者create等函数，原因是LoadClass执行了LoadObject，而LoadObject内部又会执行ConstructorHelpers::FObjectFinder()，所以会触发class的构造函数，比如自己新建了一个UserWidget class，这个class的默认构造函数会在LoadClass时被执行一次），建议将初始化操作放在Initialize、BeginPlay等函数中。
 
-【2015-05-17】  
+【2016-05-17】  
 内存溢出导致的问题：在用FString拼接字符串的时候，抛了一个异常，但是相同的代码在另一个地方是正常的，两个地方都是非GameThread，崩掉的位置发在调用FString::FromInt()。后来用itoa代替就正常了。很可能是逻辑代码有内存溢出的bug。
 
 【2016-06-02】  
