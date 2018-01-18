@@ -261,6 +261,8 @@ https://answers.unrealengine.com/questions/459423/change-variable-in-client-want
 
 2，如果服务端SpawnActor时返回NULL，且参数传递都正确，可能是服务端上的对应Actor未清理，比如客户端崩掉了，导致了服务端的Actor未即时清理。
 
+3，执行UNavigationSystem::SimpleMoveToLocation(MyCharacter()->GetController(), Location);时位移无效（假设已经生成了NavMesh）。原因是MyCharacter是在客户端生成的，客户端PlayerController传递给NavigationSystem()时执行无效，需要在服务端Spawn这个Character，然后再给其Spawn出一个AIController并Possess。官方模版项目，传递给NavigationSystem的是PlayerController且位移有效，是因为模版项目中设置的DefautlPawnClass，其实是服务端Spawn出来的Character，执行位置也是在服务端。
+
 
 
 示例工程下载地址：  
