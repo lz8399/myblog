@@ -26,7 +26,7 @@ UE4还写莫名其妙的bug，这些bug可能是与引擎升级有关，可参�
 【2016-05-15】  
 如果项目中使用了LoadClass<T>，那么蓝图相关的class构造函数中不要执行和实例化对象相关的操作，因为当执行LoadClass时也会把对应class的构造函数执行一遍（即使我们没有手动执行spawn或者create等函数，原因是LoadClass执行了LoadObject，而LoadObject内部又会执行ConstructorHelpers::FObjectFinder()，所以会触发class的构造函数，比如自己新建了一个UserWidget class，这个class的默认构造函数会在LoadClass时被执行一次），建议将初始化操作放在Initialize、BeginPlay等函数中。
 
-【2015-05-17】  
+【2016-05-17】  
 内存溢出导致的问题：在用FString拼接字符串的时候，抛了一个异常，但是相同的代码在另一个地方是正常的，两个地方都是非GameThread，崩掉的位置发在调用FString::FromInt()。后来用itoa代替就正常了。很可能是逻辑代码有内存溢出的bug。
 
 【2016-06-02】  
@@ -34,7 +34,7 @@ UE4还写莫名其妙的bug，这些bug可能是与引擎升级有关，可参�
 新建蓝图时，蓝图的属性会遵循C++父类中的构造函数中的属性设置。
 
 【2016-08-16】  
-用C++动态创建Component时，在`AttachToComponent`之前，需要执行`RegisterComponent`,否则无法Attach成功。备注：这个问题貌似要看版本，新版本中貌似不需要执行`RegisterComponent`，具体我没实测过。
+用C++动态创建Component时（NewObject<Component>()），在`AttachToComponent`之前，需要执行`RegisterComponent`,否则无法Attach成功。备注：只有NewObject创建出来的Component才需要执行ResisterComponent，SpawnActor和ConstructorHelpers创建的对象则不需要。
 
 【2016-09-23】  
 UE4中的C++类继承规则：只能直接继承自两种类，一种是非UObject类，一种是继承过UInterface的UObject类。如果一个类是UObject且其父类没有一个是UInterface，则无法编译通过。
@@ -75,7 +75,7 @@ SpawnActor()有个参数：FActorSpawnParameters，这个参数中有很多属�
 APawn::GetActorEyesViewPoint();
 
 
-获取模型缸体尺寸的相关API  
+获取模型刚体尺寸的相关API  
 AActor::GetSimpleCollisionXXXX()
 比如：AActor::GetSimpleCollisionHalfHeight()、AActor::GetSimpleCollisionRadius()
 
@@ -126,9 +126,6 @@ Unity3D提供的类似封装为：function TransformDirection (direction : Vecto
 
 CharacterMovementComponent一些重要接口：IsWalkable()、PhysWalking()、PhysFlying()、PhysCustom()
 
- 
-
- 
 
 【2017-02-28】  
 
@@ -300,3 +297,6 @@ BUILD FAILED：gradle\rungradle.bat" :app:assembleDebug
 	{
 		Movement->MaxWalkSpeed *= 0.5;
 	}
+	
+【2017-12-28T13:57】  
+如果UMG中的一个button，在游戏运行时，鼠标一放上去鼠标光标就消失，原因是button的`IsFocusable`属性设置为false。

@@ -79,9 +79,9 @@ CPP：
 ##### Role
 每个Actor有个公开属性：AActor::Role。表示当前Actor的作用权限，枚举值有：
 
-+ ROLE_SimulatedProxy：表示当前Actor是一个模拟服务端的Actor状态Object，无法修改服务端上的数据，也没有权限执行远程函数（Reliable标识的UFUNCTION）。
++ ROLE_SimulatedProxy：表示当前Actor是一个模拟服务端的Actor状态Object，无法修改服务端上的数据，也没有权限执行远程函数（Reliable标识的UFUNCTION）。DedicatedServer服务器中创建的对象，都是ROLE_Authority，这些对象映射在客户端上的对象则都是ROLE_SimulatedProxy。
 + ROLE_AutonomousProxy：与ROLE_SimulatedProxy相似，区别是ROLE_AutonomousProxy有权限执行远程函数，但是远程函数必须是该Object身上的，其他Object上的远程函数没有权限执行。
-+ ROLE_Authority：最高权限，即可以修改Server上的属性，又可以执行任何Objecct身上的远程函数。
++ ROLE_Authority：最高权限，即可以修改Server上的属性，又可以执行任何Objecct身上的远程函数。Standalone服务器中，所有对象都是ROLE_Authority。
 
 ##### 关键函数
 
@@ -261,6 +261,8 @@ https://answers.unrealengine.com/questions/459423/change-variable-in-client-want
 
 2，如果服务端SpawnActor时返回NULL，且参数传递都正确，可能是服务端上的对应Actor未清理，比如客户端崩掉了，导致了服务端的Actor未即时清理。
 
+3，执行UNavigationSystem::SimpleMoveToLocation(MyCharacter()->GetController(), Location);时位移无效（假设已经生成了NavMesh）。原因是MyCharacter是在客户端生成的，客户端PlayerController传递给NavigationSystem()时执行无效，需要在服务端Spawn这个Character，然后再给其Spawn出一个AIController并Possess。官方模版项目，传递给NavigationSystem的是PlayerController且位移有效，是因为模版项目中设置的DefautlPawnClass，其实是服务端Spawn出来的Character，执行位置也是在服务端。
+
 
 
 示例工程下载地址：  
@@ -270,5 +272,5 @@ http://pan.baidu.com/s/1o7MzmRo
 属性同步：  
 http://blog.csdn.net/yangxuan0261/article/details/54766955  
 RPC：  
-http://blog.csdn.net/yangxuan0261/article/details/54766955
+http://blog.csdn.net/yangxuan0261/article/details/54766951
 

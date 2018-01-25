@@ -47,6 +47,14 @@ AddImpulse一般用来做投掷、爆炸、击飞等物理效果。添加的是�
 7，
 
     void UCharacterMovementComponent::AddForce( FVector Force )
+	
+8，
+
+	FLatentActionInfo ActionInfo;
+	ActionInfo.CallbackTarget = this;
+	UKismetSystemLibrary::MoveComponentTo(TopDownCameraComponent, Location, Rotation, false, false, 1.f, true, EMoveComponentAction::Move, ActionInfo);
+	
+一般用来移动Actor身上的Component，例如CameraComponent等。支持平滑移动，可以设置移动到目标Location、Rotation过程的时长。
 
 如果想让物体保持移动，需要每帧都执行AddForce()函数，也就说如果加速度是实时变化的，那么就可以用AddForce。
 两者的区别可以参考：  

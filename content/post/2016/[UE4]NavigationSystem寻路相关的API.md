@@ -9,8 +9,8 @@ tags= ["UE4", "API"]
 UNavigationSystem::TestPathSync 实例用法：
 
     UNavigationSystem* const NavSys = GetWorld()->GetNavigationSystem();
-    const ANavigationData* NavData = NavSys->GetNavDataForProps(YourController->GetNavAgentPropertiesRef());
-    FPathFindingQuery Query1(YourController, *NavData, YourController->GetNavAgentLocation(), FVector(2000.f, 2000.f, 0.f));
+    const ANavigationData* NavData = NavSys->GetNavDataForProps(YourCharacter->GetNavAgentPropertiesRef());
+    FPathFindingQuery Query1(YourCharacter, *NavData, YourCharacter->GetNavAgentLocation(), TestLocation);
     bool qrs1 = NavSys->TestPathSync(Query1);
 
 

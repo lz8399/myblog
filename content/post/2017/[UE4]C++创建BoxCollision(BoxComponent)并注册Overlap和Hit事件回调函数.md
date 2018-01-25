@@ -14,45 +14,49 @@ keywords: UE4、Overlap、Hit、Event、Callback、C++、Blueprint、Box Collisi
 ##### 1，C++中的代码编写
 这里我们演示的例子，是在角色身上创建一个BoxComponent，假设角色的C++ class叫AMyCharacter。
 MyCharacter.h头文件中定义：
+{{< codeblock "MyCharacter.h" "cpp" "http://underscorejs.org/#compact" "MyCharacter.h" >}}
+//Box对象
+UBoxComponent* CollisionMesh;
 
-    //Box对象
-    UBoxComponent* CollisionMesh;
+//OverlapBegin事件的回调函数，注意函数签名！
+UFUNCTION()
+	void OnTestOverlapBegin(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult);
 
-    //OverlapBegin事件的回调函数，注意函数签名！
-    UFUNCTION()
-        void OnTestOverlapBegin(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult);
+//OverlapEnd事件的回调函数，注意函数签名！
+UFUNCTION()
+	void OnTestOverlapEnd(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
+{{< /codeblock >}}
 
-    //OverlapEnd事件的回调函数，注意函数签名！
-    UFUNCTION()
-        void OnTestOverlapEnd(class AActor* OtherActor, class UPrimitiveComponent* OtherComp, int32 OtherBodyIndex);
-
-注意：<font color=red>回调函数一定要加UFUNCTION()，否则无法注册成功，因为注册函数时使用了UE4编译器的反射。</font>
+{{< alert danger >}}
+回调函数一定要加UFUNCTION()，否则无法注册成功，因为注册函数时使用了UE4编译器的反射。
+{{< /alert >}}
 
 MyCharacter.cpp的构造函数中：
+{{< codeblock "MyCharacter.cpp" "cpp" "http://underscorejs.org/#compact" "MyCharacter.cpp" >}}
+//创建BoxComponent
+CollisionMesh = CreateDefaultSubobject<UBoxComponent>(TEXT("TestCollision"));
+CollisionMesh->SetBoxExtent(FVector(200.f, 200.f, 96.f));
+CollisionMesh->bDynamicObstacle = true;
+CollisionMesh->SetupAttachment(GetRootComponent());
+//如果需要Overlap事件，将bGenerateOverlapEvents设置为true。如果不设置，默认也为true。
+CollisionMesh->bGenerateOverlapEvents = true;
 
-    //创建BoxComponent
-    CollisionMesh = CreateDefaultSubobject<UBoxComponent>(TEXT("TestCollision"));
-    CollisionMesh->SetBoxExtent(FVector(200.f, 200.f, 96.f));
-    CollisionMesh->bDynamicObstacle = true;
-    CollisionMesh->SetupAttachment(GetRootComponent());
-    //如果需要Overlap事件，将bGenerateOverlapEvents设置为true。如果不设置，默认也为true。
-    CollisionMesh->bGenerateOverlapEvents = true;
+//注意：要触发Overlap事件，SetCollisionResponseToAllChannels要么不设置，要么设置为ECR_Overlap。
+CollisionMesh->SetCollisionResponseToAllChannels(ECR_Overlap);
+/*CollisionMesh->SetCollisionResponseToChannel(ECC_WorldStatic, ECR_Block);
+CollisionMesh->SetCollisionResponseToChannel(ECC_WorldDynamic, ECR_Block);
+CollisionMesh->SetCollisionResponseToChannel(ECC_Pawn, ECR_Block);
+CollisionMesh->SetNotifyRigidBodyCollision(true);
+CollisionMesh->SetSimulatePhysics(true);*/
 
-    //注意：要触发Overlap事件，SetCollisionResponseToAllChannels要么不设置，要么设置为ECR_Overlap。
-    CollisionMesh->SetCollisionResponseToAllChannels(ECR_Overlap);
-    /*CollisionMesh->SetCollisionResponseToChannel(ECC_WorldStatic, ECR_Block);
-    CollisionMesh->SetCollisionResponseToChannel(ECC_WorldDynamic, ECR_Block);
-    CollisionMesh->SetCollisionResponseToChannel(ECC_Pawn, ECR_Block);
-    CollisionMesh->SetNotifyRigidBodyCollision(true);
-    CollisionMesh->SetSimulatePhysics(true);*/
-
-    //要触发Overlap事件，碰对对象需要勾选属性：Generate Overlap Events
-    FScriptDelegate DelegateBegin;
-    DelegateBegin.BindUFunction(this, "OnTestOverlapBegin");
-    CollisionMesh->OnComponentBeginOverlap.Add(DelegateBegin);
-    FScriptDelegate DelegateEnd;
-    DelegateEnd.BindUFunction(this, "OnTestOverlapEnd");
-    CollisionMesh->OnComponentEndOverlap.Add(DelegateEnd);
+//要触发Overlap事件，碰对对象需要勾选属性：Generate Overlap Events
+FScriptDelegate DelegateBegin;
+DelegateBegin.BindUFunction(this, "OnTestOverlapBegin");
+CollisionMesh->OnComponentBeginOverlap.Add(DelegateBegin);
+FScriptDelegate DelegateEnd;
+DelegateEnd.BindUFunction(this, "OnTestOverlapEnd");
+CollisionMesh->OnComponentEndOverlap.Add(DelegateEnd);
+{{< /codeblock >}}
 
 回调函数的函数体：
 
@@ -152,6 +156,11 @@ Actor的Hit事件不需要BoxComponent，只需要注册回调即可，回调函
 ##### 注意事项：
 如果是用BoxComponent去碰撞其他物体，且想触发BoxComponent的Hit事件（通过BoxComponent.OnComponentHit.Add()注册），那么<font color=red>其他物体的Simulate Physics属性必须设置为true，且Collision Presets属性不要设置为NoCollision</font>；
 如果是用Actor去碰撞其他物体，且想触发Actor的Hit事件（通过Actor.OnActorHit.Add()注册），那么<font color=red>其他物体的Simulate Physics属性设置为true或false均可，且Collision Presets属性不要设置为NoCollision</font>。
+
+### Actor的Overlap事件
+Overlap事件开关
+
+	void AActor::UpdateOverlaps(bool bDoNotifies)
 
 ### 其他与碰撞相关：
 
