@@ -6,6 +6,7 @@ tags= ["UE4"]
 keywords= ["UE4", "Asset Asynchronous Loading"]
 +++
 
+为什么需要异步加载资源，因为当一次性加载的资源较多或者单个资源较大时，普通的LoadObject()方式会阻塞引擎的主线程。
 
 假设测试工程叫TestTD4，自定义Character叫ATestTD4Character（头文件为TestTD4Character.h）
 
