@@ -22,3 +22,22 @@ Camera [modename]
 启用debug camera：
 
     ToggleDebugCamera
+	
+显示刚体
+
+	Show Collision
+
+显示帧率
+
+	stat fps
+	
+显示Drawcall
+	
+	stat scenerendering
+	
+显示三角面数量
+
+	stat Engine
+	
+
+https://docs-origin.unrealengine.com/latest/INT/Engine/Performance/StatCommands/
