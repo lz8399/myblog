@@ -109,7 +109,6 @@ TestTD4Character.cpp
 {{< /alert >}}
 
 ##### 同步加载
-UE4提供的同步加载API，内部实现是对异步加载的封装：调用FStreamableHandle::WaitUntilComplete()阻塞等待。
 
 同步加载有两种API：
 
@@ -126,5 +125,8 @@ UE4提供的同步加载API，内部实现是对异步加载的封装：调用FS
 		}
 
 {{< alert warning>}}
-FStreamableManager的源码注释已经写明：RequestAsyncLoad、RequestSyncLoad、LoadSynchronous等待延迟时间可能长达数秒。个人建议对于体积较小的资源，直接使用LoadObject<T>执行同步加载。
+FStreamableManager的源码注释已经写明：RequestAsyncLoad、RequestSyncLoad、LoadSynchronous等待延迟时间可能长达数秒。LoadSynchronous和RequestSyncLoad的内部实现是对异步加载的封装：调用FStreamableHandle::WaitUntilComplete()阻塞等待。RequestSyncLoad函数内部要么会进行异步载入并且调用WaitUntilComplete函数，要么直接调用LoadObject函数 —— 哪个更快就调哪个。
 {{< /alert >}}
+
+Runtime Asset Management  
+https://answers.unrealengine.com/storage/temp/136465-runtimeassetmanagementin416.pdf
