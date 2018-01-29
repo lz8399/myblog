@@ -108,5 +108,20 @@ TestTD4Character.cpp
 注意：UserWidget蓝图无法通过上述方式执行异步加载，目前只测试了Animation、Mesh等资源是可行的。
 {{< /alert >}}
 
+##### 同步加载
+UE4提供的同步加载API，内部实现是对异步加载的封装：调用FStreamableHandle::WaitUntilComplete()阻塞等待。
 
+同步加载有两种API：
+
++ FStreamableManager::LoadSynchronous
+
+		UAnimSequence* AimObj = AssetLoader.LoadSynchronous<UAnimSequence>(FSoftObjectPath(TEXT("/Game/Assets/ThirdPerson_Jump.ThirdPerson_Jump")));
+
++ FStreamableManager::RequestSyncLoad
+
+		TSharedPtr<FStreamableHandle> Handle = AssetLoader.RequestSyncLoad(FSoftObjectPath(TEXT("/Game/Assets/ThirdPerson_Jump.ThirdPerson_Jump")));
+		if (Handle.IsValid())
+		{
+			UAnimSequence* AnimiObj = Cast<UAnimSequence>(Handle->GetLoadedAsset());
+		}
 
