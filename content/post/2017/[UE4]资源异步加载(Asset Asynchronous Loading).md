@@ -125,3 +125,6 @@ UE4提供的同步加载API，内部实现是对异步加载的封装：调用FS
 			UAnimSequence* AnimiObj = Cast<UAnimSequence>(Handle->GetLoadedAsset());
 		}
 
+{{< alert warning>}}
+FStreamableManager的源码注释已经写明：RequestAsyncLoad、RequestSyncLoad、LoadSynchronous等待延迟时间可能长达数秒。个人建议对于体积较小的资源，直接使用LoadObject<T>执行同步加载。
+{{< /alert >}}
