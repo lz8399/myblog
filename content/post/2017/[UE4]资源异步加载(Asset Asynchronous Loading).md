@@ -128,5 +128,9 @@ TestTD4Character.cpp
 FStreamableManager的源码注释已经写明：RequestAsyncLoad、RequestSyncLoad、LoadSynchronous等待延迟时间可能长达数秒。LoadSynchronous和RequestSyncLoad的内部实现是对异步加载的封装：调用FStreamableHandle::WaitUntilComplete()阻塞等待。RequestSyncLoad函数内部要么会进行异步载入并且调用WaitUntilComplete函数，要么直接调用LoadObject函数 —— 哪个更快就调哪个。
 {{< /alert >}}
 
+{{< alert danger>}}
+FStreamableManager加载出来的资源不会被垃圾回收，会常驻内存，只有执行void Unload(const FSoftObjectPath& Target);才会从内存销毁。
+{{< /alert >}}
+
 Runtime Asset Management  
 https://answers.unrealengine.com/storage/temp/136465-runtimeassetmanagementin416.pdf
