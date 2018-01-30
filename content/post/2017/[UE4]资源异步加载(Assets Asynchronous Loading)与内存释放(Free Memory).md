@@ -1,5 +1,5 @@
 +++
-title= "[UE4]资源异步加载(Asset Asynchronous Loading)"
+title= "[UE4]资源异步加载(Assets Asynchronous Loading)与内存释放(Free Memory)"
 date= "2018-01-26T00:42:40+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
@@ -128,8 +128,17 @@ TestTD4Character.cpp
 FStreamableManager的源码注释已经写明：RequestAsyncLoad、RequestSyncLoad、LoadSynchronous等待延迟时间可能长达数秒。LoadSynchronous和RequestSyncLoad的内部实现是对异步加载的封装：调用FStreamableHandle::WaitUntilComplete()阻塞等待。RequestSyncLoad函数内部要么会进行异步载入并且调用WaitUntilComplete函数，要么直接调用LoadObject函数 —— 哪个更快就调哪个。
 {{< /alert >}}
 
+##### 资源内存释放
+用上述方式加载资源后（包括同步加载和异步加载），如何再释放资源并从内存中销毁？  
+方式如下：
+
+	FSoftObjectPath Path(TEXT("/Game/Assets/ThirdPerson_Jump.ThirdPerson_Jump"));
+	AssetLoader.Unload(Path);
+	Path.ResolveObject()->MarkPendingKill();
+	GEngine->ForceGarbageCollection();
+
 {{< alert danger>}}
-FStreamableManager加载出来的资源不会被垃圾回收，会常驻内存，只有执行void Unload(const FSoftObjectPath& Target);才会从内存销毁。
+FStreamableManager加载出来的资源不会被垃圾回收，会常驻内存，只有执行Unload()并且MarkPendingKill()后，才会从内存销毁。
 {{< /alert >}}
 
 Runtime Asset Management  
