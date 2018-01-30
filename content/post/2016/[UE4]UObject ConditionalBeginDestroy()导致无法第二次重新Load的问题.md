@@ -20,7 +20,7 @@ tags:
     UObject* Obj = LoadObject<UObject>(NULL, Path);
 
 
-因为这样只是在内存中扫描，不会从工程的资源Package文件中去加载(为什么首次这样执行可以加载成功？因为启动UE4Editor或程序首次启动时会自动加载一次)，所以这样不会加载成功，返回值为NULL。
+因为这样只是在内存中扫描，不会从工程的资源Package文件中去加载(为什么首次这样执行可以加载成功？因为启动UE4Editor或程序首次启动时会加载被引用的资源)，所以这样不会加载成功，返回值为NULL。
 如果要从工程资源文件中加载，那么需要手动new一个UObject，作为LoadObject的第一个参数：
 
     UObject* Obj = NewObject<UTexture2D>();
