@@ -11,11 +11,11 @@ tags:
 之前网上一直有这么一条for循环优化建议：
 将size提到第一个分号前，这样可以提高循环的效率，例如：
 
-std::vector<int> aaa;
-for (size_t i = 0, size = aaa.size(); i < size; i++)
-{
-	printf("bbb");
-}
+	std::vector<int> aaa;
+	for (size_t i = 0, size = aaa.size(); i < size; i++)
+	{
+		printf("bbb");
+	}
 
 这个如果是很多年前，应该是有道理的，但是现在的编译器足够聪明，很多看起不够优化的代码，编译器会帮你处理。
 以下是在VS2015下的汇编代码，结果是：<font color=red>size不前提反而可以节省两次mov指令。</font>

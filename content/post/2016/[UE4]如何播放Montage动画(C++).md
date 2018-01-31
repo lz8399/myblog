@@ -7,9 +7,7 @@ tags= ["UE4","API"]
 
 假设是在Character内执行，其中MontagePtr为Montage指针：
 
-{{< codeblock "test.cpp" "cpp" "http://underscorejs.org/#compact" "test.cpp" >}}
-float DeathAnimDuration = PlayAnimMontage(MontagePtr) / (GetMesh() && GetMesh()->GlobalAnimRateScale > 0 ? GetMesh()->GlobalAnimRateScale : 1);
-{{< /codeblock >}}
+	float DeathAnimDuration = PlayAnimMontage(MontagePtr) / (GetMesh() && GetMesh()->GlobalAnimRateScale > 0 ? GetMesh()->GlobalAnimRateScale : 1);
 
 如果只是播放Animation Sequence，可以使用 PlayAnimation()
 
