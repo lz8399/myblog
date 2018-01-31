@@ -5,12 +5,17 @@ categories= ["Web"]
 tags= ["Hugo", "Blog", "Highlight.js"]
 +++
 
-1，在config.toml中开启highlight.js
+##### 方式一：修改config.toml（推荐）
+在config.toml中开启highlight.js
 
     [params]
-        syntaxHighlighter = "highlight.js"
-             
-2，在theme的./layouts/partials或者./layouts/chrome/目录下，找到header.html或者header.includes.html文件，然后再在\<header>标签内添加cdn地址：
+    syntaxHighlighter = "highlight.js"
+    customCSS = ["https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/solarized-light.min.css"]
+    
+其中customCSS指定的是highlight的style名称，如果不设置，则会使用highlight.js的默认style。
+
+##### 方式二：修改header.html        
+在theme的./layouts/partials或者./layouts/chrome/目录下，找到header.html或者header.includes.html文件，然后再在\<header>标签内添加cdn地址：
 
     <link rel="stylesheet"
       href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
@@ -28,7 +33,7 @@ https://highlightjs.org/download/
 
     href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/vs.min.css"
     
-这样hugo文章模板中的所有代码都会统一替换为highlight.js风格，不用在修改原有的.md文件。
+上述两种方式设置后，hugo文章模板中的所有代码都会统一替换为highlight.js风格，不用在修改原有的.md文件。
     
 ##### highlight.js style演示合集
 https://highlightjs.org/static/demo/
