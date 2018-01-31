@@ -14,6 +14,10 @@ tags= ["Hugo", "Blog", "Highlight.js"]
     
 其中customCSS指定的是highlight的style名称，如果不设置，则会使用highlight.js的默认style。
 
+{{< alert warning >}}
+这种方式需要hugo的theme提供highlight.js支持，hugo默认theme不支持这种方式。已知的支持highlight.js的hugo theme：https://github.com/kakawait/hugo-tranquilpeak-theme
+{{< /alert >}}
+
 ##### 方式二：修改header.html        
 在theme的./layouts/partials或者./layouts/chrome/目录下，找到header.html或者header.includes.html文件，然后再在\<header>标签内添加cdn地址：
 
