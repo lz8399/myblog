@@ -9,8 +9,7 @@ tags:
 
 keywords：UE4、Movement Replicate、Networking、Server、Client、Smooth
 
-引擎对于客户端服务端的位移同步，CharacterMovementComponent::SmoothCorrection()函数中有进行平滑处理，但是仍然还有瑕疵，在有DedicatedServer时，客户端的位移还是有明显抖动。  
-个人经验是：关掉角色的Movement Replicate，然后在客户端的Tick函数中自己实现位移的平滑同步处理。
+引擎对于客户端服务端的位移同步，CharacterMovementComponent::SmoothCorrection()函数中有进行平滑处理。
 
 
 其他参考资料：  

@@ -8,12 +8,12 @@ tags= ["UE4", "API", "Math"]
 
 原始的数学公式不列举了，需要的话找个Math库看下源码。这里以UE4的API说明：
 
-情况一：
+#### 情况一：已知两个空间向量的角角
 已知空间中两个点FVector V1, V2，方向向量V3 = V2 - V1，求V3与空间坐标的夹角：
 
     FRotator R = (V2 - V1).Rotation();
 
-情况二：
+##### 情况二：单个向量与世界坐标的夹角
 已知方向向量Vector V1，求V1与空间坐标轴的夹角Rotator R1：即将Vector转换为Rotator
 
     FRotator R1 = FVector(100.f, 100.f, 0.f).Rotation();
@@ -43,3 +43,11 @@ FVector::Rotation()函数的内部实现（局部）：
     R.Roll = 0;
 
     return R;
+	
+##### 情况三：两个平面向量的夹角度数
+
+	FVector V1;
+	FVector V2;
+	float Angle = FMath::RadiansToDegrees(acosf(FVector::DotProduct(V1, V2)));
+	
+运算结果值的范围为：0到180。
