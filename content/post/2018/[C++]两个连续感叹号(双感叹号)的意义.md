@@ -1,6 +1,6 @@
 +++
 title= "[C++]两个连续感叹号(双感叹号)的意义"
-date= "2018-01-31T15:29:40+08:00"
+date= "2018-02-03T21:39:40+08:00"
 categories= ["C++"]
 tags= ["C++", "Syntax"]
 +++
@@ -24,13 +24,14 @@ tags= ["C++", "Syntax"]
     }
     
 当然用三元运算符? : 也可以，不过要多敲一些字符。
+
     void Test(A* Ptr)
     {
         bool b = Ptr ? true : false;
         ...
     }
     
-三者的CPU指令数是完全一样，开销相同。
+三种方式的CPU指令数是完全一样，开销相同。
 
         bool b = !!Ptr;
     003EA318  cmp         dword ptr [Ptr],0  
