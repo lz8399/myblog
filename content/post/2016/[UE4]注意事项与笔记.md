@@ -302,3 +302,9 @@ UObject::ConditionalBeginDestroy()是异步销毁对象内存；AActor::Destroy(
 	
 【2017-12-28T13:57】  
 如果UMG中的一个button，在游戏运行时，鼠标一放上去鼠标光标就消失，原因是button的`IsFocusable`属性设置为false。
+
+【2018-02-05T16:01】  
+SceneComponent和ActorComponent的区别  
+SceneComponent有transform属性（location, rotation, scale）而ActorComponent没有。  
+意义在于：如果只是存放数据，而不处理显示逻辑，那么就用ActorComponent，如果需要处理显示上的层级关系（比CameraComponent机与SpringArm），那么要用SceneComponent。
+
