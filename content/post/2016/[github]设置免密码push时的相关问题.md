@@ -2,7 +2,7 @@
 title: "[github]设置免密码push时的相关问题"
 date: "2016-11-12T18:44:02+08:00"
 categories:
-- Version Control
+- VersionControl
 tags:
 - Git
 ---

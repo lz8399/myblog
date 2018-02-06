@@ -2,7 +2,7 @@
 title: "[TortoiseGit]fetch和merge操作"
 date: "2016-06-16T20:14:40+08:00"
 categories:
-- Version Control
+- VersionControl
 tags:
 - TortoiseGit
 - Git

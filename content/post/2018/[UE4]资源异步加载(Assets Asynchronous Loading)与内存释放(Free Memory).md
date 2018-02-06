@@ -138,7 +138,7 @@ FStreamableManager的源码注释已经写明：RequestAsyncLoad、RequestSyncLo
 	GEngine->ForceGarbageCollection();
 
 {{< alert danger>}}
-FStreamableManager加载出来的资源不会被垃圾回收，会常驻内存，只有执行Unload()并且MarkPendingKill()后，才会从内存销毁。
+FStreamableManager加载出来的资源不会被垃圾回收，会常驻内存，只有执行Unload()并且MarkPendingKill()后，才会从内存销毁。但是从内存销毁后，无法再用FStreamableManager Load资源，会返回NULL。
 {{< /alert >}}
 
 Runtime Asset Management  
