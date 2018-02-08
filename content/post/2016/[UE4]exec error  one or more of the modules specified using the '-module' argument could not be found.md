@@ -7,10 +7,10 @@ tags:
 - UE4
 ---
 
-编译代码是提示错误：
+编译代码时提示错误：
 
     exec: error : one or more of the modules specified using the '-module' argument could not be found  
 
 原因：  
-没有关闭UE4Editor就在编译代码。不是必现，感觉是UE4的bug。
+没有关闭UE4Editor就在编译代码。不是必现，感觉是UE4的HotLoad bug。
 
