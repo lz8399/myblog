@@ -308,3 +308,6 @@ SceneComponent和ActorComponent的区别
 SceneComponent有transform属性（location, rotation, scale）而ActorComponent没有。  
 意义在于：如果只是存放数据，而不处理显示逻辑，那么就用ActorComponent，如果需要处理显示上的层级关系（比CameraComponent机与SpringArm），那么要用SceneComponent。
 
+【2018-02-09T10:30】  
+Android打包时的OpenGL和Vulkan支持  
+Project Settings -》 Platforms -》 Android -》 Build -》 Support OpenGL ES3.1。默认只使用OpenGL ES2。
