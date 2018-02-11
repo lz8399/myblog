@@ -48,6 +48,6 @@ tags= ["UE4"]
 解决办法：赋值逻辑放在Server端。因为GameInstance只存在于服务端且无法replicated。
 
 UE4的另一个关于GameInstance改名或者更改目录结构的bug：  
-另外，在Viewport/Simulation中正常，在Package/Standalone中Cast失败，原因如下：  
+在Viewport/Simulation中正常，在Package/Standalone中Cast失败，原因如下：  
 Casting to game instance always fails when packaging the game  
 https://answers.unrealengine.com/questions/595245/casting-to-game-instance-always-fails-when-packagi.html
