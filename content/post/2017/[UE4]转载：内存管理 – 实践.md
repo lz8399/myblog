@@ -19,7 +19,7 @@ tags:
         mBehavData = NewObject<UBehavData>(this, UBehavData::StaticClass());
         bh->mId = 111;
         
-* TArray保持引用如果有个 TArray 容器，则这个TArray需要用一个* UPROPERTY()* 去保持容器的引用，然后里面的UObject就不需要再去AddToRoot去阻止被gc了。
+* TArray保持引用如果有个 TArray 容器，则这个TArray需要用一个`UPROPERTY()` 去保持容器的引用，然后里面的UObject就不需要再去AddToRoot去阻止被gc了。
 
         UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UCoolDownComponent")
         TArray<UCoolDown*>      mCDArr;

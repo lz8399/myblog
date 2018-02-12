@@ -9,16 +9,16 @@ keywords= ["UE4", "Android", "Build"]
 
 先设置NDK的环境变量：
 https://docs.unrealengine.com/latest/INT/Platforms/Android/Reference/index.html#environmentvariables
-{{< figure src="/img/20171219-[UE4]Android package for engine source build/[UE4]Android package for engine source build-01.jpg">}}
+{{< figure src="/img/20171219-[UE4]Android package for engine source build/[UE4]Android package for engine source build-02.jpg">}}
 
 
 然后重新运行引擎源码根目录下的Setup.bat。此时会开始下载几百兆的内容，且Excluding没有出现Android字样，如果没有配置NDKROOT，Excluding会包含Android，表示下载内容排除android编译环境。
-{{< figure src="/img/20171219-[UE4]Android package for engine source build/[UE4]Android package for engine source build-02.jpg">}}
+{{< figure src="/img/20171219-[UE4]Android package for engine source build/[UE4]Android package for engine source build-03.jpg">}}
 
 如果不设置环境变量，也可以通过命令行Setup.bat --all来下载所有平台的编译文件（包括ios和linux）。
 
 下载完成后，rebuild一下Development - Android
-{{< figure src="/img/20171219-[UE4]Android package for engine source build/[UE4]Android package for engine source build-03.jpg">}}
+{{< figure src="/img/20171219-[UE4]Android package for engine source build/[UE4]Android package for engine source build-04.jpg">}}
 
 
 ##### 常见错误

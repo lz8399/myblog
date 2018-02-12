@@ -44,3 +44,23 @@ https://wiki.unrealengine.com/Iterators:_Object_%26_Actor_Iterators,_Optional_Cl
     for (TActorIterator<AMyCharacter> ActorItr(GetWorld()); ActorItr; ++ActorItr)
     {	
     }
+    
+##### 注意事项
+
+如果用以下方式遍历：
+
+	for (TObjectIterator<AMyCharacter> Itr; Itr; ++Itr)
+	
+则当编辑器中打开蓝图后（双击蓝图），该蓝图也会出被遍历出来。不打开则不在遍历范围内。
+
+诡异效果：
+{{< figure src="/img/20160929-[UE4]如何遍历场景中的所有Actor和Object(C++)/[UE4]如何遍历场景中的所有Actor和Object(C++)-01.jpg">}}
+
+
+这两种不会
+
+	for (FConstPawnIterator Itr = GetWorld()->GetPawnIterator(); Itr; ++Itr)
+	
+	for (TActorIterator<AMyCharacter> ActorItr(GetWorld()); ActorItr; ++ActorItr)
+
+其他未测试。
