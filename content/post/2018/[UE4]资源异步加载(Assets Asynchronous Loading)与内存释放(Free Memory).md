@@ -128,23 +128,29 @@ TestTD4Character.cpp
 FStreamableManager的源码注释已经写明：RequestAsyncLoad、RequestSyncLoad、LoadSynchronous等待延迟时间可能长达数秒。LoadSynchronous和RequestSyncLoad的内部实现是对异步加载的封装：调用FStreamableHandle::WaitUntilComplete()阻塞等待。RequestSyncLoad函数内部要么会进行异步载入并且调用WaitUntilComplete函数，要么直接调用LoadObject函数 —— 哪个更快就调哪个。
 {{< /alert >}}
 
-##### 资源内存释放
-用上述方式加载资源后（包括同步加载和异步加载），如何再释放资源并从内存中销毁？  
+### 资源内存释放
+用上述方式加载资源后（包括同步加载和异步加载），如何再释放资源并从内存中销毁？两种情况：
 
-方式如下：
+##### 自动回收
+`只要对象失去引用后就会被自动释放，无需手动Destroy。如果是异步加载，对象只在回调函数中有效，回调函数执行完毕后，就会被标记为可收回状态，如果此时ForceGC，则对象会立即销毁。`
 
-	FSoftObjectPath Path(TEXT("/Game/Assets/ThirdPerson_Jump.ThirdPerson_Jump"));
-	AssetLoader.Unload(Path);
-	//Unload之后就会将对象标记为回收状态，一段时间后会自动回收。如果需要立即执行回收，可以强制GC一下。
-	GEngine->ForceGarbageCollection();
+##### 手动回收
+在执行加载时，将bManageActiveHandle标记为true，默认为false：表示是否手动管理FStreamableHandle。如果设置为true，则对象会一直常驻内存直到手动释放。
 
-{{< alert Warning>}}
-只要资源对象没有被引用或者AddToRoot()，执行Unload之后就会被自动回收。
-FStreamableManager加载出来的资源不会被垃圾回收，会常驻内存，只有执行Unload()并且MarkPendingKill()后，才会从内存销毁。但是从内存销毁后，无法再用FStreamableManager Load资源，会返回NULL。
-{{< /alert >}}
+    FStreamableManager& AssetLoader = UAssetManager::GetStreamableManager();
+    UParticleSystem* AimObj = AssetLoader.LoadSynchronous<UParticleSystem>(FSoftObjectPath(AssetPath), true);
+    
+当对象不再需要时，再手动执行执行Unload。之后对象就会被自动回收：
 
-{{< alert Danger>}}
-在编辑器模式下，即使Unload对象，资源还是会常驻内存不会销毁，但是打包版本中运行正常：执行Unload之后对象就会被销毁。AnswerHub有人说需要执行MarkPendingKill()才能被释放，这种方式时针对Editor运行模式下：Editor模式下执行MarkPendingKill()是可以将内存销毁，但是无法再次Load，除非重启编辑器。在打包版本中运行，Unload()或者MarkPendingKill()都可以将内存销毁并且再次Load的时候也可以加载成功。
+    FStreamableManager& AssetLoader = UAssetManager::GetStreamableManager();
+	AssetLoader.Unload(FSoftObjectPath(AssetPath));
+
+Unload之后如果需要立即回收，可以执行ForceGC：
+
+    GEngine->ForceGarbageCollection(true);
+
+{{< alert danger >}}
+在编辑器模式下，上述两种回收方式都不起效，会一直常驻内存，只有在打包运行版本中才会生效。如果在编辑器运行模式下强制Destroy()或者MarkPendingKill()，则对象可以从内存中销毁，但是无法再次Load，除非重启编辑器。
 {{< /alert >}}
 
 《Fortnite》开发经验分享之运行时资源管理：Runtime Asset Management  
