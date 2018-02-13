@@ -130,16 +130,22 @@ FStreamableManager的源码注释已经写明：RequestAsyncLoad、RequestSyncLo
 
 ##### 资源内存释放
 用上述方式加载资源后（包括同步加载和异步加载），如何再释放资源并从内存中销毁？  
+
 方式如下：
 
 	FSoftObjectPath Path(TEXT("/Game/Assets/ThirdPerson_Jump.ThirdPerson_Jump"));
 	AssetLoader.Unload(Path);
-	Path.ResolveObject()->MarkPendingKill();
+	//Unload之后就会将对象标记为回收状态，一段时间后会自动回收。如果需要立即执行回收，可以强制GC一下。
 	GEngine->ForceGarbageCollection();
 
-{{< alert danger>}}
+{{< alert Warning>}}
+只要资源对象没有被引用或者AddToRoot()，执行Unload之后就会被自动回收。
 FStreamableManager加载出来的资源不会被垃圾回收，会常驻内存，只有执行Unload()并且MarkPendingKill()后，才会从内存销毁。但是从内存销毁后，无法再用FStreamableManager Load资源，会返回NULL。
 {{< /alert >}}
 
-Runtime Asset Management  
+{{< alert Danger>}}
+在编辑器模式下，即使Unload对象，资源还是会常驻内存不会销毁，但是打包版本中运行正常：执行Unload之后对象就会被销毁。AnswerHub有人说需要执行MarkPendingKill()才能被释放，这种方式时针对Editor运行模式下：Editor模式下执行MarkPendingKill()是可以将内存销毁，但是无法再次Load，除非重启编辑器。在打包版本中运行，Unload()或者MarkPendingKill()都可以将内存销毁并且再次Load的时候也可以加载成功。
+{{< /alert >}}
+
+《Fortnite》开发经验分享之运行时资源管理：Runtime Asset Management  
 https://answers.unrealengine.com/storage/temp/136465-runtimeassetmanagementin416.pdf
