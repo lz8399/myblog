@@ -9,6 +9,7 @@ tags:
 - Error
 ---
 
+NDK 1.2之后的版本已修复此bug，1.2及1.2之前的版本存在这个问题。但1.2之后的版本不再支持GCC。
 
 原文：
 http://boguscoder.blogspot.jp/2013/08/android-ndk-stl-linking-issues-bug.html

@@ -15,10 +15,10 @@ Key：android、mobile、material、building、low quality
 {{< figure src="/img/20161021-[UE4]如果设置移动版本的材质质量.jpg">}}
 
 ##### OpenGL和Vulkan版本选择
-已Android版本为例：  
+以Android版本为例：  
 Project Settings -》 Platforms -》 Android -》 Build -》 Support OpenGL ES3.1。默认只使用OpenGL ES2。
 
-相关文档：
+##### 相关文档
 Scalability Reference
 https://docs.unrealengine.com/latest/INT/Engine/Performance/Scalability/ScalabilityReference/
 

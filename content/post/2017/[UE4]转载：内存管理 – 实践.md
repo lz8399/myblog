@@ -7,6 +7,10 @@ tags:
 - UE4
 ---
 
+{{< alert danger >}}
+一个UObject类型的变量，即使是static，默认也会被GC掉。要防止该对象被GC，必须标记为UPROPERTY()，或者AddToRoot()。
+{{< /alert >}}
+
 原文：http://blog.csdn.net/yangxuan0261/article/details/52075581
 
 #### UObject gc机制
