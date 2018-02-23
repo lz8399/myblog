@@ -12,6 +12,8 @@ keywords= ["UE4", "Asset Asynchronous Loading"]
 
 假设在Content/Assets/目录下放了三个动画文件（AnimSequence）。
 
+### 异步加载
+
 ##### 通过DefaultGame.ini配置文件生成FSoftObjectPath
 
 DefaultGame.ini
@@ -108,7 +110,7 @@ TestTD4Character.cpp
 注意：UserWidget蓝图无法通过上述方式执行异步加载，目前只测试了Animation、Mesh等资源是可行的。
 {{< /alert >}}
 
-##### 同步加载
+### 同步加载
 
 同步加载有两种API：
 
@@ -153,5 +155,23 @@ Unload之后如果需要立即回收，可以执行ForceGC：
 在编辑器模式下，上述两种回收方式都不起效，会一直常驻内存，只有在打包运行版本中才会生效。如果在编辑器运行模式下强制Destroy()或者MarkPendingKill()，则对象可以从内存中销毁，但是无法再次Load，除非重启编辑器。
 {{< /alert >}}
 
+##### 注意事项
++ FStreamableManager::Unload()会Release掉和当前资源相关的所有FStreamableHandle。比如在三处位置加载了同一个资源，即使bManageActiveHandle设置为true，那么只要调用Unload一次，就可以将这三个FStreamableHandle对象全部Release掉，即从内存中释放该对象；如果对这3个FStreamableHandle对象分别执行Release，那么只有当最后一个Handle被Release之后，该资源才会从内存中释放。
+
++ 异步加载时，谁先请求则谁的回调函数先执行，不会存在回调函数执行顺序乱序的问题，因为引擎内部接收回调请求的容器使用的是TArray，且每次执行索引为0的回调，然后RemoveAt(0)。
+
++ 异步加载时，如果资源还没加载完成就执行ReleaseHandle()（假设加载时bManageActiveHandle为true），比如在执行回调函数之前执行ReleaseHandle，那么当资源加载完成后（回调函数执行之后），会自动从内存中回收。不过该对象在回调函数中仍然有效，除非在回调函数内ForceGC。
+
+        void AMyPlayerController::TestAsyncLoadAndRelease()
+        {
+            FStreamableDelegate Call;
+            Call.BindUFunction(this, FName("AsyncLoadCallback"));
+            
+            FStreamableManager& AssetLoader = UAssetManager::GetStreamableManager();
+            Handle = AssetLoader.RequestAsyncLoad(FSoftObjectPath(AssetPath), Call, 0, true);
+            Handle->ReleaseHandle();
+        }
+
+##### 参考
 《Fortnite》开发经验分享之运行时资源管理：Runtime Asset Management  
 https://answers.unrealengine.com/storage/temp/136465-runtimeassetmanagementin416.pdf
