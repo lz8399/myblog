@@ -158,7 +158,7 @@ Unload之后如果需要立即回收，可以执行ForceGC：
 ##### 注意事项
 + FStreamableManager::Unload()会Release掉和当前资源相关的所有FStreamableHandle。比如在三处位置加载了同一个资源，即使bManageActiveHandle设置为true，那么只要调用Unload一次，就可以将这三个FStreamableHandle对象全部Release掉，即从内存中释放该对象；如果对这3个FStreamableHandle对象分别执行Release，那么只有当最后一个Handle被Release之后，该资源才会从内存中释放。
 
-+ 异步加载时，谁先请求则谁的回调函数先执行，不会存在回调函数执行顺序乱序的问题，因为引擎内部接收回调请求的容器使用的是TArray，且每次执行索引为0的回调，然后RemoveAt(0)。
++ 异步加载时，谁先请求则谁的回调函数先执行，不会存在回调函数执行顺序乱序的问题（除非修改TAsyncLoadPriority），因为引擎内部接收回调请求的容器使用的是TArray，且每次执行索引为0的回调，然后RemoveAt(0)。
 
 + 异步加载时，如果资源还没加载完成就执行ReleaseHandle()（假设加载时bManageActiveHandle为true），比如在执行回调函数之前执行ReleaseHandle，那么当资源加载完成后（回调函数执行之后），会自动从内存中回收。不过该对象在回调函数中仍然有效，除非在回调函数内ForceGC。
 

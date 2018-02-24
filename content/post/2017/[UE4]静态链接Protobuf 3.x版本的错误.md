@@ -7,10 +7,16 @@ keywords= ["UE4", "Error", "Protobuf"]
 +++
 
 
-UE4集成protobuf时建议使用2.x版本。如果使用3.x，将protoc生成的代码打成lib链接到UE4工程时，会出现以下错误（当template文件中有string字段时会报错，如果没有string可以编译通过）：
+如果使用3.x，将protoc生成的代码打成lib链接到UE4工程时，会出现以下错误（当template文件中有string字段时会报错，如果没有string可以编译通过）：
 
 	2>TestTDGameMode.cpp.obj : error LNK2019: unresolved external symbol "public: void __cdecl my_proto::login_info::set_account(char const *)" (?set_account@login_info@fh_proto@@QEAAXPEBD@Z) referenced in function "public: virtual void __cdecl ATestTDGameMode::BeginPlay(void)" (?BeginPlay@ATestTDGameMode@@UEAAXXZ)
 	2>G:\Source\Work\Game20171205\program\client\TestTD\Binaries\Win64\UE4Editor-TestTD-4710.dll : fatal error LNK1120: 1 unresolved externals
 
-有人写了py脚本来生成UE4风格的C++代码，在UE4工程中源码编译protobuf 3.x，是否可行没试过：  
+Python脚本对protoc生成代码二次转换，然后与UE4工程编译(Protobuf 3.x)
+https://github.com/thejinchao/libprotobuf  
 https://thecodeway.com/blog/?p=1394
+
+修改Protobuf 3.x源码并作为UE4 plugin编译  
+https://github.com/jashking/UE4Protobuf
+
+如果使用protobuf 2.x版本，可以不用修改任何代码，直接作为一个lib链接UE4工程。
