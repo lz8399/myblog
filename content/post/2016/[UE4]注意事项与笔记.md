@@ -311,3 +311,7 @@ SceneComponent有transform属性（location, rotation, scale）而ActorComponent
 【2018-02-09T10:30】  
 Android打包时的OpenGL和Vulkan支持  
 Project Settings -》 Platforms -》 Android -》 Build -》 Support OpenGL ES3.1。默认只使用OpenGL ES2。
+
+【2018-03-01T12:28】  
+使用 Skeletal Control 动态控制头部IK运动  
+http://blog.csdn.net/sb978433018/article/details/77429762
