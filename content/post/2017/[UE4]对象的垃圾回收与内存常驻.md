@@ -1,17 +1,37 @@
----
-title: "[UE4]转载：内存管理 – 实践"
-date: "2017-04-26T14:11:40+08:00"
-categories:
-- UnrealEngine4
-tags:
-- UE4
----
++++
+title= "[UE4]对象的垃圾回收与内存常驻"
+date= "2017-04-26T14:11:40+08:00"
+categories= ["UnrealEngine4"]
+tags= ["UE4"]
+keywords= ["UE4", "Memory", "GC", "Persist", "垃圾回收", "内存管理"]
++++
+
+keywords：UE4, Memory Persist, GC, 垃圾回收, 内存管理
 
 {{< alert danger >}}
-一个UObject类型的变量，即使是static，默认也会被GC掉。要防止该对象被GC，必须标记为UPROPERTY()，或者AddToRoot()。
+一个UObject类型的变量，即使是static，默认也会被GC掉。
 {{< /alert >}}
 
-原文：http://blog.csdn.net/yangxuan0261/article/details/52075581
+要防止该对象被GC，有三种方式：
+
++ 作为成员变量并标记为UPROPERTY()；
++ 创建对象后AddToRoot()；（退出游戏时需要RemoveFromRoot()）
++ FGCObjectScopeGuard在指定代码区域内保持对象；
+
+FGCObjectScopeGuard的用法：
+
+    {
+        FGCObjectScopeGuard(UObject* GladOS = NewObject<...>(...));
+        GladOS->SpawnCell();
+        RunGC();
+        GladOS->IsStillAlive();   // Object will not be removed by GC
+    }
+
+
+转载：UE4内存管理 – 实践  
+http://blog.csdn.net/yangxuan0261/article/details/52075581
+
+原文内容如下：
 
 #### UObject gc机制
 
