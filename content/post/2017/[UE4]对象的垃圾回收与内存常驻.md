@@ -26,6 +26,10 @@ FGCObjectScopeGuard的用法：
         RunGC();
         GladOS->IsStillAlive();   // Object will not be removed by GC
     }
+    
+##### 参考资料
+虚幻4垃圾回收剖析  
+http://www.cnblogs.com/ghl_carmack/p/6112118.html
 
 
 转载：UE4内存管理 – 实践  
