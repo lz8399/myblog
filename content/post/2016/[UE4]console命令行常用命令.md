@@ -39,5 +39,12 @@ Camera [modename]
 
 	stat Engine
 	
+显示单帧信息：总时长、Game耗时、Draw耗时、GPU耗时
 
+    stat unit
+    
+显示当前帧的时间信息（各种Tick, GC Mark，Update Overlaps等）：
+
+    stat game
+    
 https://docs-origin.unrealengine.com/latest/INT/Engine/Performance/StatCommands/
