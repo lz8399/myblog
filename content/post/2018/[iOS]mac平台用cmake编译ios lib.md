@@ -1,7 +1,7 @@
 +++
 title= "[iOS]mac平台用cmake编译ios lib"
 date= "2018-03-06T17:56:02+08:00"
-categories= ["UnrealEngine4"]
+categories= ["iOS"]
 tags= ["iOS"]
 keywords= ["iOS", "Mac", "cmake"]
 +++
