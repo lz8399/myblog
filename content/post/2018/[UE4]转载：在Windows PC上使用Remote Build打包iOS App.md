@@ -6,6 +6,9 @@ tags= ["UE4"]
 keywords= ["ios", "remote build", "windows"]
 +++
 
-原文：  
+How to setup Remote Build ?  
+https://answers.unrealengine.com/questions/450714/how-to-setup-remote-build.html
+
+[UE4]在Windows PC上使用Remote Build打包iOS App  
 https://www.jianshu.com/p/8770044771e3
 
