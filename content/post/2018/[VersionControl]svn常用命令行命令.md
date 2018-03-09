@@ -47,3 +47,6 @@ tags= ["SVN"]
 
     svn log path    //查看目录的log
     svn log test.php    //查看文件的log
+    svn log path -l 10  //查看log前10条
+    svn log -q      //只输出版本号、时间、作者 而不输出日志
+    svn log -l 5 --xml >> aaa.xml   //log输出到xml文件
