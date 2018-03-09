@@ -35,7 +35,7 @@ tags= ["SVN"]
     
 回退到旧版本并提交
     
-    svn update
+    svn update      //回退前要保证版本更新到最新，假设最新版本为150，准备回退到140
     svn merge -r 150:140 .
     svn commit -m "Rolled back to r140"
 

@@ -19,4 +19,7 @@ https://thecodeway.com/blog/?p=1394
 修改Protobuf 3.x源码并作为UE4 plugin编译  
 https://github.com/jashking/UE4Protobuf
 
+将protobuf3.x作为插件集成进UE4  
+https://github.com/marshal-it/Protobuffer_UE4
+
 如果使用protobuf 2.x版本，可以不用修改任何代码，直接作为一个lib链接UE4工程。
