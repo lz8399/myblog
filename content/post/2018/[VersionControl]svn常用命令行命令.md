@@ -11,7 +11,6 @@ tags= ["SVN"]
     svn checkout url --username=*** --password=*** path     //第一次check out
     svn checkout url    //不是第一次check out
 
-
 添加
 
     svn add file    //添加指定文件
@@ -36,8 +35,12 @@ tags= ["SVN"]
 回退到旧版本并提交
     
     svn update      //回退前要保证版本更新到最新，假设最新版本为150，准备回退到140
-    svn merge -r 150:140 .
+    svn merge -r 150:140 .  
     svn commit -m "Rolled back to r140"
+    
+{{< alert warning >}}
+执行merge命令时，需要先cd到对应的目录下，否则merge无效。Mac是这样，Linux未试过。
+{{< /alert >}}
 
 清理
 
@@ -50,3 +53,9 @@ tags= ["SVN"]
     svn log path -l 10  //查看log前10条
     svn log -q      //只输出版本号、时间、作者 而不输出日志
     svn log -l 5 --xml >> aaa.xml   //log输出到xml文件
+    
+查看差异（简写：svn di）
+
+    svn diff    //查看本地文件与svn缓存版本之前的差异
+    svn diff -r111    //查看本地文件与111版本之间的差异
+    svn diff -r11:22    //查看11和22版本之间的差异
