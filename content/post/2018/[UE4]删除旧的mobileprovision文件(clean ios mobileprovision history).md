@@ -6,6 +6,7 @@ tags= ["UE4"]
 keywords= ["ios", "mobileprovision", "windows"]
 +++
 
+##### 清除mobileprovision
 
 [Windows]
 
@@ -18,3 +19,11 @@ keywords= ["ios", "mobileprovision", "windows"]
 
 参考：Remove obsolete mobileprovision profiles (iOS)  
 https://answers.unrealengine.com/questions/223227/remove-obsolete-mobileprovision-profiles-ios.html
+
+
+##### 清除Certificate
+[Windows]
+
+    运行（Win +R ） -》输入certmgr.msc，回车 -》 个人 -》 证书 -》删除和Mac相关的证书
+    
+

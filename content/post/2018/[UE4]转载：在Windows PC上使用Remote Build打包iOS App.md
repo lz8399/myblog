@@ -9,6 +9,10 @@ keywords= ["ios", "remote build", "windows"]
 How to setup Remote Build ?  
 https://answers.unrealengine.com/questions/450714/how-to-setup-remote-build.html
 
-[UE4]在Windows PC上使用Remote Build打包iOS App  
+
+[UE4]在Windows PC上打包纯蓝图工程
+https://www.jianshu.com/p/7c62ec452ce1
+
+[UE4]在Windows PC上使用Remote Build打包iOS App（C++或蓝图）  
 https://www.jianshu.com/p/8770044771e3
 

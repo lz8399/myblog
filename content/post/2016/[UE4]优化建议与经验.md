@@ -22,3 +22,5 @@ keywords：UE4性能优化、Performance Optimization
 
 7，3种光源的性能消耗从低到高：定向光/平行光(Directional Light) < 点光源(Point Light) < 聚光灯(Spot Light)。这个标准不局限于UE4，其他引擎也是这样。当光源数量在场景中达到一定量级时，3种灯光的性能差距也是数量级上差距。
 
+Epic Games工程师分享：如何在移动平台上做UE4的UI优化？  
+http://youxiputao.com/articles/11743
