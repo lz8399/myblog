@@ -37,5 +37,5 @@ tags:
 如果一个UObject是SpawnActor创建出来的，那么执行Destroy()之后，再次执行Spawn是可以正常创建出来的。这点和LoadObject有区别。
 
 {{< alert warning >}}
-UE4官方论坛上，很多帖子或资料告诉你，如果要销毁对象，需要执行ConditionalBeginDestroy()。其实这个API不是给上层逻辑使用的，如果要销毁对象，只要保证该对象失去引用或者RemoveFromRoot()即可，否则就会出现上述问题，即：Destroy之后，无法第二次Load。但是这个问题只存在编辑器运行模式下，如果是打包版本，即使Destroy()，第二次LoadObject()，第一个参数为NULL，也是可以正常加载的。
+UE4官方论坛上，很多帖子或资料告诉你，如果要销毁对象，需要执行ConditionalBeginDestroy()。其实这个API不是给上层逻辑使用的，如果要销毁对象，只要保证该对象失去引用或者RemoveFromRoot()即可，否则就会出现上述问题，即：Destroy之后，无法第二次Load。但是这个问题只存在编辑器运行模式下，如果是打包版本（或者Play时选择下拉菜单：Standalone），即使Destroy()，第二次LoadObject()，第一个参数为NULL，也是可以正常加载的。
 {{< /alert >}}
