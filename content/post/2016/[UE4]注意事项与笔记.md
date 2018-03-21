@@ -315,3 +315,10 @@ Project Settings -》 Platforms -》 Android -》 Build -》 Support OpenGL ES3.
 【2018-03-01T12:28】  
 使用 Skeletal Control 动态控制头部IK运动  
 http://blog.csdn.net/sb978433018/article/details/77429762
+
+【2018-03-21T11:48】  
+DerivedDataCache目录修改  
+默认目录在
+C:\Users\用户名\AppData\Local\UnrealEngine\Common\DerivedDataCache，时间久了以后，该目录的体积会有十几个G。  
+修改方法：打开UE4Editor -》 Edit -》 Editor Preference -》General -》 Global -》 Derived Data，修改位置。
+
