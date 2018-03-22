@@ -322,3 +322,8 @@ DerivedDataCache目录修改
 C:\Users\用户名\AppData\Local\UnrealEngine\Common\DerivedDataCache，时间久了以后，该目录的体积会有十几个G。  
 修改方法：打开UE4Editor -》 Edit -》 Editor Preference -》General -》 Global -》 Derived Data，修改位置。
 
+【2018-03-22T14:42】  
+游戏暂停时是否允许输入执行（默认是进入输入）
+
+    FInputActionBinding& ToggleInGameMenuBinding = InputComponent->BindAction("InGameMenu", IE_Pressed, this, &AStrategyPlayerController::OnToggleInGameMenu);
+        ToggleInGameMenuBinding.bExecuteWhenPaused = true;
