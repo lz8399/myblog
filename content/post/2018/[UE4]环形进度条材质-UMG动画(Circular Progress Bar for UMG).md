@@ -10,3 +10,6 @@ keywords：Cooldown Effect、UMG Material
 
 参考自：Circular Progress Bar for UMG  
 http://www.tomlooman.com/circular-progress-bar-for-umg/
+
+下载地址：  
+https://pan.baidu.com/s/1kfzODWw8i_VXfd9L5ughmg
