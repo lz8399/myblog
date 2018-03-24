@@ -10,7 +10,7 @@ keywords：DecalComponent、贴花、C++
 
 使用的贴花材质是UE4模版工程TopDown中的贴花材质：M_Cursor_Decal。
 
-    if (FootRingComponent)
+    if (!FootRingComponent)
 	{
 		FootRingComponent = NewObject<UDecalComponent>(MyCharacter->GetRootComponent());
 		if (FootRingComponent)
