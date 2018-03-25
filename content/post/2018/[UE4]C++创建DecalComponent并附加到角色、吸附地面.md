@@ -23,8 +23,12 @@ keywords：DecalComponent、贴花、C++
 			{
 				FootRingComponent->SetDecalMaterial(Material);
 				FootRingComponent->DecalSize = FVector(16.f, 128.f, 128.f);
-				FootRingComponent->SetRelativeRotation(FRotator(90.f, 90.f, 90.f));
+				FootRingComponent->SetRelativeRotation(FRotator(-90.f, 0.f, 0.f));
 				FootRingComponent->SetRelativeLocation(FVector(0.f, 0.f, -90.f));
 			}
 		}
 	}
+    
+{{< alert danger >}}
+RelativeRotation一定要设置为FRotator(-90.f, 0.f, 0.f)或者FRotator(90.f, 90.f, 90.f)，否则贴花的无法正常显示；前者表示正向显示，后者表示反向显示。DecalSize的X表示贴花作用高度：比如一面墙高500，X设置为200，那么贴花在墙面上的显示高度只到200高度；Y、Z表示长和宽。
+{{< /alert >}}
