@@ -8,3 +8,9 @@ keywords= ["UE4", "Paper Sprite", "序列帧动画"]
 
 Paper 2D Sprites  
 http://api.unrealengine.com/CHN/Engine/Paper2D/Sprites/index.html
+
+Paper 2D Import Options  
+http://api.unrealengine.com/CHN/Engine/Paper2D/Importing/index.html
+
+VaTexAtlas：一款支持TexturePacker json数据导入UE4插件  
+https://github.com/ufna/VaTexAtlas
