@@ -6,6 +6,6 @@ tags= ["UE4"]
 keywords= ["UE4", "Joint Baking"]
 +++
 
-UE4联机烘焙  
-http://blog.csdn.net/qq992817263/article/details/52563721
+UE4联机烘焙出现问题和解决方式  
+https://blog.csdn.net/shenmifangke/article/details/78394872
 

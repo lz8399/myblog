@@ -9,7 +9,7 @@ keywords= ["UE4", "Statistics"]
 
 {{< figure src="/img/20180129-[UE4]统计图表Statistics/[UE4]统计图表Statistics-01.jpg">}}
 
-统计资源面数
+##### 统计资源面数
 统计类型选择：Primitive Stats
 {{< figure src="/img/20180129-[UE4]统计图表Statistics/[UE4]统计图表Statistics-02.jpg">}}
 
