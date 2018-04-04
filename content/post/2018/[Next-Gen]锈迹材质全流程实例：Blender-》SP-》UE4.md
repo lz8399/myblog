@@ -2,7 +2,7 @@
 title= "[Next-Gen]锈迹材质全流程实例：Blender-》SP-》UE4"
 date= "2018-03-21T01:55:02+08:00"
 categories= ["Next-Gen"]
-tags= ["Material"]
+tags= ["Material", "Blender", "SubstancePainter", "UE4"]
 +++
 
 ##### 1，准备Mesh

@@ -5,6 +5,19 @@ categories= ["UnrealEngine4"]
 tags= ["UE4", "API"]
 +++
 
+三种方式：
+
+##### 方式1：GLog
+
+    GLog->Log("Does something");
+    
+##### 方式2：UE_LOG(LogTemp)
+
+    UE_LOG(LogTemp, Log, TEXT("%d"), 1111);
+	UE_LOG(LogTemp, Warning, TEXT("%d"), 1111);
+    
+##### 方式3：自定义log
+
 转载自：http://www.cnblogs.com/pengyingh/articles/5472998.html
 
 头文件中加入：
@@ -25,3 +38,9 @@ cpp文件中加入：
 使用
 
     UE_LOG(YourLog, Warning, TEXT("Test UE_LOG %d"), rand());
+    
+##### 三种方式的输出结果
+
+    Does something
+    LogTemp: 1111
+    LogTemp: Warning: 1111（黄色）
