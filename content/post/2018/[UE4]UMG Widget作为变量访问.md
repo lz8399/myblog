@@ -6,7 +6,7 @@ tags= ["UE4"]
 keywords= ["UE4", "Widget Blueprint"]
 +++
 
-设计面板（Design）中勾选Is Variable
+设计面板（Designer）中勾选Is Variable
 
 {{< figure src="/img/20180401-[UE4]UMG Widget作为变量访问/[UE4]UMG Widget作为变量访问-01.jpg">}}
 {{< figure src="/img/20180401-[UE4]UMG Widget作为变量访问/[UE4]UMG Widget作为变量访问-02.jpg">}}

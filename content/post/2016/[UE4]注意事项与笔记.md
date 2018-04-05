@@ -299,9 +299,45 @@ UObject::ConditionalBeginDestroy()是异步销毁对象内存；AActor::Destroy(
 	{
 		Movement->MaxWalkSpeed *= 0.5;
 	}
-	
+
 【2017-12-28T13:57】  
 如果UMG中的一个button，在游戏运行时，鼠标一放上去鼠标光标就消失，原因是button的`IsFocusable`属性设置为false。
+
+【2018-01-12T19:09】  
+MoveToLocation和AddMovementInput同时执行  
+如果对同一个Pawn，同时使用AIController::MoveToLocation()和APawn::AddMovementInput()来移动物体，会有冲突，会出现短暂时间内角色被黏住无法移动的情况
+
+【2018-01-03T10:26】  
+
+	void AActor::AttachToComponent(USceneComponent* Parent, const FAttachmentTransformRules& AttachmentRules, FName SocketName)
+
+AttachToComponent()的参数SocketName，也可以是骨骼名，即使不添加Socket，也可以直接用骨骼来挂载物件。
+
+【2018-01-04T16:56】  
+如果在TMap中存放一个TArray数组
+
+	USTRUCT()
+	struct FConversations
+	{
+		UPROPERTY()
+		TArray<FString> Entries;
+	};
+
+	TMap<EConversationNode, FConversations> testMap;
+
+Is there any way to store an array in a tmap?  
+https://answers.unrealengine.com/questions/319040/is-there-any-way-to-store-an-array-in-a-tmap.html?sort=oldest
+
+【2018-01-08T16:56】  
+如果在运行时期间隐藏显示虚拟摇杆（Virtual Joystick）
+
+	void APlayerController::SetVirtualJoystickVisibility(bool bVisible);
+
+
+【2018-01-13T14:08】  
+Switch Level时能保留的数据  
+Switch Level时能保留的数据对象只有一个：GameInstance。GameState、PlayerState都会被重置。
+
 
 【2018-02-05T16:01】  
 SceneComponent和ActorComponent的区别  
@@ -327,3 +363,4 @@ C:\Users\用户名\AppData\Local\UnrealEngine\Common\DerivedDataCache，时间�
 
     FInputActionBinding& ToggleInGameMenuBinding = InputComponent->BindAction("InGameMenu", IE_Pressed, this, &AStrategyPlayerController::OnToggleInGameMenu);
         ToggleInGameMenuBinding.bExecuteWhenPaused = true;
+

@@ -1,5 +1,5 @@
 ---
-title: "[UE4]Error Only Local Player Controllers can be assigned to widgets."
+title: "[UE4]Error Only Local Player Controllers can be assigned to widgets"
 date: "2017-09-14T19:39:40+08:00"
 categories:
 - UnrealEngine4

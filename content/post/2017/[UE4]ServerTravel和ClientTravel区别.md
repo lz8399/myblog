@@ -19,5 +19,8 @@ https://answers.unrealengine.com/questions/55477/the-difference-of-the-two-funct
 PlayerController->ClientTravel()连接远程服务器  
 https://answers.unrealengine.com/questions/29017/gamemode-multiplayer-c.html
 
+Seamless and non-seamless travel  
+https://docs.unrealengine.com/latest/INT/Gameplay/Networking/Travelling
+
 
 另外，可以参加官方**ShooterGame**的`APlayerController->ClientTravel()`用法。

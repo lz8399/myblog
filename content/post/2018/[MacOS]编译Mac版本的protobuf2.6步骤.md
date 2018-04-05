@@ -1,7 +1,7 @@
 +++
 title= "[MacOS]编译Mac版本的protobuf2.6步骤"
 date= "2018-03-03T18:35:02+08:00"
-categories= ["UnrealEngine4"]
+categories= ["MacOS"]
 tags= ["MacOS"]
 keywords= ["Mac", "Protobuf"]
 +++

@@ -1,5 +1,5 @@
 ---
-title: "[Android NDK]Android.mk  missing separator.  Stop."
+title: "[Android NDK]Android.mk missing separator.Stop"
 date: "2016-10-15T15:30:40+08:00"
 categories:
 - Android

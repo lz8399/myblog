@@ -1,5 +1,5 @@
 +++
-title= "[UE4]Character添加OnClick事件（C++和蓝图两种方式）"
+title= "[UE4]Character添加OnClicked事件（C++和蓝图两种方式）"
 date= "2018-01-11T23:30:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
@@ -100,3 +100,8 @@ MyCharacter.cpp
 
 触屏输入
 {{< figure src="/img/20180111-[UE4]Character添加OnClick事件（C++和蓝图两种方式）/[UE4]Character添加OnClick事件（C++和蓝图两种方式）-10.jpg">}}
+
+
+##### 参考
+OnClicked not working in C++(works in bp)  
+https://answers.unrealengine.com/questions/389222/mouse-click-not-working-in-cworks-in-bp.html

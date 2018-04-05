@@ -14,3 +14,6 @@ http://api.unrealengine.com/CHN/Engine/Paper2D/Importing/index.html
 
 VaTexAtlas：一款支持TexturePacker json数据导入UE4插件  
 https://github.com/ufna/VaTexAtlas
+
+UMG Animation  
+https://docs.unrealengine.com/latest/INT/Engine/UMG/UserGuide/Animation/index.html
