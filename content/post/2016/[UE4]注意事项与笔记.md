@@ -252,6 +252,22 @@ BUILD FAILED：gradle\rungradle.bat" :app:assembleDebug
 【2017-12-10T18:57】 
 UObject::ConditionalBeginDestroy()是异步销毁对象内存；AActor::Destroy();是同步销毁对象内存且是在当前帧结束时立即执行。这里说的销毁不是硬指针delete内存，而是从内存池中抹掉数据。
 
+【2017-12-14T14:24】  
+编译时引擎代码报错：
+
+	'SetPipelineState': illegal qualified name in member declaration
+
+解决办法：  
+修改 engine\source\runtime\d3d12rhi\private\D3D12StateCachePrivate.h(716) 
+
+将  
+D3D12_STATE_CACHE_INLINE void FD3D12StateCacheBase::SetPipelineState(FD3D12PipelineState* PSO)
+修改为  
+D3D12_STATE_CACHE_INLINE void SetPipelineState(FD3D12PipelineState* PSO)
+
+参考：  
+https://answers.unrealengine.com/questions/605554/setpipelinestate-illegal-qualified-name-in-member.html
+
 【2017-12-21T16:27】  
 1，GameMode无法在游戏运行过程中切换，只能在编辑器的WorldSettings或者Project Settings中切换。
 
