@@ -1,6 +1,6 @@
 +++
 title= "[UE4]Creating outline or stroke effect around objects"
-date= "2018-01-8T18:44:02+08:00"
+date= "2018-01-08T18:44:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
 keywords= ["UE4", "stroke effect"]
