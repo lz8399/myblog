@@ -6,6 +6,8 @@ tags= ["UE4"]
 keywords= ["UE4", "stroke effect"]
 +++
 
+keywords：UE4, stroke effect、角色勾轮廓
+
 UE4: Outline Post Process  
 http://www.tomlooman.com/ue4-outline-post-process/
 
