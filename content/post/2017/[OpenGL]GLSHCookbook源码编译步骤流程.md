@@ -7,7 +7,8 @@ tags= ["Shading", "Graphics", "OpenGL"]
 
 这里讲解《OpenGL 4 Shading Language Cookbook, Second Edition》 这本书的示例代码如何编译。
 
-步骤如下：  
+##### 编译步骤
+ 
 1，下载glm的源码，并用cmake-gui生成出VisualStudio的工程文件。  
 https://github.com/g-truc/glm/releases
 
@@ -42,6 +43,39 @@ https://github.com/daw42/glslcookbook
 {{< figure src="/img/20170906-[OpenGL]GLSHCookbook源码编译步骤流程/[OpenGL]GLSHCookbook源码编译步骤流程-05.jpg">}}
 
 
+##### 运行程序
+
+每个章节的exe无法双击运行，需要命令输入相关参数。
+以章节5为例，先CD到exe所在目录：
+
+	cd /d D:\glslcookbook\bin\chapter05\Debug>
+	
+然后输入：
+
+	chapter05.exe
+	
+则会提示：
+
+	Recipe names:
+	  blur     : Gaussian blur
+	  deferred : deferred rendering
+	  edge     : edge detection filter
+	  gamma    : gamma correction
+	  msaa     : multisample anti-aliasing
+	  tone-map : tone mapping example.
+	  hdr-bloom: bloom example with HDR tone mapping.
+	  oit      : order independent transparency
+
+然后再CD上一层目录（因为程序中使用了相对路径：chapter05/shader，如果cd到Debug目录则会提示找不到这些shader）
+
+	cd ..
+	
+然后执行（以hdr-bloom为例）：
+
+	start Debug/chapter05.exe hdr-bloom
+
+程序运行效果
+{{< figure src="/img/20170906-[OpenGL]GLSHCookbook源码编译步骤流程/[OpenGL]GLSHCookbook源码编译步骤流程-05-1.jpg">}}
 
 ##### 相关错误：
 
