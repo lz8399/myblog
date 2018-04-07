@@ -7,7 +7,7 @@ keywords= ["UE4", "Indirect Lighting"]
 +++
 
 
-原文：https://home.gamer.com.tw/creationDetail.php?sn=3935067
+原文：https://home.gamer.com.tw/creationDetail.php?sn=3315244
 
 某台湾网站上看到的文章，比起youtube上讲Indirect Lighting的视频要直观易懂。
 
@@ -22,13 +22,13 @@ http://api.unrealengine.com/INT/Engine/Rendering/LightingAndShadows/IndirectLigh
 
 在UE4里面建构光照后会自动产生Indirect Lighting Cache，可以从编辑画面的Show > Visualize > volume light sample显示当前Indirect Lighting Cache的情形。
 
-{{< figure src="/img/20180402-[UE4]Indirect Lighting Cache(间接光照缓存)/Indirect Lighting Cache(间接光照缓存)-01.png">}}
+{{< figure src="/img/20180402-[UE4]Indirect Lighting Cache(间接光照缓存)/Indirect Lighting Cache(间接光照缓存)-01.jpg">}}
 显示间接光照缓存
 
-{{< figure src="/img/20180402-[UE4]Indirect Lighting Cache(间接光照缓存)/Indirect Lighting Cache(间接光照缓存)-02.png">}}
+{{< figure src="/img/20180402-[UE4]Indirect Lighting Cache(间接光照缓存)/Indirect Lighting Cache(间接光照缓存)-02.jpg">}}
 没有间接光照缓存的情况，角色不会受到静态灯光的颜色影响
 
-{{< figure src="/img/20180402-[UE4]Indirect Lighting Cache(间接光照缓存)/Indirect Lighting Cache(间接光照缓存)-03.png">}}
+{{< figure src="/img/20180402-[UE4]Indirect Lighting Cache(间接光照缓存)/Indirect Lighting Cache(间接光照缓存)-03.jpg">}}
 有间接光照缓存时，角色即会受到静态灯光影响
 
 可以从上图看到场景中那些小正方形就是间接光照缓存的颜色，周围的物件会受到靠近的间接光照颜色影响。
@@ -40,38 +40,38 @@ http://api.unrealengine.com/INT/Engine/Rendering/LightingAndShadows/Lightmass/Ba
 
 在建构光照贴图时，{{< hl-text primary >}}若场景中没有给予Lightmass Importance Volume，会对整个场景做间接光照的采样{{< /hl-text >}}，产生Indirect Lighting Cache，{{< hl-text primary >}}这对大型游戏场景是相当的浪费{{< /hl-text >}}，像是游戏角色到不了的中、远景不需要产生Indirect Lighting Cache，这时候就可以在场景中置入Lightmass Importance Volume，指定特定区域内才会产生Indirect Lighting Cache，节省不少建构光照的时间。
 
-{{< figure src="/img/20180402-[UE4]Indirect Lighting Cache(间接光照缓存)/Indirect Lighting Cache(间接光照缓存)-04.png">}}
+{{< figure src="/img/20180402-[UE4]Indirect Lighting Cache(间接光照缓存)/Indirect Lighting Cache(间接光照缓存)-04.jpg">}}
 Modes视窗中的Volumes页签找到Lightmass Importance Volume
 
-{{< figure src="/img/20180402-[UE4]Indirect Lighting Cache(间接光照缓存)/Indirect Lighting Cache(间接光照缓存)-05.png">}}
+{{< figure src="/img/20180402-[UE4]Indirect Lighting Cache(间接光照缓存)/Indirect Lighting Cache(间接光照缓存)-05.jpg">}}
 拖曳至场景后，调整Scale直到包覆特定区域即可
 
-{{< figure src="/img/20180402-[UE4]Indirect Lighting Cache(间接光照缓存)/Indirect Lighting Cache(间接光照缓存)-06.png">}}
+{{< figure src="/img/20180402-[UE4]Indirect Lighting Cache(间接光照缓存)/Indirect Lighting Cache(间接光照缓存)-06.jpg">}}
 建构光照后会在Lightmass Importance Volume区域内看到产生的间接光照缓存
 
 ### Lightmass Character Indirect Detail Volumes(角色细节间接光范围 )
 
 在上述的Lightmass Importance Volume所建构出来的间接光会发现大多都只有在模型上才有，{{< hl-text primary >}}无法再浮空的地方产生间接光缓存 {{< /hl-text >}}(像是靠近天花板的地方)，主要原因是Lightmass Importance Volume是提供使用者快速建构重要范围，没有办法处理到细节的部份，因此在这种情况下会产生这种问题:
 
-{{< figure src="/img/20180402-[UE4]Indirect Lighting Cache(间接光照缓存)/Indirect Lighting Cache(间接光照缓存)-07.gif">}}
+{{< figure src="/img/20180402-[UE4]Indirect Lighting Cache(间接光照缓存)/Indirect Lighting Cache(间接光照缓存)-07.jpg">}}
 当角色跳跃至天花板附近时，受光会变亮
 
-{{< figure src="/img/20180402-[UE4]Indirect Lighting Cache(间接光照缓存)/Indirect Lighting Cache(间接光照缓存)-08.png">}}
+{{< figure src="/img/20180402-[UE4]Indirect Lighting Cache(间接光照缓存)/Indirect Lighting Cache(间接光照缓存)-08.jpg">}}
 主因是因为靠近天花板那区没有产生间接光照缓存
 
 这时候就需要补充细节的间接光，就必须使用Lightmass Character Indirect Detail Volumes，一样在Modes里的Volumes页签中找Lightmass Character Indirect Detail Volumes，拖曳至场景后放在需要补足间接光的地方，再建构光照贴图后即可。
 
-{{< figure src="/img/20180402-[UE4]Indirect Lighting Cache(间接光照缓存)/Indirect Lighting Cache(间接光照缓存)-09.png">}}
+{{< figure src="/img/20180402-[UE4]Indirect Lighting Cache(间接光照缓存)/Indirect Lighting Cache(间接光照缓存)-09.jpg">}}
 Modes视窗中的Volumes页签找到Lightmass Character Indirect Detail Volumes
 
-{{< figure src="/img/20180402-[UE4]Indirect Lighting Cache(间接光照缓存)/Indirect Lighting Cache(间接光照缓存)-10.png">}}
+{{< figure src="/img/20180402-[UE4]Indirect Lighting Cache(间接光照缓存)/Indirect Lighting Cache(间接光照缓存)-10.jpg">}}
 包覆需要间接光细节的区域
 
-{{< figure src="/img/20180402-[UE4]Indirect Lighting Cache(间接光照缓存)/Indirect Lighting Cache(间接光照缓存)-11.png">}}
+{{< figure src="/img/20180402-[UE4]Indirect Lighting Cache(间接光照缓存)/Indirect Lighting Cache(间接光照缓存)-11.jpg">}}
 建构光照后就会在该区域生成间接光照缓存
 
 
-{{< figure src="/img/20180402-[UE4]Indirect Lighting Cache(间接光照缓存)/Indirect Lighting Cache(间接光照缓存)-12.gif">}}
+{{< figure src="/img/20180402-[UE4]Indirect Lighting Cache(间接光照缓存)/Indirect Lighting Cache(间接光照缓存)-12.jpg">}}
 增加了间接光后，靠近天花板会变亮的问题就解决了
 
 Lightmass Character Indirect Detail Volumes通常会应用在垂直的地形上，像是升降梯、电梯那种，只要角色到的了的地方但却没有间接光缓存时就可以使用!
