@@ -106,10 +106,6 @@ TestTD4Character.cpp
 		}
 	}
 
-{{< alert danger>}}
-注意：UserWidget蓝图无法通过上述方式执行异步加载，目前只测试了Animation、Mesh等资源是可行的。
-{{< /alert >}}
-
 ### 同步加载
 
 同步加载有两种API：
@@ -129,6 +125,24 @@ TestTD4Character.cpp
 {{< alert warning>}}
 FStreamableManager的源码注释已经写明：RequestAsyncLoad、RequestSyncLoad、LoadSynchronous等待延迟时间可能长达数秒。LoadSynchronous和RequestSyncLoad的内部实现是对异步加载的封装：调用FStreamableHandle::WaitUntilComplete()阻塞等待。RequestSyncLoad函数内部要么会进行异步载入并且调用WaitUntilComplete函数，要么直接调用LoadObject函数 —— 哪个更快就调哪个。
 {{< /alert >}}
+
+##### 加载蓝图
+
+无论是加载角色蓝图，还是UMG蓝图，都需要先获取UBlueprint对象，然后通过UBlueprint对象获取UClass。  
+示例：
+
+    FStreamableManager& AssetLoader = UAssetManager::GetStreamableManager();
+    UBlueprint* WdigetBP = AssetLoader.LoadSynchronous<UBlueprint>(FSoftObjectPath("WidgetBlueprint'/Game/Blueprint/LoginWidget.LoginWidget'"));
+    if (WdigetBP)
+    {
+        UClass* WdigetClass = WdigetBP->GetBlueprintClass();
+        LoginWidget = CreateWidget<UUserWidget>(MyController, WdigetClass);
+        if (LoginWidget)
+        {
+            LoginWidget->AddToViewport();
+        }
+    }
+
 
 ### 资源内存释放
 用上述方式加载资源后（包括同步加载和异步加载），如何再释放资源并从内存中销毁？两种情况：
