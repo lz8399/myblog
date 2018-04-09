@@ -254,15 +254,25 @@ https://answers.unrealengine.com/questions/459423/change-variable-in-client-want
 
 9，当前客户端只能获取当前控制角色的Controller，无法获取其他客户端的Controller，比如玩家A在玩家B的角色为C1，那么调用C1->GetController()时返回NULL。
 
+10，动画同步  
+角色X在客户端A播放一个攻击动作，并且角色X在客户端B的视野内，此时需要客户端B也能同步看到角色X的动画，流程如下：  
+{{< hl-text primary >}}
+客户端发送请求 -》 服务端执行函数（假设叫ServerPlayAnim()） -》 ServerPlayAnim函数内调用NetMulticast函数 -》 NetMulticast函数内执行播放动画的逻辑。
+{{< /hl-text >}}
+
 ##### 常见问题：
-1，如果出现以下错误，表示Reliable函数的参数名和引擎生成的代码有同名的情况，把参数名重新改一下即可。
+1. 如果出现以下错误，表示Reliable函数的参数名和引擎生成的代码有同名的情况，把参数名重新改一下即可。
 
     error : Function parameter: 'Pawn' cannot be defined in 'ServerMoveToDest' as it is already defined in scope 'Controller' (shadowing is not allowed)
 
-2，如果服务端SpawnActor时返回NULL，且参数传递都正确，可能是服务端上的对应Actor未清理，比如客户端崩掉了，导致了服务端的Actor未即时清理。
+2. 如果服务端SpawnActor时返回NULL，且参数传递都正确，可能是服务端上的对应Actor未清理，比如客户端崩掉了，导致了服务端的Actor未即时清理。
 
-3，执行UNavigationSystem::SimpleMoveToLocation(MyCharacter()->GetController(), Location);时位移无效（假设已经生成了NavMesh）。原因是MyCharacter是在客户端生成的，客户端PlayerController传递给NavigationSystem()时执行无效，需要在服务端Spawn这个Character，然后再给其Spawn出一个AIController并Possess。官方模版项目，传递给NavigationSystem的是PlayerController且位移有效，是因为模版项目中设置的DefautlPawnClass，其实是服务端Spawn出来的Character，执行位置也是在服务端。
+3. 执行UNavigationSystem::SimpleMoveToLocation(MyCharacter()->GetController(), Location);时位移无效（假设已经生成了NavMesh）。原因是MyCharacter是在客户端生成的，客户端PlayerController传递给NavigationSystem()时执行无效，需要在服务端Spawn这个Character，然后再给其Spawn出一个AIController并Possess。官方模版项目，传递给NavigationSystem的是PlayerController且位移有效，是因为模版项目中设置的DefautlPawnClass，其实是服务端Spawn出来的Character，执行位置也是在服务端。
 
+4. 在打包版本下，客户端的玩家行走时，摄像机有抖动和卡顿（编辑器模式下正常），原因是没有勾选SpringArmComponent的Lag属性：Enable Camera Lag、Enable Camera Rotation Lag
+{{< figure src="/img/20170225-[UE4]RTS游戏的位移同步示例（Replication和RPC）/[UE4]RTS游戏的位移同步示例（Replication和RPC）-04.jpg">}}
+Dedicated Servers, Jitter, Matchmaking  
+https://forums.unrealengine.com/development-discussion/c-gameplay-programming/96598-dedicated-servers-jitter-matchmaking
 
 
 示例工程下载地址：  

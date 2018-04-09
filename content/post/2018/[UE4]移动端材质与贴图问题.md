@@ -12,7 +12,7 @@ keywords= ["UE4", "Mobile Material", "Mobile Texture"]
 
 解决办法：  
 打开材质蓝图，勾选Use Full Precision。
-{{< figure src="/img/20180304-[UE4]Cull Distance Volume(遮挡剔除)用法/[UE4]Cull Distance Volume(遮挡剔除)用法-01.jpg">}}
+{{< figure src="/img/20180316-[UE4]移动端材质与贴图问题/[UE4]移动端材质与贴图问题-01.jpg">}}
 
 参考自：  
 https://answers.unrealengine.com/questions/211323/layered-landscape-material-on-mobile.html

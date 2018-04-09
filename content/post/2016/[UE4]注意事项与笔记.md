@@ -252,6 +252,22 @@ BUILD FAILED：gradle\rungradle.bat" :app:assembleDebug
 【2017-12-10T18:57】 
 UObject::ConditionalBeginDestroy()是异步销毁对象内存；AActor::Destroy();是同步销毁对象内存且是在当前帧结束时立即执行。这里说的销毁不是硬指针delete内存，而是从内存池中抹掉数据。
 
+【2017-12-14T14:24】  
+编译时引擎代码报错：
+
+	'SetPipelineState': illegal qualified name in member declaration
+
+解决办法：  
+修改 engine\source\runtime\d3d12rhi\private\D3D12StateCachePrivate.h(716) 
+
+将  
+D3D12_STATE_CACHE_INLINE void FD3D12StateCacheBase::SetPipelineState(FD3D12PipelineState* PSO)
+修改为  
+D3D12_STATE_CACHE_INLINE void SetPipelineState(FD3D12PipelineState* PSO)
+
+参考：  
+https://answers.unrealengine.com/questions/605554/setpipelinestate-illegal-qualified-name-in-member.html
+
 【2017-12-21T16:27】  
 1，GameMode无法在游戏运行过程中切换，只能在编辑器的WorldSettings或者Project Settings中切换。
 
@@ -299,9 +315,45 @@ UObject::ConditionalBeginDestroy()是异步销毁对象内存；AActor::Destroy(
 	{
 		Movement->MaxWalkSpeed *= 0.5;
 	}
-	
+
 【2017-12-28T13:57】  
 如果UMG中的一个button，在游戏运行时，鼠标一放上去鼠标光标就消失，原因是button的`IsFocusable`属性设置为false。
+
+【2018-01-12T19:09】  
+MoveToLocation和AddMovementInput同时执行  
+如果对同一个Pawn，同时使用AIController::MoveToLocation()和APawn::AddMovementInput()来移动物体，会有冲突，会出现短暂时间内角色被黏住无法移动的情况
+
+【2018-01-03T10:26】  
+
+	void AActor::AttachToComponent(USceneComponent* Parent, const FAttachmentTransformRules& AttachmentRules, FName SocketName)
+
+AttachToComponent()的参数SocketName，也可以是骨骼名，即使不添加Socket，也可以直接用骨骼来挂载物件。
+
+【2018-01-04T16:56】  
+如果在TMap中存放一个TArray数组
+
+	USTRUCT()
+	struct FConversations
+	{
+		UPROPERTY()
+		TArray<FString> Entries;
+	};
+
+	TMap<EConversationNode, FConversations> testMap;
+
+Is there any way to store an array in a tmap?  
+https://answers.unrealengine.com/questions/319040/is-there-any-way-to-store-an-array-in-a-tmap.html?sort=oldest
+
+【2018-01-08T16:56】  
+如果在运行时期间隐藏显示虚拟摇杆（Virtual Joystick）
+
+	void APlayerController::SetVirtualJoystickVisibility(bool bVisible);
+
+
+【2018-01-13T14:08】  
+Switch Level时能保留的数据  
+Switch Level时能保留的数据对象只有一个：GameInstance。GameState、PlayerState都会被重置。
+
 
 【2018-02-05T16:01】  
 SceneComponent和ActorComponent的区别  
@@ -327,3 +379,4 @@ C:\Users\用户名\AppData\Local\UnrealEngine\Common\DerivedDataCache，时间�
 
     FInputActionBinding& ToggleInGameMenuBinding = InputComponent->BindAction("InGameMenu", IE_Pressed, this, &AStrategyPlayerController::OnToggleInGameMenu);
         ToggleInGameMenuBinding.bExecuteWhenPaused = true;
+
