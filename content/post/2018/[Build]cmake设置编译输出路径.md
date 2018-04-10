@@ -5,7 +5,7 @@ categories= ["Build"]
 tags= ["CMake"]
 +++
 
-CMakeList.txt
+在CMakeList.txt中如下设置后，无论是编译可执行文件还是编译静态库，都会输出到指定目录下，而不再是默认的当前目录。
 
     # etc. etc.
     set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "lib/")

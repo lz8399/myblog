@@ -186,6 +186,12 @@ Unload之后如果需要立即回收，可以执行ForceGC：
             Handle->ReleaseHandle();
         }
 
++ UPROPERTY()修饰的成员变量，可以让其保持的资源对象常驻内存，如果不再需要驻留内存，将该成员变量值为NULL，等到下次GC时就会被自动回收
+
++ GEngine->ForceGarbageCollection();执行后，内存回收至少要等到下一帧才会执行。在当前帧内，即使一个对象执行ConditionalBeginDestroy()且执行了ForceGarbageCollection，当前帧内该对象仍然有效。
+
++ ConditionalBeginDestroy()是所有UObject都有的API，其对象销毁是异步执行且对象在当前帧内持续有效；AActor::Destroy()是AActor特有的API，其对象回收发生在当前帧结束时。
+
 ##### 参考
 《Fortnite》开发经验分享之运行时资源管理：Runtime Asset Management  
 https://answers.unrealengine.com/storage/temp/136465-runtimeassetmanagementin416.pdf
