@@ -7,7 +7,7 @@ keywords= ["UE4", "iOS building"]
 +++
 
 原文  
-http://ios.tedu.cn/data/notes/276329.html
+http://wangjie.rocks/2017/11/30/ue4-ios-build-on-windows/
 
 ##### 问题一
 

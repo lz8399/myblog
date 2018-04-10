@@ -9,8 +9,8 @@ keywords= ["iOS", "Mac", "Xcode"]
 ##### 添加头文件目录
 {{< figure src="/img/20180315-[Xcode]常用设置与问题/[Xcode]常用设置与问题-01.jpg">}}
 
-Header Search Paths对应系统或者第三方库的头文件；#include <>
-User Header Search Paths 对应用户自己代码的头文件；#include “”
+Header Search Paths对应系统或者第三方库的头文件；#include <>  
+User Header Search Paths 对应用户自己代码的头文件；#include “”  
 
 ##### 添加静态库依赖
 {{< figure src="/img/20180315-[Xcode]常用设置与问题/[Xcode]常用设置与问题-02.jpg">}}
