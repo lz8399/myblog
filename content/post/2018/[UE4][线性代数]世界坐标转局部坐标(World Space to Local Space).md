@@ -19,3 +19,5 @@ keywords：UE4、InverseTransformVector、InverseTransformVector、InverseTransf
         return AimRotLS;
     }
     
+    
+https://github.com/tomlooman/EpicSurvivalGameSeries/blob/4a6ee9a6081529fadbe0f693b2e4e6729d5ec08d/SurvivalGame/Source/SurvivalGame/Private/Player/SBaseCharacter.cpp#L374
