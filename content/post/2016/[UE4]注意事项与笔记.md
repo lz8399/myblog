@@ -330,7 +330,7 @@ MoveToLocation和AddMovementInput同时执行
 AttachToComponent()的参数SocketName，也可以是骨骼名，即使不添加Socket，也可以直接用骨骼来挂载物件。
 
 【2018-01-04T16:56】  
-如果在TMap中存放一个TArray数组
+如何在TMap中存放一个TArray数组
 
 	USTRUCT()
 	struct FConversations
@@ -345,7 +345,7 @@ Is there any way to store an array in a tmap?
 https://answers.unrealengine.com/questions/319040/is-there-any-way-to-store-an-array-in-a-tmap.html?sort=oldest
 
 【2018-01-08T16:56】  
-如果在运行时期间隐藏显示虚拟摇杆（Virtual Joystick）
+如何在运行时期间隐藏显示虚拟摇杆（Virtual Joystick）
 
 	void APlayerController::SetVirtualJoystickVisibility(bool bVisible);
 
@@ -375,8 +375,16 @@ C:\Users\用户名\AppData\Local\UnrealEngine\Common\DerivedDataCache，时间�
 修改方法：打开UE4Editor -》 Edit -》 Editor Preference -》General -》 Global -》 Derived Data，修改位置。
 
 【2018-03-22T14:42】  
-游戏暂停时是否允许输入执行（默认是进入输入）
+游戏暂停时是否允许输入执行（默认是禁止输入）
 
     FInputActionBinding& ToggleInGameMenuBinding = InputComponent->BindAction("InGameMenu", IE_Pressed, this, &AStrategyPlayerController::OnToggleInGameMenu);
-        ToggleInGameMenuBinding.bExecuteWhenPaused = true;
+    ToggleInGameMenuBinding.bExecuteWhenPaused = true;
+
+【2018-03-26T14:42】  
+错误：
+
+    FAsyncPackage::FindExistingImport class mismatch int property 
+    
+原因：在UObject构造函数中去执行了BindUFunction()等逻辑。  
+解决办法：在非构造函数中执行，比如BeginPlay()或者NativeContruct()（UserWidget而言）。
 

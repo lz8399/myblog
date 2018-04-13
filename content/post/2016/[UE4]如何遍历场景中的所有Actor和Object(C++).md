@@ -47,7 +47,7 @@ https://wiki.unrealengine.com/Iterators:_Object_%26_Actor_Iterators,_Optional_Cl
     
 ##### 注意事项
 
-如果用以下方式遍历：
+如果用不带GetWorld()的方式遍历，比如这种方式：
 
 	for (TObjectIterator<AMyCharacter> Itr; Itr; ++Itr)
 	
@@ -57,7 +57,7 @@ https://wiki.unrealengine.com/Iterators:_Object_%26_Actor_Iterators,_Optional_Cl
 {{< figure src="/img/20160929-[UE4]如何遍历场景中的所有Actor和Object(C++)/[UE4]如何遍历场景中的所有Actor和Object(C++)-01.jpg">}}
 
 
-这两种不会
+这两种不会，它们只会遍历游戏运行时期间的对象：
 
 	for (FConstPawnIterator Itr = GetWorld()->GetPawnIterator(); Itr; ++Itr)
 	

@@ -6,6 +6,8 @@ tags= ["UE4"]
 keywords= ["UE4", "AttachToComponent"]
 +++
 
+https://github.com/tomlooman/EpicSurvivalGameSeries/blob/4a6ee9a6081529fadbe0f693b2e4e6729d5ec08d/SurvivalGame/Source/SurvivalGame/Private/Items/SWeapon.cpp#L106
+
 EpicSurvivalGameSeries\SurvivalGame\Source\SurvivalGame\Private\Items\SWeapon.cpp
 
 	void ASWeapon::AttachMeshToPawn(EInventorySlot Slot)
