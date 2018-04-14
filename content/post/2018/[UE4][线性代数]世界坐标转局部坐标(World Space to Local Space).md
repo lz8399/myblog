@@ -21,3 +21,11 @@ keywords：UE4、InverseTransformVector、InverseTransformVector、InverseTransf
     
     
 https://github.com/tomlooman/EpicSurvivalGameSeries/blob/4a6ee9a6081529fadbe0f693b2e4e6729d5ec08d/SurvivalGame/Source/SurvivalGame/Private/Player/SBaseCharacter.cpp#L374
+
+如果只是想获取两个Rotation之间的Offset，更简单的办法：
+
+    FRotator R1;
+    FRotator R2;
+    FRotator Offset = R2 - R1;
+    
+    
