@@ -14,5 +14,5 @@ Animation Notifications (Notifies)
 https://docs.unrealengine.com/latest/INT/Engine/Animation/Sequences/Notifies/
 
 
-ue4中动画通知的几种方式  
+ue4中动画通知的两种方式（蓝图和C++）  
 http://blog.csdn.net/yangxuan0261/article/details/52097917
