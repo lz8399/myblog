@@ -42,7 +42,7 @@ MyCharacter.cpp
 {{< figure src="/img/20180111-[UE4]Character添加OnClick事件（C++和蓝图两种方式）/[UE4]Character添加OnClick事件（C++和蓝图两种方式）-07.jpg">}}
 
 
-### 方式二：添加Cube（Static Mesh Component）
+### 方式二：GetHitResult
 
 1，Project Settings中编辑Input配置
 {{< figure src="/img/20180111-[UE4]Character添加OnClick事件（C++和蓝图两种方式）/[UE4]Character添加OnClick事件（C++和蓝图两种方式）-08.jpg">}}

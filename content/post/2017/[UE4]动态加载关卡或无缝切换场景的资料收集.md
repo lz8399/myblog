@@ -85,7 +85,7 @@ https://answers.unrealengine.com/questions/46503/how-to-use-preparemapchangecomm
 		}
 	}
 
-如何ServerTravel()相关的回调函数（切换场景之前、切换场景之后等）：  
+如何触发ServerTravel()相关的回调函数（切换场景之前、切换场景之后等）：  
 Runtime\Engine\Classes\GameFramework\GameModeBase.h
 
 	/** Returns true if allowed to server travel */
