@@ -1,5 +1,5 @@
 +++
-title= "[C++]读写二进制文件"
+title= "[C++]读写二进制文件和文本文件"
 date= "2018-04-20T17:45:40+08:00"
 categories= ["C++"]
 tags= ["C++", "read and write binary"]
