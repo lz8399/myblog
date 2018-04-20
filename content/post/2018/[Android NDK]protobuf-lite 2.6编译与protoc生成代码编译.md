@@ -2,7 +2,7 @@
 title= "[Android NDK]protobuf-lite 2.6编译与protoc生成代码编译"
 date= "2018-02-11T12:27:02+08:00"
 categories= ["Android"]
-tags= ["NDK", "UE4"]
+tags= ["NDK", "Android", "protobuf"]
 +++
 
 ##### Protobuf源码与protoc生成代码编译成一个静态库
