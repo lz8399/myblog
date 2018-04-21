@@ -87,3 +87,14 @@ Cage虽然可以更好的处理UV接缝，但是对于凹凸结构会产生扭�
 {{< alert info>}}
 如果凹凸结构落差较大，即使是无Cage法线贴图，对于高度的表现并不好，所以对于落差较大的凹凸结构，低模上最好保留相应结构。
 {{< /alert >}}
+
+#### 3DMax中的Cage制作(平均法线 Average Normals)
+
+打开菜单：选中 mesh、或patch、或spline、或NURBS object. -》 修改器 > 几何体(转换蒙皮) > 编辑法线。  
+Select a mesh, patch, spline, or NURBS object. > Modifiers menu > Geometry (Convert to Mesh) > Edit Normals
+{{< figure src="/img/20171202-[Map-Baking]SP烘焙法线贴图：使用Cage处理UV接缝/[Map-Baking]SP烘焙法线贴图：使用Cage处理UV接缝-21.png">}}
+
+然后点击：“法线” -》 “选择” -》 修改。
+
+官方文档：Edit Normals Modifier Reference  
+https://knowledge.autodesk.com/support/3ds-max/learn-explore/caas/CloudHelp/cloudhelp/2016/ENU/3DSMax/files/GUID-82722323-100B-4711-A01D-8A87EB53DD96-htm.html
