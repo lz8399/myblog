@@ -1,5 +1,5 @@
 +++
-title= "[UE4]Android打包版本执行protobuf的ParseFromArray函数崩溃的问题"
+title= "[UE4]Android NDK打包版本执行protobuf的ParseFromArray函数崩溃"
 date= "2018-04-21T22:01:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
@@ -79,4 +79,51 @@ protobuf与android ndk编译后，集成到UE4中执行时，每当执行ParseFr
     MessageTest msg;
     bool rs = ProtobufHelper::Parse(msg, buffer, buffer_size);
     
-    
+### message嵌套问题
+
+{{< alert danger >}}
+如果在一个模版文件中定义多个message，即使用上面的Parse函数，UE4打包Android版本运行时也会导致崩溃。
+{{< /alert >}}
+
+SearchResponse.proto
+
+	syntax = "proto3";
+	
+	option optimize_for = LITE_RUNTIME;
+
+	message SearchResponse {
+	  repeated Result results = 1;
+	}
+
+	message Result {
+	  string url = 1;
+	  string title = 2;
+	  repeated string snippets = 3;
+	}
+	
+解决办法：一个proto文件只定义一种message，通过import方式导入。
+
+SearchResponse.proto
+
+	syntax = "proto3";
+	
+	option optimize_for = LITE_RUNTIME;
+	
+	import "Result.proto";
+
+	message SearchResponse {
+	  repeated Result results = 1;
+	}
+
+Result.proto
+
+	syntax = "proto3";
+	
+	option optimize_for = LITE_RUNTIME;
+
+	message Result {
+	  string url = 1;
+	  string title = 2;
+	  repeated string snippets = 3;
+	}
+
