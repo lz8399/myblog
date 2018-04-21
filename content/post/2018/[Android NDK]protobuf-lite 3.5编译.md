@@ -53,7 +53,7 @@ Android.mk
     LOCAL_EXPORT_C_INCLUDES := $(LOCAL_C_INCLUDES)
 
     LOCAL_C_INCLUDES += thirdparty/include
-    #LOCAL_STATIC_LIBRARIES += thirdparty/lib/libprotobuf-lite.a
+    LOCAL_STATIC_LIBRARIES += thirdparty/lib/libprotobuf-lite.a
 
     #include $(BUILD_SHARED_LIBRARY)
     include $(BUILD_STATIC_LIBRARY)
