@@ -1,5 +1,5 @@
 ---
-title: "[UE4]console命令行常用命令"
+title: "[UE4]console命令行常用命令(command)"
 date: "2016-05-27T15:30:02+08:00"
 categories:
 - UnrealEngine4
@@ -46,5 +46,14 @@ Camera [modename]
 显示当前帧的时间信息（各种Tick, GC Mark，Update Overlaps等）：
 
     stat game
+    
+设置渲染分辨率为默认大小的50%
+
+    r.ScreenPercentage 50
+    
+
+{{< alert warning >}}
+使用stat相关命令检测性能时，需要关闭Smooth Frame Rate来保证检测结果更精准：Project Settings -》 Engine -》 General Settings -》 Framerate -》 Smooth Frame Rate。
+{{< /alert >}}
     
 https://docs-origin.unrealengine.com/latest/INT/Engine/Performance/StatCommands/
