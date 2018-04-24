@@ -3,10 +3,10 @@ title= "[UE4]Android NDK打包版本执行protobuf的ParseFromArray函数崩溃"
 date= "2018-04-21T22:01:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
-keywords= ["UE4", "protobuf-lite", "ParseFromArray", "Crash"]
+keywords= ["UE4", "protobuf-lite", "Android NDK","ParseFromArray", "Crash"]
 +++
 
-keywords：UE4、protobuf-lite、ParseFromArray、Crash
+keywords：UE4、protobuf-lite、Android NDK、ParseFromArray、Crash
 
 protobuf与android ndk编译后，集成到UE4中执行时，每当执行ParseFromArray时就会崩溃（Windows版本没有问题）：
 
@@ -82,7 +82,7 @@ protobuf与android ndk编译后，集成到UE4中执行时，每当执行ParseFr
 ### message嵌套问题
 
 {{< alert danger >}}
-如果在一个模版文件中定义多个message，即使用上面的Parse函数，UE4打包Android版本运行时也会导致崩溃。
+protobuf 3.x版本，如果在一个模版文件中定义多个message，即使用上面的Parse函数，UE4打包Android版本运行时也会导致崩溃。2.x版本正常
 {{< /alert >}}
 
 SearchResponse.proto

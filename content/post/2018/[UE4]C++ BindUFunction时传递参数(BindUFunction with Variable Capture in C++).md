@@ -73,3 +73,7 @@ https://answers.unrealengine.com/questions/715835/bindufunction-with-variable-ca
 
 Bind delegate with one parameter  
 https://answers.unrealengine.com/questions/109955/bind-delegate-with-one-parameter.html
+
+### 注意事项
+
+BindRaw针对非UObject类型的class，BindUObject和BindUFunction针对UObject类型的class。
