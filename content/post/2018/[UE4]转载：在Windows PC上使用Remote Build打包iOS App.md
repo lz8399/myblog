@@ -16,3 +16,5 @@ https://www.jianshu.com/p/7c62ec452ce1
 [UE4]在Windows PC上使用Remote Build打包iOS App（C++或蓝图）  
 https://www.jianshu.com/p/8770044771e3
 
+Building iOS game in Unreal Engine 4 via remote machine  
+http://zompi.pl/building-ios-game-in-unreal-engine-4-via-remote-machine/
