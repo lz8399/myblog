@@ -17,7 +17,9 @@ https://github.com/thejinchao/libprotobuf
 https://thecodeway.com/blog/?p=1394
 
 修改Protobuf 3.x源码并作为UE4 plugin编译  
-https://github.com/jashking/UE4Protobuf
+https://github.com/jashking/UE4Protobuf  
+我基于该项目的protobuf代码，做了一个cmake自动构建配置：  
+https://github.com/dawnarc/protobuf_ue4_cmake
 
 将protobuf3.x作为插件集成进UE4  
 https://github.com/marshal-it/Protobuffer_UE4

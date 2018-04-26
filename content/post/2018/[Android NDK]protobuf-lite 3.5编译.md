@@ -5,7 +5,10 @@ categories= ["Android"]
 tags= ["NDK", "Android", "protobuf"]
 +++
 
-### NDK编译配置
+### protobuf源码NDK编译配置
+
+
+### proto生成代码NDK编译配置
 
 假设工程结构如下：
 
