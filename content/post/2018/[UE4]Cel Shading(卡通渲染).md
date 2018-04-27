@@ -16,3 +16,6 @@ https://www.youtube.com/watch?v=0UBNXneL1oo
 
 UE4 - Tutorial - Cel Shading!
 https://www.youtube.com/watch?v=_bpQoI5Xrx8  
+
+Stylized Rendering Post Processing  
+https://docs.unrealengine.com/en-us/Resources/Showcases/Stylized/PostProcessing
