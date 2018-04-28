@@ -1,5 +1,5 @@
 +++
-title= "[UE4]Lighting the Environment"
+title= "[UE4]Lightings"
 date= "2018-04-27T14:14:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
@@ -7,6 +7,18 @@ keywords= ["UE4", "Lightings"]
 +++
 
 keywords：UE4、Lighting、灯光
+
+##### Lighting Content Examples
+
+https://docs.unrealengine.com/en-us/Resources/ContentExamples/Lighting
+
+
+##### Light Propagation Volumes
+Light Propagation Volumes  
+https://docs.unrealengine.com/en-us/Engine/Rendering/LightingAndShadows/LightPropagationVolumes
+
+Dynamic GI : Getting the Most out of LPV ( Light Propagation Volume )  
+https://forums.unrealengine.com/community/community-content-tools-and-tutorials/103572-dynamic-gi-getting-the-most-out-of-lpv-light-propagation-volume
 
 ##### Lighting Channels
 https://docs.unrealengine.com/en-us/Engine/Rendering/LightingAndShadows/LightingChannels
@@ -24,3 +36,4 @@ https://docs.unrealengine.com/en-us/Engine/Rendering/LightingAndShadows/Lighting
 + 一个Primitives只受一个Directional Light影响，如果primitves勾选了多个Lighting Channel，那么只会启用第一个。
 + CSM Shadows只会投射到与光源Lighting Channels相同的primitives上。
 + 动态点光源在移动端支持Lighting Channels的所有特性，与桌面级特性相同。
+
