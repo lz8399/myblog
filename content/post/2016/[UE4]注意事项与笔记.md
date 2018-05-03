@@ -388,3 +388,7 @@ C:\Users\用户名\AppData\Local\UnrealEngine\Common\DerivedDataCache，时间�
 原因：在UObject构造函数中去执行了BindUFunction()等逻辑。  
 解决办法：在非构造函数中执行，比如BeginPlay()或者NativeContruct()（UserWidget而言）。
 
+【2018-05-03T15:32】  
+隐藏安卓的虚拟键、软键 Hide Android App Soft Keys(Home key and Return key)  
+Project Settings -》 Android -》 Platforms -》 Enable FullScreen Immersive on KitKat and above devices
+
