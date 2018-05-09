@@ -12,5 +12,15 @@ https://forums.unrealengine.com/community/community-content-tools-and-tutorials/
 Steam, Using the Steam SDK During Development  
 https://wiki.unrealengine.com/Steam,_Using_the_Steam_SDK_During_Development
 
+Integrating Steam SDK – Part 1  
+http://orfeasel.com/steam_integration_p1/
+
+Handling Steam Achievements – Steam Integration Part 2  
+http://orfeasel.com/handling-steam-achievements-steam-integration-part-2/
+
+中文翻译：  
 集成 Steam SDK（一）  
 http://gad.qq.com/program/translateview/7191581
+
+处理Steam成就系统——接入Steam SDK（二）  
+http://gad.qq.com/program/translateview/7191582
