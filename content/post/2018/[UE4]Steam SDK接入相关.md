@@ -9,6 +9,9 @@ keywords= ["UE4", "Steam SDK"]
 Advanced Sessions Plugin  
 https://forums.unrealengine.com/community/community-content-tools-and-tutorials/41043-advanced-sessions-plugin
 
+Online Subsystem Steam  
+https://docs.unrealengine.com/en-us/Programming/Online/Steam
+
 Steam, Using the Steam SDK During Development  
 https://wiki.unrealengine.com/Steam,_Using_the_Steam_SDK_During_Development
 
@@ -24,3 +27,10 @@ http://gad.qq.com/program/translateview/7191581
 
 处理Steam成就系统——接入Steam SDK（二）  
 http://gad.qq.com/program/translateview/7191582
+
+##### Shipping模式下steam集成无效的问题
+
+在打包输出目录下，例如：\WindowsNoEditor\MyProj\Binaries\Win64\，新建一个文本文件：steam_appid.txt，并且内容为“480”。480表示steam测试使用的app id。
+
+参考自：Steam integration not working on a Shipping Build  
+https://answers.unrealengine.com/questions/474029/steam-integration-not-working-on-a-shipping-build.html
