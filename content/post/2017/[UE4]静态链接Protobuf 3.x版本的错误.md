@@ -18,7 +18,7 @@ https://thecodeway.com/blog/?p=1394
 
 修改Protobuf 3.x源码并作为UE4 plugin编译  
 https://github.com/jashking/UE4Protobuf  
-我基于该项目的protobuf代码，做了一个cmake自动构建配置：  
+{{< hl-text green >}}我基于该项目的protobuf代码，做了一个cmake自动构建配置：{{< /hl-text >}}  
 https://github.com/dawnarc/protobuf_ue4_cmake
 
 将protobuf3.x作为插件集成进UE4  
