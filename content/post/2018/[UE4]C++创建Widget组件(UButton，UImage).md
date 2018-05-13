@@ -26,3 +26,6 @@ keywords= ["UE4", "C++ Create Widget "]
 ##### 其他参考
 Create widget in pure C++  
 https://answers.unrealengine.com/questions/470481/create-widget-in-pure-c.html?sort=oldest
+
+***
+`曾虑多情损梵行，入山又恐别倾城，世间安得双全法，不负如来不负卿。----仓央嘉措`

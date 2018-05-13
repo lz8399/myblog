@@ -37,3 +37,6 @@ tags= ["UE4", "Math"]
 
 
 注意：`矩阵相乘时，两个乘数的前后位置不同则计算的结果也不同`，比如上面例子，如果是( FRotationMatrix(Rot2) * FRotationMatrix(Rot1)).Rotator，则结果是Rotation(90, -90, -180)。
+
+***
+`风起于青萍之末，浪成于微澜之间。 ----先秦·宋玉 《风赋》`

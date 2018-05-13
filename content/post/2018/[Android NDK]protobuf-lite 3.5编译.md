@@ -158,3 +158,6 @@ tags= ["NDK", "Android", "protobuf"]
 是因为Android.mk中没有添加：`HAVE_PTHREAD=1`
 
     LOCAL_CPPFLAGS := -std=c++11 -D HAVE_PTHREAD=1
+
+***
+`热爱是条件，专注是能力。`

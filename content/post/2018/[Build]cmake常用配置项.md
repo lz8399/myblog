@@ -18,3 +18,6 @@ tags= ["CMake"]
 
     file(GLOB cpp_files ./src/*.cpp)
     add_library(mylib STATIC ${cpp_files})
+	
+***
+`伦常乖舛，立见消亡；德不配位，必有灾殃。----《朱子家训》`

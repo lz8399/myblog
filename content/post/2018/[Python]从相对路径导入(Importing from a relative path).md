@@ -27,3 +27,6 @@ tags= ["Python"]
 参考：  
 Importing from a relative path in Python  
 https://stackoverflow.com/questions/7505988/importing-from-a-relative-path-in-python
+
+***
+`我行过许多地方的桥，看过许多次数的云，喝过许多种类的酒，却只爱过一个正当最好年龄的人。----沈从文《湘行散记》`

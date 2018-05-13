@@ -91,3 +91,5 @@ Application.mk
     LOCAL_SRC_FILES += \
     $(CC_LITE_SRC_FILES)
     
+***
+`人生有两种境界：一是痛而不言，二是笑而不语。`

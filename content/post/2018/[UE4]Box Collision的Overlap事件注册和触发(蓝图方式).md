@@ -31,3 +31,6 @@ keywords：Hit和Overlap事件（碰撞和重叠）
 
 再编辑Box Collision属性
 {{< figure src="/img/20171228-[UE4]Box Collision的Overlap事件注册和触发(蓝图方式)/[UE4]Box Collision的Overlap事件注册和触发(蓝图方式)-08.jpg">}}
+
+***
+`人的一生会遇到两个人，一个惊艳了时光，一个温柔了岁月。----苏剧 《经年》`

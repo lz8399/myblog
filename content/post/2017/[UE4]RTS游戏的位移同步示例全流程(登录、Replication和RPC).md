@@ -284,3 +284,5 @@ http://blog.csdn.net/yangxuan0261/article/details/54766955
 RPC：  
 http://blog.csdn.net/yangxuan0261/article/details/54766951
 
+***
+`天下事，成于精而败于众，立于诚而倾于奢。`

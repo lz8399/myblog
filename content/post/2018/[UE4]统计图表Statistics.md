@@ -15,3 +15,6 @@ keywords= ["UE4", "Statistics"]
 
 Tris表示单个Mesh的三角面；SumTris表示该类型的Mesh面数总和。
 {{< figure src="/img/20180129-[UE4]统计图表Statistics/[UE4]统计图表Statistics-03.jpg">}}
+
+***
+`一个人生命中最大的幸运，莫过于在他的人生中途，即在他年富力强的时候发现了自己的使命。 ----茨威格《人类群星闪耀时》`

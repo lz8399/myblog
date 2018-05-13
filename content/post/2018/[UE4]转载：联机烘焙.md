@@ -19,3 +19,6 @@ http://www.cnblogs.com/ghl_carmack/p/8580617.html
 3、 如果是Win10的话切换为专用网络，Win7切换为工作网络或者家庭网络。主要是为了确保已经开启了File And Printer Sharing。  
 4、 Swarm agent waiting for remotes to become available。一种情况下是它也在自己编译，另外可能就是没有打开File And Printer Sharing。  
 5、 其它的问题请参考Swarm Agent Troubleshooting  
+
+***
+`愿你出走半生，归来仍是少年郎。纵使尘满面，鬓如霜。`

@@ -51,3 +51,6 @@ UE4的另一个关于GameInstance改名或者更改目录结构的bug：
 在Viewport/Simulation中正常，在Package/Standalone中Cast失败，原因如下：  
 Casting to game instance always fails when packaging the game  
 https://answers.unrealengine.com/questions/595245/casting-to-game-instance-always-fails-when-packagi.html
+
+***
+`高潜力人才的一个典型特征就是永不满足现状，不断挑战更高目标。`

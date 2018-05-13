@@ -383,3 +383,9 @@ build-protobuf-2.6.1.sh
     echo "$(tput setaf 2)"
     echo Done!
     echo "$(tput sgr0)"
+
+***
+`“大圣，此去欲何？”  
+“踏南天，碎凌霄。”  
+“若一去不回……”  
+“便一去不回！”`

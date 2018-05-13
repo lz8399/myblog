@@ -30,3 +30,6 @@ Build Settings -> Build Locations -> Build Products Path
 
 iOS 静态库制作（Xcode9.0）  
 http://blog.csdn.net/wanna_dance/article/details/78687676
+
+***
+`人们最好在运筹帷幄时胆小一点，并想到所有不良后果；但在必须行动的时候，便要大胆敢为。`

@@ -16,3 +16,6 @@ keywords= ["UE4", "Mobile Material", "Mobile Texture"]
 
 参考自：  
 https://answers.unrealengine.com/questions/211323/layered-landscape-material-on-mobile.html
+
+***
+`只有诗人同圣徒才能相信，在沥青路上辛勤浇水会培养出百合花来。  ----毛姆`

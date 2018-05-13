@@ -37,3 +37,5 @@ https://docs.unrealengine.com/en-us/Engine/Rendering/LightingAndShadows/Lighting
 + CSM Shadows只会投射到与光源Lighting Channels相同的primitives上。
 + 动态点光源在移动端支持Lighting Channels的所有特性，与桌面级特性相同。
 
+***
+`我只担心一件事，我怕我配不上自己所受的苦难。----陀思妥耶夫斯基`

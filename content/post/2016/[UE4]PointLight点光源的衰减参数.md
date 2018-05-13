@@ -24,3 +24,5 @@ https://docs.unrealengine.com/latest/INT/Resources/ContentExamples/Lighting/4_2/
 
 {{< figure src="/img/20161020-[UE4]PointLight点光源的衰减参数/[UE4]PointLight点光源的衰减参数-03.jpg">}}
 
+***
+`先知先觉者胜，后知后觉者平，不知不觉者败。`

@@ -195,3 +195,6 @@ Unload之后如果需要立即回收，可以执行ForceGC：
 ##### 参考
 《Fortnite》开发经验分享之运行时资源管理：Runtime Asset Management  
 https://answers.unrealengine.com/storage/temp/136465-runtimeassetmanagementin416.pdf
+
+***
+`如果热爱与希望，背道而驰，那我选择热爱。 ----井上雄彦`

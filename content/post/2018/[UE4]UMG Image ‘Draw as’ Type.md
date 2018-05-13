@@ -35,3 +35,6 @@ Marin表示Image边沿格子的大小，数值是百分比。例如，假设Marg
 
 Border模式下，Image不会随着屏幕大小拉伸，而是固定大小。例如，当Margin为0.5，且Viewport变小时，每个格子的图片不会被拉伸：
 {{< figure src="/img/20180417-[UE4]UMG Image ‘Draw as’ Type/[UE4]UMG Image ‘Draw as’ Type-10.jpg">}}
+
+***
+`有些动物主要是皮值钱，譬如狐狸；有些动物主要是肉值钱，譬如牛；有些动物主要是骨头值钱，譬如人。——丰子恺`

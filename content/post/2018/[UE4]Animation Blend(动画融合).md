@@ -24,3 +24,6 @@ https://docs.unrealengine.com/en-us/Engine/Animation/NodeReference/Blend
 {{< figure src="/img/20180413-[UE4]Animation Blend(动画融合)/[UE4]Animation Blend(动画融合)-02.jpg">}}
 
 {{< figure src="/img/20180413-[UE4]Animation Blend(动画融合)/[UE4]Animation Blend(动画融合)-03.jpg">}}
+
+***
+`有作用者器宇定是不凡，有智慧者才情决然不露。----弘一法师`

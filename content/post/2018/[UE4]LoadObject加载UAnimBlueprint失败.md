@@ -35,3 +35,6 @@ keywords：UE4、Dynamic Load、Animation Blueprint、LoadObject、动画蓝图
 参考：Why can't i dynamically load an animation BP in a packaged game  
 https://answers.unrealengine.com/questions/263863/why-cant-i-dynamically-load-an-animation-bp-in-a-p.html
 
+
+***
+`二八佳人体似酥，腰间仗剑斩凡夫。虽然不见人头落，暗里教君骨髓枯。  ---唐·吕洞宾`

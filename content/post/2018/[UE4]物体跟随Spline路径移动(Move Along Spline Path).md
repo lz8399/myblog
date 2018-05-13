@@ -15,3 +15,6 @@ keywords= ["UE4", "Spline"]
 然后把该Actor蓝图拖到场景中，然后在相应蓝图（比如角色蓝图）中编辑移动逻辑：
 {{< figure src="/img/20180304-[UE4]物体跟随Spline路径移动(Move Along Spline Path)/[UE4]物体跟随Spline路径移动(Move Along Spline Path)-03.jpg">}}
 (图片放大：复制图片地址单独打开)
+
+***
+`君子和而不同，小人同而不和。 ----《论语》`

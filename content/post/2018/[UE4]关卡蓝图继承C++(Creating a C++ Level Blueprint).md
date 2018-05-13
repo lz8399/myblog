@@ -15,3 +15,6 @@ keywords= ["UE4", "Level Blueprint"]
 3，然后关卡蓝图中就可以调用自定义LevelScriptActor Class中的UFUNCTION(BlueprintCallable)函数
 
 参考：http://orfeasel.com/creating-a-c-level-blueprint/
+
+***
+`天之道利而无害，人之道为而不争。 ----《道德经》`

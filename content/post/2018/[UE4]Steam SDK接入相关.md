@@ -34,3 +34,6 @@ http://gad.qq.com/program/translateview/7191582
 
 参考自：Steam integration not working on a Shipping Build  
 https://answers.unrealengine.com/questions/474029/steam-integration-not-working-on-a-shipping-build.html
+
+***
+`人生没有彩排，每天都是直播。阳光，源自你内心的澄澈！`

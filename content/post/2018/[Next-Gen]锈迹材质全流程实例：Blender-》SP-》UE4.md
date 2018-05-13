@@ -117,3 +117,7 @@ OcclusionRoughnessMetallic贴图的红色通道连AO（环境光）、绿色通�
 {{< figure src="/img/20180320-[Material]锈迹材质全流程实例：Blender-》SP-》UE4/[Material]锈迹材质全流程实例：Blender-》SP-》UE4-33.jpg">}}
 
 头顶颜色泛蓝是因为场景中有个天空盒，反射效果。
+
+
+***
+`大上有立德，其次有立功，其次有立言，虽久不废，此之谓不朽。----《左传》`

@@ -392,3 +392,5 @@ C:\Users\用户名\AppData\Local\UnrealEngine\Common\DerivedDataCache，时间�
 隐藏安卓的虚拟键、软键 Hide Android App Soft Keys(Home key and Return key)  
 Project Settings -》 Android -》 Platforms -》 Enable FullScreen Immersive on KitKat and above devices
 
+***
+`凡心所向，素履以往。生如逆旅，一苇以航。----木心`

@@ -110,4 +110,5 @@ Package Project -》 Windows -》 Windows x64。
 如果出现以下错误提示，原因是客户端和服务端版本不匹配，比如编译完客户端之后又改过代码，然后再编译服务端。  
 {{< hl-text danger >}}LogNet: NotifyControlMessage: Client connecting with invalid version. LocalNetworkVersion: -629807355, RemoteNetworkVersion: 1642249361{{< /hl-text >}}
 
-
+***
+`自古美人如名将，不许人间见白头。`

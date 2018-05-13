@@ -26,3 +26,6 @@ tags= ["Windows", "FTP"]
 {{< figure src="/img/20171206-[Windows]Windows Server搭建FTP共享服务器/[Windows]Windows Server搭建FTP共享服务器-08.jpg">}}
 
 {{< figure src="/img/20171206-[Windows]Windows Server搭建FTP共享服务器/[Windows]Windows Server搭建FTP共享服务器-09.jpg">}}
+
+***
+`年少的承诺，执着的相守。看似美好，却是无情。----《花千骨》`

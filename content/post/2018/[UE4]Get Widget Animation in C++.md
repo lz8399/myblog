@@ -43,3 +43,6 @@ keywords：C++操作控制UMG动画、Widget Animation
     
 参考自：Get Widget Animation in C++  
 https://answers.unrealengine.com/questions/427948/get-widget-animation-in-c.html
+
+***
+`飞蛾扑火时，一定是极快乐幸福的。----三毛《撒哈拉的故事》`

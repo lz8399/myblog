@@ -13,3 +13,6 @@ keywords= ["UE4", "Widget Blueprint"]
 
 {{< figure src="/img/20180401-[UE4]UMG Widget作为变量访问/[UE4]UMG Widget作为变量访问-01.jpg">}}
 {{< figure src="/img/20180401-[UE4]UMG Widget作为变量访问/[UE4]UMG Widget作为变量访问-02.jpg">}}
+
+***
+`博观而约取，厚积而薄发。-----《稼说送张琥》`

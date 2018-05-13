@@ -70,3 +70,6 @@ tags= ["C++", "read and write binary"]
         getchar() ; 
         return 0 ; 
     } 
+	
+***
+`世上所有的惊喜和好运，等于你的人品乘以你的努力。 ​​`

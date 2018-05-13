@@ -41,4 +41,6 @@ tags= ["C++", "Syntax"]
     003EA32A  mov         dword ptr [ebp-0E8h],0  
     003EA334  mov         al,byte ptr [ebp-0E8h]  
     003EA33A  mov         byte ptr [b],al
-    
+ 
+*** 
+`时间是一只藏在黑暗中的温柔的手，在你一出神一恍惚之间，物走星移。----龙应台《目送》`

@@ -65,3 +65,6 @@ tip:
     APP_OPTIM := debug
 
 具体application.mk 文件的配置见： http://blog.csdn.net/weidawei0609/article/details/6561280
+
+***
+`人行阳德，人自报之；人行阴德，鬼神报之；人行阳恶，人自报之；人行阴恶，鬼神害之。  ----孙思邈《大医精诚》 `

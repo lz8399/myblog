@@ -82,3 +82,5 @@ Pascal and D are quick but not suited to the large scale, where Go overtakes C++
 A bit more data points to show that the lines are not as smooth as they appear above.
 But the way the data was gather may be quite unrepresentative of real applications anyway, so don't take this too seriously. But maybe it can spark some interesting discussion. No pitchforks please. :)
 
+***
+`君子博学而日参省乎己，则智明而行无过矣。  ----《荀子·劝学》`

@@ -15,3 +15,6 @@ SetNextSection在编辑器中运行正常，但是在打包版本中无效。
 
 参考自：Montage unwanted section switching  
 https://answers.unrealengine.com/questions/172537/montage-unwanted-section-switching.html
+
+***
+`人生如逆旅，我亦是行人。----苏轼《临江仙》`

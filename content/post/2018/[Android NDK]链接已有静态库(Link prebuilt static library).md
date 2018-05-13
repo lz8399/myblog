@@ -27,3 +27,6 @@ Android.mk：
 
 Include prebuilt static library  
 https://stackoverflow.com/questions/18983037/include-prebuilt-static-library
+
+***
+`故兵无常势，水无常形。能因敌变化而取胜者，谓之神。故五行无常胜，四时无常位，日有短长，月有死生。`

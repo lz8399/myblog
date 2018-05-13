@@ -90,3 +90,5 @@ https://stackoverflow.com/questions/12630970/compiling-for-ios-with-cmake
 用CMake代替makefile进行跨平台交叉编译  
 http://www.cnblogs.com/wengzilin/p/4466708.html
 
+***
+`会有那样的一天，你活成了你最想要的样子，过去所有的伤痕都变成了勋章 。`

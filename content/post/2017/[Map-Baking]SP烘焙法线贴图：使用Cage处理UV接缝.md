@@ -98,3 +98,6 @@ Select a mesh, patch, spline, or NURBS object. > Modifiers menu > Geometry (Conv
 
 官方文档：Edit Normals Modifier Reference  
 https://knowledge.autodesk.com/support/3ds-max/learn-explore/caas/CloudHelp/cloudhelp/2016/ENU/3DSMax/files/GUID-82722323-100B-4711-A01D-8A87EB53DD96-htm.html
+
+***
+`若无力驾驭，自由便是负担。`

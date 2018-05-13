@@ -28,4 +28,6 @@ https://github.com/tomlooman/EpicSurvivalGameSeries/blob/4a6ee9a6081529fadbe0f69
     FRotator R2;
     FRotator Offset = R2 - R1;
     
+***
+`无欲则刚，关心则乱。----《论语》`
     

@@ -33,4 +33,5 @@ windows bat：
         if exist %%s protoc.exe -I=%dir% --cpp_out=%out_cpp% %%s
     )
 
-
+***
+`欲无祸于昭昭，勿得罪于冥冥。----《菜根谭》`

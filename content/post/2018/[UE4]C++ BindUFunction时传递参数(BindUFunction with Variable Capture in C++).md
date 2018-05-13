@@ -79,3 +79,7 @@ https://answers.unrealengine.com/questions/109955/bind-delegate-with-one-paramet
 + BindRaw()：针对非UObject类型的class。
 + BindUObject()：针对UObject类型Class的非UFUNCTION()函数。
 + BindUFunction：针对UObject类型Class的UFUNCTION()函数。
+
+
+***
+`天上的神明和星辰，人间的艺术与真纯，我们所敬畏和景仰的，莫过于此。`

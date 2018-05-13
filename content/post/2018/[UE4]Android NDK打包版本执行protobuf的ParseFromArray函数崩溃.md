@@ -127,3 +127,5 @@ Result.proto
 	  repeated string snippets = 3;
 	}
 
+***
+`当才华无法撑起野心时，应静下心学习。`

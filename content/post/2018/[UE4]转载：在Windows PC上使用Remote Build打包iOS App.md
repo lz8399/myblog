@@ -18,3 +18,6 @@ https://www.jianshu.com/p/8770044771e3
 
 Building iOS game in Unreal Engine 4 via remote machine  
 http://zompi.pl/building-ios-game-in-unreal-engine-4-via-remote-machine/
+
+***
+`如果，你的身后如果中了一个冷箭，说明你走在了他们的前面；如果，你会被他们伤到，说明你走得不够远，还在他们的射程以内。。。。`

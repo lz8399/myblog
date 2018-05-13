@@ -54,3 +54,6 @@ IPA 打包失败，错误如下
 Edit -> Project Settings... -> Platforms -> iOS -> Mobile Provision 中添加描述文件和证书，或者直接打开 Engine\Binaries\DotNET\IOS\IPhonePackager.exe 进行添加
 
 描述文件和证书生成见官方文档
+
+***
+`天行健，君子以自强不息；地势坤，君子以厚德载物。----《易经》`

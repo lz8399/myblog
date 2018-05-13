@@ -75,3 +75,6 @@ Modes视窗中的Volumes页签找到Lightmass Character Indirect Detail Volumes
 增加了间接光后，靠近天花板会变亮的问题就解决了
 
 Lightmass Character Indirect Detail Volumes通常会应用在垂直的地形上，像是升降梯、电梯那种，只要角色到的了的地方但却没有间接光缓存时就可以使用!
+
+***
+`非淡泊无以明志， 非宁静无以致远。----诸葛亮《诫子书》`

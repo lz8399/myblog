@@ -21,3 +21,5 @@ keywords= ["UE4", "PlayerState"]
 参考：PlayerState persistence across map change.  
 https://answers.unrealengine.com/questions/43814/playerstate-persistence-across-map-change.html
 
+***
+`有两样东西，越是持久地进行思考，越使心灵充满惊赞和敬畏！它们就是头顶的璀璨星空和心中的道德法则。----德国古典哲学创始人康德`

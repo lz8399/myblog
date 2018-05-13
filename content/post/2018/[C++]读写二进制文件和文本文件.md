@@ -187,3 +187,6 @@ tags= ["C++", "read and write binary"]
     }
     
 参考自：https://blog.csdn.net/hjl240/article/details/47132477
+
+***
+`为天地立心，为生民立命，为往圣继绝学，为万世开太平。 ----北宋·张载`

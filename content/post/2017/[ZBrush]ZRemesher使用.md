@@ -28,4 +28,5 @@ ZRemesher可以用于模型的自动拓扑：先在SubTool复制一个模型，�
 [ZBrush]Project All实例(example)
 http://www.dawnarc.com/2017/04/zbrushproject-all%E5%AE%9E%E4%BE%8Bexample/
 
-
+***
+`金鳞昂首凌霄烁，少年得意浅水游。 ---光叔`

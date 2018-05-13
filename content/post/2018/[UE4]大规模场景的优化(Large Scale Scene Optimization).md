@@ -46,3 +46,6 @@ https://docs.unrealengine.com/latest/INT/Engine/Content/Types/StaticMeshes/HowTo
 
 Setting Up Automatic LOD Generation（自动生成LOD）  
 https://docs.unrealengine.com/latest/INT/Engine/Content/Types/StaticMeshes/HowTo/AutomaticLODGeneration/
+
+***
+`越是丰盈的灵魂，往往越能敏锐地意识到残缺，有越强烈的孤独感。在内在丰盈的衬照下，方见人生的缺憾。反之，不谙孤独也许正意味着内在的贫乏。`
