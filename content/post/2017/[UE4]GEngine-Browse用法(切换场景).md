@@ -22,3 +22,6 @@ keywords= ["UE4", "Custom Shape Button"]
 {{< alert danger >}}
 GEngine->Browse这种方式第一次打开场景时正常，如果第二次切换场景（比如从别的场景再切回原场景），则会导致程序崩溃。建议用：UGameplayStatics::OpenLevel(GetWorld(), TEXT("/Game/Map/TestMap")); 这种方式来回切场景不会出现崩溃问题。
 {{< /alert >}}
+
+***
+`几时归去，作个闲人。对一张琴、一壶酒、一溪云。----宋·苏轼《行香子》`
