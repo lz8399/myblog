@@ -392,5 +392,16 @@ C:\Users\用户名\AppData\Local\UnrealEngine\Common\DerivedDataCache，时间�
 隐藏安卓的虚拟键、软键 Hide Android App Soft Keys(Home key and Return key)  
 Project Settings -》 Android -》 Platforms -》 Enable FullScreen Immersive on KitKat and above devices
 
+【2018-0515T20:17】  
+UMG BindWidget宏使用  
+假如在UMG蓝图中放了一个name为BtnTest的UButton，那么可以在父类C++的UserWidget类中使用meta = (BindWidget)，来获取这个button的指针：
+
+    UPROPERTY(meta = (BindWidget))
+		UButton* BtnTest;
+
+这样就不用通过GetWidgetFromName()函数获取button的指针：
+
+    BtnTest = Cast<UButton>(GetWidgetFromName(TEXT("BtnTest")));
+
 ***
 `凡心所向，素履以往。生如逆旅，一苇以航。----木心`
