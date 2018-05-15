@@ -16,3 +16,6 @@ https://www.unrealengine.com/zh-CN/blog/how-to-improve-game-thread-cpu-performan
 
 UE4 性能优化方法(工具篇)  
 https://www.cnblogs.com/ghl_carmack/p/5481763.html
+
+***
+`人生中有些事是不得不做的，于不得不做中勉强去做，是毁灭；于不得不做中做的好，是勇敢。——叶弥《成长如蜕》`

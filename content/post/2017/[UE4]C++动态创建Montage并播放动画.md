@@ -28,3 +28,6 @@ keywords：UE4, C++, AnimSequence, AnimMontage, Slot, 动态创建, 播放动画
 
 ##### C++播放Montage动画（静态Montage资源）
 http://www.dawnarc.com/2016/02/ue4%E5%A6%82%E4%BD%95%E6%92%AD%E6%94%BEmontage%E5%8A%A8%E7%94%BBc--/
+
+***
+`所有的战争都是内战，因为所有的人类都是同胞。——弗朗索瓦·费奈隆（FrancoisFenelon）`

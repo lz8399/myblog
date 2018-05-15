@@ -172,3 +172,6 @@ http://blog.csdn.net/yangxuan0261/article/details/52075581
         
 #### 参考资料
 官网地址： https://wiki.unrealengine.com/Garbage_Collection_%26_Dynamic_Memory_Allocation
+
+***
+`他们如此单纯，以至于认为贫穷是一种罪过，还以为可以通过赚钱来遗忘。——杰拉尔·萨利克`

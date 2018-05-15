@@ -24,3 +24,6 @@ https://docs.unrealengine.com/latest/INT/Gameplay/Networking/CharacterMovementCo
 
 Custom Character Movement Component  
 https://wiki.unrealengine.com/Custom_Character_Movement_Component
+
+***
+`人们常常用咄咄逼人来掩饰弱点，真正持久的力量存在于忍受中，只有软骨头才急躁粗暴，他们因此丧失了人的尊严。我等待，我观看。恩惠也许来，也许不来。也许这种既平静又不平静的等待就是恩惠的使者，抑或恩惠本身。──弗兰茨·卡夫卡（FranzKafka）`

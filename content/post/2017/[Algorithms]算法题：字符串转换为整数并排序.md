@@ -78,3 +78,6 @@ tags= ["Algorithms-String", "Algorithms-Sorting"]
     5765
     234234
     563435
+    
+***
+`真正的强者，不是没有眼泪的人，而是含着眼泪奔跑的人。`
