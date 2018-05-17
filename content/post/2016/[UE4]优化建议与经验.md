@@ -24,3 +24,10 @@ keywords：UE4性能优化、Performance Optimization
 
 Epic Games工程师分享：如何在移动平台上做UE4的UI优化？  
 http://youxiputao.com/articles/11743
+
+##### Dedicated Server优化
+1，服务端不用播放角色动画
+
+2，禁用角色刚体
+
+3，Detach角色身上所有的装饰性组件
