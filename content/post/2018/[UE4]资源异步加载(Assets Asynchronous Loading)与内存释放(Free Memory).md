@@ -196,5 +196,16 @@ Unload之后如果需要立即回收，可以执行ForceGC：
 《Fortnite》开发经验分享之运行时资源管理：Runtime Asset Management  
 https://answers.unrealengine.com/storage/temp/136465-runtimeassetmanagementin416.pdf
 
+【2018-05-21】  
+如果在场景A中去加载场景B（SyncLoad或者AsyncLoad，不是UGameplayStatics::OpenLevel方式），那么加载场景B时，bManageActiveHandle参数不能设置为false，而要设置为true。
+
+现象：  
+如果bManageActiveHandle设置为默认值false，那么当执行OpenLevel切换到场景B时，若此时场景B的内存已经被回收掉，则会导致程序无响应卡死（20秒左右后闪退，但是没有崩溃日志），而且在移动端还会因为各种莫名其妙的问题，且Android Device Monitor中也看不到崩溃日志，只能看到一句：
+
+    A/libc(27559): Fatal signal 11 (SIGSEGV), code 1, fault addr 0x10 in tid 27609 (Thread-2), pid 27559 (MainThread-UE4)
+    
+解决办法：  
+如果场景A中需要Load场景B，bManageActiveHandle设置为true；等到切换到场景B时，再手动ReleaseHandle。
+
 ***
 `如果热爱与希望，背道而驰，那我选择热爱。 ----井上雄彦`
