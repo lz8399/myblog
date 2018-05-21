@@ -11,3 +11,6 @@ keywords= ["UE4", "C++", "PlayerController"]
 	APlayerController* PC1 = GetWorld()->GetFirstLocalPlayerFromController()->GetPlayerController(GetWorld());
 	APlayerController* PC2 = GetWorld()->GetFirstPlayerController();
 	APlayerController* PC3 = GEngine->GetFirstLocalPlayerController(GetWorld());
+    
+***
+`心似平原走马，易放难收。----《增广贤文》`

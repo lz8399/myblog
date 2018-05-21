@@ -14,3 +14,6 @@ http://computergraphics.stackexchange.com/questions/1608/how-to-combine-rotation
 
 Rotation matrix  
 https://en.wikipedia.org/wiki/Rotation_matrix
+
+***
+`云山苍苍，江水泱泱，先生之风，山高水长。---范仲淹《严先生祠堂记》`

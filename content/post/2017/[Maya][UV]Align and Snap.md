@@ -23,3 +23,6 @@ Maya版本为2018.1
 {{< figure src="/img/20171106-[Maya][UV]Align and Snap/[Maya][UV]Align and Snap-04.jpg">}}
 Snap用来操作UV壳，上面的九宫格，分别对应不同方位的吸附对齐，例如：右上角方框就表示UV壳吸附到UV贴图的右上角位置，例如：
 {{< figure src="/img/20171106-[Maya][UV]Align and Snap/[Maya][UV]Align and Snap-05.jpg">}}
+
+***
+`只身千里客，孤枕一灯秋。---宋·真山民《渡江之越宿萧山县》`

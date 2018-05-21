@@ -30,3 +30,6 @@ tags= ["CMake"]
 ##### 删除临时文件
 如果要删除cache文件，点击：File -》 Delete Cache。
 {{< figure src="/img/20170906-[Build]cmake-gui使用/[Build]cmake-gui使用-06.jpg">}}
+
+***
+`树德莫如滋，去疾莫如尽。----《左传》`

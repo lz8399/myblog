@@ -47,3 +47,5 @@ tags= ["UE4"]
      
 不要自己设置FActorSpawnParameters，因为AIController和PlayerController表现不一样。
 
+***
+`人生一世,草生一春,来如风雨,去似微尘。----《增广贤文》`

@@ -79,7 +79,5 @@ Modeling Toolkit提供了更加快捷的挤压操作：按住Shift + 鼠标左�
 + 挤压面：
 {{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程01：Multi-Cut/[Maya]Modeling Tookkit 教程01：Multi-Cut-20.jpg">}}
 
-
-
-
-
+***
+`恻隐之心，仁之端也；羞恶之心，义之端也：辞让之心，礼之端也；是非之心，智之端也。----《孟子》`

@@ -19,3 +19,6 @@ https://share.allegorithmic.com/libraries/2310
 
 使用教程：Perfect Normal Map Baking in Substance Painter   
 https://www.youtube.com/watch?v=cVPJwMivw5I
+
+***
+`虽有智慧，不如乘势。虽有镃基，不如待时。----《孟子》`

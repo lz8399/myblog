@@ -17,3 +17,6 @@ https://zhidao.baidu.com/question/132223547.html
 
 HOMOGENEOUS TRANSFORMATION MATRICES  
 http://www.silcom.com/~barnowl/HTransf.htm
+
+***
+`天道何亲，惟德之亲；鬼神何灵，因人而灵。---刘基《司马季主论卜》`

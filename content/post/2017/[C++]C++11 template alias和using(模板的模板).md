@@ -51,3 +51,6 @@ keywords：alias template、模板别名、模板的模板
 
 Type alias, alias template (since C++11)  
 http://en.cppreference.com/w/cpp/language/type_alias
+
+***
+`尺之木必有节目，寸之玉必有瑕瓋。---《吕氏春秋》`
