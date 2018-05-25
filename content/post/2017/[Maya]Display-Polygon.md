@@ -33,3 +33,6 @@ Display -》 Polygons，都是Polygon显示相关的菜单。
 ##### Edge Width
 调节Border Edges的线宽
 {{< figure src="/img/20170908-[Maya]Display-Polygon/[Maya]Display-Polygon-08.jpg">}}
+
+***
+`面刺寡人之过者，受上赏；上书谏寡人者，受中赏；能谤讥于市朝闻寡人之耳者，受下赏。---《战国策》`

@@ -45,3 +45,5 @@ Maya版本为2018
 如果要显示所有，点击Display -》 Show -》 All。
 {{< figure src="/img/20171008-[Maya]Display-Show & Hide/[Maya]Show-15.jpg">}}
 
+***
+`面刺寡人之过者，受上赏；上书谏寡人者，受中赏；能谤讥于市朝闻寡人之耳者，受下赏。---《战国策》`

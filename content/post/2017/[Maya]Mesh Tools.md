@@ -88,3 +88,6 @@ Mesh Tool -》 Insert Edge Loop，或者按住shift+ 鼠标右键-》 Insert Edg
 但是这条环线只穿越四角面，三角面和五角面则会让其终止。比如如下情形：
 {{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-25.jpg">}}
 {{< figure src="/img/20170930-[Maya]Mesh Tools/[Maya]Mesh Tools-26.jpg">}}
+
+***
+`数战则民劳，久师则兵弊。---《战国策》`

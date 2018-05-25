@@ -27,10 +27,45 @@ FGCObjectScopeGuard的用法：
         GladOS->IsStillAlive();   // Object will not be removed by GC
     }
     
+##### 垃圾回收导致的崩溃
+
+    LogMemory: Warning: Freeing 33554432 bytes from backup pool to handle out of memory.
+    LogMemory: Warning: MemoryStats:
+        AvailablePhysical 8224505856
+         AvailableVirtual 140736262627328
+             UsedPhysical 184074240
+         PeakUsedPhysical 456364032
+              UsedVirtual 709910528
+          PeakUsedVirtual 42022313984
+    FMallocBinned2 Mem report
+    Small Pool
+    Requested Allocations: 86.295471mb  (including block size padding)
+    OS Allocated: 86.295471mb
+    Large Pool
+    Requested Allocations: 111.373856mb
+    OS Allocated: 113.687500mb
+    OS Page Allocator
+    Cached free pages: 1.250000mb
+    LogWindows: Windows GetLastError: 操作成功完成。 (0)
+    LogWindows: Error: === Critical error: ===
+    LogWindows: Error: 
+    LogWindows: Error: Fatal error: [File:D:\Build\++UE4+Release-4.18+Compile\Sync\Engine\Source\Runtime\Core\Private\GenericPlatform\GenericPlatformMemory.cpp] [Line: 183] 
+    LogWindows: Error: Ran out of memory allocating 41231712256 bytes with alignment 0
+    LogWindows: Error: 
+    LogWindows: Error: 
+    LogWindows: Error: 
+    LogExit: Executing StaticShutdownAfterError
+    LogWindows: FPlatformMisc::RequestExit(1)
+    Log file closed, 05/25/18 12:15:07
+
+如果出现上述的log，说明垃圾回收所致。这种log只是程序退出，并不会产生crash dump文件。
+    
 ##### 参考资料
+Actor Lifecycle（Actor生命周期）  
+https://docs.unrealengine.com/en-us/Programming/UnrealArchitecture/Actors/ActorLifecycle
+
 虚幻4垃圾回收剖析  
 http://www.cnblogs.com/ghl_carmack/p/6112118.html
-
 
 转载：UE4内存管理 – 实践  
 http://blog.csdn.net/yangxuan0261/article/details/52075581
@@ -172,3 +207,6 @@ http://blog.csdn.net/yangxuan0261/article/details/52075581
         
 #### 参考资料
 官网地址： https://wiki.unrealengine.com/Garbage_Collection_%26_Dynamic_Memory_Allocation
+
+***
+`扈江离与辟芷兮，纫秋兰以为佩。---屈原《离骚》`

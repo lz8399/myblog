@@ -34,3 +34,6 @@ Toolkit中的Symmetry是用来控制对称的，默认是关闭的
 + 方式3：点击右上角的Tool Settings，然后展开Symmetry Settings
 {{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程03：Symmetry Tool/[Maya]Modeling Tookkit 教程03：Symmetry Tool-11.jpg">}}
 {{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程03：Symmetry Tool/[Maya]Modeling Tookkit 教程03：Symmetry Tool-12.jpg">}}
+
+***
+`祸与福相贯，生与死为邻。---《战国策》`

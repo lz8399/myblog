@@ -171,3 +171,6 @@ https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhe
 
 这样再平滑一个正方体时，就不会把正方体的棱角软化，平滑后的效果如下：
 {{< figure src="/img/20171002-[Maya]Mesh/[Maya]Mesh-45.jpg">}}
+
+***
+`争名者于朝，争利者于市。---《战国策》`

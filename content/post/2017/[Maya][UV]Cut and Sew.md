@@ -41,3 +41,6 @@ UV Toolkit面板钟展开Cut and Sew选项
 {{< figure src="/img/20171105-[Maya][UV]Cut and Sew/[Maya][UV]Cut and Sew-09.jpg">}}
 然后点击Sew。
 {{< figure src="/img/20171105-[Maya][UV]Cut and Sew/[Maya][UV]Cut and Sew-10.jpg">}}
+
+***
+`同欲者相憎，同忧者相亲。---《战国策》`

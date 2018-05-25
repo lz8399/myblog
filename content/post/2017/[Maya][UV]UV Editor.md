@@ -64,3 +64,6 @@ UV贴图制作完成后输出到指定路径
 打开棋盘格之后可以检测UV的拉伸畸变是否严重
 {{< figure src="/img/20171031-[Maya][UV]UV Editor/[Maya][UV]UV Editor-25.jpg">}}
 {{< figure src="/img/20171031-[Maya][UV]UV Editor/[Maya][UV]UV Editor-26.jpg">}}
+
+***
+`前事不忘，后事之师。---《战国策》`

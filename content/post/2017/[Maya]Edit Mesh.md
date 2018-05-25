@@ -157,3 +157,6 @@ Thickness=3
 
 然后就可以拖动这个Component。此时两个Components仍然属于同一个Object。
 {{< figure src="/img/20170908-[Maya]Edit Mesh/[Maya]Edit Mesh-49.jpg">}}
+
+***
+`谋泄者，事无功；计不决者，名不成。---《战国策》`

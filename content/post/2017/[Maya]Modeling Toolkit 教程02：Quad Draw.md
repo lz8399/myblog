@@ -26,3 +26,5 @@ Maya版本为2018
 {{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程02：Quad Draw/[Maya]Modeling Tookkit 教程02：Quad Draw-07.jpg">}}
 {{< figure src="/img/20171002-[Maya]Modeling Tookkit 教程02：Quad Draw/[Maya]Modeling Tookkit 教程02：Quad Draw-08.jpg">}}
 
+***
+`明主爱其国，忠臣爱其名。---《战国策》`

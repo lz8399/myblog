@@ -30,3 +30,6 @@ tags= ["Modeling"]
 ##### 删除Group
 选中Group之后，再点击：Edit -》 Ungroup。
 {{< figure src="/img/20170830-[Maya]Group/[Maya]Group-11.jpg">}}
+
+***
+`宁为鸡口，无为牛后。---《战国策》`

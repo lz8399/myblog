@@ -44,3 +44,5 @@ Hypershade是Maya中编辑shader材质的工具，比如制作ID贴图时会用�
 这样选中的面就会被涂上指定的颜色材质。
 {{< figure src="/img/20171116-[Maya]Hypershade编辑/[Maya]Hypershade编辑-11.jpg">}}
 
+***
+`人之有德于我也，不可忘也；吾有德于人也，不可不忘也。---《战国策》`

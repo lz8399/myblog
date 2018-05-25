@@ -47,3 +47,6 @@ Display Type
 {{< figure src="/img/20171114-[Maya]Channel Box & Layer Editor/[Maya]Channel Box & Layer Editor-11.jpg">}}
 Color
 {{< figure src="/img/20171114-[Maya]Channel Box & Layer Editor/[Maya]Channel Box & Layer Editor-12.jpg">}}
+
+***
+`无形者，形之君也。无端者，事之本也。---《战国策》`

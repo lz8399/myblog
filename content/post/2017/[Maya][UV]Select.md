@@ -113,3 +113,6 @@ Maya版本为2018.1
 {{< figure src="/img/20171105-[Maya][UV]Select/[Maya][UV]Select-40.jpg">}}
 向上拖动
 {{< figure src="/img/20171105-[Maya][UV]Select/[Maya][UV]Select-41.jpg">}}
+
+***
+`士为知己者死，女为悦己者容。---《战国策》`

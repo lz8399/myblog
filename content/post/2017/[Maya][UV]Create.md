@@ -51,3 +51,5 @@ Maya版本为2018.1
 然后执行Contour Stretch
 {{< figure src="/img/20171031-[Maya][UV]Create/[Maya][UV]Create-14.jpg">}}
 
+***
+`行百里者半九十。---《战国策》`

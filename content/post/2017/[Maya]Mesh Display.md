@@ -61,3 +61,6 @@ Reverse的Hotbox为：按住Shift+鼠标右键 -》 Face Normals -》 Reverse No
 {{< alert danger >}}
 注意：法线平均时只对硬边有效，对软边无效。
 {{< /alert >}}
+
+***
+`君子交绝，不出恶声。---《战国策》`

@@ -71,6 +71,5 @@ Maya版本为2018
     {{< figure src="/img/20171009-[Maya]Deform/[Maya]Deform-29.jpg">}}
     {{< figure src="/img/20171009-[Maya]Deform/[Maya]Deform-30.jpg">}}
 
-
-
-
+***
+`论至德者不和于俗，成大功者不谋于众。---《战国策》`

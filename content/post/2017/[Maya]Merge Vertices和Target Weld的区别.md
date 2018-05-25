@@ -28,3 +28,6 @@ Merge Vertices和Target Weld快捷键：按住Shift+鼠标右键-》Merge Vertic
 参考：  
 Merge Vertices and Target Weld in Maya
 https://www.youtube.com/watch?v=LsDnWZ4hHTk
+
+***
+`效小节者不能行大威，恶小耻者不能立荣名。---《战国策》`

@@ -40,3 +40,6 @@ http://download.autodesk.com/global/docs/maya2014/en_us/index.html?url=files/Edi
 或者在选中边之后按住Shitf+鼠标右键 -》 Soften/Harden Edges
 {{< figure src="/img/20170908-[Maya]Harden Edge和Softend Edge区别/[Maya]Harden Edge和Softend Edge区别-03.jpg">}}
 {{< figure src="/img/20170908-[Maya]Harden Edge和Softend Edge区别/[Maya]Harden Edge和Softend Edge区别-04.jpg">}}
+
+***
+`父母之爱子，则为之计深远。---《战国策》`

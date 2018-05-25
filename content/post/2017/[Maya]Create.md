@@ -58,3 +58,5 @@ T表示隐藏
 {{< figure src="/img/20171006-[Maya]Create/[Maya]Create-19.jpg">}}
 {{< figure src="/img/20171006-[Maya]Create/[Maya]Create-20.jpg">}}
 
+***
+`圣人不能为时，时至而弗失。---《战国策》`

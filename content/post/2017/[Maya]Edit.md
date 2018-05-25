@@ -64,3 +64,6 @@ tags= ["Modeling"]
 {{< figure src="/img/20170829-[Maya]Edit/[Maya]Edit-16.jpg">}}
 
 {{< alert warning >}}注意：复制出来的对象都是一个个独立的Object，如果要最终合并下，需要执行Combine。{{< /alert >}}
+
+***
+`怀重宝者不以夜行，任大功者不以轻敌。---《战国策》`

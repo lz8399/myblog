@@ -200,7 +200,7 @@ https://answers.unrealengine.com/storage/temp/136465-runtimeassetmanagementin416
 如果在场景A中去加载场景B（SyncLoad或者AsyncLoad，不是UGameplayStatics::OpenLevel方式），那么加载场景B时，bManageActiveHandle参数不能设置为false，而要设置为true。
 
 现象：  
-如果bManageActiveHandle设置为默认值false，那么当执行OpenLevel切换到场景B时，若此时场景B的内存已经被回收掉，则会导致程序无响应卡死（20秒左右后闪退，但是没有崩溃日志），而且在移动端还会因为各种莫名其妙的问题，且Android Device Monitor中也看不到崩溃日志，只能看到一句：
+如果bManageActiveHandle设置为默认值false，那么当执行OpenLevel切换到场景B时，若此时场景B的内存已经被回收掉，则会导致程序无响应卡死（20秒左右后闪退，但是没有崩溃日志），而且在移动端还会引起各种莫名其妙的问题，且Android Device Monitor中也看不到崩溃日志，只能看到一句：
 
     A/libc(27559): Fatal signal 11 (SIGSEGV), code 1, fault addr 0x10 in tid 27609 (Thread-2), pid 27559 (MainThread-UE4)
     

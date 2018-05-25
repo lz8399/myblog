@@ -18,3 +18,5 @@ Duplicate Special之Instance
 复制出这个模型，是可以和原物体同时编辑的，比如我拖动某个点，那么另外一个物体也会提示变化。
 {{< figure src="/img/20170830-[Maya]Duplicate Special/[Maya]Duplicate Special-04.jpg">}}
 
+***
+`孪子之相似者，唯其母知之而已；利害之相似者，唯智者知之而已。---《战国策》`
