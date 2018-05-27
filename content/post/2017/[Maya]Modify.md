@@ -43,3 +43,5 @@ Modify -》Center Pivot
 执行后，相关参数就会变化初始化的参数，但是物体的Transform不会变化。
 {{< figure src="/img/20171002-[Maya]Modify/[Maya]Modify-11.jpg">}}
 
+***
+`可惜流年，忧愁风雨，树犹如此。---辛弃疾《水龙吟》`

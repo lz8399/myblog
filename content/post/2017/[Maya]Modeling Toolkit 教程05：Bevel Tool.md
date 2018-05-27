@@ -57,3 +57,6 @@ Maya版本为2018
 
 ##### polyBevel官方文档  
 https://knowledge.autodesk.com/support/maya/learn-explore/caas/CloudHelp/cloudhelp/2018/ENU/Maya-Modeling/files/GUID-40E32F44-1EB9-4DC6-8EE4-6A013EEC626F-htm.html
+
+***
+`一场消黯，永日无言，却下层楼。---柳永《曲玉管》`

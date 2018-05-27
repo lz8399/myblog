@@ -27,3 +27,6 @@ Maya版本为2018
 为了确保缝合成功，可以拖动试一下，看两个顶点的位置有没同时移动。
 {{< figure src="/img/20171005-[Maya]Modeling Tookkit 教程04：Target Weld Tool/[Maya]Modeling Tookkit 教程04：Target Weld Tool-06.jpg">}}
 也可以按数字键3看平滑效果是否正常，如果有顶点没有缝合，平滑时的效果会很奇怪。
+
+***
+`风萧萧兮易水寒，壮士一去兮不复还。---《战国策》`
