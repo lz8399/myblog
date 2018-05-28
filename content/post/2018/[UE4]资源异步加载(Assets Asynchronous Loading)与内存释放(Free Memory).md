@@ -98,7 +98,7 @@ TestTD4Character.cpp
 
 	void ATestTD4Character::AssetsDeferred()
 	{
-		TAssetPtr<UAnimSequence> WidgetAsset(SoftObj);
+		TSoftObjectPtr<UAnimSequence> WidgetAsset(SoftObj);
 		UAnimSequence* AnimObj= WidgetAsset.Get();
 		if (AnimObj)
 		{
