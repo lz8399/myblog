@@ -102,3 +102,6 @@ https://github.com/daw42/glslcookbook
 {{< figure src="/img/20170906-[OpenGL]GLSHCookbook源码编译步骤流程/[OpenGL]GLSHCookbook源码编译步骤流程-06.jpg">}}
 
 解决办法：将uint替换为GLuint。
+
+***
+`纵使相逢应不识，尘满面，鬓如霜。夜来幽梦忽还乡。小轩窗，正梳妆。----北宋·苏轼《江城子·乙卯正月二十日夜记梦》`

@@ -115,3 +115,5 @@ https://docs.unrealengine.com/latest/INT/Platforms/Android/Reference/index.html#
 解决办法：将android-ndk-r12b\sources\cxx-stl\stlport\libs\armeabi\下的libstlport_static.a拷贝出来，放在工程的某个目录下并再Build.cs中链接此lib文件。这是ndk链接stl的bug，nkd 15版本据说已修复，但是ue4编译android版本只支持ndk 12即其以下版本。  
 网上其他人说的解决办法（但是对我无效）：执行GenerateProjectFiles.bat重新生成UE4.sln，并打开VS后clean再rebuild。然后再build Android/Development。  
 
+***
+`人一切的痛苦，本质上都是对自己的无能的愤怒。──王小波`

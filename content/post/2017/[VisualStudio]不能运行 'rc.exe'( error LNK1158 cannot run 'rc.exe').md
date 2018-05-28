@@ -20,3 +20,6 @@ keywords= ["VisualStudio", "LNK1158", "rc.exe"]
 
 2. 打开VS2013里面的属性->常规->平台工具，将v120改成v120_xp。
 {{< figure src="/img/20171209-[VisualStudio]不能运行 'rc.exe'( error LNK1158 cannot run 'rc.exe')/[VisualStudio]不能运行 'rc.exe'( error LNK1158 cannot run 'rc.exe')-01.png">}}
+
+***
+`英雄之所以是英雄，是他不知道有一个阴谋在他身后。——张锐锋《古战场》`

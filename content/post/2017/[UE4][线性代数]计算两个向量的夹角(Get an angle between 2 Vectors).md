@@ -13,3 +13,6 @@ keywords= ["UE4", "Math"]
 	
 参考：How to get an angle between 2 Vectors?  
 https://answers.unrealengine.com/questions/31058/how-to-get-an-angle-between-2-vectors.html
+
+***
+`两情若是久长时，又岂在、朝朝暮暮！----秦观《鹊桥仙》`

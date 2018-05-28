@@ -200,3 +200,5 @@ https://docs.unrealengine.com/latest/INT/Engine/Blueprints/UserGuide/Events/inde
 
 提醒：<font color=red>4.12的碰撞有bug，会导致Hit事件不触发，建议用最新版本</font>。
 
+***
+`几个朋友祝我安乐，几个仇敌祝我灭亡。我却总是既不安乐，也不灭亡。不上不下地生活下来，都不能副任何一面的期望。──鲁迅`

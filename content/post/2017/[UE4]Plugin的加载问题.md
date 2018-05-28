@@ -16,3 +16,6 @@ keywords= ["UE4", "Plugin"]
 解决办法：成员变量（LoadObject返回值，在构造函数中创建的对象）添加UPROPERTY()宏。
 
 另外一种解决办法：给C++的GameMode套一个蓝图，然后在该蓝图中设置DefaultPawnClass、PlayerControllerClass等GameMode属性，此时即使这些PawnClass或者PlayerControllerClass蓝图使用了plugin，也不会报错。
+
+***
+`醉里挑灯看剑，梦回吹角连营。----辛弃疾《破阵子·为陈同甫赋壮词以寄之》`

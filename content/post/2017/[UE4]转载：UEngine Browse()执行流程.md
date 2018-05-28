@@ -84,5 +84,6 @@ NMT_Welcome消息定义如下:
 
     void APlayerController::PostInitializeComponents()  
 
-
+***
+`快乐属于那些选择了孤独的人，因为你是从那儿来的，而且你还要回到那儿去。——《托马斯福音》（GospelofThomas）`
     

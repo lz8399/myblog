@@ -30,3 +30,6 @@ EpicSurvivalGameSeries\SurvivalGame\Source\SurvivalGame\Private\Items\SWeapon.cp
 		Mesh->DetachFromComponent(FDetachmentTransformRules::KeepWorldTransform);
 		Mesh->SetHiddenInGame(true);
 	}
+
+***    
+`念去去、千里烟波，暮霭沉沉楚天阔。----北宋·柳永《雨霖铃》`
