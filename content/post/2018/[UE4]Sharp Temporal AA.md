@@ -16,7 +16,7 @@ Project Settings -》 Engine -》 Rendering -》 Default Settings -》 Anti-Alia
 Project Settings -》 Engine -》 Rendering -》 Mobile -》 Mobile MSAA 选择 NO MSAA，并确保配置DefaultEngine.ini中r.MobileMSAA=0。
 
 {{< alert danger >}}
-4.19版本有bug，移动端无法开启Temporal AA，4.18没有问题。启用TemporalAA后，在Android设备涨容易产生残影（转动屏幕或角色跑动时）。
+4.19版本有bug，移动端无法开启Temporal AA，4.18没有问题。启用TemporalAA后，在Android设备上容易产生残影（转动屏幕或角色跑动时）。
 {{< /alert >}}
 
 ***
