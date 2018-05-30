@@ -6,7 +6,7 @@ tags= ["UE4", "Animation"]
 keywords= ["UE4", "Animation", "customizable character","换装"]
 +++
 
-keywords：UE4 Animation、customizable character、动画蓝图、换装
+keywords：UE4 Animation、Set Master Pose Component、customizable character、动画蓝图、换装
 
 ##### 美术资源制作
 1. 每个身体部件（帽子、鞋子等）蒙皮时需要使用同一套骨骼(all pieces need to be skinned to the same skeleton)
