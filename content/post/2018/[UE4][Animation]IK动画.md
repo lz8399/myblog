@@ -1,5 +1,5 @@
 +++
-title= "[UE4]IK动画"
+title= "[UE4][Animation]IK动画.md"
 date= "2018-05-30T13:41:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4", "Animation"]
@@ -32,3 +32,6 @@ https://www.youtube.com/watch?v=yTniZCOCY7o
 下载地址：Unreal商城，60刀  
 Advanced Locomotion System V3  
 https://www.unrealengine.com/marketplace/advanced-locomotion-system-v1
+
+***
+`认识自己的无知是认识世界的最可靠的方法。---米歇尔·蒙田《随笔集》`
