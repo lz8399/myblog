@@ -52,3 +52,6 @@ Tool -》 Geometry -》 Crease -》 Crease
 
 其他资料：  
 http://www.zbrushcn.com/jinjie/ruhe-kabian.html
+
+***
+`十里杨州，三生杜牧，前事休说。—姜夔《琵琶仙》`

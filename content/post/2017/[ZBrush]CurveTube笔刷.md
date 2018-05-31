@@ -117,3 +117,6 @@ CurveTube笔刷是每画一条斑马线，曲线就会立即出现；而ZRemeshe
 
 3，编辑好之后，再切换到CurveTube笔刷，然后点击下斑马线，即可生成曲线
 {{< figure src="/img/20170416-[ZBrush]CurveTube笔刷/[ZBrush]CurveTube笔刷-35.jpg">}}
+
+***
+`闲愁最苦，休去倚危阑，斜阳正在，烟柳断肠处。—辛弃疾《辛弃疾》`

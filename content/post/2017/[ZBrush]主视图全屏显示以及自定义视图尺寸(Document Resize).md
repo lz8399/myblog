@@ -35,4 +35,5 @@ Document -》 修改Width和Height
 **建议**：  
 如果要修改Document Size，建议在开始工作前就就将Document Size修改好，否则在高模情况下修改size，容易导致zb崩溃
 
-
+***
+`自己的行为最惹人耻笑的人，却永远是最先去说别人坏话的人。---《伪君子》`

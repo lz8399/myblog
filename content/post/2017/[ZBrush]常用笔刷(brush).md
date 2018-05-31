@@ -71,3 +71,5 @@ QWERT：Dam_Standard、<font color=red>被zb占用</font>、ClipCurve、ClipRect
 ASDFG：Move、Clay、ClayBuildup、ClayTubes、TrimDynamic  
 ZXCV：<font color=red>被zb占用</font>、Polish、hPolish、Pinch  
 
+***
+`世界上有这样一些幸福的人，他们把自己的痛苦化作他人的幸福，他们挥泪埋葬了自己在尘世间的希望，它却变成了种子，长出鲜花和香膏，为孤苦伶仃的苦命人医治创伤。---《汤姆叔叔的小屋》`

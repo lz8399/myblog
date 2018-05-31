@@ -47,5 +47,5 @@ Keyword：ZBrush、SliceCurve、Mask、Group
 11，最后按下shift+F，隐藏网格。结束
 {{< figure src="/img/20170721-[ZBrush]SliceCurve、Mask、Group综合使用实例：制作头盔/[ZBrush]SliceCurve、Mask、Group综合使用实例：制作头盔-13.jpg">}}
 
-
-
+***
+`一个人并不是生来要被打败的，你尽可以把他消灭掉，可就是打不败他。---《老人与海》`

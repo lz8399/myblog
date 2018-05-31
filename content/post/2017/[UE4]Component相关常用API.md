@@ -30,4 +30,5 @@ PrimitiveComponent.h
     //创建一个材质对象，并替换到Parent对象上的指定index的材质
     UMaterialInstanceDynamic* UPrimitiveComponent::CreateAndSetMaterialInstanceDynamicFromMaterial(int32 ElementIndex, class UMaterialInterface* Parent)
     
-    
+***
+`燕子不知何世，向寻常、巷陌人家，相对如说兴亡，斜阳里。—周邦彦《金陵怀古》`

@@ -39,3 +39,6 @@ tags:
     
 原因：没有安装Microsoft Build Tools 2015，vs2017安装器没有包含这个工具，需要单独下载安装：    
 https://www.microsoft.com/en-us/download/details.aspx?id=48159
+
+***
+`黛蛾长敛，任是春风吹不展，困倚危楼，过尽飞鸿字字愁。—秦观《木兰花》`

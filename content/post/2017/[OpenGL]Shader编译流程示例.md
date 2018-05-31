@@ -79,3 +79,5 @@ tags= ["Shading", "Graphics", "OpenGL"]
     glVertexAttribPointer( 1, 3, GL_FLOAT, GL_FALSE, 0, (GLubyte *)NULL );
     glBindVertexArray(0);
         
+***
+`只愿君心似我心，定不负，相思意。---李之仪《卜算子》`

@@ -42,4 +42,5 @@ tags:
 点击Bake All，就表示Layer的效果固定下来，不可在隐藏，同时Layer全部消失。
 {{< figure src="/img/20170518-[ZBrush]Layers用法/[ZBrush]Layers用法-11.jpg">}}
 
-
+***
+`善良人在追求中纵然迷惘，却终将意识到有一条正途。---《浮士德》`

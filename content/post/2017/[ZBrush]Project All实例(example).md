@@ -38,3 +38,6 @@ Tool -》 SubTool -》Duplicate
 此时再隐藏掉高分模型，就可以只对低分模型重新布线：
 {{< figure src="/img/20170416-[ZBrush]Project All实例(example)/[ZBrush]Project All实例(example)-07.jpg">}}
 {{< figure src="/img/20170416-[ZBrush]Project All实例(example)/[ZBrush]Project All实例(example)-08.jpg">}}
+
+***
+`唉，奴隶般的意大利，你哀痛之逆旅，你这暴风雨中没有舵手的孤舟，你不再是各省的主妇，而是妓院！---《神曲》`

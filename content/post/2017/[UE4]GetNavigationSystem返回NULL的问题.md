@@ -19,3 +19,6 @@ keywords：UE4、Client、UNavigationSystem、自动寻路、Dedicated Server
 
 注意事项：  
 默认关闭Allow Client Side Navigation，是因为UE4的DedicatedServer默认开启了角色的Movement Replicate，所以可以不用客户端寻路。如果要开启此项，一般是关闭了角色的自动位移同步，自己手动处理客户端和服务端的位移同步。
+
+***
+`天涯旧恨，试看几许消魂？长亭门外山重叠。不尽眼中青，是愁来时节。—张元千《石州慢》`

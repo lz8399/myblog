@@ -110,3 +110,6 @@ ZBrush提供了直接在模型表面绘制颜色和材质的功能。
 这样模型材质就会还原到最初效果
 1，颜色模式切换到MRGB，并将Intensity调整为100。
 {{< figure src="/img/20170520-[ZBrush]Shading和Rending（RGB颜色和Material绘制）/[ZBrush]Shading和Rending（RGB颜色和Material绘制）-26.jpg">}}
+
+***
+`钟声又鸣响了……一声又一声，静谧而安详，即使在女人做新娘的那个好月份里，钟声里也总带有秋天的味道。---《喧嚣与骚动》`

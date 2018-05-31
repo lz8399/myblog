@@ -53,3 +53,6 @@ Keyword：zbrush、ArrahMesh、WeldPoint、阵列、顶点缝合、接缝
 {{< figure src="/img/20170816-[ZBrush]ArrayMesh和WeldPoint/[ZBrush]ArrayMesh和WeldPoint-16.jpg">}}
 此时再执行Dynamic，可以看到每个扇形的边沿没有裂开了，已经合并成了一个整体。
 {{< figure src="/img/20170816-[ZBrush]ArrayMesh和WeldPoint/[ZBrush]ArrayMesh和WeldPoint-17.jpg">}}
+
+***
+`一向年光有限身，等闲离别易消魂，酒筵歌席莫辞频。—晏殊《浣溪沙》`

@@ -20,3 +20,6 @@ tags:
 
 	virtual bool NativeIsInteractable() const;
 	virtual bool NativeSupportsKeyboardFocus() const;
+	
+***
+`渐写到别来，此情深处，红笺为无色。—晏几道《思远人》`

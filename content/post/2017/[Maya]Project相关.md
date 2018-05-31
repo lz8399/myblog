@@ -21,3 +21,6 @@ tags= ["Modeling"]
 
 然后再选择指定的工程目录：
 {{< figure src="/img/20170901-[Maya]Project相关/[Maya]Project相关-05.jpg">}}
+
+***
+`十年生死两茫茫，不思量，自难忘。---苏轼《江城子》`

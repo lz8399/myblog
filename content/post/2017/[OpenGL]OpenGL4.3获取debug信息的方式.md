@@ -161,3 +161,6 @@ opengl默认是开启了debug的，显示开启方式：
 opengl提供了两个函数glPushDebugGroup 和glPopDebugGroup。当在某个位置执行glPushDebugGroup，opengl内部就会将当前的debug filter保存到一个堆栈里面，然后再执行glDebugMessageControl时，不会覆盖之前位置设置的debug filter，直到执行glPopDebugGroup之后。
 
 这两个函数的意义是：如果想让某块代码的debug级别是error，另一个代码的debug级别是warn，那么就可以使用glPushDebugGroup 和glPopDebugGroup来让多个debug级别共存。
+
+***
+`杨柳岸，晓风残月。---柳永《雨霖铃》`

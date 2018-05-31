@@ -34,3 +34,6 @@ UE4导入资源的面板参数中，Normal Import Method表示是否使用资源
 
 ##### Unity3D
 Unity导入资源提供的选项：automatically calculate normals，不勾选就表示使用自带的顶点法线。
+
+***
+`杜郎老矣，想旧事、花须能说。记少年、一梦扬州，二十四桥明月。—周密《瑶华》`

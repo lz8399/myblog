@@ -19,3 +19,6 @@ VS2017的所有安装文件就会下载到D:\VS2017目录下
 
 参考：  
 https://forums.asp.net/t/2117067.aspx?Where+to+download+visual+studio+2017+community+edition+iso+file
+
+***
+`亲爱的艾妮斯，我出国，为了爱你；我留在国外，为了爱你；我回国，也是为了爱你！《大卫·科波菲尔》`

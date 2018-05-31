@@ -200,3 +200,6 @@ Bevel另外一种常用方式是，将Modifiers选择为Two Rows，如果觉得�
 ##### 其他参考
 Polygon各个Actions的用法：  
 http://docs.pixologic.com/user-guide/3d-modeling/modeling-basics/creating-meshes/zmodeler/zmodeler-actions/polygon-actions/
+
+***
+`爱情应该给人一种自由感，而不是囚禁感。---《儿子与情人》`

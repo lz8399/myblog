@@ -27,3 +27,6 @@ https://dev.mysql.com/downloads/mysql/
 修改root密码（首次安装后root还未修改的情况下，即密码为空）
 
     mysqladmin -u root -p password 123456
+	
+***
+`山映斜阳天接水，芳草无情，更在斜阳外。---范仲淹《苏幕遮》`

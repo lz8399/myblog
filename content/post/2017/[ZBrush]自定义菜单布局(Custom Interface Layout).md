@@ -68,3 +68,6 @@ http://docs.pixologic.com/user-guide/customizing-zbrush/interface-layout/custom-
 视频教程：  
 Zbrush Customize UI  
 https://www.youtube.com/watch?v=Jr3XNnctUfI
+
+***
+`人与人之间，最可痛心的事莫过于在你认为理应获得善意和友谊的地方，却遭受了烦扰和损害。---《巨人传》`

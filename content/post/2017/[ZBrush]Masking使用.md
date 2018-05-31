@@ -106,3 +106,5 @@ Tool -》 Masking -》 Inverse。快捷键Ctrl + I。
 <font color=red>注意：点击的时候按住Ctrl键，表示对Mask笔刷生效。点击的时候选择的是哪个笔刷，则对哪个笔刷生效。</font>
 {{< figure src="/img/20170118-[ZBrush]Masking使用/[ZBrush]Masking使用-27.jpg">}}
 
+***
+`我只想证明一件事，就是，那时魔鬼引诱我，后来又告诉我，说我没有权利走那条路，因为我不过是个虱子，和所有其余的人一样。---《罪与罚》`

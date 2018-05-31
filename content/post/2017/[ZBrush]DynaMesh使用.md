@@ -102,4 +102,5 @@ MeshInsert Dot Brush使用完毕以后，然后关闭Freeze SubDivision Levels�
 如果要取消Group的Mask效果，在空白区域拖拽一下鼠标，类似Re-DynaMesh操作。这样就可以同时编辑多个Group。
 {{< figure src="/img/20170305-[ZBrush]DynaMesh使用/[ZBrush]DynaMesh使用-25.jpg">}}
  
-
+***
+`寻寻觅觅，冷冷清清，凄凄惨惨戚戚。—李清照《声声慢》`

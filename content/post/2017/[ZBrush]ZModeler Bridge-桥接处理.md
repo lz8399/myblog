@@ -67,3 +67,6 @@ Keyword：zbrush、zmodeler
 此时再拖拽鼠标：<font color=red>上下拖改变密度，左右拖改边高度。</font>
 {{< figure src="/img/20170815-[ZBrush]ZModeler Bridge-桥接处理/[ZBrush]ZModeler常用操作示例-02-17.jpg">}}
 {{< figure src="/img/20170815-[ZBrush]ZModeler Bridge-桥接处理/[ZBrush]ZModeler常用操作示例-02-18.jpg">}}
+
+***
+`我从没有爱过这世界，它对我也一样。---《拜伦诗选》`

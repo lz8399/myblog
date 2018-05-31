@@ -64,3 +64,6 @@ Keywords：挤出、Extract、合并、Merge、掏空、挖洞
 
 转换为DynaMesh后，圆柱体会自动消失，并掏空正方体，最终效果：
 {{< figure src="/img/20170413[ZBrush]SubTool使用(类似PS的Layer)/[ZBrush]SubTool使用(类似PS的Layer)-17.jpg">}}
+
+***
+`当然，行是行的，这固然很好，可是千万别闹出什么乱子来啊。---《套中人》`

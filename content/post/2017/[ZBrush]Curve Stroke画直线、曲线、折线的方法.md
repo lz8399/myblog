@@ -16,4 +16,5 @@ tags:
 {{< figure src="/img/20170625-[ZBrush]Curve Stroke画直线、曲线、折现的方法/[ZBrush]Curve Stroke画直线、曲线、折现的方法-03.jpg">}}
 {{< figure src="/img/20170625-[ZBrush]Curve Stroke画直线、曲线、折现的方法/[ZBrush]Curve Stroke画直线、曲线、折现的方法-04.jpg">}}
 
-
+***
+`十里杨州，三生杜牧，前事休说。—姜夔《琵琶仙》`

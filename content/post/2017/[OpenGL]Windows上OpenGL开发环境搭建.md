@@ -409,4 +409,5 @@ http://pan.baidu.com/s/1nvp6kUt
 示例代码参考自：  
 https://github.com/daw42/glslcookbook/blob/master/chapter01/scenebasic.cpp
 
-
+***
+`只愿君心似我心，定不负，相思意。---李之仪《卜算子》`

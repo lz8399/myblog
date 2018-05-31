@@ -15,3 +15,6 @@ tags= ["Modeling"]
 {{< figure src="/img/20170830-[Maya]Parent/[Maya]Parent-02.jpg">}}
 {{< figure src="/img/20170830-[Maya]Parent/[Maya]Parent-03.jpg">}}
 子物体执行Transform，父物体不会变换，但父物体执行Transform，所有物体都会变换。
+
+***
+`东风夜放花千树，更吹落、是如雨。---辛弃疾《青玉案 元夕》`

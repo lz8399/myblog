@@ -66,3 +66,6 @@ Tool -》 Tool -》 ZSphere
 
 如果觉得细分还不够高，可以再点击Divide（快捷键Ctrl + D）
 {{< figure src="/img/20170117-[ZBrush]ZSphere使用/[ZBrush]ZSphere使用-19.jpg">}}
+
+***
+`暴风雨将要在那一天，甚至把一些槲树吹倒，一些教堂的高塔要倒塌，一些宫殿也将要动摇！---《海涅诗选》`

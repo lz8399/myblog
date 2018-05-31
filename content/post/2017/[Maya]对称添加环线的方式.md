@@ -50,3 +50,6 @@ Keywords：Maya、Edge Loop
 
 然后点击Bevel（Ctrl+B或者Edit Mesh -》 Bevel），在Chanel box面板中修改offset和segments，前者表示间距，后者表示条数。
 {{< figure src="/img/20171008-[Maya]对称添加环线的方式/[Maya]对称添加环线的方式-14.jpg">}}
+
+***
+`算好春长在，好花长见，原只是，人憔悴。---程垓《水龙吟》`

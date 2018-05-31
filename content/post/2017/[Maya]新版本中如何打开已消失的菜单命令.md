@@ -16,3 +16,6 @@ Maya2018的命令输入框在底部靠中间的位置。
 
 参考：  
 https://forums.autodesk.com/t5/maya-forum/where-is-the-interactive-split-tool-in-maya-2015/td-p/5218129
+
+***
+`千古江山，英雄无觅，孙仲谋处。---辛弃疾《永遇乐》`

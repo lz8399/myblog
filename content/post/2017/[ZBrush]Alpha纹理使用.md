@@ -18,3 +18,6 @@ Brush选择Standard，Stroke选择DragDot，然后在选择需要的Alpha，就�
 
 Stroke通常是配合Alpha使用的，常用的有Dots、DragRect、Spray、DragDot。
 {{< figure src="/img/20170102-[ZBrush]Alpha纹理使用/[ZBrush]Alpha纹理使用-03.jpg">}}
+
+***
+`乍暖还寒时候，最难将息。—李清照《声声慢》`

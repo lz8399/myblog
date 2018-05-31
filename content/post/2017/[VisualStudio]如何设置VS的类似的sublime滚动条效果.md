@@ -12,3 +12,6 @@ keywords：滚动条 插件 sublime
 
 Tools -> Options -> Text Editor -> C++ -> Scroll Bars，选中：Use map mode for vertical scroll bar
 {{< figure src="/img/[VisualStudio]如何设置VS的类似的sublime滚动条效果.jpg">}}
+
+***
+`但梦想、一枝潇洒，黄昏斜照水。—周邦彦《花犯》`

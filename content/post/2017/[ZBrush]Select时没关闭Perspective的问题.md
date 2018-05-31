@@ -25,3 +25,5 @@ Keywords：ZBrush、SelectRect、Perspective
 关掉透视，再框选，就能正常。
 {{< figure src="/img/20170816-[ZBrush]Select时没关闭Perspective的问题/[ZBrush]Select时没关闭Perspective的问题-05.jpg">}}
 
+***
+`将感情埋藏得太深有时是件坏事。如果一个女人掩饰了对自己所爱的男子的感情，她也许就失去了得到他的机会。---《傲慢与偏见》`

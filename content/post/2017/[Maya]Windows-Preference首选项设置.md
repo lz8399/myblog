@@ -14,3 +14,6 @@ Windows -》 Settings/Preferences -》 Preferences
 ##### Plug-in Manager 插件管理器
 Windows -》 Settings/Preferences -》 Plug-in Manager，打开之后就可以看到各种插件，比如Unfold3D。
 {{< figure src="/img/20170829-[Maya]Preference首选项设置/[Maya]Preference首选项设置-03.jpg">}}
+
+***
+`东风似旧，向前度桃花，刘郎能记，花复认郎否？---刘辰翁《摸鱼儿》`

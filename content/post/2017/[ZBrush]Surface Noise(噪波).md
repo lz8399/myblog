@@ -34,3 +34,6 @@ Noise使用之前需要将模型转换为PolyMesh3D。
 可以点击Edit，打开编辑面板，调成噪波曲线来调整效果：
 {{< figure src="/img/20170514-[ZBrush]Surface Noise(噪波)/[ZBrush]Surface Noise(噪波)-07.jpg">}}
 {{< figure src="/img/20170514-[ZBrush]Surface Noise(噪波)/[ZBrush]Surface Noise(噪波)-08.jpg">}}
+
+***
+`面包！面包！我们要面包！---《萌芽》`
