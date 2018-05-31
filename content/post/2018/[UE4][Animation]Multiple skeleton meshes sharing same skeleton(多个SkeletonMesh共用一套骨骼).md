@@ -31,5 +31,11 @@ keywords：UE4 Animation、Set Master Pose Component、customizable character、
 参考自：How to Setup "Master Pose Component"  
 https://answers.unrealengine.com/questions/228601/how-to-setup-master-pose-component.html
 
+##### C++接口
+
+`Set Master Pose Component`蓝图节点对应的C++ API：
+
+    Child->SetMaseterPoseComponent(Body);
+
 ***
 `有一个传说，说的是有那么一只鸟儿，它一生只唱一次，那歌声比世上所有一切生灵的歌声都更加优美动听。---《荆棘鸟》`
