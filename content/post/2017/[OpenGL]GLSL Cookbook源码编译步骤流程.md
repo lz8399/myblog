@@ -1,5 +1,5 @@
 +++
-title= "[OpenGL]GLSHCookbook源码编译步骤流程"
+title= "[OpenGL]GLSL Cookbook源码编译步骤流程"
 date= "2017-09-06T22:38:28+08:00"
 categories= ["OpenGL"]
 tags= ["Shading", "Graphics", "OpenGL"]
