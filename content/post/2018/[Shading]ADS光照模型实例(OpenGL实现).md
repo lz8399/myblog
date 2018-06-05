@@ -6,6 +6,11 @@ tags= ["Shading", "OpenGL"]
 keywords= ["Shading", "OpenGL", "ADS"]
 +++
 
+keywords：ambient diffuse specular、Phong Shading、Phong reflection model
+
+ADS光照模型又称为“冯氏反射模型”(Phong reflection model)，为什么叫冯氏：
+
+    裴祥风（Bùi Tường Phong音译, 1942年—1975年），美国电脑CG研究学者，于越南出生。他于1973年在尤他大学取得哲学博士学位，并发明了Phong反射模型及Phong著色法，并广为CG界采用。1975死于白血病。
 
 
 ***

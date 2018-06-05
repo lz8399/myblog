@@ -12,11 +12,12 @@ keywords：UE4, Memory Persist, GC, 垃圾回收, 内存管理
 一个UObject类型的变量，即使是static，默认也会被GC掉。
 {{< /alert >}}
 
-要防止该对象被GC，有三种方式：
+要防止该对象被GC，有4种方式：
 
 + 作为成员变量并标记为UPROPERTY()；
 + 创建对象后AddToRoot()；（退出游戏时需要RemoveFromRoot()）
 + FGCObjectScopeGuard在指定代码区域内保持对象；
++ FStreamableManager Load资源时，bManageActiveHandle设置为true；
 
 FGCObjectScopeGuard的用法：
 
@@ -26,6 +27,19 @@ FGCObjectScopeGuard的用法：
         RunGC();
         GladOS->IsStillAlive();   // Object will not be removed by GC
     }
+    
+FStreamableManager用法：
+
+    FSoftObjectPath AssetPath(TEXT("/Game/Mannequin/Animations/ThirdPersonWalk.ThirdPersonWalk"));
+    FStreamableManager& AssetLoader = UAssetManager::GetStreamableManager();
+    
+    //hold object in memory.
+    TSharedPtr<FStreamableHandle> Handle = AssetLoader.RequestSyncLoad(AssetPath, true);
+    UObject* Obj = Handle->GetLoadedAsset();
+    
+    //free memory of object.
+    Handle->ReleaseHandle();
+    
     
 ##### 参考资料
 虚幻4垃圾回收剖析  
