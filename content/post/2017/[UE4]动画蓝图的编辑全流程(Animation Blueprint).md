@@ -114,7 +114,7 @@ UE4版本：4.16
 
 
 __原因__：  
-可能时没有指定Montage的Slot
+可能是没有指定Montage的Slot
 
 __解决办法__：  
 1，打开Montage动画，看下默认的Slot名字叫什么
