@@ -192,6 +192,8 @@ Unload之后如果需要立即回收，可以执行ForceGC：
 
 + ConditionalBeginDestroy()是所有UObject都有的API，其对象销毁是异步执行且对象在当前帧内持续有效；AActor::Destroy()是AActor特有的API，其对象回收发生在当前帧结束时。
 
++ bManageActiveHandle为true时，即使切换关卡，该资源也不会被销毁，类似AddToRoot()的效果。
+
 ##### 参考
 《Fortnite》开发经验分享之运行时资源管理：Runtime Asset Management  
 https://answers.unrealengine.com/storage/temp/136465-runtimeassetmanagementin416.pdf

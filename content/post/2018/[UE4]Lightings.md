@@ -8,6 +8,8 @@ keywords= ["UE4", "Lightings"]
 
 keywords：UE4、Lighting、灯光
 
+以下问题都是基于4.18，不排除后续新版本变动。
+
 ##### Lighting Content Examples
 
 https://docs.unrealengine.com/en-us/Resources/ContentExamples/Lighting
@@ -37,12 +39,18 @@ https://docs.unrealengine.com/en-us/Engine/Rendering/LightingAndShadows/Lighting
 + CSM Shadows只会投射到与光源Lighting Channels相同的primitives上。
 + 动态点光源在移动端支持Lighting Channels的所有特性，与桌面级特性相同。
 
+另外：Lighting Channels不支持运行时修改，就是说Lighting Channels在Actor创建时(比如BeginPlay)设置好以后，之后就无法再修改。
+
 ##### Occlusion Culling 光源距离裁剪
 Project Settings -》 Engine -》 Rendering -》 Culling
 
 Lights view distance  
 https://forums.unrealengine.com/unreal-engine/feedback-for-epic/54065-lights-view-distance
 
+
+##### 移动端的灯光问题
+
+1，移动端不支持Movable的Spotlight，Spotlight在移动端只支持Static和Stationary；但是Movable的Pointlight在移动端也支持。
 
 ***
 `我只担心一件事，我怕我配不上自己所受的苦难。----陀思妥耶夫斯基`
