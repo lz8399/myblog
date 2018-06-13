@@ -392,5 +392,11 @@ C:\Users\用户名\AppData\Local\UnrealEngine\Common\DerivedDataCache，时间�
 隐藏安卓的虚拟键、软键 Hide Android App Soft Keys(Home key and Return key)  
 Project Settings -》 Android -》 Platforms -》 Enable FullScreen Immersive on KitKat and above devices
 
+【2018-06-13T21:45】  
+在移动端，如果想对`FPaths::ProjectDir()`目录下文件写入，是无效的，但Windows下没有问题。  
+如果想在移动端写入文件，需要使用`FPlatformMisc::GamePersistentDownloadDir()`作为路径。
+
+FPlatformMisc::GamePersistentDownloadDir()
+
 ***
 `凡心所向，素履以往。生如逆旅，一苇以航。----木心`
