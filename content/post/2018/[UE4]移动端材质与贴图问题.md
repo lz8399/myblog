@@ -28,6 +28,11 @@ Project Settings -》 Platforms -》 Android -》 Build -》 Support OpenGL ES3.
 参考自：  
 https://answers.unrealengine.com/questions/211323/layered-landscape-material-on-mobile.html
 
+##### 移动端无法run-time修改Instanced Static Mesh的问题
+
+解决办法：  
+InstancedStaticMeshComponent::UseDynamicInstanceBuffer 设置为true，默认为false。
+
 ##### 相关文档
 Scalability Reference
 https://docs.unrealengine.com/latest/INT/Engine/Performance/Scalability/ScalabilityReference/
