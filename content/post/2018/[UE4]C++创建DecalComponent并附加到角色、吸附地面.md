@@ -33,5 +33,11 @@ keywords：DecalComponent、贴花、C++
 RelativeRotation一定要设置为FRotator(-90.f, 0.f, 0.f)或者FRotator(90.f, 90.f, 90.f)，否则贴花的无法正常显示；前者表示正向显示，后者表示反向显示。DecalSize的X表示贴花作用高度：比如一面墙高500，X设置为200，那么贴花在墙面上的显示高度只到200高度；Y、Z表示长和宽。
 {{< /alert >}}
 
+##### 贴花影响物体过滤
+
+默认所有PrimitiveComponent都接受贴花，也可以让指定物体不显示贴花：
+
+    void UPrimitiveComponent::SetReceivesDecals(bool bNewReceivesDecals);
+
 ***
 `我只是个戏子，在别人的故事里，流着自己的泪。----席慕蓉《戏子》`
