@@ -50,3 +50,6 @@ https://stackoverflow.com/questions/21894450/how-to-add-constructors-destructors
 
 C++ lambda表达式与函数对象  
 https://www.jianshu.com/p/d686ad9de817
+
+***
+`只要你是天鹅蛋，就是生在养鸡场里也没有什么关系。---《安徒生童话》`
