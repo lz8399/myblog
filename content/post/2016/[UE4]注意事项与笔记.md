@@ -392,6 +392,14 @@ C:\Users\用户名\AppData\Local\UnrealEngine\Common\DerivedDataCache，时间�
 隐藏安卓的虚拟键、软键 Hide Android App Soft Keys(Home key and Return key)  
 Project Settings -》 Android -》 Platforms -》 Enable FullScreen Immersive on KitKat and above devices
 
+【2018-05-21】  
+WIndows版本卡死十几秒后，程序自动推出且无崩溃日志，且Android Device Monitor中也看不到崩溃日志，只能看到一句：
+
+    A/libc(27559): Fatal signal 11 (SIGSEGV), code 1, fault addr 0x10 in tid 27609 (Thread-2), pid 27559 (MainThread-UE4)
+	
+原因：UE4安装文件中删除了Debugging symbols。  
+解决办法：打开Epic Lanuncher -》 Library -》 点击引擎版本的红色下来箭头 -》 Options -》 勾选Editor symbols for debugging -》 Apply。
+
 【2018-06-13T21:45】  
 在移动端，如果想对`FPaths::ProjectDir()`目录下文件写入，是无效的，但Windows下没有问题。  
 如果想在移动端写入文件，需要使用`FPlatformMisc::GamePersistentDownloadDir()`作为路径。
