@@ -5,6 +5,12 @@ categories= ["OpenGL"]
 tags= ["Shading", "Graphics", "OpenGL"]
 +++
 
+{{< alert danger>}}
+以下文章内容是基于glslcookbook所在github上2017年8月份的提交版本，当前文章所述的配置glm和glfw的步骤与github上最新CMakeList.txt已不再适用！针对2018.06的github代码，我新增了文章《[OpenGL]GLSL Cookbook源码编译步骤流程(2018.06新版)》。如果是萌新，建议先把当前旧文章看完再看新文章。
+{{< /alert >}}
+
+
+
 这里讲解《OpenGL 4 Shading Language Cookbook, Second Edition》 这本书的示例代码如何编译。
 
 ##### 编译步骤
