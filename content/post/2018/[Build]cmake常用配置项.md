@@ -65,8 +65,9 @@ Config模式示例：
 先在自己工程的CMakeList.txt中添加
 
 	set(XXX_DIR D:/sdk/XXX-0.9.9.0/bin)
+	find_package( XXX CONFIG REQUIRED )
 	
-然后D:/sdk/XXX-0.9.9.0/cmake目录下必须存在XXXConfig.cmake文件，否则当执行cmake时会提示找不到XXXConfig.cmake。
+其中`CONFIG`表示使用Config模式搜索，默认是Module模式；然后D:/sdk/XXX-0.9.9.0/cmake目录下必须存在XXXConfig.cmake文件，否则当执行cmake时会提示找不到XXXConfig.cmake。
 
 {{< alert danger>}}
 XXXConfig.cmake和XXXTargets.cmake都不是手动编写的，而是CMake自动生成的！！
