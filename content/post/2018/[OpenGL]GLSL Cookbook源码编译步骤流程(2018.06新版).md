@@ -65,4 +65,5 @@ https://github.com/daw42/glslcookbook
 
 	D:\glslcookbook\bin\chapter02>start Debug/chapter02.exe ads
 	
-	
+***
+`人就是要以自卑为跳板才能跳得更高。---坂田银时《银魂》`
