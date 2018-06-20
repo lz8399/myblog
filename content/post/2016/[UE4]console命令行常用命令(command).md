@@ -50,7 +50,10 @@ Camera [modename]
 设置渲染分辨率为默认大小的50%
 
     r.ScreenPercentage 50
-    
+
+记录卡顿时间（通过t.HitchThreshold定义卡顿时长阀值）  
+
+    stat Hitches    //或者stat DumpHitches 记录log文件
 
 {{< alert warning >}}
 使用stat相关命令检测性能时，需要关闭Smooth Frame Rate来保证检测结果更精准：Project Settings -》 Engine -》 General Settings -》 Framerate -》 Smooth Frame Rate。

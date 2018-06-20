@@ -6,8 +6,43 @@ tags= ["UE4"]
 keywords= ["UE4", "Steam SDK"]
 +++
 
+##### 使用第三方plugin
+
 Advanced Sessions Plugin  
 https://forums.unrealengine.com/community/community-content-tools-and-tutorials/41043-advanced-sessions-plugin
+
+将该plugin加入工程后，再做以下修改：
+
+在DefaultEngine.ini的`[/Script/Engine.Engine]`下添加：
+
+    +NetDriverDefinitions=(DefName="GameNetDriver",DriverClassName="OnlineSubsystemSteam.SteamNetDriver",DriverClassNameFallback="OnlineSubsystemUtils.IpNetDriver")
+
+再增加：
+    
+    [OnlineSubsystem]
+    DefaultPlatformService=Steam
+     
+    [OnlineSubsystemSteam]
+    bEnabled=true
+    SteamDevAppId=480
+
+    [/Script/OnlineSubsystemSteam.SteamNetDriver]
+    NetConnectionClassName="OnlineSubsystemSteam.SteamNetConnection"
+    
+然后启动编辑器后，以Standalone模式运行，且保证电脑上启动了Steam客户端，则启动游戏后会，在游戏屏幕右下角会自动弹出Steam相关菜单。
+
+如果不使用该plugin，手动编写接入代码，则还需要添加以下配置：
+
++ 工程名.Build.cs构造函数中添加：
+
+        PublicDependencyModuleNames.AddRange(new string[] { "OnlineSubsystem", "OnlineSubsystemUtils" });
+        DynamicallyLoadedModuleNames.Add("OnlineSubsystemSteam");
+  
++ 工程名.Target.cs构造函数中添加：
+
+        bUsesSteam = true;
+
+##### 手动接入steam SDK
 
 Online Subsystem Steam  
 https://docs.unrealengine.com/en-us/Programming/Online/Steam
