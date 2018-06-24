@@ -18,10 +18,16 @@ ADS光照模型又称为“冯氏反射模型”(Phong reflection model)，为�
 公式：
 
 $$
-L = Ld \cdot Kd \cdot \left(\max_{\vec{s} \cdot \vec{n}, 0}\right)^n
+Id = Ld \cdot Kd \cdot \left(\max_{\vec{s} \cdot \vec{n}, 0}\right)^f
 $$
 	
+参数解释：
 
++ Id : Intensity of the outgoing light 光源出射强度 / 出射光强度
++ Ld : Intensity of the light source 光源强度
++ Kd : Reflection coefficient 反射系数
++ s :  Direction from the surface point to the light source 顶点 / 曲面点 到光源方向的单位向量
++ n :  Normal vector at the surface point 顶点 / 曲面点 的法线单位向量
 
 ***
 `在各种事物的常理中，爱情是无法改变和阻挡的，因为就本性而言，爱只会自行消亡，任何计谋都难以使它逆转。---意大利·薄伽丘《十日谈》`

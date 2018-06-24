@@ -51,6 +51,8 @@ tags= ["Shading", "Graphics", "OpenGL"]
 
 5，创建并绑定buffer对象
 
+绑定buffer的意义：当渲染（Rendering）的时候，着色器(shader)每当被执行时，OpenGL从这些buffer中拉取属性(attribute)数据给这些着色器。
+
     // Create and populate the buffer objects
     GLuint vboHandles[2];
     glGenBuffers(2, vboHandles);
@@ -63,7 +65,7 @@ tags= ["Shading", "Graphics", "OpenGL"]
     glBindBuffer(GL_ARRAY_BUFFER, colorBufferHandle);
     glBufferData(GL_ARRAY_BUFFER, 9 * sizeof(float), colorData, GL_STATIC_DRAW);
 
-6，开辟Array数组并组装其各个元素数据
+6，开辟Array数组并填充其数据
 
     // Create and set-up the vertex array object
     glGenVertexArrays( 1, &vaoHandle );

@@ -311,6 +311,7 @@ https://github.com/glfw/glfw/releases
         glEnableVertexAttribArray(0);  // Vertex position
         glEnableVertexAttribArray(1);  // Vertex color
 
+		////break current vertex array object binding.
         glBindBuffer(GL_ARRAY_BUFFER, positionBufferHandle);
         glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, (GLubyte *)NULL);
 
