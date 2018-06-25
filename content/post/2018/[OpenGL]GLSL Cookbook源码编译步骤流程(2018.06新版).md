@@ -26,7 +26,7 @@ Configure过程中，会有警告，可以无视，直接Generate：
 生成完以后，不需要打开VS编译，后面直接使用相关文件即可。
 
 
-2，下载glfw，并用cmake-gui生成VS工程文件。
+2，下载glfw源码，并用cmake-gui生成VS工程文件。
 https://github.com/glfw/glfw/releases/download/3.2.1/glfw-3.2.1.zip
 
 假设  
@@ -66,4 +66,4 @@ https://github.com/daw42/glslcookbook
 	D:\glslcookbook\bin\chapter02>start Debug/chapter02.exe ads
 	
 ***
-`人就是要以自卑为跳板才能跳得更高。---坂田银时《银魂》`
+`人就是要以自卑为跳板，才能跳得更高。---坂田银时《银魂》`

@@ -6,6 +6,8 @@ tags= ["Hugo", "Blog", "集成MathJax"]
 mathjax= ["ture"]
 +++
 
+keywords：hugo、MathJax、公式、数学表达式
+
 ##### 步骤
 
 1，在theme\layouts\partials\目录下新建一个文件，命名为 `mathjax_support.html`，内容为：
@@ -59,7 +61,7 @@ mathjax= ["ture"]
 	公式表达式 
 	$$
 	
-前者靠右显示，后者居中显示
+前者靠左显示，后者居中显示
 
 
 示例：
@@ -79,4 +81,4 @@ $$
 	
 	
 ***
-`就投机钻营来说，世故的价值永远是无可比拟的。---《死魂灵》`
+`对的那条路，往往不是最好走的。`

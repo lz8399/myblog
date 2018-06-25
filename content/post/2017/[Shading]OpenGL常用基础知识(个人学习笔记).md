@@ -333,11 +333,11 @@ You might be wondering why we use glBindBuffer and glBindBufferBase with GL_UNIF
 
 ##### uniform layout类型：
 
-std140
-shared
-packed
-row_major
-column_major
++ std140
++ shared
++ packed
++ row_major
++ column_major
 
 例如：
 
