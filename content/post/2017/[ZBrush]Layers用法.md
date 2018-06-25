@@ -24,7 +24,7 @@ tags:
 3，在模型上做想要的效果：
 {{< figure src="/img/20170518-[ZBrush]Layers用法/[ZBrush]Layers用法-05.jpg">}}
 
-4，雕刻万以后，点击之前新建Layer中的REC按钮，表示将刚刚操作记录下来：
+4，雕刻玩以后，点击之前新建Layer中的REC按钮，表示将刚刚操作记录下来：
 {{< figure src="/img/20170518-[ZBrush]Layers用法/[ZBrush]Layers用法-06.jpg">}}
 
 5，点击REC之后，就会出现一个眼睛按钮，表示刚刚的记录显示或隐藏：
@@ -39,7 +39,7 @@ tags:
 {{< figure src="/img/20170518-[ZBrush]Layers用法/[ZBrush]Layers用法-10.jpg">}}
 
 ##### 合并Layer
-点击Bake All，就表示Layer的效果固定下来，不可在隐藏，同时Layer全部消失。
+点击Bake All，就表示Layer的效果固定下来，不可再隐藏，同时Layer全部消失。
 {{< figure src="/img/20170518-[ZBrush]Layers用法/[ZBrush]Layers用法-11.jpg">}}
 
 ***

@@ -17,7 +17,7 @@ Keywords：ZBrush、SelectRect、Perspective
 {{< figure src="/img/20170816-[ZBrush]Select时没关闭Perspective的问题/[ZBrush]Select时没关闭Perspective的问题-02.jpg">}}
 
 
-那么在框选某个面时，只会将面的一部分保留下来，不是完整的正方形，即时在旋转正方体时按住shift键。
+那么在框选某个面时，只会将面的一部分保留下来，不是完整的正方形（即使在旋转正方体时按住shift键）。
 {{< figure src="/img/20170816-[ZBrush]Select时没关闭Perspective的问题/[ZBrush]Select时没关闭Perspective的问题-03.jpg">}}
 {{< figure src="/img/20170816-[ZBrush]Select时没关闭Perspective的问题/[ZBrush]Select时没关闭Perspective的问题-04.jpg">}}
 
