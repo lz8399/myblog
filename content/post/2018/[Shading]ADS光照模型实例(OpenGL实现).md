@@ -27,6 +27,9 @@ ADS光照模型公式缩写：
 + Diffuse 漫反射
 + Specular 全反射光 / 镜面光
 
+三个参数渲染效果示例：
+{{< figure src="/img/20180603-[Shading]ADS光照模型实例(OpenGL实现)/[Shading]ADS光照模型实例(OpenGL实现)-04.jpg">}}
+
 三个参数拆解如下：
 
 	Ambient = La * Ka;
