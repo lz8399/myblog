@@ -2,7 +2,7 @@
 title= "hugo-集成MathJax"
 date= "2018-06-22T00:51:40+08:00"
 categories= ["Web"]
-tags= ["Hugo", "Blog", "集成MathJax"]
+tags= ["Hugo", "Blog", "MathJax"]
 mathjax= ["ture"]
 +++
 
