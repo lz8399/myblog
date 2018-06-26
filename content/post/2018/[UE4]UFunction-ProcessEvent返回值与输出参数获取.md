@@ -6,7 +6,9 @@ tags= ["UE4"]
 keywords= ["UE4", "UFunction", "ProcessEvent", "Invoke"]
 +++
 
-如果不需要返回值也不需要输出参数，那么只需调用 `ProcessEvent` ：
+##### 调用UFunction
+
+执行UFuncion，使用 `ProcessEvent` ：
 
     UFunction* Fun = Actor->FindFunction(TEXT("TestFun"));
     if(Fun)
@@ -14,6 +16,7 @@ keywords= ["UE4", "UFunction", "ProcessEvent", "Invoke"]
         Actor->ProcessEvent(Fun, Buffer);
     }
 
+##### 查询UFunction信息
 
 获取返回值：
 
