@@ -51,7 +51,7 @@ ADS光照模型公式缩写：
 
 光源出射强度 / 出射光强度(Intensity of the outgoing light ) `I` 的完整计算公式如下：
 $$
-I = La \cdot Ka+Ld \cdot Kd \cdot \left(\vec{s} \cdot \vec{n}\right)+Ld \cdot Kd \cdot \left(\vec{r} \cdot \vec{v}\right)^f
+I = La \cdot Ka+Ld \cdot Kd \cdot \left(\vec{s} \cdot \vec{n}\right)+Ls \cdot Ks \cdot \left(\vec{r} \cdot \vec{v}\right)^f
 $$
 
 #### 渲染实例
