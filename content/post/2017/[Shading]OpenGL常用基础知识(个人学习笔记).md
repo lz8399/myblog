@@ -17,13 +17,29 @@ https://github.com/daw42/glslcookbook
 * `GLFW` is an Open Source, multi-platform library for OpenGL, OpenGL ES and Vulkan development on the desktop. It provides a simple API for creating windows, contexts and surfaces, receiving input and events.
 
 
-#### Shader类型
+##### Shader类型
 * vertex shader
 * fragment shader
 * geometry shader
 * tess_control shader
 * tess_evaluation shader
 * compute shader
+
+##### OpenGL版本查询与设置
+
+查询版本（使用glad的API）：
+    
+    GLint major, minor;
+    glGetIntegerv(GL_MAJOR_VERSION, &major);
+    glGetIntegerv(GL_MINOR_VERSION, &minor);
+    
+选择版本（使用glfw的API）：
+
+    //OpenGL版本设置为4.6
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
+    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 6);
+    
+注意：设置版本号不得高于查询出来的版本号。
 
 ##### 批量填充(populate)数据
 
