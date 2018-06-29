@@ -33,7 +33,7 @@ defaultContentLanguage = "en-us"
 [author]
   name = "Neil Wang"
   bio = "久长唯有品格"
-  job = "Marvelous"
+  job = "Marvelous Developer"
   location = "Yichang·Hubei"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
   gravatarEmail = "aigo@mail.com"
