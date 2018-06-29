@@ -1,6 +1,6 @@
 +++
 title= "[C++]How to erase an element from std vector by index"
-date= "2018-02-03T21:39:40+08:00"
+date= "2018-06-29T21:39:40+08:00"
 categories= ["C++"]
 tags= ["C++", "Erase by index"]
 +++
