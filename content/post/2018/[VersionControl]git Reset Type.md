@@ -40,3 +40,6 @@ Reset Type有三种类型：Soft、Mixed、Hard。
 
 参考自：git reset soft,hard,mixed之区别深解  
 https://www.cnblogs.com/kidsitcn/p/4513297.html
+
+***
+`生命的价值不在于时间的长短，而在于你如何利用它。`

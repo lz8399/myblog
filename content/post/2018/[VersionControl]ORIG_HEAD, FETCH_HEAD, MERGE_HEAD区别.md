@@ -24,3 +24,6 @@ clone一个仓库后，可以在.git文件夹内找到 HEAD、FETCH_HEAD、MERGE
 
 参考自：ORIG_HEAD, FETCH_HEAD, MERGE_HEAD etc  
 https://stackoverflow.com/questions/17595524/orig-head-fetch-head-merge-head-etc/17596265	
+
+***
+`如果有来生，要做一只鸟，飞越永恒，没有迷途的苦恼。东方有火红的希望，南方有温暖的巢床，向西逐退残阳，向北唤醒芬芳。`
