@@ -5,6 +5,8 @@ categories= ["C++"]
 tags= ["C++", "Erase by index"]
 +++
 
+keywords：C++ 用索引删除 std::vector 中的数组元素
+
 To delete a single element, you could do:
 
     std::vector<int> vec;
