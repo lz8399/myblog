@@ -5,7 +5,7 @@ categories= ["OpenGL"]
 tags= ["Shading", "Graphics", "OpenGL"]
 +++
 
-去年写过一篇文章，github上的最新代码与这篇文章已不再有效（主要是glm和glfw的配置发生变动）：  
+去年写过一篇文章，该文章与github上的最新代码已不再有效（主要是glm和glfw相关的CMake配置发生变动）：  
 http://www.dawnarc.com/2017/09/openglglsl-cookbook%E6%BA%90%E7%A0%81%E7%BC%96%E8%AF%91%E6%AD%A5%E9%AA%A4%E6%B5%81%E7%A8%8B/
 
 当前这篇文章针对github的glslcookbook最新代码，重新梳理一次配置流程，保证最新代码能编译工程并跑起来。步骤如下：
