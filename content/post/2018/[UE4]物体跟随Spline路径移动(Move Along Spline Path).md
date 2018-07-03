@@ -16,5 +16,9 @@ keywords= ["UE4", "Spline"]
 {{< figure src="/img/20180304-[UE4]物体跟随Spline路径移动(Move Along Spline Path)/[UE4]物体跟随Spline路径移动(Move Along Spline Path)-03.jpg">}}
 (图片放大：复制图片地址单独打开)
 
+##### 将Spline 曲线打直（Turn Splines curves into straight Spline paths）
+
+选中需要打直的曲线，在Detail面板中找到：Selected Points -》 Type，修改为Linear，默认为Curve。
+
 ***
 `君子和而不同，小人同而不和。 ----《论语》`
