@@ -16,5 +16,9 @@ keywords：UE4、Cull Distance Volume、距离裁剪、遮挡剔除
 ##### 常用的Distance级别设置
 {{< figure src="/img/20180304-[UE4]Cull Distance Volume(遮挡剔除)用法/[UE4]Cull Distance Volume(遮挡剔除)用法-02.jpg">}}
 
+{{< alert danger >}}
+Cull Distance Volume在游戏运行时才有效，在编辑器非运行期间拖拉摄像机无效。
+{{< /alert >}}
+
 ***
 `识不足则多虑；威不足则多怒；信不足则多言。----弘一法师`
