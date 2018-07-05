@@ -39,3 +39,21 @@ UnrealMathUnlity.h：
             FracY
             );
     }
+    
+##### 使用实例
+先定义一个成员变量：
+
+    float LerpTime = 0.f;
+
+再在Tick中计算：
+
+    void Tick(float DeltaSecond)
+    {
+        LerpTime += DeltaSecond * 0.1f;
+
+        LerpTime = LerpTime > 1.f ? 1.f : LerpTime;
+
+        FVector NewLoc = FMath::Lerp<FVector>(SrcLoc, DistLoc, LerpTime);
+        
+        MyCharacter->SetActorLocation(NewLoc);
+    }

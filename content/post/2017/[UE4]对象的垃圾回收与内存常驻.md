@@ -8,18 +8,25 @@ keywords= ["UE4", "Memory", "GC", "Persist", "垃圾回收", "内存管理"]
 
 keywords：UE4, Memory Persist, GC, 垃圾回收, 内存管理
 
+##### 防止GC的办法
+
 {{< alert danger >}}
 一个UObject类型的变量，即使是static，默认也会被GC掉。
 {{< /alert >}}
 
-要防止该对象被GC，有4种方式：
+要防止该对象被GC，有5种方式：
 
-+ 作为成员变量并标记为UPROPERTY()；
-+ 创建对象后AddToRoot()；（退出游戏时需要RemoveFromRoot()）
-+ FGCObjectScopeGuard在指定代码区域内保持对象；
-+ FStreamableManager Load资源时，bManageActiveHandle设置为true；
++ 作为成员变量并标记为`UPROPERTY()`；
++ 创建对象后 `AddToRoot()` ；（退出游戏时需要`RemoveFromRoot()`）
++ UObject对象创建出来后用TSharedPtr保存，作用等价于`UPROPERTY()`；
++ FStreamableManager Load资源时，`bManageActiveHandle` 设置为true；
++ `FGCObjectScopeGuard` 在指定代码区域内保持对象；
 
-FGCObjectScopeGuard的用法：
+TSharedPtr 用法：
+
+    TSharedPtr<MyUObject> ObjPtr = MakeShareable(NewObject<MyUObject>());
+
+FGCObjectScopeGuard 用法：
 
     {
         FGCObjectScopeGuard(UObject* GladOS = NewObject<...>(...));
@@ -28,7 +35,7 @@ FGCObjectScopeGuard的用法：
         GladOS->IsStillAlive();   // Object will not be removed by GC
     }
     
-FStreamableManager用法：
+FStreamableManager 用法：
 
     FSoftObjectPath AssetPath(TEXT("/Game/Mannequin/Animations/ThirdPersonWalk.ThirdPersonWalk"));
     FStreamableManager& AssetLoader = UAssetManager::GetStreamableManager();
