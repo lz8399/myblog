@@ -45,7 +45,7 @@ keywords: UE4、Movement
 
 AddImpulse一般用来做投掷、爆炸、击飞等物理效果。添加的是一个瞬间的力，之后就不需要每帧做处理了。
 {{< alert warning >}}
-以实现一个击飞效果为例，要有明显击飞效果，Impulse 值要2000以上，且 bVelocityChange 设置为 true 。
+以实现一个击飞效果为例，要有明显击飞效果，Impulse 值要1000以上，且 bVelocityChange 设置为 true 。
 {{< /alert >}}
 
 7，UCharacterMovementComponent::AddForce

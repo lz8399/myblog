@@ -22,11 +22,13 @@ keywords：UE4, Memory Persist, GC, 垃圾回收, 内存管理
 + FStreamableManager Load资源时，`bManageActiveHandle` 设置为true；
 + `FGCObjectScopeGuard` 在指定代码区域内保持对象；
 
-TSharedPtr 用法：
+###### TSharedPtr 用法
 
     TSharedPtr<MyUObject> ObjPtr = MakeShareable(NewObject<MyUObject>());
+    
+TSharedPtr 每赋值一次，引用计数器就会加一。但如果 TSharedPtr 成员变量所属的对象被销毁，则计数失效；如果想让某对象在游戏运行过程中一直不销毁，则可以在 GameInstance 中定义一个 TSharedPtr 对象并对其赋值。
 
-FGCObjectScopeGuard 用法：
+###### FGCObjectScopeGuard 用法
 
     {
         FGCObjectScopeGuard(UObject* GladOS = NewObject<...>(...));
@@ -35,7 +37,7 @@ FGCObjectScopeGuard 用法：
         GladOS->IsStillAlive();   // Object will not be removed by GC
     }
     
-FStreamableManager 用法：
+###### FStreamableManager 用法
 
     FSoftObjectPath AssetPath(TEXT("/Game/Mannequin/Animations/ThirdPersonWalk.ThirdPersonWalk"));
     FStreamableManager& AssetLoader = UAssetManager::GetStreamableManager();
@@ -47,7 +49,8 @@ FStreamableManager 用法：
     //free memory of object.
     Handle->ReleaseHandle();
     
-    
+
+
 ##### 参考资料
 虚幻4垃圾回收剖析  
 http://www.cnblogs.com/ghl_carmack/p/6112118.html
