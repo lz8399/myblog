@@ -406,12 +406,16 @@ WIndows版本卡死十几秒后，程序自动推出且无崩溃日志，且Andr
 
 FPlatformMisc::GamePersistentDownloadDir()
 
-【2018-07-06T20:19】
+【2018-07-06T20:19】  
 Convert to pure cast  
 蓝图的Cast节点，左右两端默认会带两个Exec三角图标，表示逻辑的执行顺序，有这种图标，说明当前逻辑是函数；如果在宏（Macros）中使用 Cast 节点，默认也会带有这种三角图标，但这样会直到蓝图编译错误，需要将这些Cast节点转换为无三角图标形势，方法如下：  
 右键 Cast 节点 -》 Convert to pure cast，这样就可以保证蓝图编译通过。  
 同样，pure cast 节点也可以在转换为 带三角图标的节点：  
 右键 Cast 节点 -》 Convert to impure cast。
+
+【2018-07-07T19:56】  
+Character::GetActorLocation().Z 是 角色刚体高度的一般，不是Skeletal Mesh 底部的Z坐标。  
+
 
 ***
 `凡心所向，素履以往。生如逆旅，一苇以航。----木心`
