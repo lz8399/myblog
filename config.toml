@@ -12,7 +12,7 @@
 # For developpers, if you modify this theme, put your images in `source/images` folder and
 # use grunt task `build` to synchronize assets
 
-baseurl = "http://www.dawnarc.com/"
+baseurl = "https://dawnarc.com/"
 languageCode = "en-us"
 title = "玄冬Wong"
 theme = "hugo-tranquilpeak-theme"
@@ -39,7 +39,7 @@ defaultContentLanguage = "en-us"
   gravatarEmail = "aigo@mail.com"
   # Your profile picture
   # Overwritten by your gravatar image if `author.gravatar` is filled
-  picture = "http://en.gravatar.com/userimage/39492023/b4ed5534beed278270e4a8b7000cf04d.jpg?"
+  # picture = "https://en.gravatar.com/userimage/39492023/b4ed5534beed278270e4a8b7000cf04d.jpg?"
   # Your Twitter username without the @. E.g : thibaudlepretre
   twitter = "idealsland"
   # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
@@ -94,7 +94,7 @@ defaultContentLanguage = "en-us"
   identifier = "stackoverflow"
   name = "Stack Overflow"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-stack-overflow\"></i>"
-  url = "http://stackoverflow.com/users/1645289/protoss"
+  url = "https://stackoverflow.com/users/1645289/protoss"
 [[menu.links]]
   weight = 0
   identifier = "twitter"
@@ -112,13 +112,13 @@ defaultContentLanguage = "en-us"
   identifier = "weibo"
   name = "Weibo"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-weibo\"></i>"
-  url = "http://weibo.com/koanland"
+  url = "https://weibo.com/koanland"
 [[menu.links]]
   weight = 0
   identifier = "linkedin"
   name = "Linkedin"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-linkedin\"></i>"
-  url = "http://www.linkedin.com/in/dawnarc/"
+  url = "https://www.linkedin.com/in/dawnarc/"
 [[menu.links]]
   weight = 0
   identifier = "pinterest"
@@ -130,7 +130,7 @@ defaultContentLanguage = "en-us"
   identifier = "steam"
   name = "Steam"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-steam\"></i>"
-  url = "http://steamcommunity.com/id/dawnarc"
+  url = "https://steamcommunity.com/id/dawnarc"
 [[menu.links]]
   weight = 0
   identifier = "artstation"
