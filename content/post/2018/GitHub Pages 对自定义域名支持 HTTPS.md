@@ -44,6 +44,10 @@ dawnarc.github.io仓库下的CNAME修改
 ##### 3，enforce HTTPS 勾选
 上面第二步的CNAME文件修改以后，再刷新 `dawnarc.github.io` 的 GitHub Pages 设置，就可以勾选 `Enforce HTTPS `。稍等片刻，就可以以https打开自己的自定义域名。
 
+{{< alert warning>}}
+GitHub Pages 的CNAME如果设置为带 www 的域名，貌似无法使用 https，去掉 www 后才可以。
+{{< /alert >}}
+
 ##### 注意事项
 如果使用 Chrome 访问 https 地址栏左侧仍未出现小绿锁，请检查自己的网站引用的资源文件有没有使用了 http 协议，请替换成相应的 https 资源。
 
