@@ -19,6 +19,10 @@ UE4 的 TSharedPtr、TWeakObjectPtr 模仿自 C++11 的 shared_ptr 、 weak_ptr 
 如果两个 TSharedPtr 相互赋值，则会导致对象永不释放，导致内存泄漏。
 {{< /alert >}}
 
+{{< alert warning >}}
+Uobject不能使用TSharedPtr进行引用计数，如果一个非UObject的类想加入GC，那么必须继承FGCObject类。
+{{< /alert >}}
+
 ##### TWeakObjectPtr
 `TWeakObjectPtr` 保持的对象不能防止被垃圾回收。若引用的对象在其他地方被销毁，则 `TWeakObjectPtr` 内部的指针自动将被置为NULL，TWeakObjectPtr::IsValid()会返回false。`TSharedPtr` 则没有这个作用。
 
@@ -27,6 +31,9 @@ UE4 的 TSharedPtr、TWeakObjectPtr 模仿自 C++11 的 shared_ptr 、 weak_ptr 
      TWeakObjectPtr<MyUObject> ObjPtr = NewObject<MyUObject>();
 
 参考资料：  
+
+UE4 TSharedPtr和UObject的垃圾回收  
+http://www.v5xy.com/?p=808
 
 There's a Huge Difference, One Will Always Crash  
 https://answers.unrealengine.com/questions/48818/whats-the-difference-between-using-tweakobjectptr.html

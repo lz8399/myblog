@@ -14,29 +14,27 @@ keywords：UE4, Memory Persist, GC, 垃圾回收, 内存管理
 一个UObject类型的变量，即使是static，默认也会被GC掉。
 {{< /alert >}}
 
-要防止该对象被GC，有5种方式：
+要防止该对象被GC，有4种方式：
 
 + 作为成员变量并标记为`UPROPERTY()`；
 + 创建对象后 `AddToRoot()` ；（退出游戏时需要`RemoveFromRoot()`）
-+ UObject对象创建出来后用TSharedPtr保存，作用等价于`UPROPERTY()`；
 + FStreamableManager Load资源时，`bManageActiveHandle` 设置为true；
 + `FGCObjectScopeGuard` 在指定代码区域内保持对象；
 
-###### TSharedPtr 用法
+{{< alert warning >}}
+Uobject不能使用TSharedPtr进行引用计数，如果一个非UObject的类想加入GC，那么必须继承FGCObject类。
+{{< /alert >}}
 
-    TSharedPtr<MyUObject> ObjPtr = MakeShareable(NewObject<MyUObject>());
-    
-TSharedPtr 每赋值一次，引用计数器就会加一。但如果 TSharedPtr 成员变量所属的对象被销毁，则计数失效；如果想让某对象在游戏运行过程中一直不销毁，则可以在 GameInstance 中定义一个 TSharedPtr 对象并对其赋值。
+###### UPROPERTY()用法
 
-###### FGCObjectScopeGuard 用法
+    URPOPERTY()
+        UObject* MyObj;
+        
+###### AddToRoot()用法
 
-    {
-        FGCObjectScopeGuard(UObject* GladOS = NewObject<...>(...));
-        GladOS->SpawnCell();
-        RunGC();
-        GladOS->IsStillAlive();   // Object will not be removed by GC
-    }
-    
+    UMyObject* MyObj = NewObject<UMyObject>();
+    MyObj.AddToRoot();
+
 ###### FStreamableManager 用法
 
     FSoftObjectPath AssetPath(TEXT("/Game/Mannequin/Animations/ThirdPersonWalk.ThirdPersonWalk"));
@@ -49,7 +47,14 @@ TSharedPtr 每赋值一次，引用计数器就会加一。但如果 TSharedPtr 
     //free memory of object.
     Handle->ReleaseHandle();
     
+###### FGCObjectScopeGuard 用法
 
+    {
+        FGCObjectScopeGuard(UObject* GladOS = NewObject<...>(...));
+        GladOS->SpawnCell();
+        RunGC();
+        GladOS->IsStillAlive();   // Object will not be removed by GC
+    }
 
 ##### 参考资料
 虚幻4垃圾回收剖析  
