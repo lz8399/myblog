@@ -26,7 +26,7 @@ ZRemesher控制模型精度的两个参数为：Target Polygons Count、Adaptive
 ##### 实际用途：
 ZRemesher可以用于模型的自动拓扑：先在SubTool复制一个模型，然后使用ZRemesher生成一个低分辨率的模型，然后再使用Project All功能，就可以进行自动拓扑了，可以参见之前的文章：
 [ZBrush]Project All实例(example)
-http://www.dawnarc.com/2017/04/zbrushproject-all%E5%AE%9E%E4%BE%8Bexample/
+https://dawnarc.com/2017/04/zbrushproject-all%E5%AE%9E%E4%BE%8Bexample/
 
 ***
 `金鳞昂首凌霄烁，少年得意浅水游。 ---光叔`

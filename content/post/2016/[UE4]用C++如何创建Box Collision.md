@@ -26,4 +26,4 @@ UBoxComponent* MyNewBox = NewObject<UBoxComponent>(this);
 
 其他参考：  
 C++创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数  
-http://www.dawnarc.com/2017/05/ue4c--%E5%88%9B%E5%BB%BAboxcollisionboxcomponent%E5%B9%B6%E6%B3%A8%E5%86%8Coverlap%E5%92%8Chit%E4%BA%8B%E4%BB%B6%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/
+https://dawnarc.com/2017/05/ue4c--%E5%88%9B%E5%BB%BAboxcollisionboxcomponent%E5%B9%B6%E6%B3%A8%E5%86%8Coverlap%E5%92%8Chit%E4%BA%8B%E4%BB%B6%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0/

@@ -106,7 +106,7 @@ UWorld::TimeSince(double time)
 返回time与当前系统时间的时间差。
 
 AActor::GetWorldTimerManager().SetTimerForNextTick()  
-设置下一个tick期间执行的回调函数。
+设置下一个tick期间执行的回调函数（下一帧执行）。
 
 AActor::ForceNetUpdate()  
 强制并立即将当前actor的数据更新到客户端。
@@ -414,7 +414,7 @@ Convert to pure cast
 右键 Cast 节点 -》 Convert to impure cast。
 
 【2018-07-07T19:56】  
-Character::GetActorLocation().Z 是 角色刚体高度的一般，不是Skeletal Mesh 底部的Z坐标。  
+Character::GetActorLocation().Z 是 角色刚体高度的一半，不是Skeletal Mesh 底部的Z坐标。  
 
 
 ***
