@@ -1,5 +1,5 @@
 +++
-title= "[Algorithms]StarCraft 2's AI algorithm"
+title= "[Algorithms]StarCraft 2's AI Algorithm"
 date= "2018-07-12T13:28:28+08:00"
 categories= ["Algorithms"]
 tags= ["Algorithms"]
@@ -49,6 +49,12 @@ https://pdfs.semanticscholar.org/9fbb/a0583259b70e318003f5b6861faf9447060f.pdf
 
 Selecting Robust Strategies in RTS Games via Concurrent Plan Augmentation  
 https://www.microsoft.com/en-us/research/wp-content/uploads/2016/12/RTS.pdf
+
+The Current State of StarCraft AI Competitions and Bots  
+http://101.96.10.63/agents.fel.cvut.cz/~certicky/files/publications/aiide17-certicky-churchill.pdf
+
+On Design of an Effective AI Agent for StarCraft  
+http://www.cs.put.poznan.pl/wjaskowski/pub/theses/fbober_msc_starcraft.pdf
 
 ##### 相关代码
 
