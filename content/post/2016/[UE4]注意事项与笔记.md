@@ -416,6 +416,9 @@ Convert to pure cast
 【2018-07-07T19:56】  
 Character::GetActorLocation().Z 是 角色刚体高度的一半，不是Skeletal Mesh 底部的Z坐标。  
 
+【2018-07-13T00:37】  
+蓝图的所有数学公式节点对应的C++代码：  
+UE_4.19\Engine\Source\Runtime\Engine\Classes\Kismet\KismetMathLibrary.h
 
 ***
 `凡心所向，素履以往。生如逆旅，一苇以航。----木心`
