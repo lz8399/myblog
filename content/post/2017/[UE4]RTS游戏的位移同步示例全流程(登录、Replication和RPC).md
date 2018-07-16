@@ -260,6 +260,8 @@ https://answers.unrealengine.com/questions/459423/change-variable-in-client-want
 客户端发送请求 -》 服务端执行函数（假设叫ServerPlayAnim()） -》 ServerPlayAnim函数内调用NetMulticast函数 -》 NetMulticast函数内执行播放动画的逻辑。
 {{< /hl-text >}}
 
+11，编辑器模式下，即使勾选了 `Run Dedicated Server`，默认是不会自动连接专用服务器的，如果希望游戏启动时就自动连接专用服务器，需要勾选：`Auto Connect to Server` （Project Settings -> Level Editor -> Play -> Multiplayer Options），如果你自己实现了登陆逻辑，那么就不要勾选这个。如果是为了方便测试跳过登陆，可以勾选这个选项，并实现对应逻辑。
+
 ##### 常见问题：
 1. 如果出现以下错误，表示Reliable函数的参数名和引擎生成的代码有同名的情况，把参数名重新改一下即可。
 
