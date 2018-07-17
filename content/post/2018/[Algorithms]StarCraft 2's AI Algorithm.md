@@ -29,6 +29,9 @@ https://gamedev.stackexchange.com/questions/20392/a-navigational-mesh-path-findi
 
 ##### 相关论文
 
+A Q-Learning Algorithm for Adversarial Real-Time Strategy Games  
+https://www.aaai.org/ocs/index.php/AIIDE/AIIDE12/paper/download/5515/5734  
+
 StarCraft Unit Motion: Analysis and Search Enhancements  
 https://www.aaai.org/ocs/index.php/AIIDE/AIIDE15/paper/download/11573/11384
 
@@ -42,7 +45,7 @@ Identifying the Rush Strategies in the Game Logs of the Real-Time Strategy Game 
 https://kaigi.org/jsai/webprogram/2017/pdf/448.pdf
 
 A Survey of Real-Time Strategy Game AI Research and Competition in StarCraft  
-https://hal.archives-ouvertes.fr/hal-00871001/document
+http://richoux.fr/publications/tciaig13.pdf
 
 an evolutionary algorithm approach for a real time strategy game  
 https://pdfs.semanticscholar.org/9fbb/a0583259b70e318003f5b6861faf9447060f.pdf
@@ -73,3 +76,8 @@ https://github.com/idmillington/aicore
 A fish flock AI plugin for Unreal Engine 4  
 https://github.com/no5ix/flock-ai-ue4-plugin
 
+The StarCraft II API Has Arrived  
+http://us.battle.net/sc2/en/blog/20944009/the-starcraft-ii-api-has-arrived-8-9-2017
+
+Brood War API  
+https://github.com/bwapi/bwapi
