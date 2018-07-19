@@ -54,6 +54,9 @@ https://docs.unrealengine.com/latest/INT/API/Runtime/AIModule/Navigation/FCrowdA
 现象：  
 新建的自定义 `CrowdManager`，即使在设置中（Project Settings -》Engine -》 Navigation System -》 Crowd Manager Class）设置了，也不会起效。
 
+原因：  
+UE4的bug。
+
 解决办法：
 
 + 1. 继承NavigationSystem。
@@ -64,6 +67,17 @@ SetCrowdManager(NewObject<UCrowdManagerBase>(this, UMyCrowdManager::StaticClass(
 [/Script/Engine.Engine] 
 NavigationSystemClassName=/Script/[YourProjectName].[NavigationClassName] 
 + 4.关掉Editor重开，就可以试试看你的CrowdManager是不是运作了~
+
+3，移动时转向抖动的问题  
+现象：  
+启用 `UCrowdFollowingComponent` 之后，角色群体移动时，转向时经常抖动（朝向瞬切）。
+
+原因：  
+可能是每帧都在执行移动，且使用的API为：`UNavigationSystem::SimpleMoveToLocation()`。
+
+解决办法：  
+如果要使用 `UNavigationSystem::SimpleMoveToLocation()`，就不要每帧执行，可以间隔几秒执行一次。  
+如果使用 `AAIController::MoveToLocation()`，则没这个问题，即使每帧执行，也不会抖动。
 
 ##### 参考资料
 Crowd Manager Avoidance Config（推荐）  
