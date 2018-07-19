@@ -56,4 +56,4 @@ Gourard shading is in between the two: like Phong shading, each polygon has one 
 On modern hardware, you should either use flat shading (if speed is everything) or Phong shading (if quality is important). Or you can use a programmable-pipeline shader and avoid the whole question.
 
 ***
-`谁都可能出个错儿，你在一件事情上越琢磨得多就越容易出错。----《好兵帅克历险记》`
+`你要做一个可爱的人，不烦世事，满心欢喜，别恃宠而骄，别卑贱讨好。`

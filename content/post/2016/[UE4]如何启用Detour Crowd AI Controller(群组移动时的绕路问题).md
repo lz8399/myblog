@@ -5,12 +5,18 @@ categories= ["UnrealEngine4"]
 tags= ["UE4","API"]
 +++
 
-老版本中需要手动写C++来设置CrowManagerClass，新版本中只需要在Project Settings中设置。
+keywords：UE4、AI、群体移动、闪避、避让、回避
 
-##### 老版本
+##### Detour Crowd AI Controller
 
-蓝图中叫做：`Detour Crowd AI Controller`
-C++代码中叫做：`UCrowdFollowingComponent`，在AIController的构造函数中设置即可
+蓝图方式  
+打开ControllerBP，在 `Class Settings` 中设置 `Parent Class` 为：`Detour Crowd AI Controller`。  
+
+
+C++方式  
+
+引擎的C++代码有个叫 `ADetourCrowdAIController` 的class，但是这个class无法继承；  
+要在C++中使用Detour Crowd AI，需要借助 `UCrowdFollowingComponent`，在AIController的构造函数中设置即可
 
 头文件：
 
@@ -24,18 +30,47 @@ cpp：
     }
 
 
-##### 新版本
-Project Settings -》Engine -》 Navigation System -》 Crow Manager Class
+##### Crowd Manager 配置
+Project Settings -》Engine -》 Navigation System -》 Crowd Manager Class
 
 {{< figure src="/img/20160727-[UE4]如何启用Detour Crowd AI Controller(群组移动时的绕路问题)/[UE4]如何启用Detour Crowd AI Controller(群组移动时的绕路问题)-01.jpg">}}
 
+并可以在 Project Settings -》 Engine -》 Crowd Manager 编辑各种参数。
 
 官方doc：
 FCrowdAvoidanceConfig
 https://docs.unrealengine.com/latest/INT/API/Runtime/AIModule/Navigation/FCrowdAvoidanceConfig/index.html
 
-注意事项：
-使用UCrowdFollowingComponent时必须禁用RVO避让模式，否则无法生效：
+##### 注意事项
+
+1，使用UCrowdFollowingComponent时必须禁用RVO避让模式，否则无法生效：
 
     //默认是关闭的
     GetCharacterMovement()->bUseRVOAvoidance = false;	
+    
+2，自定义 `CrowdManager` 无法生效的bug  
+4.18有这个问题，最新版是否修复本没测过。
+
+现象：  
+新建的自定义 `CrowdManager`，即使在设置中（Project Settings -》Engine -》 Navigation System -》 Crowd Manager Class）设置了，也不会起效。
+
+解决办法：
+
++ 1. 继承NavigationSystem。
++ 2. 复写NavigationSystem::CreateCrowdManager()
+直接在函式内生成你的CrowdManager并传进SetCrowdManager：
+SetCrowdManager(NewObject<UCrowdManagerBase>(this, UMyCrowdManager::StaticClass())); 
++ 3. 到Engine/Config/DefaultEngine. ini加下面两行
+[/Script/Engine.Engine] 
+NavigationSystemClassName=/Script/[YourProjectName].[NavigationClassName] 
++ 4.关掉Editor重开，就可以试试看你的CrowdManager是不是运作了~
+
+##### 参考资料
+Crowd Manager Avoidance Config（推荐）  
+https://answers.unrealengine.com/questions/212408/crowd-manager-avoidance-config.html
+
+Unreal Avoidance系统(上)  
+https://yekdniwunrealengine.blogspot.com/2018/02/unreal-avoidance_10.html
+
+Unreal Avoidance系统(下)  
+https://yekdniwunrealengine.blogspot.com/2018/02/unreal-avoidance.html
