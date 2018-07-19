@@ -22,11 +22,14 @@ keywords：UE4性能优化、Performance Optimization
 
 7，3种光源的性能消耗从低到高：定向光/平行光(Directional Light) < 点光源(Point Light) < 聚光灯(Spot Light)。这个标准不局限于UE4，其他引擎也是这样。当光源数量在场景中达到一定量级时，3种灯光的性能差距也是数量级上差距。
 
+8，BoxComponent的 Generate Overlap Events 设置为false。如果不需要Overlap事件，那么就将该属性设置设置为false，默认为true。当BoxCompont达到一定量级时，开启Generate Overlap Events的性能消耗时关闭情况下的两倍。
+
 Epic Games工程师分享：如何在移动平台上做UE4的UI优化？  
 http://youxiputao.com/articles/11743
 
 ##### Dedicated Server优化
-1，服务端不用播放角色动画
+1，服务端剥离动画数据  
+Project Settings -> Engine -> Animation -> 勾选 Strip Animation Data on Dedicated Server.
 
 2，禁用角色刚体
 
