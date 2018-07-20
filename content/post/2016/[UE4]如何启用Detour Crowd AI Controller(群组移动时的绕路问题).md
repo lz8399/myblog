@@ -79,6 +79,10 @@ NavigationSystemClassName=/Script/[YourProjectName].[NavigationClassName]
 如果要使用 `UNavigationSystem::SimpleMoveToLocation()`，就不要每帧执行，可以间隔几秒执行一次。  
 如果使用 `AAIController::MoveToLocation()`，则没这个问题，即使每帧执行，也不会抖动。
 
+4，群体移动时，一部分移动，一部分静止不动  
+解决办法：  
+将 `Max Agents` 改大一点。
+
 ##### 参考资料
 Crowd Manager Avoidance Config（推荐）  
 https://answers.unrealengine.com/questions/212408/crowd-manager-avoidance-config.html
