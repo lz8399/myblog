@@ -73,6 +73,7 @@ CPP：
 + NM_Standalone：表示当前Actor在独立服务器（单机模式），可以执行客户端、服务端的所有功能。
 + NM_DedicatedServer：表示当前Actor在专用服务器上，只能执行服务端相关的功能。
 + NM_ListenServer：官方文档上解释的很少，我在官方论坛上问了下得到的几个解释是，<font color=red>ListenServer可以被游戏内的某个玩家的机器当作服务器，该服务器拥有操作每个客户端角色的权利。这种模式下，更方便来创建服务器；缺点是承载人数较少。</font>个人理解是ListenServer可能更适合做局域网游戏，因为这种既不需要考虑外挂也不需要考虑承载压力。
++ NM_Client：当客户端未连接 Dedicated Server 时，NetMode 为 NM_Standalone， 连接成功之后，客户端的 NetMode 就变成了 NM_Client 。
 
 <font color=red>DedicatedServer没有客户端的相关功能，只接收远程客户端的网络请求，适合承载大规模玩家在线。</font>另外连接DedicatedServer的客户端，是没有权限直接修改其他玩家的数据，因为客户端上的大部分Object的Role枚举都是ROLE_AutonomousProxy（如果你逻辑有bug，也是可以被客户端发送非法请求串改其他角色的数据，所以这里所说的没有权限修改，不要以为DedicatedServer可以帮你反外挂），但是在ListenServer的玩家主机上可以，因为他拥有其他所有玩家的实例（Role枚都是ROLE_Authority类型）。UE4的一些API内部有权限检测的逻辑：判断当前Role类型是否为ROLE_Authority，这样避免非法修改数据。
 
@@ -82,6 +83,11 @@ CPP：
 + ROLE_SimulatedProxy：表示当前Actor是一个模拟服务端的Actor状态Object，无法修改服务端上的数据，也没有权限执行远程函数（Reliable标识的UFUNCTION）。DedicatedServer服务器中创建的对象，都是ROLE_Authority，这些对象映射在客户端上的对象则都是ROLE_SimulatedProxy。
 + ROLE_AutonomousProxy：与ROLE_SimulatedProxy相似，区别是ROLE_AutonomousProxy有权限执行远程函数，但是远程函数必须是该Object身上的，其他Object上的远程函数没有权限执行。
 + ROLE_Authority：最高权限，即可以修改Server上的属性，又可以执行任何Objecct身上的远程函数。Standalone服务器中，所有对象都是ROLE_Authority。
+
+##### NetMode 和 Role 关系概述
+
++ 当 NetMode 为 NM_Standalone 或者 NM_DedicatedServer 时，所有对象的 Role 都为 ROLE_Authority 。
++ 当 NetMode 为 NM_Client 时，服务端 Spawn 出来的所有 Character 对象，在每个客户端的 Role 都为 ROLE_SimulatedProxy；当前客户端 PlayerController 对象的 Role 为 ROLE_AutonomousProxy ，当前客户端无法获取其他客户端的PlayerController，如果使用其他客户端的 Character 执行 Character::GetController()，则返回NULL。
 
 ##### 关键函数
 
