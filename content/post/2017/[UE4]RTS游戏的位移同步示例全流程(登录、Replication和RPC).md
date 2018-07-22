@@ -282,6 +282,11 @@ https://answers.unrealengine.com/questions/459423/change-variable-in-client-want
 Dedicated Servers, Jitter, Matchmaking  
 https://forums.unrealengine.com/development-discussion/c-gameplay-programming/96598-dedicated-servers-jitter-matchmaking
 
+5. 旋转视角时，NM_Standalone 模式下执行 `APlayerController::AddYawInput()` 或者 `APawn::AddControllerYawInput()` 没有问题，但是 NM_Client 模式下失效。  
+原因：  
+不清楚。。  
+解决办法：  
+NM_Client 模式下使用 `UCameraComponent::AddRelativeRotation()` 旋转视角。
 
 示例工程下载地址：  
 http://pan.baidu.com/s/1o7MzmRo
