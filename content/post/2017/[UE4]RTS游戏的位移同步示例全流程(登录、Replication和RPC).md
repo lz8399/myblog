@@ -55,6 +55,16 @@ CPP：
     {
         //logic...
     }
+    
+三种 RPC 函数区别：
+
++ UFUNCTION(Server, Reliable, WithValidation) 客户端请求，服务端执行。  
+使用场景：涉及到数据安全的行为，比如：砍一刀扣血，扣血条件判定以及血量修改，都应该放在服务端执行。
++ UFUNCTION(Client, Reliable) 服务端请求，客户端执行。  
+使用场景：只是表现相关，不涉及数据修改的行为，比如：装备升级，整备的属性修改发生在服务端，升级成功后的外观变化，服务端需要通知客户端替换武器 Mesh 和材质。
++ UFUNCTION(NetMulticast, Reliable) 服务端先执行，然后所有连接的客户端再执行。  
+使用场景：当前客户端做的表现也希望其他客户端也看到，比如：播放攻击动作，客户端A控制的角色A播放攻击动作，希望所有其他客户端也能看见角色A播放了攻击动作。  
+NetMulticast一般可以设置为 Unreliable ，表示如果网络不通畅，不重新发送 UDP 消息，比如上述装备升级，如果网络问题导致客户端未能更新装备外观，影响也不大，Unreliable 可以节省带宽。
 
 ##### 角色身上需要设置的属性
 {{< figure src="/img/20170225-[UE4]RTS游戏的位移同步示例（Replication和RPC）/[UE4]RTS游戏的位移同步示例（Replication和RPC）-01.jpg">}}
