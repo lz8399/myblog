@@ -28,9 +28,18 @@ Epic Games工程师分享：如何在移动平台上做UE4的UI优化？
 http://youxiputao.com/articles/11743
 
 ##### Dedicated Server优化
-1，服务端剥离动画数据  
-Project Settings -> Engine -> Animation -> 勾选 Strip Animation Data on Dedicated Server.
+1，服务端cook时剥离动画数据  
+Project Settings -> Engine -> Animation -> 勾选 Strip Animation Data on Dedicated Server.  
+如果在动画中添加了触发修改数据的 Notify Event，勾选此选项会有问题。请确保动画做挂载的 Notify 只是表现相关，不涉及游戏逻辑。
 
-2，禁用角色刚体
+2，Server模式下禁用角色物理模拟  
 
-3，Detach角色身上所有的装饰性组件
+`FBodyInstance->bSimulatePhysics` 设置为false。默认为false。
+
+`SkeletalMeshComponent::bEnablePhysicsOnDedicatedServer` 设置为 false ， 默认为 true 。但这样会导致物理验算以客户端为准，有被外挂hack的风险。bEnablePhysicsOnDedicatedServer 在 run-time 修改不生效。
+
+3，Server模式下禁用 Collision  
+
+`UPrimitiveComponent->bGenerateOverlapEvents` 设置为false，角色蓝图中的 CollisionComponent 默认为true。
+
+4，Server模式下Detach角色身上所有的装饰性组件

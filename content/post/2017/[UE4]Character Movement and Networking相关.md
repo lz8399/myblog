@@ -25,5 +25,18 @@ https://docs.unrealengine.com/latest/INT/Gameplay/Networking/CharacterMovementCo
 Custom Character Movement Component  
 https://wiki.unrealengine.com/Custom_Character_Movement_Component
 
+##### Dedicated Server 的 Movement 优化
+
+如果仅仅为了性能，不希望服务端实时修正客户端坐标，以客户端发过来的坐标为准，可以开启以下选项：
+
+    [/Script/Engine.GameNetworkManager]
+     MAXPOSITIONERRORSQUARED=625
+     ClientAuthorativePosition=true
+     
+但是这么做会被外挂 hack
+
+参考自：How am I able to Replicate movement when using "AddMovement Input", but not AddLocalTransform?  
+https://answers.unrealengine.com/questions/26116/able-to-replicate-movement-when-using-addmovement.html
+
 ***
 `人们常常用咄咄逼人来掩饰弱点，真正持久的力量存在于忍受中，只有软骨头才急躁粗暴，他们因此丧失了人的尊严。我等待，我观看。恩惠也许来，也许不来。也许这种既平静又不平静的等待就是恩惠的使者，抑或恩惠本身。──弗兰茨·卡夫卡（FranzKafka）`
