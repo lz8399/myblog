@@ -38,5 +38,13 @@ https://wiki.unrealengine.com/Custom_Character_Movement_Component
 参考自：How am I able to Replicate movement when using "AddMovement Input", but not AddLocalTransform?  
 https://answers.unrealengine.com/questions/26116/able-to-replicate-movement-when-using-addmovement.html
 
+##### 运行时期间断开Actor的Replication
+比如一个 Character 一开始是在服务端同步的，当他死亡时，之后相关表现希望不再同步，比如布娃娃系统（可破碎网格），如果继续保持同步，会增加服务端计算开销，且布娃娃此时只是客户端表现，并不会驱动服务端数据，所以希望在执行布娃娃破碎之前，断开该Character在客户端服务端之间的Replication。
+
+办法如下：  
+服务端在执行布娃娃破碎之前，先执行`AActor::ForceNetUpdate()`，将当前最新状态同步到客户端，然后服务端接着执行`AActor::TearOff`，表示从此时开启，服务端不再同步当前 Actor 给服务端。  
+当服务端执行`AActor::TearOff`成功后，客户端会触发回调`AActor::TornOff()`，表示此时客户端可以任意修改当前 Actor 状态，且不会被服务端纠正。
+
+
 ***
 `人们常常用咄咄逼人来掩饰弱点，真正持久的力量存在于忍受中，只有软骨头才急躁粗暴，他们因此丧失了人的尊严。我等待，我观看。恩惠也许来，也许不来。也许这种既平静又不平静的等待就是恩惠的使者，抑或恩惠本身。──弗兰茨·卡夫卡（FranzKafka）`
