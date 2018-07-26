@@ -81,7 +81,7 @@ NavigationSystemClassName=/Script/[YourProjectName].[NavigationClassName]
 
 4，群体移动时，一部分移动，一部分静止不动  
 解决办法：  
-将 `Max Agents` 改大一点。
+将 `Max Agents` 改大一点。（Project Settings -> Engine -> Crowd Manager -> Max Agents）
 
 ##### 参考资料
 Crowd Manager Avoidance Config（推荐）  
