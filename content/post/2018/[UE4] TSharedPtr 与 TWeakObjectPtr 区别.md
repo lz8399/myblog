@@ -9,7 +9,7 @@ keywords= ["UE4", "GarbageCollect", "TSharedPtr", "TWeakObjectPtr"]
 UE4 的 TSharedPtr、TWeakObjectPtr 模仿自 C++11 的 shared_ptr 、 weak_ptr 。
 
 ##### TSharedPtr
-`TSharedPtr` 相当于对象的引用计数器。每当对 TSharedPtr 赋值一次，该 TSharedPtr 引用对象计数加一，当引用计数为0时，则该对象被自动销毁。TSharedPtr 可以防止对象被垃圾回收，等价于 `UPROPERTY()` （前提是 TSharedPtr 成员变量所属的对象没有被销毁，如果被销毁，则 TSharedPtr 成员变量的计数不再有效）。
+`TSharedPtr` 相当于对象的引用计数器。每当对 TSharedPtr 赋值一次，该 TSharedPtr 引用对象计数加一，当引用计数为0时，则该对象被自动销毁。TSharedPtr 可以防止 raw pointer 对象被垃圾回收，。
 
 用法：
 
