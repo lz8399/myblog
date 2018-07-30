@@ -27,3 +27,12 @@ Keywords：单位向量、方向向量、unit vector
 C++ 方式：
 
 蓝图节点 `Normalize` 对应的 C++ 接口是 `FVector::GetSafeNormal()`，而不是`FVector::Normalize()`。前者是返回一个单位向量，但不会修改当前向量；后者不返回任何值，但是会修改当前向量为单位向量。
+
+##### FVector::Rotation()对应的蓝图节点
+
+    void GetYawPitchFromVector(FVector InVec, float& Yaw, float& Pitch);
+
+{{< figure src="/img/20160906-[UE4] FVector 向量相关/[UE4] FVector 向量相关-03.jpg">}}  
+
+然后使用输出参数 Yaw, Pitch 创建一个 Rotator，并将 Roll 设置为0，即等价于`FVector::Rotation()`。
+
