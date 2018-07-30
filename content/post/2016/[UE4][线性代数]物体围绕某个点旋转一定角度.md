@@ -41,8 +41,7 @@ As kakTuZ observed, your code converts point to spherical coordinates. There's n
 The result of not rotating the next reference axis along the first w_ny is that two points that are 1 km a part of each other at equator, move closer each other at the poles and at latitude of 90 degrees, they touch. Even though the apparent purpose is to keep them 1 km apart where ever they are rotated.
 
 
-==================================
-UE4中的实现方式
+##### UE4中的实现方式
 
     FVector A;
     FVector B;

@@ -35,7 +35,7 @@ keywords：UE4、Replication、Relicate、reliable、RPC、RTS Movement、Dedica
     
 ##### RPC（远程执行调用）
 步骤：  
-1，对需要远程执行的函数添加宏UFUNCTION(Server, Reliable, WithValidation)或者UFUNCTION(Client, Reliable)。其中Server表示在客户端调用，在服务端执行，Client则反之；WithValidation表示是否需要验证函数，加上的画需要添加函数：bool MyFun_Validate()，函数提内容写在MyFun_Implementation函数内。cpp中不需要与函数名同名的函数体，只需要实现_Validate和_Implementation两个函数即可。
+1，对需要远程执行的函数添加宏UFUNCTION(Server, Reliable, WithValidation)或者UFUNCTION(Client, Reliable)。其中Server表示在客户端调用，在服务端执行；WithValidation表示是否需要验证函数，加上的画需要添加函数：bool MyFun_Validate()，函数提内容写在MyFun_Implementation函数内。cpp中不需要与函数名同名的函数体，只需要实现_Validate和_Implementation两个函数即可。
 头文件：
 
     //移动角色(只在服务端执行的函数)
@@ -60,11 +60,18 @@ CPP：
 
 + UFUNCTION(Server, Reliable, WithValidation) 客户端请求，服务端执行。  
 使用场景：涉及到数据安全的行为，比如：砍一刀扣血，扣血条件判定以及血量修改，都应该放在服务端执行。
-+ UFUNCTION(Client, Reliable) 服务端请求，客户端执行。  
++ UFUNCTION(Client, Reliable) 服务端请求，客户端执行，{{< hl-text red >}}也可能是服务端执行{{< /hl-text >}}。  
 使用场景：只是表现相关，不涉及数据修改的行为，比如：装备升级，整备的属性修改发生在服务端，升级成功后的外观变化，服务端需要通知客户端替换武器 Mesh 和材质。
 + UFUNCTION(NetMulticast, Reliable) 服务端先执行，然后所有连接的客户端再执行。  
 使用场景：当前客户端做的表现也希望其他客户端也看到，比如：播放攻击动作，客户端A控制的角色A播放攻击动作，希望所有其他客户端也能看见角色A播放了攻击动作。  
 NetMulticast一般可以设置为 Unreliable ，表示如果网络不通畅，不重新发送 UDP 消息，比如上述装备升级，如果网络问题导致客户端未能更新装备外观，影响也不大，Unreliable 可以节省带宽。
+	
+{{< alert warning >}}
+UFUNCTION(Client, Unreliable) 并不表示是客户端执行！！！也可能是服务端执行。官方文档：
+Since the server can own actors itself, a "Run on Owning Client" event may actually run on the server, despite its name.
+{{< /alert >}}
+
+https://docs.unrealengine.com/latest/INT/Gameplay/Networking/Blueprints/index.html 
 
 ##### 角色身上需要设置的属性
 {{< figure src="/img/20170225-[UE4]RTS游戏的位移同步示例（Replication和RPC）/[UE4]RTS游戏的位移同步示例（Replication和RPC）-01.jpg">}}
@@ -294,9 +301,29 @@ https://forums.unrealengine.com/development-discussion/c-gameplay-programming/96
 
 5. 旋转视角时，NM_Standalone 模式下执行 `APlayerController::AddYawInput()` 或者 `APawn::AddControllerYawInput()` 没有问题，但是 NM_Client 模式下失效。  
 原因：  
-不清楚。。  
+可能是Use Controller Rotation Yaw 设置为 false。  
 解决办法：  
-NM_Client 模式下使用 `UCameraComponent::AddRelativeRotation()` 旋转视角。
+有些情况下，我们不希望使用 `Controller Rotation Yaw` 作为角色的朝向，那么此时想旋转角色方向，使用如下方式：
+
+		void AMyPlayerController::Turn(float Rate)
+		{
+			// calculate delta for this frame from the rate information
+			if (Rate != 0.f)
+			{
+				if (AActor* Target = GetViewTarget())
+				{
+					Target->AddActorLocalRotation(FRotator(0.f, Rate * InputYawScale, 0.f));
+				}
+			}
+		}
+
+	`UCameraComponent::AddRelativeRotation()` 也可以旋转视角，但是其旋转速率是 `AActor::AddActorLocalRotation()` 的两倍。原因不清楚。。。
+	
+6. 假设角色蓝图中有两个Component：A 和 B，A 设置为 `A->SetOnlyOwnerSee(true)`，且 B 附加在 A 上： `B->SetupAttachment(A)`，那么只能第一个登陆的角色正常，之后登陆的角色会消失不见。  
+解决办法：  
+这种情况下，A 不要 Attach B，如果要 Attach，B 设置为 `SetOnlyOwnerSee(false)`（默认为false）；或者 A 也隐藏掉。
+
+7. 如果角色身上 Attach 了一个 BoxComponent 或者 SphereComponent，那么这个Component的 `CollisionProfileName` 不要设置为 `Projectile`（First Person Shooter模版项目中的自定义 `Collision Channel`）， （能否设置为其他没试过，最好默认），如果设置成 `Projectile`，那么角色在移动时会不停抖动（Standalone是否也有这种问题没试过）。
 
 示例工程下载地址：  
 http://pan.baidu.com/s/1o7MzmRo

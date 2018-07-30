@@ -82,7 +82,7 @@ Package Project -》 Windows -》 Windows x64。
 {{< figure src="/img/20170225-[UE4]如何编译部署独立专用服务端(Standalone Dedicated Server)/[UE4]如何编译部署独立专用服务端(Standalone Dedicated Server)-03.jpg">}}
 
 构建完毕以后，输出的server.exe文件位置在：{{< hl-text green >}}/MyProject/Binaries/Win64/MyProjectServer.exe。{{< /hl-text >}}  
-然后拷贝这个MyProjectServer.exe文件到上面第3步中提到的目录位置：{{< hl-text green >}}D:/PackageTest/WindowsNoEditor/MyProject/Binariesk/Win64/{{< /hl-text >}}目录下。  
+然后拷贝这个MyProjectServer.exe文件到上面第3步中提到的目录位置：{{< hl-text green >}}D:/PackageTest/WindowsNoEditor/MyProject/Binaries/Win64/{{< /hl-text >}}目录下。  
 此时，该目录就会同时存在两个exe文件：{{< hl-text blue >}}MyProject.exe{{< /hl-text >}}和{{< hl-text blue >}}MyProjectServer.exe{{< /hl-text >}}。
  
 如果MyProjectServer.exe不和MyProject.exe放在一起，则启动server时会报错（下面只是其众多错误信息中的一条）：  
