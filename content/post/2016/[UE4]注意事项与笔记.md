@@ -420,6 +420,12 @@ Character::GetActorLocation().Z 是 角色刚体高度的一半，不是Skeletal
 蓝图的所有数学公式节点对应的C++代码：  
 UE_4.19\Engine\Source\Runtime\Engine\Classes\Kismet\KismetMathLibrary.h
 
+蓝图中数组节点对应的C++代码：  
+UE_4.19\Engine\Source\Runtime\Engine\Classes\Kismet\KismetArrayLibrary.h
+
+蓝图中动画节点对应的C++代码：  
+UE_4.19\Engine\Source\Runtime\Engine\Classes\Kismet\KismetAnimationLibrary.h
+
 【2018-07-26T16:35】  
 蓝图中创建Map  
 新建一个变量后，类型先改成Int或者String，然后才能点击类型下来列表中的Map，默认bool类型变量是无法点击Map类型的。  
