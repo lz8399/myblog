@@ -8,6 +8,8 @@ tags:
 - Error
 ---
 
+##### UObject ConditionalBeginDestroy()导致无法第二次重新Load的问题
+
 如果一个材质对象首次执行垃圾回收（ConditionalBeginDestroy是对BeginDestroy的封装，BeginDestroy是不管任何因素强制回收）：
 
     UObject::ConditionalBeginDestroy()
@@ -36,6 +38,16 @@ tags:
 
 如果一个UObject是SpawnActor创建出来的，那么执行Destroy()之后，再次执行Spawn是可以正常创建出来的。这点和LoadObject有区别。
 
+##### ConditionalBeginDestroy()并不推荐在业务逻辑中使用
+
 {{< alert warning >}}
 UE4官方论坛上，很多帖子或资料告诉你，如果要销毁对象，需要执行ConditionalBeginDestroy()。其实这个API不是给上层逻辑使用的，如果要销毁对象，只要保证该对象失去引用或者RemoveFromRoot()即可，否则就会出现上述问题，即：Destroy之后，无法第二次Load。但是这个问题只存在编辑器运行模式下，如果是打包版本（或者Play时选择下拉菜单：Standalone），即使Destroy()，第二次LoadObject()，第一个参数为NULL，也是可以正常加载的。
 {{< /alert >}}
+
+##### DedicatedServer 中的问题
+{{< alert danger >}}
+如果在 DedicatedServer 模式下，SpawnActor生成Actor，且这个Actor bReplicates 设置为true，执行 ConditionalBeginDestroy() ，一定时间后客户端会崩掉，但是使用 Destroy() 没问题。对于服务端生成的 Actor，销毁对象时绝对不要 ConditionalBeginDestroy()。
+{{< /alert >}}
+
+##### ConditionalBeginDestroy 和 Destroy区别
+ConditionalBeginDestroy 和 Destroy两者都是销毁对象，区别是：前者是在delay一定时间后执行销毁，Destroy是在当前帧结束时执行销毁。如果逻辑上每帧都有很多 Actor需要销毁，那么可以先把这些Actor隐藏，然后再调用ConditionalBeginDestroy，让引擎统一执行GC。

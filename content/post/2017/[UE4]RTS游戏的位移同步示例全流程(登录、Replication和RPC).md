@@ -325,6 +325,10 @@ https://forums.unrealengine.com/development-discussion/c-gameplay-programming/96
 
 7. 如果角色身上 Attach 了一个 BoxComponent 或者 SphereComponent，那么这个Component的 `CollisionProfileName` 不要设置为 `Projectile`（First Person Shooter模版项目中的自定义 `Collision Channel`）， （能否设置为其他没试过，最好默认），如果设置成 `Projectile`，那么角色在移动时会不停抖动（Standalone是否也有这种问题没试过）。
 
+8. DedicatedServer 模式下，`SpawnActor`生成出的 Actor，且这个Actor bReplicates 设置为true， 执行`ConditionalBeginDestroy()`时，一定时间后客户端会崩掉。  
+解决办法：  
+`SpawnActor`生成出的 Actor，且改 Actor 同步到远程机器，销毁时，不要用`ConditionalBeginDestroy()`，而要用`Destroy()`。Standalone 模式貌似没这种限制。
+
 示例工程下载地址：  
 http://pan.baidu.com/s/1o7MzmRo
     
