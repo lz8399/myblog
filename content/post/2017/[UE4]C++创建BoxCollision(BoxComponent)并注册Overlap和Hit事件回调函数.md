@@ -101,7 +101,7 @@ MyCharacter.cpp的构造函数中：
     DelegateHit.BindUFunction(this, "OnTestHit");
     CollisionMesh->OnComponentHit.Add(DelegateHit);
 
-注意，上面设置的ProfileName：MyCollisionProfile，是下面第二步中在工程设置中添加的。
+注意，上面设置的ProfileName：MyCollisionProfile，是在Project Settings中设置的，具体步骤见下文 **Collision Channel 设置**。
 
 回调函数的函数体：
 
@@ -110,7 +110,16 @@ MyCharacter.cpp的构造函数中：
         GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Red, FString("Hit&&&&&&&&&&&&&&&& ") + Hit.Location.ToString());
     }
 
-##### 2，设置Channel Response Profile
+##### 3，场景中的碰撞对象需要设置的选项
+{{< figure src="/img/20170515-[UE4]C++创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数/[UE4]C++创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数-09.jpg">}}
+注意，当首次勾选Simulate Physics时，Collision Presets会自动修改为PhysicsActor。
+
+* `Simulate Physics`：如果要触发Hit事件，这个属性是必须勾选的。
+* `Simulation Generates Hit Events`：表示是否触发当前物体的Hit事件，如果你需要的回调事件不是这个物体的，可以不勾选该选项。
+* `Collision Presets`：同上，如果不关心当前物体的碰撞规则，只是希望其他物体碰到当前物体时，能触发其他物体的碰撞事件，那么Collision Presets可以设置为默认值。
+
+### Collision Channel 设置
+
 打开工程设置：Edit -》 Project Settings -》 Engine -》 Collision
 {{< figure src="/img/20170515-[UE4]C++创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数/[UE4]C++创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数-02.jpg">}}
 
@@ -132,13 +141,26 @@ Name自己定义，这里的Name就是之前C++代码中设置ProfileName中的�
 点击Accept之后，就在Preset列表中多了一条记录
 {{< figure src="/img/20170515-[UE4]C++创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数/[UE4]C++创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数-08.jpg">}}
 
-##### 3，场景中的碰撞对象需要设置的选项
-{{< figure src="/img/20170515-[UE4]C++创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数/[UE4]C++创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数-09.jpg">}}
-注意，当首次勾选Simulate Physics时，Collision Presets会自动修改为PhysicsActor。
+Collision Object Channel、Collision Preset、Object Type 三者联系：
 
-* `Simulate Physics`：如果要触发Hit事件，这个属性是必须勾选的。
-* `Simulation Generates Hit Events`：表示是否触发当前物体的Hit事件，如果你需要的回调事件不是这个物体的，可以不勾选该选项。
-* `Collision Presets`：同上，如果不关心当前物体的碰撞规则，只是希望其他物体碰到当前物体时，能触发其他物体的碰撞事件，那么Collision Presets可以设置为默认值。
+{{< figure src="/img/20170515-[UE4]C++创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数/[UE4]C++创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数-10.jpg">}}
+
++ Project Settings 中的 Object Channel 对应蓝图中 CollisionComponent 或者 MeshComponent 中的属性 Object Type 和 Object Response；
++ Project Settings 中的 Collision Preset 对应蓝图中 CollisionComponent 或者 MeshComponent 中的属性 Collision Presets；
+
+如果蓝图中 CollisionComponent 或者 MeshComponent 中的属性 Collision Presets 选择预设好的 Preset ，则 Object Type 等其他 Collision 相关属性不可编辑。
+{{< figure src="/img/20170515-[UE4]C++创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数/[UE4]C++创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数-11.jpg">}}
+
+如果选择 Collision Presets 选择 Custom ，则可以相关属性可以编辑。相关参数含义是：
+
++ Object Type 表示当前物体所属的 Collision Channel ；
++ Object Response 表示当前物体与其他物体所对其他 Collision Channel 物体的反应：Ingore(忽略)、Overlaop(重叠)还是Block(阻挡)。
+
+使用示例：  
+假如有三个物体A、B、C，A物体身上有个 CollisionBox，希望这个 CollisionBox 只与物体B发生 Overlap，忽略掉物体C（既不 Overlap 也不 Block ）。  
+方式如下：  
+新建两个 Collision Channel，分别作为物体B和物体C的 Object Type；然后再新建一个
+Collision Preset，假设叫 CollisionProfileA ，并设置该 Preset 对物体B的通道 Overlap ， 对物体C的通道 Ingore ，然后将物体A的 Collision Preset 设置成 CollisionProfileA。
 
 ### Actor的Hit事件
 ##### 1，C++代码的编写
