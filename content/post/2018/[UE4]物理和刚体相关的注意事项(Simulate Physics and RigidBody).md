@@ -1,5 +1,5 @@
 +++
-title= "[UE4]物理和刚体相关的注意事项(Simulate Physics and Collision)"
+title= "[UE4]物理和刚体相关的注意事项(Simulate Physics and RigidBody)"
 date= "2018-07-23T00:27:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
@@ -23,11 +23,11 @@ keywords= ["UE4", "Velocity", "AddImpulse", "Simulate Physics", "Collision"]
 2. 如何在运行时期间修改速度；
 
 问题1解决方法：  
-如果情况下，Actor spawn之后，就会收到 ProjectileMovement 影响立即移动，如何在Spawn 之后马上停止移动：
+默认情况下，Actor spawn之后，就会受到 ProjectileMovement 影响立即移动，如何在 Spawn 之后马上停止移动：
 
 	ProjectileMovement->Deactivate();
 
-问题2解决方法：  	
+问题2解决方法：  
 如何在 Spawn 之后修改 Speed，两种方式：
 
 	UProjectileMovementComponent->SetVelocityInLocalSpace(FVector NewVelocity);
@@ -72,6 +72,10 @@ https://answers.unrealengine.com/questions/736999/simulate-physics-and-projectil
 
 	StaticMeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("StaticMeshComp"));
 	StaticMeshComp->SetCollisionEnabled(ECollisionEnabled::Type::PhysicsOnly);
+    
+{{< alert success >}}
+4.16版本存在这种问题，但是最新4.20.1版本，即使放射物体在角色 CapsuleComponent 内部，且 CapsuleComponent 的 Object Response 对发射物体为 Block，发射时物体也不会存在乱窜的问题，不知是不是引擎把这种情况自动处理了。4.16到4.20之间的版本是否仍然存在这个问题，没有测试过。
+{{< /alert >}}
 	
 ##### 不使用 MovementComponent 情况下设置 Gravity 大小
 
@@ -80,6 +84,8 @@ MovementComponent 有个属性`Gravity Scale`来设置重力大小。
 
 	StaticMeshComp->SetSimulatePhysics(true);
 	StaticMeshComp->AddImpulse(SpeedInWorld);
+
+然后在 Tick 函数中每帧设置：
 
 	FVector Velocity = StaticMeshComp->GetPhysicsLinearVelocity();
 	Velocity.Z -= 100.f;

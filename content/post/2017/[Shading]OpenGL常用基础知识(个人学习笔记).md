@@ -43,7 +43,7 @@ https://github.com/daw42/glslcookbook
 
 ##### 批量填充(populate)数据
 
-OpenGL 4.0之前，比如要填充vertex数据，必须有逐个vertex设置。4.0之后，可以一次性填出一组vertex。  
+OpenGL 4.0之前，比如要填充vertex数据，必须要逐个vertex设置。4.0之后，可以一次性填充一组vertex。  
 以填充position和color的vertex shader为例：
 
 	/////////////////// Create the VBO ////////////////////
@@ -144,7 +144,7 @@ glGetProgramInterfaceiv、glGetProgramResourceiv、glGetProgramResourceName是Op
 在渲染一个模型时，由于其每个顶点(vertex)信息都不一样，所以每个顶点在调用 shader 时，shader 的输入参数都不一样，相当于每计算一个顶点，shader 的输入参数都得变化一次，针对这种实时变化的输入参数，最好使用 Vertex attributes ；对于像摄像机角度、投射变换(projective transformations)等数据，相对变化频率很低，这种情况下最好使用 Uniform variable，毕竟它在 shader 内为常量，所以编译器可以针对这种常量做优化来提升性能。
 
 注意事项：  
-Uniform variables 可以定义在任何一个 shader 中，如果多个 shader 定义了名字相同的 Uniform variables，那么他么的类型也必须相同，也就是说：{{< hl-text green >}}只要一处定义，就可以可以被当前程序的所有 shader 对象访问{{< /hl-text >}}。
+Uniform variables 可以定义在任何一个 shader 中，如果多个 shader 定义了名字相同的 Uniform variables，那么它们的类型也必须相同，也就是说：{{< hl-text green >}}只要一处定义，就可以被当前程序的所有 shader 对象访问{{< /hl-text >}}。
 
 ##### Uniform variables 常用的OpenGL API
 
@@ -218,7 +218,7 @@ OpenGL 4.3 之前的版本，则要使用：glGetProgramiv、glGetActiveUniform�
 		
 ##### Uniform blocks意义和作用
 
-如果你的 OpenGL 程序中有多个 shader 对象，且这些 shader 使用了同一个 Uniform variables，而我们知道，Uniform variables的location等信息是在 shader 对象Link之后生成的，也就是说没当 Link 一个 shader对象时，这个Uniform variables 的location 可能发生变化（比如在 shader 对象A中，Uniform variables 的location 为1，shader 对象2中，那么Uniform variables 的location 为2，那么如果先link对象A，再link对象B，则这个Uniform variables的location对于 shader 对象A就已失效）。  
+如果你的 OpenGL 程序中有多个 shader 对象，且这些 shader 使用了同一个 Uniform variables，而我们知道，Uniform variables的location等信息是在 shader 对象Link之后生成的，也就是说每当 Link 一个 shader对象时，这个Uniform variables 的location 可能发生变化（比如在 shader 对象A中，Uniform variables 的location 为1，shader 对象2中，那么Uniform variables 的location 为2，那么如果先link对象A，再link对象B，则这个Uniform variables的location对于 shader 对象A就已失效）。  
 所以需要一个管理当前Program对象中所有Uniform variables的管理器，这个管理器就是Uniform blocks。
 
 使用实例：  
@@ -339,7 +339,7 @@ glBindBufferBase函数参数的索引（第二个参数）必须与定义uniform
 ##### glBindBuffer与glBindBufferBase的区别
 
 {{< alert info >}}
-简述之：`glBindBuffer` 绑定的指针索引，是用来对 Buffer 填充或修改数据而使用的，但是这个索引无法作为输入参数传递给 shader ，如果要把这个索引传递给 shader ，那么比如使用glBindBufferBase。
+简述之：`glBindBuffer` 绑定的指针索引，是用来对 Buffer 填充或修改数据而使用的，但是这个索引无法作为输入参数传递给 shader ，如果要把这个索引传递给 shader ，那么必须使用glBindBufferBase。
 {{< /alert >}}
 
 
