@@ -1,5 +1,5 @@
 +++
-title= "[UE4]RTS游戏的位移同步示例全流程(登录、Replication和RPC)"
+title= "[UE4]Dedicated Server同步示例全流程(登录、Replication和RPC)"
 date= "2017-02-25T20:33:40+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
@@ -7,7 +7,7 @@ tags= ["UE4"]
 
 转载请注明原文出处：https://dawnarc.com
 
-keywords：UE4、Replication、Relicate、reliable、RPC、RTS Movement、Dedicated Server、属性同步、demo、example
+keywords：UE4、Replication、Relicate、reliable、RPC、RTS Movement、Dedicated Server、属性同步、位移同步、专用服务器、demo、example
 
 实例的完整工程下载地址见文章底部
 
@@ -56,7 +56,7 @@ CPP：
         //logic...
     }
     
-三种 RPC 函数区别：
+**三种 RPC 函数区别**：
 
 + UFUNCTION(Server, Reliable, WithValidation) 客户端请求，服务端执行。  
 使用场景：涉及到数据安全的行为，比如：砍一刀扣血，扣血条件判定以及血量修改，都应该放在服务端执行。
@@ -67,9 +67,22 @@ CPP：
 NetMulticast一般可以设置为 Unreliable ，表示如果网络不通畅，不重新发送 UDP 消息，比如上述装备升级，如果网络问题导致客户端未能更新装备外观，影响也不大，Unreliable 可以节省带宽。
 	
 {{< alert warning >}}
-UFUNCTION(Client, Unreliable) 并不表示是客户端执行！！！也可能是服务端执行。官方文档：
+UFUNCTION(Client, Unreliable) 并不表示是一定在客户端执行！！！也可能是服务端执行。官方文档：
 Since the server can own actors itself, a "Run on Owning Client" event may actually run on the server, despite its name.
 {{< /alert >}}
+
+什么时候 Client function 才会在 Client 执行？  
+{{< hl-text red >}}如果调用 Client function 的对象是在 Server (NM_DedicatedServer) 创建的，那么该对象上的 Client function 始终会在 Server 执行，且 Client (NM_Client) 不会触发。{{< /hl-text >}}  
+{{< hl-text red >}}如果是非 Server 创建的对象，比如：PlayerController ，那么其内部的 Client function 会在客户端执行。{{< /hl-text >}}  
+{{< hl-text red >}}如何在 Server 上获取这个 Client 的 PlayerController : 重写 AGameMode::InitNewPlayer() 或者 AGameMode::PostLogin() ，PlayerController 会作为参数传递进来，将这个 PlayerController 指针保存下来。{{< /hl-text >}}
+
+NetMulticast function 没有在 Client 触发的问题  
+{{< hl-text red >}}并不是定义了 NetMulticast function ，就一定会在 Client 执行。{{< /hl-text >}}  
+{{< hl-text red >}}比如，在服务端生成了一个 Actor ，且在服务端执行该 Actor 上的 Multicast function ，默认情况下该 Multicast function 只会在 Server 执行。{{< /hl-text >}}  
+如果要使该 Actor 的 Multicast function 在客户端也执行，需要执行以下步骤（缺一不可）：
+
++ 除了对该 Actor 执行 `bReplicates = true;` 外，还要执行 `bNetUseOwnerRelevancy = true;`
++ 该 Actor Spawn 之后，需要执行 `Actor->SetOwner(NewOwner);`，这个 NewOwner 是一个 Replicated 对象，比如 Character 。
 
 https://docs.unrealengine.com/latest/INT/Gameplay/Networking/Blueprints/index.html 
 
@@ -118,6 +131,22 @@ https://docs.unrealengine.com/latest/INT/Gameplay/Networking/Blueprints/index.ht
             PC->ClientTravel(*URL, TRAVEL_Absolute);
         }
     }
+	
+拒绝非法登陆请求（2018-08-05更新，未同步到文章末尾的demo工程）：
+
+	void AFPSGameMode::PreLogin(const FString& Options, const FString& Address, const FUniqueNetIdRepl& UniqueId, FString& ErrorMessage)
+	{
+		Super::PreLogin(Options, Address, UniqueId, ErrorMessage);
+
+		FString UserName = UGameplayStatics::ParseOption(Options, TEXT("UserName")).TrimStart().TrimEnd();
+		if (UserName.Len() == 0 || UserMap.Find(UserName))
+		{
+			//deny client's login request.
+			ErrorMessage = TEXT("User login repeatly!");
+		}
+	}
+	
+将`ErrorMessage`设置为非空字符串，就表示拒绝客户端的链接。
 
 2，GameMode::InitNewPlayer()，处理登陆请求时的自定义参数，比如账号名和密码。
 
@@ -323,16 +352,36 @@ https://forums.unrealengine.com/development-discussion/c-gameplay-programming/96
 解决办法：  
 这种情况下，A 不要 Attach B，如果要 Attach，B 设置为 `SetOnlyOwnerSee(false)`（默认为false）；或者 A 也隐藏掉。
 
-7. 如果角色身上 Attach 了一个 BoxComponent 或者 SphereComponent，那么这个Component的 `CollisionProfileName` 不要设置为 `Projectile`（First Person Shooter模版项目中的自定义 `Collision Channel`）， （能否设置为其他没试过，最好默认），如果设置成 `Projectile`，那么角色在移动时会不停抖动（Standalone是否也有这种问题没试过）。
+7. 如果角色身上 Attach 了一个 BoxComponent 或者 SphereComponent，那么这个Component的 `CollisionProfileName` 不要设置为 `Projectile`（First Person Shooter模版项目中的自定义 `Collision Channel`），（能否设置为其他没试过，最好默认），如果设置成 `Projectile`，那么角色在移动时会不停抖动（Standalone是否也有这种问题没试过）。
 
 8. DedicatedServer 模式下，`SpawnActor`生成出的 Actor，且这个Actor bReplicates 设置为true， 执行`ConditionalBeginDestroy()`时，一定时间后客户端会崩掉。  
 解决办法：  
-`SpawnActor`生成出的 Actor，且改 Actor 同步到远程机器，销毁时，不要用`ConditionalBeginDestroy()`，而要用`Destroy()`。Standalone 模式貌似没这种限制。
+`SpawnActor`生成出的 Actor，且改 Actor 同步到远程机器，销毁时，不要用`ConditionalBeginDestroy()`，而要用`Destroy()`。Standalone 模式貌似没这种限制。  
+崩溃日志：
+	
+		Assertion failed: Index >= 0 [File:D:\Build\++UE4+Release-4.16+Compile\Sync\Engine\Source\Runtime\CoreUObject\Public\UObject/UObjectArray.h] [Line: 455] 
+
+		UE4Editor_Core!FDebug::AssertFailed() [d:\build\++ue4+release-4.16+compile\sync\engine\source\runtime\core\private\misc\assertionmacros.cpp:349]
+		UE4Editor_Engine!UNetDriver::ServerReplicateActors_BuildConsiderList() [d:\build\++ue4+release-4.16+compile\sync\engine\source\runtime\engine\private\networkdriver.cpp:2600]
+		UE4Editor_Engine!UNetDriver::ServerReplicateActors() [d:\build\++ue4+release-4.16+compile\sync\engine\source\runtime\engine\private\networkdriver.cpp:3159]
+		UE4Editor_Engine!UNetDriver::TickFlush() [d:\build\++ue4+release-4.16+compile\sync\engine\source\runtime\engine\private\networkdriver.cpp:355]
+		UE4Editor_Engine!TBaseUObjectMethodDelegateInstance<0,UNetDriver,void __cdecl(float)>::ExecuteIfSafe() [d:\build\++ue4+release-4.16+compile\sync\engine\source\runtime\core\public\delegates\delegateinstancesimpl.h:858]
+		UE4Editor_Engine!TBaseMulticastDelegate<void,float>::Broadcast() [d:\build\++ue4+release-4.16+compile\sync\engine\source\runtime\core\public\delegates\delegatesignatureimpl.inl:937]
+		UE4Editor_Engine!UWorld::Tick() [d:\build\++ue4+release-4.16+compile\sync\engine\source\runtime\engine\private\leveltick.cpp:1506]
+		UE4Editor_UnrealEd!UEditorEngine::Tick() [d:\build\++ue4+release-4.16+compile\sync\engine\source\editor\unrealed\private\editorengine.cpp:1633]
+		UE4Editor_UnrealEd!UUnrealEdEngine::Tick() [d:\build\++ue4+release-4.16+compile\sync\engine\source\editor\unrealed\private\unrealedengine.cpp:386]
+		UE4Editor!FEngineLoop::Tick() [d:\build\++ue4+release-4.16+compile\sync\engine\source\runtime\launch\private\launchengineloop.cpp:3119]
+		UE4Editor!GuardedMain() [d:\build\++ue4+release-4.16+compile\sync\engine\source\runtime\launch\private\launch.cpp:166]
+		UE4Editor!GuardedMainWrapper() [d:\build\++ue4+release-4.16+compile\sync\engine\source\runtime\launch\private\windows\launchwindows.cpp:134]
+		UE4Editor!WinMain() [d:\build\++ue4+release-4.16+compile\sync\engine\source\runtime\launch\private\windows\launchwindows.cpp:210]
+		UE4Editor!__scrt_common_main_seh() [f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl:253]
+		kernel32
+		ntdll
 
 示例工程下载地址：  
 http://pan.baidu.com/s/1o7MzmRo
     
-其他参考文章：  
+##### 参考文章
 属性同步：  
 http://blog.csdn.net/yangxuan0261/article/details/54766955  
 RPC：  

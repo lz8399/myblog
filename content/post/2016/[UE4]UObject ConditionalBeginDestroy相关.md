@@ -49,5 +49,30 @@ UE4官方论坛上，很多帖子或资料告诉你，如果要销毁对象，�
 如果在 DedicatedServer 模式下，SpawnActor生成Actor，且这个Actor bReplicates 设置为true，执行 ConditionalBeginDestroy() ，一定时间后客户端会崩掉，但是使用 Destroy() 没问题。对于服务端生成的 Actor，销毁对象时绝对不要 ConditionalBeginDestroy()。
 {{< /alert >}}
 
+DedicatedServer 模式下，`SpawnActor`生成出的 Actor，且这个Actor bReplicates 设置为true， 执行`ConditionalBeginDestroy()`时，一定时间后客户端会崩掉。  
+解决办法：  
+`SpawnActor`生成出的 Actor，且 `AActor::bReplicates = true;` ，销毁时，不要用`ConditionalBeginDestroy()`，而要用`Destroy()`。Standalone 模式貌似没这种限制。
+
+崩溃日志：
+	
+	Assertion failed: Index >= 0 [File:D:\Build\++UE4+Release-4.16+Compile\Sync\Engine\Source\Runtime\CoreUObject\Public\UObject/UObjectArray.h] [Line: 455] 
+
+	UE4Editor_Core!FDebug::AssertFailed() [d:\build\++ue4+release-4.16+compile\sync\engine\source\runtime\core\private\misc\assertionmacros.cpp:349]
+	UE4Editor_Engine!UNetDriver::ServerReplicateActors_BuildConsiderList() [d:\build\++ue4+release-4.16+compile\sync\engine\source\runtime\engine\private\networkdriver.cpp:2600]
+	UE4Editor_Engine!UNetDriver::ServerReplicateActors() [d:\build\++ue4+release-4.16+compile\sync\engine\source\runtime\engine\private\networkdriver.cpp:3159]
+	UE4Editor_Engine!UNetDriver::TickFlush() [d:\build\++ue4+release-4.16+compile\sync\engine\source\runtime\engine\private\networkdriver.cpp:355]
+	UE4Editor_Engine!TBaseUObjectMethodDelegateInstance<0,UNetDriver,void __cdecl(float)>::ExecuteIfSafe() [d:\build\++ue4+release-4.16+compile\sync\engine\source\runtime\core\public\delegates\delegateinstancesimpl.h:858]
+	UE4Editor_Engine!TBaseMulticastDelegate<void,float>::Broadcast() [d:\build\++ue4+release-4.16+compile\sync\engine\source\runtime\core\public\delegates\delegatesignatureimpl.inl:937]
+	UE4Editor_Engine!UWorld::Tick() [d:\build\++ue4+release-4.16+compile\sync\engine\source\runtime\engine\private\leveltick.cpp:1506]
+	UE4Editor_UnrealEd!UEditorEngine::Tick() [d:\build\++ue4+release-4.16+compile\sync\engine\source\editor\unrealed\private\editorengine.cpp:1633]
+	UE4Editor_UnrealEd!UUnrealEdEngine::Tick() [d:\build\++ue4+release-4.16+compile\sync\engine\source\editor\unrealed\private\unrealedengine.cpp:386]
+	UE4Editor!FEngineLoop::Tick() [d:\build\++ue4+release-4.16+compile\sync\engine\source\runtime\launch\private\launchengineloop.cpp:3119]
+	UE4Editor!GuardedMain() [d:\build\++ue4+release-4.16+compile\sync\engine\source\runtime\launch\private\launch.cpp:166]
+	UE4Editor!GuardedMainWrapper() [d:\build\++ue4+release-4.16+compile\sync\engine\source\runtime\launch\private\windows\launchwindows.cpp:134]
+	UE4Editor!WinMain() [d:\build\++ue4+release-4.16+compile\sync\engine\source\runtime\launch\private\windows\launchwindows.cpp:210]
+	UE4Editor!__scrt_common_main_seh() [f:\dd\vctools\crt\vcstartup\src\startup\exe_common.inl:253]
+	kernel32
+	ntdll
+
 ##### ConditionalBeginDestroy 和 Destroy区别
 ConditionalBeginDestroy 和 Destroy两者都是销毁对象，区别是：前者是在delay一定时间后执行销毁，Destroy是在当前帧结束时执行销毁。如果逻辑上每帧都有很多 Actor需要销毁，那么可以先把这些Actor隐藏，然后再调用ConditionalBeginDestroy，让引擎统一执行GC。
