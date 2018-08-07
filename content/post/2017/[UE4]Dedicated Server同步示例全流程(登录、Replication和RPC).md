@@ -79,7 +79,7 @@ Since the server can own actors itself, a "Run on Owning Client" event may actua
 NetMulticast function 没有在 Client 触发的问题  
 {{< hl-text red >}}并不是定义了 NetMulticast function ，就一定会在 Client 执行。{{< /hl-text >}}  
 {{< hl-text red >}}比如，在服务端生成了一个 Actor ，且在服务端执行该 Actor 上的 Multicast function ，默认情况下该 Multicast function 只会在 Server 执行。{{< /hl-text >}}  
-如果要使该 Actor 的 Multicast function 在客户端也执行，需要执行以下步骤（缺一不可）：
+如果要使该 Actor 的 Multicast function 在客户端也执行，需要执行以下步骤（缺一不可。4.19开始，之前的版本不需要这样设置）：
 
 + 除了对该 Actor 执行 `bReplicates = true;` 外，还要执行 `bNetUseOwnerRelevancy = true;`
 + 该 Actor Spawn 之后，需要执行 `Actor->SetOwner(NewOwner);`，这个 NewOwner 是一个 Replicated 对象，比如 Character 。
