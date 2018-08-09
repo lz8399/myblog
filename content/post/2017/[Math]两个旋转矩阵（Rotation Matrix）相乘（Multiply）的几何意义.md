@@ -31,9 +31,10 @@ tags= ["UE4", "Math"]
 
 
 #### 实际应用：
-比如空间中有两个物体：A和B，现在要将A旋转至与B相同的朝向，目前只知道A的相对世界坐标的Rotation Ra(90.f,0.f, 0.f)、B相对A（将A的Rotation当做(0, 0, 0)）的Rotation Rb(0.f, 90.f, 0.f)，求A旋转后的世界坐标Rotation。
+比如空间中有两个物体：A和B，现在要将A旋转至与B相同的朝向，目前只知道A的相对世界坐标的Rotation Rw(90.f,0.f, 0.f)、B相对A（将A的Rotation当做(0, 0, 0)）的Rotation Rr(0.f, 90.f, 0.f)，求A旋转后的世界坐标Rotation。  
 此时的计算公式就是：
-( FRotationMatrix(Rb) * FRotationMatrix(Ra)).Rotator
+
+    (FRotationMatrix(Rr) * FRotationMatrix(Rw)).Rotator()
 
 
 注意：`矩阵相乘时，两个乘数的前后位置不同则计算的结果也不同`，比如上面例子，如果是( FRotationMatrix(Rot2) * FRotationMatrix(Rot1)).Rotator，则结果是Rotation(90, -90, -180)。
