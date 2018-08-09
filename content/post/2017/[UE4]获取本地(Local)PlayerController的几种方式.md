@@ -8,9 +8,13 @@ keywords= ["UE4", "C++", "PlayerController"]
 
 代码：
 
-	APlayerController* PC1 = GetWorld()->GetFirstLocalPlayerFromController()->GetPlayerController(GetWorld());
-	APlayerController* PC2 = GetWorld()->GetFirstPlayerController();
-	APlayerController* PC3 = GEngine->GetFirstLocalPlayerController(GetWorld());
+    APlayerController* PC1 = GetWorld()->GetFirstLocalPlayerFromController()->GetPlayerController(GetWorld());
+    
+    APlayerController* PC2 = GetWorld()->GetFirstPlayerController();
+    
+    APlayerController* PC3 = GEngine->GetFirstLocalPlayerController(GetWorld());
+    
+    APlayerController* PC4 = UGameplayStatics::GetPlayerController(GetWorld(), 0);
     
 ***
 `心似平原走马，易放难收。----《增广贤文》`
