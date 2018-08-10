@@ -5,6 +5,8 @@ categories= ["UnrealEngine4"]
 tags= ["UE4", "Math"]
 +++
 
+##### 三角函数公式
+
 2D上的点围绕某另一个点旋转：
 If you rotate point (px, py) around point (ox, oy) by angle theta you'll get:
 
@@ -14,8 +16,10 @@ If you rotate point (px, py) around point (ox, oy) by angle theta you'll get:
 this is an easy way to rotate a point in 2D.
 
 
-=======================================
-http://stackoverflow.com/questions/13275719/rotate-a-3d-point-around-another-one
+***
+3D上的点围绕某另一个点旋转  
+http://stackoverflow.com/questions/13275719/rotate-a-3d-point-around-another-one  
+
 Try to use vector math. decide in which order you rotate, first along x, then along y perhaps.
 
 If you rotate along z, [z' = z]
@@ -53,9 +57,9 @@ A点绕B点旋转C之后的坐标：
 
 
 
-其他参考：
-Quaternions and spatial rotation
+##### 其他参考
+Quaternions and spatial rotation  
 https://en.wikipedia.org/wiki/Quaternions_and_spatial_rotation
 
-Rotation matrix
+Rotation matrix  
 https://en.wikipedia.org/wiki/Rotation_matrix#Basic_rotations
