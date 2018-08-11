@@ -17,6 +17,44 @@ keywords= ["UE4", "Plugin"]
 
 另外一种解决办法：给C++的GameMode套一个蓝图，然后在该蓝图中设置DefaultPawnClass、PlayerControllerClass等GameMode属性，此时即使这些PawnClass或者PlayerControllerClass蓝图使用了plugin，也不会报错。
 
+###### 添加第三方Plugin（2018-08-10更新）
+
+工程.uproject 需要添加两处地方：  
+1，在 Modules 中添加 plugin 名字字符串；  
+2，在 Plugins 添加 plugin 信息：包括 Name 和 Enabled；
+
+    {
+      "FileVersion": 3,
+      "EngineAssociation": "4.20",
+      "Category": "",
+      "Description": "",
+      "Modules": [
+        {
+          "Name": "TowerDefense",
+          "Type": "Runtime",
+          "LoadingPhase": "Default",
+          "AdditionalDependencies": [
+            "UMG",
+            "Engine",
+            "CoreUObject",
+            "AIModule",
+            "ApexDestruction",
+            "RTSAI"
+          ]
+        }
+      ],
+      "Plugins": [
+        {
+          "Name": "ApexDestruction",
+          "Enabled": true
+        },
+        {
+          "Name": "RTSAI",
+          "Enabled": true
+        }
+      ]
+    }
+
 ##### 参考资料
 
 How to Install a Plugin on Unreal Engine 4  
