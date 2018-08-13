@@ -54,6 +54,21 @@ keywords= ["UE4", "Plugin"]
         }
       ]
     }
+    
+###### 往 Plugin 中添加 C++ 代码（2018-08-13更新）
+
+貌似没有好的办法，只能手动添加 C++ 类文件
+
+论坛上说的这种方式不可行（至少4.20版本试过不可行）：
+
+1. Close Visual Studio
+2. Go to your plugin classes folder
+3. Add 2 empty files TestActor.h and TestActor.cpp
+4. Then , "Generate Visual Studio Project
+5. Open Visual Studio , then the files created
+
+Adding an Actor class to plugin?  
+https://forums.unrealengine.com/development-discussion/c-gameplay-programming/50761-adding-an-actor-class-to-plugin
 
 ##### 参考资料
 
