@@ -41,19 +41,21 @@ UnrealMathUnlity.h：
     }
     
 ##### 使用实例
-先定义一个成员变量：
+先定义两个成员变量：
 
     float LerpTime = 0.f;
+    const float LerpDuration = 2.5f;
 
 再在Tick中计算：
 
     void Tick(float DeltaSecond)
     {
-        LerpTime += DeltaSecond * 0.1f;
-
-        LerpTime = LerpTime > 1.f ? 1.f : LerpTime;
-
-        FVector NewLoc = FMath::Lerp<FVector>(SrcLoc, DistLoc, LerpTime);
+        if(LerpTime < LerpDuration)
+        {
+            LerpTime += DeltaSecond;
+            
+            FVector NewLoc = FMath::Lerp<FVector>(SrcLoc, DistLoc, LerpTime / LerpDuration);
         
-        MyCharacter->SetActorLocation(NewLoc);
+            MyCharacter->SetActorLocation(NewLoc);
+        }
     }

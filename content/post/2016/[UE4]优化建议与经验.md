@@ -24,6 +24,10 @@ keywords：UE4性能优化、Performance Optimization
 
 8，BoxComponent的 Generate Overlap Events 设置为false。如果不需要Overlap事件，那么就将该属性设置设置为false，默认为true。当BoxCompont达到一定量级时，开启Generate Overlap Events的性能消耗时关闭情况下的两倍。
 
+9，C++ 比 蓝图快100到1000倍  
+[Test] Blueprint vs C++ Performance vs Nativized BP  
+https://www.reddit.com/r/unrealengine/comments/6qtxy3/test_blueprint_vs_c_performance_vs_nativized_bp/
+
 Epic Games工程师分享：如何在移动平台上做UE4的UI优化？  
 http://youxiputao.com/articles/11743
 
