@@ -431,5 +431,18 @@ UE_4.19\Engine\Source\Runtime\Engine\Classes\Kismet\KismetAnimationLibrary.h
 新建一个变量后，类型先改成Int或者String，然后才能点击类型下来列表中的Map，默认bool类型变量是无法点击Map类型的。  
 https://answers.unrealengine.com/questions/524039/how-to-create-a-map-or-set-property.html
 
+【2018-08-14T22:03】  
+如果在 Editor 中启用 Tick 函数  
+Tick 默认只在游戏运行时才会执行，如果希望 Tick 在编辑器视图中也执行，方式如下：  
+Actor 启用`Tick()`：重写 `ShouldTickIfViewportsOnly()` 函数被范围 true，默认返回 false。
+
+    bool Actor::ShouldTickIfViewportsOnly() const
+    {
+        return true;
+    }
+    
+ActorComponent 启用`TickComponent()`：`bTickInEditor` 设置为 true，默认为false。  
+注意，需要双击打开Actor蓝图后 tick 才会执行，并不是编辑器一启动就会执行。
+
 ***
 `凡心所向，素履以往。生如逆旅，一苇以航。----木心`

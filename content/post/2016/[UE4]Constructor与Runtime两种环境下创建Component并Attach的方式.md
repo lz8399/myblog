@@ -61,3 +61,9 @@ AttachToActor为引擎的仅次于UObject的子类`Actor`的函数。
 
 注意：Actor::AttachToActor()和Actor::AttachTo()为4.12的新版API，旧版本的工程迁移至4.12后，编译提示警告：  
 <font color=red>AActor::AttachRootComponentToActor已废弃，需要使用AttachToActor替换</font>
+
+##### 获取 ActorComponent 所属的 Actor
+
+    AActor* GetOwner() const;
+    
+GetOwner() 会沿着 ActorComponent 到 RootComponent 之间的从属链一直往上走，找到 RootComponent 并返回 RootComponent 所属的 Actor 对象。
