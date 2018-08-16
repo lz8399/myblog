@@ -207,5 +207,17 @@ https://answers.unrealengine.com/storage/temp/136465-runtimeassetmanagementin416
 解决办法：  
 如果场景A中需要Load场景B，bManageActiveHandle设置为true；等到切换到场景B时，再手动ReleaseHandle。
 
+【2018-08-16】  
+使用TCHAR作为路径名时编译会报错：
+
+    FString Path("/Game/Assets/ThirdPerson_Jump.ThirdPerson_Jump");
+    TSoftObjectPtr<UParticleSystem> Asset(FSoftObjectPath(*Path));
+    
+解决办法：  
+使用 TCHAR_TO_ANSI 转换：
+
+    FString Path("/Game/Assets/ThirdPerson_Jump.ThirdPerson_Jump");
+    TSoftObjectPtr<UParticleSystem> Asset(FSoftObjectPath(TCHAR_TO_ANSI(*Path)));
+
 ***
 `如果热爱与希望，背道而驰，那我选择热爱。 ----井上雄彦`
