@@ -444,5 +444,18 @@ Actor 启用`Tick()`：重写 `ShouldTickIfViewportsOnly()` 函数被范围 true
 ActorComponent 启用`TickComponent()`：`bTickInEditor` 设置为 true，默认为false。  
 注意，需要双击打开Actor蓝图后 tick 才会执行，并不是编辑器一启动就会执行。
 
+【2018-08-15T16:54】  
+如何判断当前游戏世界是否为编辑器模式（PIE）
+
+    if (UWorld* World = GetWorld())
+    {
+        if (const FWorldContext* Context = GEngine->GetWorldContextFromWorld(World))
+        {
+            if (Context->WorldType == EWorldType::Editor || Context->WorldType == EWorldType::EditorPreview || Context->WorldType == EWorldType::PIE)
+            {
+            }
+        }
+    }
+
 ***
 `凡心所向，素履以往。生如逆旅，一苇以航。----木心`
