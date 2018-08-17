@@ -162,6 +162,11 @@ Collision Object Channel、Collision Preset、Object Type 三者联系：
 新建两个 Collision Channel，分别作为物体B和物体C的 Object Type；然后再新建一个
 Collision Preset，假设叫 CollisionProfileA ，并设置该 Preset 对物体B的通道 Overlap ， 对物体C的通道 Ingore ，然后将物体A的 Collision Preset 设置成 CollisionProfileA。
 
+C++ 设置 Collision：
+
+    GetCollisionComponent()->SetCollisionProfileName("Custom");
+	GetCollisionComponent()->SetCollisionResponseToChannel(ECC_Pawn, ECollisionResponse::ECR_Ignore);
+
 ### Actor的Hit事件
 ##### 1，C++代码的编写
 Actor的Hit事件不需要BoxComponent，只需要注册回调即可，回调函数的签名与上面例子的函数签名一样。

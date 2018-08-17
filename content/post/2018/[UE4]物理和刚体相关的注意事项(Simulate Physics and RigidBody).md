@@ -49,7 +49,7 @@ Simulate Physics and Projectile Movement Component
 https://answers.unrealengine.com/questions/736999/simulate-physics-and-projectile-movement-component.html
 
 ##### 模拟物理时StaticMesh和CollisionComponent冲突
-记住：{{< hl-text red >}}StaticMesh自带刚体(Collision)。{{< /hl-text >}}  
+记住：{{< hl-text red >}}StaticMesh自带刚体(RigidBody)，并能执行碰撞(Collision)相关逻辑。{{< /hl-text >}}  
 比如新建一个 Actor，并在该 Actor 内部创建了一个 BoxComponent ，然后再创建一个 StaticMeshComponent 并 Attach 到 BoxComponent 上。  
 如果不模拟物理，那么没有问题，一旦模拟物理并执行 AddImpulse 时，就会出问题。
 
