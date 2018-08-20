@@ -5,7 +5,7 @@ categories= ["UnrealEngine4"]
 tags= ["UE4", "Math"]
 +++
 
-keywords：UE4、InverseTransformVector、InverseTransformVector、InverseTransformPosition
+keywords：UE4、InverseTransformVector、InverseTransformPosition
 
 实例代码：
 
@@ -28,7 +28,7 @@ https://github.com/tomlooman/EpicSurvivalGameSeries/blob/4a6ee9a6081529fadbe0f69
     FRotator R2;
     FRotator Offset = R2 - R1;
     
-但这种直接相减的方式，返回的结果Rotation，度数可能会小于-180 或 大于 180，手动处理范围限定比较麻烦。
+但这种直接相减的方式，返回的结果Rotation，度数可能会小于-180 或 大于 180，需要手动处理范围限定，但是效率远高于 `InverseTransformVector`。
 
 ***
 `无欲则刚，关心则乱。----《论语》`
