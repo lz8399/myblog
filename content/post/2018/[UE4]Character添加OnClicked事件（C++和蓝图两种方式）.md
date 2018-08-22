@@ -6,6 +6,7 @@ tags= ["UE4"]
 keywords= ["UE4", "Character", "OnClick", "C++", "Blueprint"]
 +++
 
+keywords：如何获取鼠标点击时的物体对象
 
 ### 方式一：添加Cube（Static Mesh Component）
 
