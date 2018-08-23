@@ -308,14 +308,6 @@ https://answers.unrealengine.com/questions/605554/setpipelinestate-illegal-quali
 
 	UPROPERTY(EditAnywhere, Category = "Test", meta=(ClampMin = "0.0", ClampMax = "300.0", UIMin = "0.0", UIMax = "300.0"))
 
-【2017-12-27T17:31】  
-如何修改角色的移动速度
-
-	if (UCharacterMovementComponent* Movement = MyCharacter->GetCharacterMovement())
-	{
-		Movement->MaxWalkSpeed *= 0.5;
-	}
-
 【2017-12-28T13:57】  
 如果UMG中的一个button，在游戏运行时，鼠标一放上去鼠标光标就消失，原因是button的`IsFocusable`属性设置为false。
 

@@ -5,6 +5,19 @@ categories= ["UnrealEngine4"]
 tags= ["UE4", "API"]
 +++
 
+##### 如何修改角色的最大移动速度
+
+    if (UCharacterMovementComponent* Movement = MyCharacter->GetCharacterMovement())
+    {
+        Movement->MaxWalkSpeed *= 0.5;
+    }
+    
+##### 如何修改角色的当前移动速度
+
+Tick() 中执行：
+
+    GetCharacterMovement()->Velocity = FVector(0.f, 500.f, 0.f);
+
 ##### 如何停止正在移动的Pawn
 
     AController::StopMovement()
