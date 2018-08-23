@@ -3,7 +3,7 @@ title= "[UE4]优化建议与经验"
 date= "2016-12-09T19:17:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4", "Performance", "Optimization"]
-keywords= ["UE4性能优化","UE4", "Performance", "Optimization"]
+keywords= ["UE4性能优化", "UE4", "Performance", "Optimization"]
 +++
 
 keywords：UE4性能优化、Performance Optimization
@@ -22,11 +22,27 @@ keywords：UE4性能优化、Performance Optimization
 
 7，3种光源的性能消耗从低到高：定向光/平行光(Directional Light) < 点光源(Point Light) < 聚光灯(Spot Light)。这个标准不局限于UE4，其他引擎也是这样。当光源数量在场景中达到一定量级时，3种灯光的性能差距也是数量级上差距。
 
-8，BoxComponent的 Generate Overlap Events 设置为false。如果不需要Overlap事件，那么就将该属性设置设置为false，默认为true。当BoxCompont达到一定量级时，开启Generate Overlap Events的性能消耗时关闭情况下的两倍。
-
-9，C++ 比 蓝图快100到1000倍  
+8，C++ 比 蓝图快100到1000倍  
 [Test] Blueprint vs C++ Performance vs Nativized BP  
 https://www.reddit.com/r/unrealengine/comments/6qtxy3/test_blueprint_vs_c_performance_vs_nativized_bp/
+
+##### 物理与碰撞优化
+
+1，BoxComponent的 Generate Overlap Events 设置为false。如果不需要Overlap事件，那么就将该属性设置设置为false，默认为true。当BoxCompont达到一定量级时，开启Generate Overlap Events的性能消耗时关闭情况下的两倍。
+
+2，如果不需要物理，将 `Simulate Physics` 设置为false。
+
+3，如果不需要Hit事件，将 `Simulation Generates Hit Events` 设置为false。
+
+4，Collision 的 Object Response 通道设置的越少越好，把可以设置为 Ignore 的通道都设置为 Ignore 。
+
+5，如果大型RTS游戏，场景有海量单位时（比如星际2中大规模的虫族小狗），能不用UE4的 Collision 就不要用 Collision，否则帧数狂泻。  
+建议自己实现一个简易的自定义Collision，比如球形Collision，然后计算该 Collision 与单位之间的直线距离，来判断是否是否发生了碰撞，并且降低检测间隔，比如 0.1秒。
+
+##### 动画优化
+1，打开角色蓝图 -》 MeshComponent -》 Detail 面板中的 Optimization 类别下 -》 勾选 `Enable Update Rate Optimizations`。
+
+##### UI优化
 
 Epic Games工程师分享：如何在移动平台上做UE4的UI优化？  
 http://youxiputao.com/articles/11743
