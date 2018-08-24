@@ -71,6 +71,21 @@ Camera [modename]
                              377.887ms (   3)  -  Self
                              26.688ms ( 533)  -  STAT_FArchiveAsync2_WaitRead - STATGROUP_Quick - STATCAT_Advanced
 
+##### 性能统计图工具
+用于记录某段时间内的性能分析数据。
+
+在需要开始统计的时刻执行：
+
+    stat startfile
+    
+在统计完成的时刻执行：
+
+    stat stopfile
+    
+此时会在路径 `Saved/Profiling/UnrealStats` 下生成数据文件。  
+然后点击：Windows -》 Developer Tools -》 Session Frontend -》点击 Profiler 选项卡 -》 点击 Load 按钮，载入前面生成的数据文件。
+
+                             
 {{< alert warning >}}
 使用stat相关命令检测性能时，需要关闭Smooth Frame Rate来保证检测结果更精准：Project Settings -》 Engine -》 General Settings -》 Framerate -》 Smooth Frame Rate。
 {{< /alert >}}
