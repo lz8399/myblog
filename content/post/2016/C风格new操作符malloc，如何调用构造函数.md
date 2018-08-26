@@ -5,6 +5,8 @@ categories= ["C++"]
 tags= ["Clang"]
 +++
 
+keywords：C++, new, placement new
+
 原文：
 http://stackoverflow.com/questions/4956249/using-malloc-instead-of-new-and-calling-the-copy-constructor-when-the-object-is
 

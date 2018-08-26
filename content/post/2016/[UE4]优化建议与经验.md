@@ -40,13 +40,19 @@ https://www.reddit.com/r/unrealengine/comments/6qtxy3/test_blueprint_vs_c_perfor
 
 3，如果不需要Hit事件，将 `Simulation Generates Hit Events` 设置为false。
 
-4，Collision 的 Object Response 通道设置的越少越好，把可以设置为 Ignore 的通道都设置为 Ignore 。
+4，如果场景中物体类型（WorldStatic、WorldDynamic、Pawn等）很多，且每种数量也很多，则Collision 的 Object Response 通道设置的越少越好，把可以设置为 Ignore 的通道都设置为 Ignore 。如果场景中的物体类型比较单一，即使这种类型的物体在场景中有数百个，Object Response 即使都设置为Block 或者 Overlap，对性能也没有影响。
 
 5，如果是大型RTS游戏，场景有海量单位时（比如星际2中大规模的虫族小狗），能不用UE4的 Collision 就不要用 Collision，否则帧数狂泻。  
 建议自己实现一个简易的自定义Collision，比如球形Collision，然后计算该 Collision 与单位之间的直线距离，来判断是否是否发生了碰撞，并且降低检测间隔，比如 0.1秒一次。
 
+6，
+
 ##### 动画优化
 1，打开角色蓝图 -》 MeshComponent -》 Detail 面板中的 Optimization 类别下 -》 勾选 `Enable Update Rate Optimizations`。
+
+##### 位移优化
+
+1，海量Pawn（比如500个）单位移动，如果是在 Tick 中使用 AddMovementInput 移动，帧率直接下降一半（比如从90帧下降到40多帧）。
 
 ##### UI优化
 
@@ -74,3 +80,9 @@ Project Settings -> Engine -> Animation -> 勾选 Strip Animation Data on Dedica
 
 通过优化在UE4中实现良好性能和高质量视觉效果  
 http://gad.qq.com/program/translateview/7160166
+
+CPU Profiling  
+https://docs.unrealengine.com/en-us/Engine/Performance/CPU
+
+GPU Profiling  
+https://docs.unrealengine.com/en-us/Engine/Performance/GPU

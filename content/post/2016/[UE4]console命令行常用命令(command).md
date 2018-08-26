@@ -41,7 +41,8 @@ Camera [modename]
 	
 显示单帧信息：总时长、Game耗时、Draw耗时、GPU耗时
 
-    stat unit
+    stat Unit
+    stat UnitGraph  //附带各个参数的实时曲线图
     
 显示当前帧的时间信息（各种Tick, GC Mark，Update Overlaps等）：
 
@@ -71,7 +72,7 @@ Camera [modename]
                              377.887ms (   3)  -  Self
                              26.688ms ( 533)  -  STAT_FArchiveAsync2_WaitRead - STATGROUP_Quick - STATCAT_Advanced
 
-##### 性能统计图工具
+##### 性能统计图工具 Session Frontend
 用于记录某段时间内的性能分析数据。
 
 在需要开始统计的时刻执行：
@@ -85,6 +86,38 @@ Camera [modename]
 此时会在路径 `Saved/Profiling/UnrealStats` 下生成数据文件。  
 然后点击：Windows -》 Developer Tools -》 Session Frontend -》点击 Profiler 选项卡 -》 点击 Load 按钮，载入前面生成的数据文件。
 
+
+##### GPUProfile 与 CPUProfile
+
+GPU性能分析  
+在游戏运行时，按下 Ctrl + Shift + 逗号 ，打开 GPUProfile 面板，显示当前帧的各类计算的耗时：PostProcess、Lighting 等。注意：是当前一帧的耗时，不是平均每帧的耗时。  
+如果是在编辑器模式，建议以“新窗口”(New Editor Window)PIE模式运行，如果是在编辑器的Viewport中运行，会把编辑器的消耗也算进去。  
+如果是 在Development 打包模式下，Ctrl + Shift + 逗号 并不会打开 GPUProfile 面板，但是在 `工程名\Saved\Logs\工程名.log` 中会有 Profiling 记录，例如：
+
+    [2018.08.26-07.56.40:320][291]Profiling the next GPU frame
+    [2018.08.26-07.56.40:406][294]LogD3D11RHI: Warning: 
+    [2018.08.26-07.56.40:406][294]LogD3D11RHI: Warning: 
+    [2018.08.26-07.56.40:411][295]LogRHI: Perf marker hierarchy, total GPU time 4.33ms
+    [2018.08.26-07.56.40:411][295]LogRHI: Warning: Profiled range was continuous.
+    [2018.08.26-07.56.40:412][295]LogRHI: 100.0% 4.33ms   FRAME 635 draws 16087 prims 18018 verts
+    [2018.08.26-07.56.40:412][295]LogRHI: 97.1% 4.20ms   Scene 633 draws 15751 prims 17346 verts
+    [2018.08.26-07.56.40:412][295]LogRHI:     1.1% 0.05ms   PrePass DDM_AllOpaque (Forced by DBuffer) 141 draws 5744 prims 5634 verts
+    [2018.08.26-07.56.40:412][295]LogRHI:        0.3% 0.01ms   BeginRenderingPrePass 1 draws 0 prims 0 verts
+    [2018.08.26-07.56.40:412][295]LogRHI:     0.5% 0.02ms   ComputeLightGrid 5 draws 5 prims 0 verts
+    [2018.08.26-07.56.40:412][295]LogRHI:        0.3% 0.01ms   CullLights 30x17x32 NumLights 0 NumCaptures 1 4 draws 4 prims 0 verts
+    [2018.08.26-07.56.40:412][295]LogRHI:        0.2% 0.01ms   Compact 1 draws 1 prims 0 verts
+    [2018.08.26-07.56.40:412][295]LogRHI:     0.1% 0.00ms   BeginOcclusionTests 16 draws 192 prims 128 verts
+    [2018.08.26-07.56.40:412][295]LogRHI:        0.1% 0.00ms   ViewOcclusionTests 0 16 draws 192 prims 128 verts
+    [2018.08.26-07.56.40:412][295]LogRHI:           0.1% 0.00ms   IndividualQueries 16 draws 192 prims 128 verts
+
+CPU性能分析  
+CPU性能分析可以通过 `stat scenerendering` 、`stat game` 等命令分析，如果某类型的 draw call 数量特别高，说明这是 CPU 的瓶颈所在。
+    
+CPU Profiling  
+https://docs.unrealengine.com/en-us/Engine/Performance/CPU
+
+GPU Profiling  
+https://docs.unrealengine.com/en-us/Engine/Performance/GPU
                              
 {{< alert warning >}}
 使用stat相关命令检测性能时，需要关闭Smooth Frame Rate来保证检测结果更精准：Project Settings -》 Engine -》 General Settings -》 Framerate -》 Smooth Frame Rate。
