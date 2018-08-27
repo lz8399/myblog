@@ -28,5 +28,10 @@ ctrl+back space，当前行光标到上一个空格之间的字符串全部删�
 
 ctrl+delete，当前行光标到下一个空格之间的字符串全部删除。
 
+##### VS2017 官方快捷键文档
+https://blogs.msmvps.com/kenlin/2017/03/14/cheat-sheet-of-handy-keyboard-shortcuts-for-vs2017/
+
+{{< figure src="/img/20170721-[VisualStudio]实用快捷键/[VisualStudio]实用快捷键-01.png">}}
+
 ***
 `我们经历着生活中突然降临的一切，毫无防备，就像演员进入初排。如果生活中的第一次彩排便是生活本身，那生活有什么价值呢？---《生命中不能承受之轻》`
