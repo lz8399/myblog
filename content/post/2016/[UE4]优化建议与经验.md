@@ -14,8 +14,7 @@ keywords：UE4性能优化、Performance Optimization
 
 2，UE4不支持640X480的分辨率，如果在这个分辨率下运行程序，会导致程序崩溃。
 
-3，如果角色身上有很多Component需要Attach，尽量在使用时Attach，不要一加载就全部attach，否则当场景中角色很多时，会有严重性能问题。  
-能用 Pawn 就不要用 Character ，Character 相比 Pawn ，增加了 CapsuleComponent、CharacterMovementComponent、SkeletalMeshComponent，当 Character 数量达到一定量级后也会导致帧数狂泻，即使这些 Character 没有移动、没有动画、且模型面数极低。
+3，如果角色身上有很多Component需要Attach，尽量在使用时Attach，不要一加载就全部attach，否则当场景中角色很多时，会有严重性能问题。
 
 4，面数对UE4来说不敏感，即使在移动端。ipad 4上，50万的三角面，也能够以30fps帧率稳定运行，移动端主要对贴图大小、材质复杂度较为敏感。
 
