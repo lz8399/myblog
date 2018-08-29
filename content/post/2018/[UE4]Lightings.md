@@ -52,11 +52,6 @@ https://forums.unrealengine.com/unreal-engine/feedback-for-epic/54065-lights-vie
 
 1，移动端不支持Movable的Spotlight，Spotlight在移动端只支持Static和Stationary；但是Movable的Pointlight在移动端也支持。
 
-##### Cascaded Shadow Maps 相关
-
-1，大规模 Actor 同屏时，比如 500 个，DirectionalLight 的属性`Dynamic Shadow Distance StationaryLight`的值要大于摄像机到Actor的直线距离，否则帧率狂泻（测试中帧率从120 fps 下降到 90 fps）。测试环境为 4.20.1 ，不知是不是UE4的bug。
-
-
 ##### 物体与摄像机距离超过一定范围时，阴影自动消失的问题
 
 这个问题受两个因素影响：
