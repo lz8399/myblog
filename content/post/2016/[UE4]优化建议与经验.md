@@ -54,14 +54,14 @@ https://www.reddit.com/r/unrealengine/comments/6qtxy3/test_blueprint_vs_c_perfor
 ##### 动画优化
 1，打开角色蓝图 -》 MeshComponent -》 Detail 面板中的 Optimization 类别下 -》 勾选 `Enable Update Rate Optimizations`。
 
-##### 位移优化
-
-1，海量Pawn（比如500个）单位移动，如果是在 Tick 中使用 AddMovementInput 移动，帧率直接下降一半（比如从90帧下降到40多帧）。对于无法移动的单位，最好停止执行 AddMovementInput() ，以提升性能。
-
 ##### UI优化
 
 Epic Games工程师分享：如何在移动平台上做UE4的UI优化？  
 http://youxiputao.com/articles/11743
+
+##### 位移优化
+
+1，海量Pawn（比如500个）单位移动，如果是在 Tick 中使用 AddMovementInput 移动，帧率直接下降一半（比如从90帧下降到40多帧）。对于无法移动的单位，最好停止执行 AddMovementInput() ，以提升性能。
 
 ##### AI优化
 
