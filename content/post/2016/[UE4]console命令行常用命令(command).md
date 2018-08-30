@@ -90,8 +90,7 @@ Camera [modename]
 ##### GPUProfile 与 CPUProfile
 
 GPU性能分析  
-在游戏运行时，按下 Ctrl + Shift + 逗号 ，打开 GPUProfile 面板，显示当前帧的各类计算的耗时：PostProcess、Lighting 等。注意：是当前一帧的耗时，不是平均每帧的耗时。  
-如果是在编辑器模式，建议以“新窗口”(New Editor Window)PIE模式运行，如果是在编辑器的Viewport中运行，会把编辑器的消耗也算进去。  
+在编辑器中运行游戏时，按下 Ctrl + Shift + 逗号 ，打开 GPUProfile 面板，显示当前帧的各类计算的耗时：PostProcess、Lighting 等。注意：是当前一帧的耗时，不是平均每帧的耗时。  
 如果是 在Development 打包模式下，Ctrl + Shift + 逗号 并不会打开 GPUProfile 面板，但是在 `工程名\Saved\Logs\工程名.log` 中会有 Profiling 记录，例如：
 
     [2018.08.26-07.56.40:320][291]Profiling the next GPU frame
@@ -112,7 +111,11 @@ GPU性能分析
 
 CPU性能分析  
 CPU性能分析可以通过 `stat scenerendering` 、`stat game` 等命令分析，如果某类型的 draw call 数量特别高，说明这是 CPU 的瓶颈所在。
-    
+
+{{< alert danger >}}
+如果是在编辑器模式，建议以“新窗口”(New Editor Window)PIE模式运行，如果是在编辑器的Viewport中运行，会把编辑器的消耗也算进去（即使是全屏模式）。
+{{< /alert >}}
+
 CPU Profiling  
 https://docs.unrealengine.com/en-us/Engine/Performance/CPU
 

@@ -16,7 +16,7 @@ header
     FVector StartForce = FVector(100.f, 100.f, 2000.f);
 
     //gravitational acceleration
-    float GravityAcclerator = -980;
+    float GravityAcclerator = -980.f;
 
     //accumulated movtion time
     float AccumulateTime = 0.f;

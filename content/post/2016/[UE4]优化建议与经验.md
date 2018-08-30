@@ -14,7 +14,8 @@ keywords：UE4性能优化、Performance Optimization
 
 2，UE4不支持640X480的分辨率，如果在这个分辨率下运行程序，会导致程序崩溃。
 
-3，如果角色身上有很多Component需要Attach，尽量在使用时Attach，不要一加载就全部attach，否则当场景中角色很多时，会有严重性能问题。
+3，如果角色身上有很多Component需要Attach，尽量在使用时Attach，不要一加载就全部attach，否则当场景中角色很多时，会有严重性能问题。  
+比如：场景中有几百个角色，但不是每个角色都需要摄像机和弹簧臂，那么在构造函数中就不要创建摄像机和弹簧臂组件。
 
 4，面数对UE4来说不敏感，即使在移动端。ipad 4上，50万的三角面，也能够以30fps帧率稳定运行，移动端主要对贴图大小、材质复杂度较为敏感。
 
@@ -27,6 +28,11 @@ https://www.reddit.com/r/unrealengine/comments/6qtxy3/test_blueprint_vs_c_perfor
 ##### 灯光优化
 
 1，3种光源的性能消耗从低到高：定向光/平行光(Directional Light) < 点光源(Point Light) < 聚光灯(Spot Light)。这个标准不局限于UE4，其他引擎也是这样。当光源数量在场景中达到一定量级时，3种灯光的性能差距也是数量级上差距。
+
+##### 阴影优化
+
+1，开启 `Dynamic Shadow Distance`  
+测试用例： 500 个  Actor 同屏，摄像机高度4000，DirectionalLight 的属性`Dynamic Shadow Distance StationaryLight`（默认为0，表示关闭）的值要大于摄像机到Actor的直线距离（注意：是到每个Actor的直线距离，所以值尽量要设置的大一些），否则帧率从200 fps 下降到 100 fps。
 
 ##### 材质优化
 
@@ -45,19 +51,22 @@ https://www.reddit.com/r/unrealengine/comments/6qtxy3/test_blueprint_vs_c_perfor
 5，如果是大型RTS游戏，场景有海量单位时（比如星际2中大规模的虫族小狗），能不用UE4的 Collision 就不要用 Collision，否则帧数狂泻。  
 建议自己实现一个简易的自定义Collision，比如球形Collision，然后计算该 Collision 与单位之间的直线距离，来判断是否是否发生了碰撞，并且降低检测间隔，比如 0.1秒一次。
 
-6，
-
 ##### 动画优化
 1，打开角色蓝图 -》 MeshComponent -》 Detail 面板中的 Optimization 类别下 -》 勾选 `Enable Update Rate Optimizations`。
 
 ##### 位移优化
 
-1，海量Pawn（比如500个）单位移动，如果是在 Tick 中使用 AddMovementInput 移动，帧率直接下降一半（比如从90帧下降到40多帧）。
+1，海量Pawn（比如500个）单位移动，如果是在 Tick 中使用 AddMovementInput 移动，帧率直接下降一半（比如从90帧下降到40多帧）。对于无法移动的单位，最好停止执行 AddMovementInput() ，以提升性能。
 
 ##### UI优化
 
 Epic Games工程师分享：如何在移动平台上做UE4的UI优化？  
 http://youxiputao.com/articles/11743
+
+##### AI优化
+
+1，如果角色不需要 Controller ，就不要给它 Spawn Controller。如果一个角色长时间停止，则先给他`Unpossesed()` ，等到可移动时再`PossessedBy()`。  
+测试：500个角色，AI Controller Class 设置为：null、 AIController、PlayerController 的帧数分别为 120 fps、 100 fps、75 fps。
 
 ##### Dedicated Server优化
 1，服务端cook时剥离动画数据  
