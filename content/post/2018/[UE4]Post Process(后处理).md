@@ -6,8 +6,6 @@ tags= ["UE4"]
 keywords= ["UE4", "Post Process"]
 +++
 
-
-
 ##### 官方文档
 
 Post Process Materials  
@@ -21,6 +19,36 @@ https://docs.unrealengine.com/en-us/Resources/ContentExamples/PostProcessing
 
 1.2 - ShadingModel  
 https://docs.unrealengine.com/en-us/Resources/ContentExamples/MaterialProperties/1_2
+
+Post Processing Content Examples  
+https://docs.unrealengine.com/en-us/Resources/ContentExamples/PostProcessing
+
+Rendering Overview  
+https://docs.unrealengine.com/en-us/Engine/Rendering/Overview
+
+Post Process Effects  
+https://docs-origin.unrealengine.com/latest/INT/Engine/Rendering/PostProcessEffects/index.html
+
+PostProcessVolume的settings中各个属性对应的效果类型  
+https://docs-origin.unrealengine.com/latest/INT/Engine/Rendering/PostProcessEffects/index.html#postprocesssettings
+
+
+##### youtube教程
+
+Unreal Engine 4 Tutorial - Post Process Effects  
+https://www.youtube.com/watch?v=i6lYSXyUKRY
+
+Unreal Engine 4 Beginner Tutorial Series - #34 Post Processing  
+https://www.youtube.com/watch?v=i9bnPStLYfk
+
+Unreal 4 Post Processing Volume Part 03 Colour Grading with LUT's  
+https://www.youtube.com/watch?v=HR_Mj8o-tQ4
+
+Ue4: Post Processing Volume - Adding/Controlling Ambient Occulsion  
+https://www.youtube.com/watch?v=-u1uzJxa94Q
+
+Ue4: Post Processing Volume - Bloom and Lens Flare  
+https://www.youtube.com/watch?v=7CU5_gLIJBs
 
 ***
 `抱必死的心，走永远的路。`
