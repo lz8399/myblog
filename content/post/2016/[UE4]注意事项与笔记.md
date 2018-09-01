@@ -449,5 +449,9 @@ ActorComponent 启用`TickComponent()`：`bTickInEditor` 设置为 true，默认
         }
     }
 
+【2018-08-20T10:11】  
+场景 Actor 的`BeginPlay()`函数先于`ALevelScriptActor`的`BeginPlay()`执行  
+Development 和 Debug 模式下，场景中`AActor`的`BeginPlay()`函数先于`ALevelScriptActor`的`BeginPlay()`执行，但是 Shipping 模式下顺序正好相反：`ALevelScriptActor` 先于 `AActor`。4.20的bug。
+
 ***
 `凡心所向，素履以往。生如逆旅，一苇以航。----木心`
