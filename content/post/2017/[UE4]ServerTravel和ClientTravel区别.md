@@ -7,6 +7,13 @@ tags:
 - UE4
 ---
 
+Difference：
+
++ ServerTravel also informs the clients to move along with the server.
++ ClientTravel will be called locally for the client to load a new map. or connect to ip.
++ Browse can load local map via LoadMap ( not for multiplayer ) but there are more things happening in this method. I also want to know more about what it does and what it should be used for.
++ LoadMap should also load a map for a local client
+
 Browse, LoadMap, ServerTravel and ClientTravel?  
 https://answers.unrealengine.com/questions/122565/browse-servertravel-and-clienttravel.html
 

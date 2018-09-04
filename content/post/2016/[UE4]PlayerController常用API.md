@@ -40,3 +40,16 @@ tags= ["UE4"]
 	 */
 	bool ProjectWorldLocationToScreen(FVector WorldLocation, FVector2D& ScreenLocation, bool bPlayerViewportRelative = false) const;
     
+##### 鼠标光标固定位置不动
+
+固定鼠标光标不动：
+
+    SetInputMode(FInputModeGameOnly());
+    
+恢复鼠标光标移动：
+
+    FInputModeGameAndUI InputMode;
+	InputMode.SetHideCursorDuringCapture(false);
+	SetInputMode(InputMode);
+    
+    
