@@ -57,7 +57,7 @@ tags= ["UE4", "API"]
 参考自：https://docs.unrealengine.com/latest/INT/Programming/UnrealArchitecture/StringHandling/CharacterEncoding/index.html
 
     
-##### 中文字符的FString和wchar_t数组之间的转换
+##### 中文字符的FString 转换 char数组
 
     FString str(TEXT("笑傲江湖DA"));
     const wchar_t* s1 = *str;
@@ -65,20 +65,25 @@ tags= ["UE4", "API"]
     int LenW = wcslen(s1);
     int LenC = LenW * 2;
 
+    //先转换为 char*, 比如 protobuf 不支持 wchar_t，那么可以将中文转换char储存再protobuf内部。
     char* buf = new char[LenC + 1]();
     memcpy(buf, s1, LenC);
 
+    //验证char*能否还原为 wchar_t 数组
     wchar_t* buf2 = new wchar_t[LenC/2 + 1]();
     memcpy(buf2, buf, LenC);
 
     
-##### wchar_t*、char* 转换相关
+##### TCHAR*、wchar_t*、char* 转换相关
 
+    //TCHAR 转换为 wchar_t
     FSting Str;
     wchar_t* Str2 = TCHAR_TO_WCHAR(*Str);
 
-    char* Str3 = TCHAR_TO_UTF8(*Str);
+    //TCHAR 转换为 char
+    char* Str4 = TCHAR_TO_UTF8(*Str);
+    char* Str4 = TCHAR_TO_ANSI(*Str);
     
-    wchar_t Str4[] = L"sss";
-    TCHAR* Str5 = UTF8_TO_TCHAR(Str4);
+    wchar_t Str5[] = L"sss";
+    TCHAR* Str6 = (TCHAR*)Str5;
     

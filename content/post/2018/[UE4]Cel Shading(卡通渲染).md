@@ -20,5 +20,11 @@ https://www.youtube.com/watch?v=_bpQoI5Xrx8
 Stylized Rendering Post Processing  
 https://docs.unrealengine.com/en-us/Resources/Showcases/Stylized/PostProcessing
 
+Unreal Engine 4 Cel Shading Tutorial  
+https://www.raywenderlich.com/146-unreal-engine-4-cel-shading-tutorial
+
+UE4 Cel Shader Part 1  
+https://medium.com/@jowie94/ue4-cel-shader-part-1-1f8361e61878
+
 ***
 `所谓自由，不是随心所欲，而是自我主宰。`
