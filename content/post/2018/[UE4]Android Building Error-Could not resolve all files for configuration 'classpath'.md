@@ -11,15 +11,15 @@ keywords= ["UE4", "Materials"]
 Error Log:
 
     A problem occurred configuring root project 'app'.
-    UATHelper: Packaging (Android (ASTC)): > Could not resolve all files for configuration ':classpath'.
-    UATHelper: Packaging (Android (ASTC)):    > Could not download kotlin-reflect.jar (org.jetbrains.kotlin:kotlin-reflect:1.1.3-2)
-    UATHelper: Packaging (Android (ASTC)):       > Could not get resource 'https://jcenter.bintray.com/org/jetbrains/kotlin/kotlin-reflect/1.1.3-2/kotlin-reflect-1.1.3-2.jar'.
-    UATHelper: Packaging (Android (ASTC)):          > Could not GET 'https://jcenter.bintray.com/org/jetbrains/kotlin/kotlin-reflect/1.1.3-2/kotlin-reflect-1.1.3-2.jar'.
-    UATHelper: Packaging (Android (ASTC)):             > Software caused connection abort: recv failed
-    UATHelper: Packaging (Android (ASTC)):    > Could not download protobuf-java.jar (com.google.protobuf:protobuf-java:3.0.0)
-    UATHelper: Packaging (Android (ASTC)):       > Could not get resource 'https://jcenter.bintray.com/com/google/protobuf/protobuf-java/3.0.0/protobuf-java-3.0.0.jar'.
-    UATHelper: Packaging (Android (ASTC)):          > Could not GET 'https://jcenter.bintray.com/com/google/protobuf/protobuf-java/3.0.0/protobuf-java-3.0.0.jar'.
-    UATHelper: Packaging (Android (ASTC)):             > Software caused connection abort: recv failed
+     > Could not resolve all files for configuration ':classpath'.
+        > Could not download kotlin-reflect.jar (org.jetbrains.kotlin:kotlin-reflect:1.1.3-2)
+           > Could not get resource 'https://jcenter.bintray.com/org/jetbrains/kotlin/kotlin-reflect/1.1.3-2/kotlin-reflect-1.1.3-2.jar'.
+              > Could not GET 'https://jcenter.bintray.com/org/jetbrains/kotlin/kotlin-reflect/1.1.3-2/kotlin-reflect-1.1.3-2.jar'.
+                 > Software caused connection abort: recv failed
+    > Could not download protobuf-java.jar (com.google.protobuf:protobuf-java:3.0.0)
+       > Could not get resource 'https://jcenter.bintray.com/com/google/protobuf/protobuf-java/3.0.0/protobuf-java-3.0.0.jar'.
+          > Could not GET 'https://jcenter.bintray.com/com/google/protobuf/protobuf-java/3.0.0/protobuf-java-3.0.0.jar'.
+             > Software caused connection abort: recv failed
     
 Solution:  
 modify config file `UE_4.20\Engine\Build\Android\Java\gradle\build.gradle`,  
@@ -68,34 +68,34 @@ all content:
 Error Log:
     
     A problem occurred configuring root project 'app'.
-    UATHelper: Packaging (Android (ASTC)): > Could not resolve all files for configuration ':classpath'.
-    UATHelper: Packaging (Android (ASTC)):    > Could not download kotlin-reflect.jar (org.jetbrains.kotlin:kotlin-reflect:1.1.3-2)
-    UATHelper: Packaging (Android (ASTC)):       > Could not get resource 'http://jcenter.bintray.com/org/jetbrains/kotlin/kotlin-reflect/1.1.3-2/kotlin-reflect-1.1.3-2.jar'.
-    UATHelper: Packaging (Android (ASTC)):          > Could not GET 'http://jcenter.bintray.com/org/jetbrains/kotlin/kotlin-reflect/1.1.3-2/kotlin-reflect-1.1.3-2.jar'.
-    UATHelper: Packaging (Android (ASTC)):             > Remote host closed connection during handshake
-    UATHelper: Packaging (Android (ASTC)):    > Could not download kotlin-stdlib.jar (org.jetbrains.kotlin:kotlin-stdlib:1.1.3-2)
-    UATHelper: Packaging (Android (ASTC)):       > Could not get resource 'http://jcenter.bintray.com/org/jetbrains/kotlin/kotlin-stdlib/1.1.3-2/kotlin-stdlib-1.1.3-2.jar'.
-    UATHelper: Packaging (Android (ASTC)):          > Could not HEAD 'http://jcenter.bintray.com/org/jetbrains/kotlin/kotlin-stdlib/1.1.3-2/kotlin-stdlib-1.1.3-2.jar'.
-    UATHelper: Packaging (Android (ASTC)):             > Remote host closed connection during handshake
-    UATHelper: Packaging (Android (ASTC)):    > Could not download protobuf-java.jar (com.google.protobuf:protobuf-java:3.0.0)
-    UATHelper: Packaging (Android (ASTC)):       > Could not get resource 'http://jcenter.bintray.com/com/google/protobuf/protobuf-java/3.0.0/protobuf-java-3.0.0.jar'.
-    UATHelper: Packaging (Android (ASTC)):          > Could not GET 'http://jcenter.bintray.com/com/google/protobuf/protobuf-java/3.0.0/protobuf-java-3.0.0.jar'.
-    UATHelper: Packaging (Android (ASTC)):             > Remote host closed connection during handshake
-    UATHelper: Packaging (Android (ASTC)):    > Could not download bcpkix-jdk15on.jar (org.bouncycastle:bcpkix-jdk15on:1.56)
-    UATHelper: Packaging (Android (ASTC)):       > Could not get resource 'http://jcenter.bintray.com/org/bouncycastle/bcpkix-jdk15on/1.56/bcpkix-jdk15on-1.56.jar'.
-    UATHelper: Packaging (Android (ASTC)):          > Could not HEAD 'http://jcenter.bintray.com/org/bouncycastle/bcpkix-jdk15on/1.56/bcpkix-jdk15on-1.56.jar'.
-    UATHelper: Packaging (Android (ASTC)):             > Remote host closed connection during handshake
-    UATHelper: Packaging (Android (ASTC)):    > Could not download bcprov-jdk15on.jar (org.bouncycastle:bcprov-jdk15on:1.56)
-    UATHelper: Packaging (Android (ASTC)):       > Could not get resource 'http://jcenter.bintray.com/org/bouncycastle/bcprov-jdk15on/1.56/bcprov-jdk15on-1.56.jar'.
-    UATHelper: Packaging (Android (ASTC)):          > Could not HEAD 'http://jcenter.bintray.com/org/bouncycastle/bcprov-jdk15on/1.56/bcprov-jdk15on-1.56.jar'.
-    UATHelper: Packaging (Android (ASTC)):             > Remote host closed connection during handshake
-    UATHelper: Packaging (Android (ASTC)):    > Could not download fastutil.jar (it.unimi.dsi:fastutil:7.2.0)
-    UATHelper: Packaging (Android (ASTC)):       > Could not get resource 'http://jcenter.bintray.com/it/unimi/dsi/fastutil/7.2.0/fastutil-7.2.0.jar'.
-    UATHelper: Packaging (Android (ASTC)):          > Could not HEAD 'http://jcenter.bintray.com/it/unimi/dsi/fastutil/7.2.0/fastutil-7.2.0.jar'.
-    UATHelper: Packaging (Android (ASTC)):             > Remote host closed connection during handshake
-    UATHelper: Packaging (Android (ASTC)): * Try:
-    UATHelper: Packaging (Android (ASTC)): Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
-    UATHelper: Packaging (Android (ASTC)): * Get more help at https://help.gradle.org
+     > Could not resolve all files for configuration ':classpath'.
+        > Could not download kotlin-reflect.jar (org.jetbrains.kotlin:kotlin-reflect:1.1.3-2)
+           > Could not get resource 'http://jcenter.bintray.com/org/jetbrains/kotlin/kotlin-reflect/1.1.3-2/kotlin-reflect-1.1.3-2.jar'.
+              > Could not GET 'http://jcenter.bintray.com/org/jetbrains/kotlin/kotlin-reflect/1.1.3-2/kotlin-reflect-1.1.3-2.jar'.
+                 > Remote host closed connection during handshake
+        > Could not download kotlin-stdlib.jar (org.jetbrains.kotlin:kotlin-stdlib:1.1.3-2)
+           > Could not get resource 'http://jcenter.bintray.com/org/jetbrains/kotlin/kotlin-stdlib/1.1.3-2/kotlin-stdlib-1.1.3-2.jar'.
+              > Could not HEAD 'http://jcenter.bintray.com/org/jetbrains/kotlin/kotlin-stdlib/1.1.3-2/kotlin-stdlib-1.1.3-2.jar'.
+                 > Remote host closed connection during handshake
+        > Could not download protobuf-java.jar (com.google.protobuf:protobuf-java:3.0.0)
+           > Could not get resource 'http://jcenter.bintray.com/com/google/protobuf/protobuf-java/3.0.0/protobuf-java-3.0.0.jar'.
+              > Could not GET 'http://jcenter.bintray.com/com/google/protobuf/protobuf-java/3.0.0/protobuf-java-3.0.0.jar'.
+                 > Remote host closed connection during handshake
+        > Could not download bcpkix-jdk15on.jar (org.bouncycastle:bcpkix-jdk15on:1.56)
+           > Could not get resource 'http://jcenter.bintray.com/org/bouncycastle/bcpkix-jdk15on/1.56/bcpkix-jdk15on-1.56.jar'.
+              > Could not HEAD 'http://jcenter.bintray.com/org/bouncycastle/bcpkix-jdk15on/1.56/bcpkix-jdk15on-1.56.jar'.
+                 > Remote host closed connection during handshake
+        > Could not download bcprov-jdk15on.jar (org.bouncycastle:bcprov-jdk15on:1.56)
+           > Could not get resource 'http://jcenter.bintray.com/org/bouncycastle/bcprov-jdk15on/1.56/bcprov-jdk15on-1.56.jar'.
+              > Could not HEAD 'http://jcenter.bintray.com/org/bouncycastle/bcprov-jdk15on/1.56/bcprov-jdk15on-1.56.jar'.
+                 > Remote host closed connection during handshake
+        > Could not download fastutil.jar (it.unimi.dsi:fastutil:7.2.0)
+           > Could not get resource 'http://jcenter.bintray.com/it/unimi/dsi/fastutil/7.2.0/fastutil-7.2.0.jar'.
+              > Could not HEAD 'http://jcenter.bintray.com/it/unimi/dsi/fastutil/7.2.0/fastutil-7.2.0.jar'.
+                 > Remote host closed connection during handshake
+     * Try:
+     Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.
+     * Get more help at https://help.gradle.org
     
 Solution:  
 Project Settings -> Platforms -> Android -> Uncheck "Enable Gradle instead of Ant"
