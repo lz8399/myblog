@@ -164,8 +164,20 @@ Collision Preset，假设叫 CollisionProfileA ，并设置该 Preset 对物体B
 
 C++ 设置 Collision：
 
+    //设置自定义 Collision 配置
     GetCollisionComponent()->SetCollisionProfileName("Custom");
+    
+    //设置指定通道的Response
 	GetCollisionComponent()->SetCollisionResponseToChannel(ECC_Pawn, ECollisionResponse::ECR_Ignore);
+    
+    //为自己设置自定义 Collision 通道
+    GetCollisionComponent()->BodyInstance.SetObjectType(ECollisionChannel::ECC_GameTraceChannel1);
+    
+其中 `ECollisionChannel::ECC_GameTraceChannel1` 为 Object Channels，例如：TestCollision。  
+
+TestCollision 对应哪一个 `ECollisionChannel`，可以在DefaultEngine.ini找到，例如：  
+`+DefaultChannelResponses=(Channel=ECC_GameTraceChannel1,Name="TestCollision",DefaultResponse=ECR_Block,bTraceType=False,bStaticObject=False)`
+    
 
 ### Actor的Hit事件
 ##### 1，C++代码的编写

@@ -453,5 +453,11 @@ ActorComponent 启用`TickComponent()`：`bTickInEditor` 设置为 true，默认
 场景 Actor 的`BeginPlay()`函数先于`ALevelScriptActor`的`BeginPlay()`执行  
 Development 和 Debug 模式下，场景中`AActor`的`BeginPlay()`函数先于`ALevelScriptActor`的`BeginPlay()`执行，但是 Shipping 模式下顺序正好相反：`ALevelScriptActor` 先于 `AActor`。4.20的bug。
 
+【2018-09-07T10:11】  
+修改 Mesh 预览的背景  
+In the Preview Scene Settings there is a checkbox for both `Show Environment` and `Show Floor`
+
+参考自：https://answers.unrealengine.com/questions/502186/remove-sky-and-ground-static-mesh-editor.html
+
 ***
 `凡心所向，素履以往。生如逆旅，一苇以航。----木心`
