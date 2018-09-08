@@ -42,14 +42,47 @@ tags= ["UE4"]
     
 ##### 鼠标光标固定位置不动
 
-固定鼠标光标不动：
+假设需求如下：  
+右键按住不放，屏幕转向，隐藏鼠标光标，松开右键时再显示鼠标光标，且鼠标光标的位置固定，不要跟随鼠标滑动而移动；  
+左键按住不放，光标显示，且光标跟谁鼠标滑动而移动（比如RTS的框选操作）。
 
-    SetInputMode(FInputModeGameOnly());
-    
-恢复鼠标光标移动：
+解决方案如下：
 
-    FInputModeGameAndUI InputMode;
-	InputMode.SetHideCursorDuringCapture(false);
-	SetInputMode(InputMode);
+    void AMyPlayerController::OnLeftMousePressed()
+    {
+        //由于光标默认捕获规则是：Viewport中鼠标任意键的按下事件就会永久捕获。
+        //FInputModeGameAndUI默认规则是：捕获时隐藏光标。所以这里需要修改捕获时不隐藏光标，否则按住左键不放时光标会一直隐藏。
+        FInputModeGameAndUI InputMode;
+        InputMode.SetHideCursorDuringCapture(false);
+        
+        SetInputMode(InputMode);
+    }
     
+    void AMyPlayerController::OnLeftMouseReleased()
+    {
+        //左键松开事件中不用做任何处理
+    }
     
+    void AMyPlayerController::OnRightMousePressed()
+    {
+        //PlayerController的变量，控制是否隐藏光标
+        bShowMouseCursor = false;
+        
+        //自定义变量，用来标识是否按住右键
+        bRightMouseHold = true;
+
+        SetInputMode(FInputModeGameOnly());
+    }
+    
+    void AMyPlayerController::OnRightMouseReleased()
+    {
+        bShowMouseCursor = true;
+        
+        bRightMouseHold = false;
+
+        SetInputMode(FInputModeGameAndUI());
+    }
+
+修改光标的捕获规则模式：  
+Project Settings -> Engine -> Input -> Viewport Properties -> Default Viewport Mouse Capture Mode.  
+默认是： Capture Permanently Including Initial Mouse Down，表示鼠标任意键的按下事件捕获，且是永久捕获。
