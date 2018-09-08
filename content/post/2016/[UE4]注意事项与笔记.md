@@ -392,6 +392,10 @@ WIndows版本卡死十几秒后，程序自动推出且无崩溃日志，且Andr
 原因：UE4安装文件中删除了Debugging symbols。  
 解决办法：打开Epic Lanuncher -》 Library -》 点击引擎版本的红色下来箭头 -》 Options -》 勾选Editor symbols for debugging -》 Apply。
 
+【2018-05-30】  
+模型 Mesh 镜像 Mirror（反转）  
+修改 Relative Scale，将需要镜像轴向的值设为-1，例如(-1.f, 1.f, 1.f)。
+
 【2018-06-13T21:45】  
 在移动端，如果想对`FPaths::ProjectDir()`目录下文件写入，是无效的，但Windows下没有问题。  
 如果想在移动端写入文件，需要使用`FPlatformMisc::GamePersistentDownloadDir()`作为路径。
