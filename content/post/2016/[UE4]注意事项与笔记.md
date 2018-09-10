@@ -463,5 +463,11 @@ In the Preview Scene Settings there is a checkbox for both `Show Environment` an
 
 参考自：https://answers.unrealengine.com/questions/502186/remove-sky-and-ground-static-mesh-editor.html
 
+【2018-09-09T21:33】  
+预计算投射路径轨迹
+
+    UGameplayStatics::PredictProjectilePath()
+
+
 ***
 `凡心所向，素履以往。生如逆旅，一苇以航。----木心`
