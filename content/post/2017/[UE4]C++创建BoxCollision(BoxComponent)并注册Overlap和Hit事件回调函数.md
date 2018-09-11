@@ -138,6 +138,13 @@ MyCharacter.cpp的构造函数中：
 Name自己定义，这里的Name就是之前C++代码中设置ProfileName中的名字；CollisionEnabled设置为Collision Enabled；ObjectType设置为上面步骤添加的记录；因为我们这里需要的是Hit事件，不需要Overlap，所以这里的Collision Response设置为Block。
 {{< figure src="/img/20170515-[UE4]C++创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数/[UE4]C++创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数-07.jpg">}}
 
+其中 CollisionEnabled 类型如下：
+
++ No Collision 全部禁用，物体会坠入地表，且没有物理；
++ Query Only 只启用碰撞，不会坠入地表，但是没有物理；
++ Physics Only 只启用物理，但是会坠入地表；
++ Collision Enabled 同事启用碰撞和物理，既不会坠入地表，同时有物理；
+
 点击Accept之后，就在Preset列表中多了一条记录
 {{< figure src="/img/20170515-[UE4]C++创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数/[UE4]C++创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数-08.jpg">}}
 
@@ -153,7 +160,7 @@ Collision Object Channel、Collision Preset、Object Type 三者联系：
 
 如果选择 Collision Presets 选择 Custom ，则可以相关属性可以编辑。相关参数含义是：
 
-+ Object Type 表示当前物体所属的 Collision Channel ；
++ Object Type 表示当前物体所属的 Collision Channel ，即：Collision Presets拥有者对 Object Type 物体的影响，前者 忽略、重叠或者阻挡后者；
 + Object Response 表示当前物体与其他物体所对其他 Collision Channel 物体的反应：Ingore(忽略)、Overlaop(重叠)还是Block(阻挡)。
 
 使用示例：  
@@ -162,9 +169,9 @@ Collision Object Channel、Collision Preset、Object Type 三者联系：
 新建两个 Collision Channel，分别作为物体B和物体C的 Object Type；然后再新建一个
 Collision Preset，假设叫 CollisionProfileA ，并设置该 Preset 对物体B的通道 Overlap ， 对物体C的通道 Ingore ，然后将物体A的 Collision Preset 设置成 CollisionProfileA。
 
-C++ 设置 Collision：
+##### C++ 设置 Collision
 
-    //设置自定义 Collision 配置
+    //设置自定义 Collision 配置（只能在构造函数中使用）
     GetCollisionComponent()->SetCollisionProfileName("Custom");
     
     //设置指定通道的Response
@@ -177,7 +184,18 @@ C++ 设置 Collision：
 
 TestCollision 对应哪一个 `ECollisionChannel`，可以在DefaultEngine.ini找到，例如：  
 `+DefaultChannelResponses=(Channel=ECC_GameTraceChannel1,Name="TestCollision",DefaultResponse=ECR_Block,bTraceType=False,bStaticObject=False)`
-    
+
+##### SetCollisionProfileName 注意事项
+
+{{< alert danger >}}
+SetCollisionProfileName 如果要完全生效，必须在 Actor 的构造函数中执行；如果在非构造函数中执行，Collision Profile 的 CollisionEnabled 不会生效，但是Collision Response 会生效。
+{{< figure src="/img/20170515-[UE4]C++创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数/[UE4]C++创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数-12.jpg">}}
+{{< /alert >}}
+
+如果在非构造函数中执行`SetCollisionProfileName`会导致什么样的问题？  
+{{< hl-text red >}}
+在非构造函数中修改 CollisionProfile ，可以修改当前物体的Collision Channel，即：当前物体对其他 Object Type物体是 Ignore、Overlap 还是 Block。 但是无法修改当前物体的 CollisionEnabled ，即：是否启用物理、是否启用碰撞等设置无法生效。
+{{< /hl-text >}}
 
 ### Actor的Hit事件
 ##### 1，C++代码的编写

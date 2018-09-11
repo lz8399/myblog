@@ -93,3 +93,11 @@ MovementComponent 有个属性`Gravity Scale`来设置重力大小。
 	
 说明：`GetPhysicsLinearVelocity` 默认为0，这里修改成 -100.f 的重力下降速率，
 	
+##### 禁用、开启物理
+
+    //禁用所有子组件的物理模拟（但是没有对应的开启物理的API）
+    AActor::DisableComponentsSimulatePhysics();
+    
+    //禁用指定组件的物理模拟
+    GetCapsuleComponent()->SetSimulatePhysics(false);
+    GetMesh()->SetSimulatePhysics(false);

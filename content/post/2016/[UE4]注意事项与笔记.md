@@ -468,6 +468,27 @@ In the Preview Scene Settings there is a checkbox for both `Show Environment` an
 
     UGameplayStatics::PredictProjectilePath()
 
+【2018-09-11T00:19】  
+Windows Package full screen(Windows 打包版本全屏显示)  
+在 MyProject/Config 目录下新建配置文件：`DefaultGameUserSettings.ini`，内容如下：
+
+    [/Script/Engine.GameUserSettings]
+     bUseVSync=False
+     //ResolutionSizeX=1920
+     //ResolutionSizeY=1080
+     //LastUserConfirmedResolutionSizeX=1920
+     //LastUserConfirmedResolutionSizeY=1080
+     WindowPosX=-1
+     WindowPosY=-1
+     bUseDesktopResolutionForFullscreen=True
+     FullscreenMode=0
+     LastConfirmedFullscreenMode=0
+     Version=5
+     
+如果还是无效，删掉`\Intermediate\Build`和`\Intermediate\Saved`两个目录，再重新构建。
+
+参考：  
+https://answers.unrealengine.com/questions/206504/how-to-default-fullscreen-in-shipping-package.html
 
 ***
 `凡心所向，素履以往。生如逆旅，一苇以航。----木心`
