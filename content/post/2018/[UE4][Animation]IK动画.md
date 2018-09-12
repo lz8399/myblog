@@ -1,5 +1,5 @@
 +++
-title= "[UE4][Animation]IK动画.md"
+title= "[UE4][Animation]IK动画"
 date= "2018-05-30T13:41:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4", "Animation"]
