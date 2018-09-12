@@ -14,7 +14,7 @@ keywords= ["UE4", "BoundsBox"]
 {{< figure src="/img/20171216-[UE4]角色悬在半空的问题（BoundsBox）/[UE4]角色悬在半空的问题（BoundsBox）-02.jpg">}}
 
 {{< alert danger >}}
-如果 Static Mesh 用于制作 Destructible Mesh，修改 Static Mesh 的 Bounds 后需要重新创建 Destructible Mesh，否则 Destructible Mesh Bounds还是使用之前的Bounds。另外 Static Mesh 的 Bounds 需要在建模软件中（Max、Maya等）修改，在UE4中修改的Bounds，对 Destructible Mesh 无效。4.20版本是这样，不知道算不算bug。
+如果 Static Mesh 用于制作 Destructible Mesh，修改 Static Mesh 的 Bounds 后需要重新创建 Destructible Mesh，否则 Destructible Mesh Bounds还是使用之前的Bounds。
 {{< /alert >}}
 
 ***
