@@ -369,7 +369,7 @@ You might be wondering why we use glBindBuffer and glBindBufferBase with GL_UNIF
 	
 
 ##### fragment shader到vertex shader之间的工作流程（page 58）
-{{< figure src="/img/20170113-[Shading]OpenGL常用基础知识(个人学习笔记)/[Shading]OpenGL常用基础知识(个人学习笔记)-01.jpg">}}
+{{< figure src="/img/20170113-[Shading]OpenGL常用基础知识(个人学习笔记)/[Shading]OpenGL常用基础知识(个人学习笔记)-01.png">}}
 
 Between the vertex and fragment shader, the vertices are assembled into primitives, clipping takes place, and the viewport transformation is applied (among other operations). The rasterization process then takes place and the polygon is filled (if necessary). The fragment shader is executed once for each fragment (pixel) of the polygon being rendered (typically in parallel). Data provided from the vertex shader is (by default) interpolated in a perspective correct manner, and provided to the fragment shader via shader input variables. The fragment shader determines the appropriate color for the pixel and sends it to the frame buffer using output variables. The depth information is handled automatically.
 
