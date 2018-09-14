@@ -9,17 +9,15 @@ tags= ["UE4", "API"]
 
 ##### 如何禁用角色的刚体碰撞检测Collision
 
-通常的做法是：
+禁用Actor上所有Component的碰撞：
 
     MyCharacter->SetActorEnableCollision(false);
 
-这样设置以后，角色就可以忽视一切障碍物或者刚体来进行移动了。
+设置以后，角色就可以忽视一切障碍物或者刚体来进行移动了，{{< hl-text red >}} 但是这样会导致 AddMovementInput 失效， SetActorLocation 没问题 {{< /hl-text >}}。
 
-另外一种方式：
+禁用指定 Component 的碰撞：
 
     MyCharacter->GetMesh()->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-    
-这种第二种方式，不会禁用CollisionComponent的碰撞（个人理解，具体未测试）。
 
 ##### GetOverlappingActors() 注意事项
 

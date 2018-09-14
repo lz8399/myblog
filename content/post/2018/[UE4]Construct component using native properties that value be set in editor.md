@@ -6,6 +6,8 @@ tags= ["UE4"]
 keywords= ["UE4"]
 +++
 
+##### Method 1
+
 使用蓝图中编辑的C++属性值来创建Component。  
 Construct component using C++ property that value edit in blueprint.
 
@@ -41,3 +43,9 @@ CPP:
 
 这样，就可以在编辑器中动态调整BoxComponent的大小了。  
 Thus, We can modify the size of component in UE4Editor.
+
+##### Method 2
+
+overwirte function `PostEditChangeProperty` of AActor:
+
+    virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
