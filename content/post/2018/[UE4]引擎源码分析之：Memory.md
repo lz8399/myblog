@@ -78,7 +78,7 @@ tags= ["UE4", "GC"]
 		return Pool;
 	}
     
-内存池内分配内内存：
+内存池内分配内存：
 
     static FORCEINLINE FFreeMem* AllocateBlockFromPool(FMallocBinned& Allocator, FPoolTable* Table, FPoolInfo* Pool, uint32 Alignment)
 	{

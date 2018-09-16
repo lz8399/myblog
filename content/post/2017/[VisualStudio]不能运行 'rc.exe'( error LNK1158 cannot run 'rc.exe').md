@@ -16,7 +16,7 @@ keywords= ["VisualStudio", "LNK1158", "rc.exe"]
 
 转载自：https://blog.csdn.net/leifeng_soul/article/details/52622584
 
-1. 在D:\Programs\Microsoft Visual Studio 12.0\Common7\IDE中找到devenv.exe。在cmd命令行中切换到该路径，使用命令devenv /ResetSettings将VS2013重置到初始设置。
+1. 在D:\Programs\Microsoft Visual Studio 12.0\Common7\IDE中找到devenv.exe。在cmd命令行中切换到该路径，使用命令`devenv /ResetSettings`将VS2013重置到初始设置。
 
 2. 打开VS2013里面的属性->常规->平台工具，将v120改成v120_xp。
 {{< figure src="/img/20171209-[VisualStudio]不能运行 'rc.exe'( error LNK1158 cannot run 'rc.exe')/[VisualStudio]不能运行 'rc.exe'( error LNK1158 cannot run 'rc.exe')-01.png">}}

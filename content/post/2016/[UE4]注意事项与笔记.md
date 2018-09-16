@@ -485,7 +485,7 @@ Windows Package full screen(Windows 打包版本全屏显示)
      LastConfirmedFullscreenMode=0
      Version=5
      
-如果还是无效，删掉`\Intermediate\Build`和`\Intermediate\Saved`两个目录，再重新构建。
+如果还是无效，删掉`\Intermediate\Build`和`\Saved`两个目录，再重新构建。
 
 参考：  
 https://answers.unrealengine.com/questions/206504/how-to-default-fullscreen-in-shipping-package.html

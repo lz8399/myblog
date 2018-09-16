@@ -14,3 +14,6 @@ https://www.raywenderlich.com/5760-creating-snow-trails-in-unreal-engine-4
 
 Dynamic Mesh Painting in Unreal Engine 4  
 https://www.raywenderlich.com/6817-dynamic-mesh-painting-in-unreal-engine-4
+
+Custom Depth in Unreal Engine 4  
+https://www.tomlooman.com/the-many-uses-of-custom-depth-in-unreal-4/
