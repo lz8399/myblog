@@ -64,6 +64,11 @@ Note: Add custom parameters in AnimNotifyState is same as AnimNotify.
 
 {{< figure src="/img/20161009-[UE4]Animation Notifications (AnimNotify)/[UE4]Animation Notifications (Notifies)(动画的事件通知)-04.jpg">}} 
 
+##### Difference Between AnimNotify and AnimNotifyState
+
+AnimNotifyState can set notify time range, and it contains callback function `NotifyBegin`, `NotifyTick`, `NotifyEnd`;  
+AnimNotify can only be triggered at the moment, only has callback function `Notify`.
+
 
 Reference: Rename or delete anim notifys?  
 https://answers.unrealengine.com/questions/465629/rename-or-delete-anim-notifys.html
