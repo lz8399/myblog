@@ -13,14 +13,14 @@ UE4 的 TSharedPtr、TWeakObjectPtr 模仿自 C++11 的 shared_ptr 、 weak_ptr 
 
 用法：
 
-     TSharedPtr<MyUObject> ObjPtr = MakeShareable(NewObject<MyUObject>());
+     TSharedPtr<TestClass> ObjPtr = MakeShareable(new TestClass());
      
 {{< alert danger >}}
 如果两个 TSharedPtr 相互赋值，则会导致对象永不释放，导致内存泄漏。
 {{< /alert >}}
 
 {{< alert warning >}}
-Uobject不能使用TSharedPtr进行引用计数，如果一个非UObject的类想加入GC，那么必须继承FGCObject类。
+Uobject 不能使用 TSharedPtr 进行引用计数，非UObject才可以；如果一个非UObject的类想加入GC，那么必须继承FGCObject类。
 {{< /alert >}}
 
 ##### TWeakObjectPtr
