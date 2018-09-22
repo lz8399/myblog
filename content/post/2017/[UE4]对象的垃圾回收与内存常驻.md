@@ -22,7 +22,7 @@ keywords：UE4, Memory Persist, GC, 垃圾回收, 内存管理
 + `FGCObjectScopeGuard` 在指定代码区域内保持对象；
 
 {{< alert warning >}}
-Uobject不能使用TSharedPtr进行引用计数，如果一个非UObject的类想加入GC，那么必须继承FGCObject类。
+Uobject不能使用TSharedPtr进行引用计数，非UObject才可以；如果一个非UObject的类想加入GC，那么必须继承FGCObject类。
 {{< /alert >}}
 
 ###### UPROPERTY()用法

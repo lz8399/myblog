@@ -11,7 +11,7 @@ Compiling Error:
 error C2664: 'void TestFun01(std::string &)': cannot convert argument 1 from 'const char [5]' to 'std::string &'
 {{< /hl-text >}}
 
-Resolution:
+Solution:
 
 add `const` to `std::string&` which is a parameter of function, like this:
 
