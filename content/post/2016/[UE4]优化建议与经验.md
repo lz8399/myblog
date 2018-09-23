@@ -52,7 +52,14 @@ https://www.reddit.com/r/unrealengine/comments/6qtxy3/test_blueprint_vs_c_perfor
 建议自己实现一个简易的自定义Collision，比如球形Collision，然后计算该 Collision 与单位之间的直线距离，来判断是否是否发生了碰撞，并且降低检测间隔，比如 0.1秒一次。
 
 ##### 动画优化
-1，打开角色蓝图 -》 MeshComponent -》 Detail 面板中的 Optimization 类别下 -》 勾选 `Enable Update Rate Optimizations`。
+1. 打开角色蓝图 -》 MeshComponent -》 Detail 面板中的 Optimization 类别下 -》 勾选 `Enable Update Rate Optimizations`。
+
+2. 只对渲染的 SkinnedMesh执行 Tick 和 RefreshBoneTransforms
+
+        USkinnedMeshComponent::MeshComponentUpdateFlag = OnlyTickPoseWhenRendered;
+        
+    默认是`AlwaysTickPoseAndRefreshBones`，表示不管是否被渲染（在可见区域内），都执行 Tick 和 RefreshBoneTransforms。  
+    旧版本中`MeshComponentUpdateFlag`叫做`SkinnedMeshUpdateFlag`。  
 
 ##### UI优化
 
