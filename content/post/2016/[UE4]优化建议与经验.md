@@ -40,7 +40,7 @@ https://www.reddit.com/r/unrealengine/comments/6qtxy3/test_blueprint_vs_c_perfor
 
 ##### 物理与碰撞优化
 
-1，BoxComponent的 Generate Overlap Events 设置为false。如果不需要Overlap事件，那么就将该属性设置设置为false，默认为true。当BoxCompont达到一定量级时，开启Generate Overlap Events的性能消耗时关闭情况下的两倍。
+1，BoxComponent的 Generate Overlap Events 设置为false。如果不需要Overlap事件，那么就将该属性设置设置为false，默认为true。当BoxCompont达到一定量级时，开启Generate Overlap Events的性能消耗是关闭情况下的两倍。
 
 2，如果不需要物理，将 `Simulate Physics` 设置为false。
 
@@ -78,7 +78,7 @@ http://youxiputao.com/articles/11743
 ##### Dedicated Server优化
 1，服务端cook时剥离动画数据  
 Project Settings -> Engine -> Animation -> 勾选 Strip Animation Data on Dedicated Server.  
-如果在动画中添加了触发修改数据的 Notify Event，勾选此选项会有问题。请确保动画做挂载的 Notify 只是表现相关，不涉及游戏逻辑。
+如果在动画中添加了触发修改数据的 Notify Event，勾选此选项会有问题。请确保动画中挂载的 Notify 只是表现相关，不涉及游戏逻辑。
 
 2，Server模式下禁用角色物理模拟  
 
