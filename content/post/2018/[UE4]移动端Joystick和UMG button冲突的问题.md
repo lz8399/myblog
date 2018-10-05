@@ -14,7 +14,7 @@ keywords= ["UE4", "Joystick", "UMG", "Button", "Conflict"]
 原因：UMG button的Is Focusable属性设置为了true。  
 解决办法：UMG button的Is Focusable属性设置为false。
 
-问题3：Widget的Visibility属性默认为Self Hit Test Invisible，这样，每当有新的Widget AddToViewport时，当前Widget会被自动隐藏。但是默认的Visibility无法相应Widget之外的鼠标或touch事件（比如一个UButton，如果按住UButton不放，然后鼠标或者手指拖拽到UButton之外，那么当松开鼠标或手指时，该button的Release事件无法影响），但是Visibility属性如果设置成Visible，那么就可以相应，但是当新的Widget添加Viewport时，当前Widget不会自动隐藏。
+问题3：Widget的Visibility属性默认为Self Hit Test Invisible，这样，每当有新的Widget AddToViewport时，当前Widget会被自动隐藏。但是默认的Visibility无法响应Widget之外的鼠标或touch事件（比如一个UButton，如果按住UButton不放，然后鼠标或者手指拖拽到UButton之外，那么当松开鼠标或手指时，该button的Release事件无法响应），但是Visibility属性如果设置成Visible，那么就可以相应，但是当新的Widget添加Viewport时，当前Widget不会自动隐藏。
 
 参考：Virtual Joystick conflicts UMG Buttons  
 https://answers.unrealengine.com/questions/211064/virtual-joystick-conflicts-umg-buttons.html

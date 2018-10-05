@@ -6,7 +6,7 @@ tags= ["Graphics", "OpenGL"]
 +++
 
 
-转载请注明出处：http://www.dawnarc.com/
+转载请注明出处：https://dawnarc.com
 
 网上资料很多都是基于Cygwin来搭建的环境，这里介绍一种非Cygwin搭建Windows上的OpenGL开发环境。
 
