@@ -1,9 +1,11 @@
 +++
-title= "[Math]转载：空间点到直线垂足坐标的解算方法"
+title= "[Math]空间点到直线垂足坐标的解算方法"
 date= "2018-10-05T16:58:02+08:00"
 categories= ["Math"]
 tags= ["Math"]
 +++
+
+##### 算法1
 
 原文：https://blog.csdn.net/zhouschina/article/details/14647587
 
@@ -93,3 +95,24 @@ tags= ["Math"]
     　　
         return retVal;
     }
+    
+##### 算法2
+
+原文：3D Perpendicular Point on Line From 3D point  
+https://stackoverflow.com/questions/9368436/3d-perpendicular-point-on-line-from-3d-point
+
+计算p1、p2连成的直线上的离 q 点最近的点 f（即 q 点到直线 p1、p2的垂足坐标）：
+
+    Vector3 p1 = new Vector3(x1, y1, z1);
+    Vector3 p2 = new Vector3(x2, y2, z2);
+    Vector3 q = new Vector3(x3, y3, z3);
+
+    Vector3 u = p2 - p1;
+    Vector3 pq = q - p1;
+    Vector3 w2 = pq - Vector3.Multiply(u, Vector3.Dot(pq, u) / u.LengthSquared);
+
+    Vector3 f = q - w2;
+
+##### 参考
+Perpendicular on a line segment from a given point  
+https://stackoverflow.com/questions/10301001/perpendicular-on-a-line-segment-from-a-given-point
