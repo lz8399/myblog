@@ -49,3 +49,46 @@ Thus, We can modify the size of component in UE4Editor.
 overwirte function `PostEditChangeProperty` of AActor:
 
     virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
+
+##### Attention
+    
+How to Detect if PostEditChangeProperty is called from Level editor or classDefault/blueprint editor:
+    
+    UObjectBaseUtility::IsTemplate();
+    
+Reference:  
+https://answers.unrealengine.com/questions/566843/how-to-detect-if-posteditchangeproperty-is-called.html
+
+Why Component is not visible in level editor when modify Transform in PostEditChangeProperty() callback?
+
+Solution:  
+Invoke `RegisterComponent()` after transform changed.
+
+example
+
+header:
+
+    UPROPERTY(EditAnywhere, Category = ArrowTransform)
+        FVector RelativeLoc;
+    
+	UPROPERTY(EditAnywhere, Category = ArrowTransform)
+        FRotator RelativeRot;
+    
+    UPROPERTY(VisibleAnywhere, BlueprintReadOnly)
+		UArrowComponent* TestComponent;
+        
+cpp:
+
+    void AMyActor::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
+    {
+        if (TestComponent)
+        {
+            TestComponent->SetRelativeLocation(RelativeLoc);
+            TestComponent->SetRelativeRotation(RelativeRot);
+
+            //if not invoke RegisterComponent(), 
+            //TestComponent would disappear in level editor when RelativeLoc or RelativeRot changed.
+            TestComponent->RegisterComponent();
+        }
+    }
+    

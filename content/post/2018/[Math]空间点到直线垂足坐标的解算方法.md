@@ -103,15 +103,29 @@ https://stackoverflow.com/questions/9368436/3d-perpendicular-point-on-line-from-
 
 计算p1、p2连成的直线上的离 q 点最近的点 f（即 q 点到直线 p1、p2的垂足坐标）：
 
+XNA实现
+
     Vector3 p1 = new Vector3(x1, y1, z1);
     Vector3 p2 = new Vector3(x2, y2, z2);
     Vector3 q = new Vector3(x3, y3, z3);
 
     Vector3 u = p2 - p1;
     Vector3 pq = q - p1;
-    Vector3 w2 = pq - Vector3.Multiply(u, Vector3.Dot(pq, u) / u.LengthSquared);
+    Vector3 w2 = pq - Vector3.Multiply(u, Vector3.Dot(pq, u) / u.LengthSquared());
 
     Vector3 f = q - w2;
+    
+UE4实现
+
+    FVector GetPerpendicularPointToLine(const FVector& PointStart, const FVector& PointEnd, const FVector& PointPerpendicular)
+    {
+        FVector Line = PointEnd - PointStart;
+        FVector PS = PointPerpendicular - PointStart;
+        FVector W2 = PS - (Line * (PS | Line) / Line.SizeSquared());
+        FVector FootPoint = PointPerpendicular - W2;
+
+        return FootPoint;
+    }
 
 ##### 参考
 Perpendicular on a line segment from a given point  
