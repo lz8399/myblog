@@ -116,3 +116,6 @@ https://stackoverflow.com/questions/9368436/3d-perpendicular-point-on-line-from-
 ##### 参考
 Perpendicular on a line segment from a given point  
 https://stackoverflow.com/questions/10301001/perpendicular-on-a-line-segment-from-a-given-point
+
+How do you find a point at a given perpendicular distance from a line?  
+https://stackoverflow.com/questions/133897/how-do-you-find-a-point-at-a-given-perpendicular-distance-from-a-line

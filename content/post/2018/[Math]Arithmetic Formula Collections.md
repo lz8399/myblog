@@ -1,6 +1,6 @@
 +++
 title= "[Math]Arithmetic Formula Collections"
-date= "2018-10-07T17:13:02+08:00"
+date= "2018-10-07T21:30:02+08:00"
 categories= ["Math"]
 tags= ["Math"]
 +++

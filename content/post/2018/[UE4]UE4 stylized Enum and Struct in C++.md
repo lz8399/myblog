@@ -1,5 +1,5 @@
 +++
-title= "[UE4]UE4 styled Enum and Struct in C++"
+title= "[UE4]UE4 stylized Enum and Struct in C++"
 date= "2018-09-21T18:26:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
