@@ -25,7 +25,7 @@ tags:
 如果想在游戏运行时查看指定物体的 Bounds，那么可以先执行 ShowFlag.Bounds 1，然后再以 Simulate 模式运行游戏，然后再在场景中单击要查看的物体，然后就可以显示该物体的 Bounds 信息。
 {{< /alert >}}
 
-##### 运行时命名
+##### 运行时命令
 
 修改Camera Mode（切换摄像机视角）：
 Camera [modename]

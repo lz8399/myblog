@@ -52,14 +52,14 @@ overwirte function `PostEditChangeProperty` of AActor:
 
 ##### Attention
     
-How to Detect if PostEditChangeProperty is called from Level editor or classDefault/blueprint editor:
+1, How to Detect if PostEditChangeProperty is called from Level editor or classDefault/blueprint editor:
     
     UObjectBaseUtility::IsTemplate();
     
 Reference:  
 https://answers.unrealengine.com/questions/566843/how-to-detect-if-posteditchangeproperty-is-called.html
 
-Why Component is not visible in level editor when modify Transform in PostEditChangeProperty() callback?
+2, Why Component is not visible in level editor when modify Transform in PostEditChangeProperty() callback?
 
 Solution:  
 Invoke `RegisterComponent()` after transform changed.
@@ -85,10 +85,13 @@ cpp:
         {
             TestComponent->SetRelativeLocation(RelativeLoc);
             TestComponent->SetRelativeRotation(RelativeRot);
-
-            //if not invoke RegisterComponent(), 
-            //TestComponent would disappear in level editor when RelativeLoc or RelativeRot changed.
-            TestComponent->RegisterComponent();
+            
+            if (!IsTemplate())
+            {
+                //if not invoke RegisterComponent(), 
+                //TestComponent would disappear in level editor when RelativeLoc or RelativeRot changed.
+                TestComponent->RegisterComponent();   
+            }
         }
     }
     
