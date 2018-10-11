@@ -127,6 +127,15 @@ UE4实现
         return FootPoint;
     }
 
+UE4引擎提供的工具函数：
+
+    FVector UKismetMathLibrary::FindClosestPointOnLine(FVector Point, FVector LineOrigin, FVector LineDirection)
+    {
+        const FVector SafeDir = LineDirection.GetSafeNormal();
+        const FVector ClosestPoint = LineOrigin + (SafeDir * ((Point-LineOrigin) | SafeDir));
+        return ClosestPoint;
+    }
+    
 ##### 参考
 Perpendicular on a line segment from a given point  
 https://stackoverflow.com/questions/10301001/perpendicular-on-a-line-segment-from-a-given-point

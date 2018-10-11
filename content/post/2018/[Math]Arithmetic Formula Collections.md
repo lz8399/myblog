@@ -5,6 +5,9 @@ categories= ["Math"]
 tags= ["Math"]
 +++
 
+Mathematics  
+https://keisan.casio.com/menu/system/000000000250
+
 Calcuate distance from foot of perpendicular to line  
 https://math.stackexchange.com/questions/33868/foot-of-perpendicular-to-line
 
