@@ -28,6 +28,23 @@ ctrl+back space，当前行光标到上一个空格之间的字符串全部删�
 
 ctrl+delete，当前行光标到下一个空格之间的字符串全部删除。
 
+##### Visual Assist 快捷键
+
+`VAssistX.FindSelected` Alt + K
+
+`VAssistX.NavigateBack` Alt + Left Arrow
+
+`VAssistX.NavigateForward` Alt + Right Arrow
+
+`VAssistX.OpenFileInSolutionDialog` Alt + Right Arrow
+
+`VAssistX.ResetEditorZoom` Ctrl + 0
+
+`VAssistX.ScopeNext` Alt + Down Arrow
+
+`VAssistX.ScopePrevious` Alt + Up Arrow
+
+
 ##### VS2017 官方快捷键文档
 https://blogs.msmvps.com/kenlin/2017/03/14/cheat-sheet-of-handy-keyboard-shortcuts-for-vs2017/
 
