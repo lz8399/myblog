@@ -71,18 +71,18 @@ UFUNCTION(Client, Unreliable) 并不表示是一定在客户端执行！！！�
 Since the server can own actors itself, a "Run on Owning Client" event may actually run on the server, despite its name.
 {{< /alert >}}
 
-什么时候 Client function 才会在 Client 执行？  
+**什么时候 Client function 才会在 Client 执行？**  
 {{< hl-text red >}}如果调用 Client function 的对象是在 Server (NM_DedicatedServer) 创建的，那么该对象上的 Client function 始终会在 Server 执行，且 Client (NM_Client) 不会触发。{{< /hl-text >}}  
 {{< hl-text red >}}如果是非 Server 创建的对象，比如：PlayerController ，那么其内部的 Client function 会在客户端执行。{{< /hl-text >}}  
 {{< hl-text red >}}如何在 Server 上获取这个 Client 的 PlayerController : 重写 AGameMode::InitNewPlayer() 或者 AGameMode::PostLogin() ，PlayerController 会作为参数传递进来，将这个 PlayerController 指针保存下来。{{< /hl-text >}}
 
-NetMulticast function 没有在 Client 触发的问题  
+**NetMulticast function 没有在 Client 触发的问题**  
 {{< hl-text red >}}并不是定义了 NetMulticast function ，就一定会在 Client 执行。{{< /hl-text >}}  
 {{< hl-text red >}}比如，在服务端生成了一个 Actor ，且在服务端执行该 Actor 上的 Multicast function ，默认情况下该 Multicast function 只会在 Server 执行。{{< /hl-text >}}  
 如果要使该 Actor 的 Multicast function 在客户端也执行，需要执行以下步骤（缺一不可。4.19开始，之前的版本不需要这样设置）：
 
 + 除了对该 Actor 执行 `bReplicates = true;` 外，还要执行 `bNetUseOwnerRelevancy = true;`
-+ 该 Actor Spawn 之后，需要执行 `Actor->SetOwner(NewOwner);`，这个 NewOwner 是一个 Replicated 对象，比如 Character 。
++ 该 Actor Spawn 之后，需要执行 `Actor->SetOwner(NewOwner);`，这个 NewOwner 是一个 Replicated 对象，比如 Character 。对应的Get接口为：`GetOwner()`。
 
 https://docs.unrealengine.com/latest/INT/Gameplay/Networking/Blueprints/index.html 
 

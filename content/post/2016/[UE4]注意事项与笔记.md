@@ -60,7 +60,7 @@ UE4数据同步相关的引擎源码
 
  
 
-FActorSpawnParameters意义  
+SpawnActor和NewObject创建出来的对象如何获取父对象  
 SpawnActor()有个参数：FActorSpawnParameters，这个参数中有很多属性，设置相关属性后，可以更方便的来控制这个被spawn出来的Actor，比如Owner属性：
 
     FActorSpawnParameters Param;
@@ -68,8 +68,13 @@ SpawnActor()有个参数：FActorSpawnParameters，这个参数中有很多属�
     AActor MyActor2 = GetWorld()->SpawnActor<MyActor>(MyClass, Param);
     //此时的Owner就是MyActor1
     MyActor Owner= MyActor2->GetOwner();
+    
+NewObject直接通过构造函数参数指定：
 
-
+    if(UMyComponent* Comp = NewObject<UMyComponent>(MyPawn))
+    {
+        AMyPawn* Pawn = Cast<AMyPawn>(Comp->GetOuter());
+    }
 
 获取当前角色视角的起始location和rotation  
 APawn::GetActorEyesViewPoint();

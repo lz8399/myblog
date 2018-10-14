@@ -101,3 +101,15 @@ MovementComponent 有个属性`Gravity Scale`来设置重力大小。
     //禁用指定组件的物理模拟
     GetCapsuleComponent()->SetSimulatePhysics(false);
     GetMesh()->SetSimulatePhysics(false);
+    
+    
+##### 收集资料
+
+Using Async Collision Traces in Unreal Engine 4  
+https://medium.com/@bryan.corell/using-async-collision-traces-in-unreal-engine-4-2cc312c825f5
+
+Inside Unreal Physics  
+http://www.recursiveblueprints.fun/inside-unreal-physics/
+
+The Art of PhysX  
+https://pdfs.semanticscholar.org/presentation/faec/14b559373222fa1f2150e3aaaaf6f20b3b2e.pdf
