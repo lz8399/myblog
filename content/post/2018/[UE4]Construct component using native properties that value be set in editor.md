@@ -61,8 +61,11 @@ https://answers.unrealengine.com/questions/566843/how-to-detect-if-posteditchang
 
 2, Why Component is not visible in level editor when modify Transform in PostEditChangeProperty() callback?
 
+Reason:  
+Not invoke `Super::PostEditChangeProperty()` in Your `PostEditChangeProperty()` function.
+
 Solution:  
-Invoke `RegisterComponent()` after transform changed.
+Add `Super::PostEditChangeProperty()`.
 
 example
 
@@ -81,17 +84,12 @@ cpp:
 
     void AMyActor::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
     {
+        Super::PostEditChangeProperty(PropertyChangedEvent);
+        
         if (TestComponent)
         {
             TestComponent->SetRelativeLocation(RelativeLoc);
             TestComponent->SetRelativeRotation(RelativeRot);
-            
-            if (!IsTemplate())
-            {
-                //if not invoke RegisterComponent(), 
-                //TestComponent would disappear in level editor when RelativeLoc or RelativeRot changed.
-                TestComponent->RegisterComponent();   
-            }
         }
     }
     
