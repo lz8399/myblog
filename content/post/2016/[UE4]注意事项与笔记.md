@@ -34,7 +34,8 @@ UE4还写莫名其妙的bug，这些bug可能是与引擎升级有关，可参�
 新建蓝图时，蓝图的属性会遵循C++父类中的构造函数中的属性设置。
 
 【2016-08-16】  
-用C++动态创建Component时（NewObject<Component>()），在`AttachToComponent`之前，需要执行`RegisterComponent`,否则无法Attach成功。备注：只有NewObject创建出来的Component才需要执行ResisterComponent，SpawnActor和ConstructorHelpers创建的对象则不需要。
+用C++动态创建Component时（NewObject<Component>()），在`AttachToComponent`之前，需要执行`RegisterComponent`,否则无法Attach成功，且TickComponent()无法触发。  
+备注：只有NewObject创建出来的Component才需要执行ResisterComponent，SpawnActor和ConstructorHelpers创建的对象则不需要。
 
 【2016-09-23】  
 UE4中的C++类继承规则：只能直接继承自两种类，一种是非UObject类，一种是继承过UInterface的UObject类。如果一个类是UObject且其父类没有一个是UInterface，则无法编译通过。

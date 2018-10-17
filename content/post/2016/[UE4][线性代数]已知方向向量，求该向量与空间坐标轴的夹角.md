@@ -44,10 +44,13 @@ FVector::Rotation()函数的内部实现（局部）：
 
     return R;
 	
-##### 情况三：两个平面向量的夹角度数
+##### 情况三：两个空间向量的夹角度数
 
-	FVector V1;
-	FVector V2;
-	float Angle = FMath::RadiansToDegrees(acosf(FVector::DotProduct(V1, V2)));
+	FVector V1 = ...;
+	FVector V2 = ...;
+	float Angle = FMath::RadiansToDegrees(acosf(FVector::DotProduct(V1.GetSafeNormal(), V2.GetSafeNormal())));
 	
-运算结果值的范围为：0到180。
+运算结果值的范围为：0到180。  
+{{< alert danger >}}
+求点积时的两个向量一定要是单位向量，否则计算结果会大于Pi（正常范围是0到Pi）。
+{{< /alert >}}
