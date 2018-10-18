@@ -6,7 +6,7 @@ tags= ["UE4"]
 keywords= ["UE4", "Cel Shading"]
 +++
 
-keywords：Cel Shading、Cartoon Shader、卡通渲染、无主之地风格
+keywords：Cel Shading、Cartoon Shader、Stylized Rendering、卡通渲染、无主之地风格
 
 Cel Shading Post Process  
 https://wiki.unrealengine.com/Cel_Shading_Post_Process

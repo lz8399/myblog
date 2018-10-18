@@ -38,6 +38,9 @@ https://www.reddit.com/r/unrealengine/comments/6qtxy3/test_blueprint_vs_c_perfor
 
 1，材质类型的性能，从快到慢：Opaque -> Masked -> Translucent。
 
+Performance Guidelines for Artists and Designers  
+https://docs.unrealengine.com/latest/INT/Engine/Performance/Guidelines/
+
 ##### 物理与碰撞优化
 
 1，BoxComponent的 Generate Overlap Events 设置为false。如果不需要Overlap事件，那么就将该属性设置设置为false，默认为true。当BoxCompont达到一定量级时，开启Generate Overlap Events的性能消耗是关闭情况下的两倍。

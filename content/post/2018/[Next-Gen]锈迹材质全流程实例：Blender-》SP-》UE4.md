@@ -104,7 +104,7 @@ Config选择UE4 -》勾选DefaultMaterial -》 Export
 打开Material蓝图，如下编辑材质
 {{< figure src="/img/20180320-[Material]锈迹材质全流程实例：Blender-》SP-》UE4/[Material]锈迹材质全流程实例：Blender-》SP-》UE4-30.jpg">}}
 
-OcclusionRoughnessMetallic贴图的红色通道连AO（环境光）、绿色通道连Roughness（粗燥度）、蓝色通道连Metallic（金属度），其他两张贴图用混合通道连对应名称。
+OcclusionRoughnessMetallic贴图的红色通道连AO（环境光遮蔽）、绿色通道连Roughness（粗燥度）、蓝色通道连Metallic（金属度），其他两张贴图用混合通道连对应名称。
 
 
 材质球效果

@@ -6,6 +6,7 @@ tags= ["UE4"]
 keywords= ["UE4", "Root Motion", "Montage"]
 +++
 
+##### 蓝图设置方式
 
 Root Motion 设置步骤：
 
@@ -19,3 +20,25 @@ Root Motion 设置步骤：
 
 Root Motion  
 https://docs.unrealengine.com/en-US/Engine/Animation/RootMotion
+
+##### C++设置方式
+
+UAnimMontage 的两个属性 `bEnableRootMotionTranslation`、`bEnableRootMotionRotation`，任意一个设置为 true 即可。
+
+AnimMontage.cpp 引擎代码：
+    
+    bool bRootMotionEnabled = bEnableRootMotionTranslation || bEnableRootMotionRotation;
+
+	if (bRootMotionEnabled)
+	{
+		for (FSlotAnimationTrack& Slot : SlotAnimTracks)
+		{
+			for (FAnimSegment& Segment : Slot.AnimTrack.AnimSegments)
+			{
+				if (Segment.AnimReference)
+				{
+					Segment.AnimReference->EnableRootMotionSettingFromMontage(true, RootMotionRootLock);
+				}
+			}
+		}
+	}
