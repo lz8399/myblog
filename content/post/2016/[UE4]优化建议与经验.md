@@ -27,7 +27,11 @@ https://www.reddit.com/r/unrealengine/comments/6qtxy3/test_blueprint_vs_c_perfor
 
 ##### 灯光优化
 
-1，3种光源的性能消耗从低到高：定向光/平行光(Directional Light) < 点光源(Point Light) < 聚光灯(Spot Light)。这个标准不局限于UE4，其他引擎也是这样。当光源数量在场景中达到一定量级时，3种灯光的性能差距也是数量级上差距。
+1，3种光源的性能消耗从低到高：  
+定向光/平行光(Directional Light) < 点光源(Point Light) < 聚光灯(Spot Light)。  
+这个标准不局限于UE4，其他引擎也是这样。当光源数量在场景中达到一定量级时，3种灯光的性能差距也是数量级上差距。
+
+2，在建构光照贴图时，若场景中没有给予Lightmass Importance Volume，会对整个场景做间接光照的采样，产生Indirect Lighting Cache，这对大型游戏场景是相当的浪费，像是游戏角色到不了的中、远景不需要产生Indirect Lighting Cache，这时候就可以在场景中置入Lightmass Importance Volume，指定特定区域内才会产生Indirect Lighting Cache，节省不少建构光照的时间。
 
 ##### 阴影优化
 

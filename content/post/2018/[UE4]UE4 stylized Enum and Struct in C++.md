@@ -21,7 +21,7 @@ keywords= ["UE4", "Assertion", "UENUM", "USTRUCT", "枚举", "结构体"]
 2, using
 
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Status)
-    TEnumAsByte<Status> status;
+    TEnumAsByte<Status> Status;
     
 ##### struct
 
