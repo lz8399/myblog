@@ -12,3 +12,6 @@ This paper focuses on how the answer to this question changes depending on the s
 
 论文地址：Projectile Motion: Finding the Optimal Launch Angle  
 https://www.whitman.edu/Documents/Academics/Mathematics/2016/Henelsmith.pdf
+
+***
+`所有的战争都是内战，因为所有的人类都是同胞。——弗朗索瓦·费奈隆（FrancoisFenelon）`
