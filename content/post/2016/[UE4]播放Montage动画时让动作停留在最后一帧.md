@@ -8,9 +8,11 @@ tags:
 - API
 ---
 
+keywords：UE4、Montage、播放速度、播放速率、加速播放、减速播放
+
 三种方式
 ##### 方式1：
-在想要冻结的那一帧内，将SkeletonComponent的GlobalAnimRateScale属性设置为0。
+在想要冻结的那一帧内，将SkeletonComponent的GlobalAnimRateScale属性设置为0。  
 比如想要角色的骨骼定格在第三帧，那么就在动画播放到第三帧的时候将该属性设置为0。
 
     ACharacter::GetMesh()->GlobalAnimRateScale = 0.f;
