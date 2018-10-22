@@ -71,7 +71,30 @@ keywords：UE4、Montage、C++、播放速度、播放速率、加速播放、�
 注意：正常播放完AnimSequence时，只要不是设置为循环播放，播放完以后会自动停留在最后一帧。只有播放Montage时才需要设置以上属性。
 {{< /alert >}}
 
-##### Montage Section切换无效的问题
+##### C++播放Montage的指定Section
+
+方式1：  
+通过第三个参数 StartSectionName 指定 Section
+    
+    float ACharacter::PlayAnimMontage(class UAnimMontage* AnimMontage, float InPlayRate = 1.f, FName StartSectionName = NAME_None);
+
+方式2：  
+使用 `UAnimInstance::Montage_JumpToSection()` 
+
+    if (USkeletalMeshComponent *Mesh = Character->GetMesh())
+    {
+        if (UAnimInstance *AnimInst = Mesh->GetAnimInstance())
+        {
+            Char->PlayAnimMontage(MontagePtr);
+            AnimInst->Montage_JumpToSection(FName("step_03"), MontagePtr);
+        }
+    }
+    
+{{< alert danger >}}
+执行 Montage_JumpToSection 时请确保角色动画的正处于Section所属Montage的播放状态，否则 JumpToSection 无效。
+{{< /alert >}}
+
+##### Montage Section切换无效的问题(2018-02-11)
 
 keywords: UE4 Montage Section not working
 
