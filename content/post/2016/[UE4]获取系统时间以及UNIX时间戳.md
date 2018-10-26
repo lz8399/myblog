@@ -14,3 +14,8 @@ tags:
 C++代码：
 
     double now = FPlatformTime::Seconds();
+    
+将 Unix Timestamp 转换为年月日（year, month, day）:
+
+    FDateTime Time = FDateTime::FromUnixTimestamp(int64 UnixTime);
+    

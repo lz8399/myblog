@@ -496,5 +496,17 @@ Windows Package full screen(Windows 打包版本全屏显示)
 参考：  
 https://answers.unrealengine.com/questions/206504/how-to-default-fullscreen-in-shipping-package.html
 
+【2018-10-26T17:33】  
+获取文件的最后修改时间  
+需要头文件：
+
+    #include "Runtime/Core/Public/GenericPlatform/GenericPlatformFile.h"
+    #include "HAL/PlatformFilemanager.h"
+    
+API：
+    
+    IPlatformFile& Handle = FPlatformFileManager::Get().GetPlatformFile();
+    FDateTime Time = Handle.GetTimeStamp(TEXT("path-to-file"));
+
 ***
 `凡心所向，素履以往。生如逆旅，一苇以航。----木心`
