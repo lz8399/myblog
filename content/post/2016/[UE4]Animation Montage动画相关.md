@@ -47,6 +47,10 @@ keywords：UE4, C++, AnimSequence, AnimMontage, Slot, 动态创建, 播放动画
             }
         }
     }
+    
+{{< alert info >}}
+使用 UAnimInstance::PlaySlotAnimationAsDynamicMontage() 播放Montage时，参数 Animation Sequence 中 Notify 仍然对动态生成的 Montage 有效，即：Montage 也会触发同样的Notify。
+{{< /alert >}}
 
 ##### 播放Montage动画时让动作停留在最后一帧
 
@@ -110,6 +114,40 @@ https://answers.unrealengine.com/questions/172537/montage-unwanted-section-switc
 {{< alert warning >}}
 如果Section的时间很短，需要将 Blend In 和 Blend Out 设置为 改小或者设置为 0（默认为0.25），否则 JumpToSection 无效果。
 {{< /alert >}}
+
+##### Montage 循环播放(2018-10-26)
+
+如果用动画蓝图控制动画切换，直接用动画状态机去指定 AnimSequence 即可，不需要其他设置，因为动画蓝图会自动根据状态机去循环播放指定的 AnimSequence 。  
+如果用C++播放Montage，则需要注意以下细节：
+
+1. 如果是使用现成的Montage资源，需要将Montage设置为循环播放，方式如下：  
+打开Montage编辑窗口后，先鼠标单击位置1，然后鼠标单击位置2（都是鼠标左键单击）
+{{< figure src="/img/20160218-[UE4]Animation Montage动画相关/[UE4]Animation Montage动画相关-02.jpg">}}
+然后Preview Section 进度条中就多了一个 X ，此时表示Montage为循环播放了
+{{< figure src="/img/20160218-[UE4]Animation Montage动画相关/[UE4]Animation Montage动画相关-03.jpg">}}
+之后再执行 `ACharacter::PlayAnimMontage()` 就可以自动循环播放指定Montage了。{{< hl-text green >}}PlayAnimMontage() 只需执行一次即可。{{< /hl-text >}}
+
+2. 如果动态创建Montage并播放，则需要将`LoopCount`设置为足够大，比如 9999。这样当前Montage就会循环播放：
+
+        AnimInstance->PlaySlotAnimationAsDynamicMontage(AnimSeq, TEXT("DefaultSlot"), 0.25f, 0.25f, 1.f, 9999));
+        
+{{< alert danger >}}
+这种方式是否可行：不设置Montage循环播放，而是在Tick中不停检测上一次Montage的累计播放时长，当播完时马上执行下一次播放。答案是不可行！！实际效果是：两次的Montage播放之间会有短暂时间切换到Idle状态动画。
+{{< /alert >}}
+    
+##### 停止Montage播放
+如果要停止当前正在播放的Montage，则执行`StopAnimMontage()`：
+
+    void ACharacter::StopAnimMontage(class UAnimMontage* AnimMontage);
+
+##### Montage 切换时没有融合的问题
+
+原因：  
+Montage 的参数`Blend In`被设置为了0。
+
+解决办法：  
+将Montage 的参数`Blend In`（Blend Option -> Blend In -> Blend Time）改成大于0，比如默认值0.25。
+
 
 ***
 `人生如逆旅，我亦是行人。----苏轼《临江仙》`
