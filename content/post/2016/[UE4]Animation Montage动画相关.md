@@ -75,7 +75,7 @@ keywords：UE4、Montage、C++、播放速度、播放速率、加速播放、�
 注意：正常播放完AnimSequence时，只要不是设置为循环播放，播放完以后会自动停留在最后一帧。只有播放Montage时才需要设置以上属性。
 {{< /alert >}}
 
-##### C++播放Montage的指定Section
+##### C++播放Montage时指定Section
 
 方式1：  
 通过第三个参数 StartSectionName 指定 Section
@@ -139,6 +139,10 @@ https://answers.unrealengine.com/questions/172537/montage-unwanted-section-switc
 如果要停止当前正在播放的Montage，则执行`StopAnimMontage()`：
 
     void ACharacter::StopAnimMontage(class UAnimMontage* AnimMontage);
+    
+{{< alert warning >}}
+如果希望停止播放Montage时有动画融合效果，记得将Montage的Blend Out Time设置为大于0，比如默认值 0.25 。
+{{< /alert >}}
 
 ##### Montage 切换时没有融合的问题
 

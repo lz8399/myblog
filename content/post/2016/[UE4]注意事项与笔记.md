@@ -507,6 +507,13 @@ API：
     
     IPlatformFile& Handle = FPlatformFileManager::Get().GetPlatformFile();
     FDateTime Time = Handle.GetTimeStamp(TEXT("path-to-file"));
+    
+【2018-10-27T15:34】  
+粒子特效（发射器）无法旋转和移动的问题。  
+Particle Effect Emitter can't move or rotate in Editor.  
+解决办法：Emitter下的Required的属性Use Local Space设置为 true。
+
+
 
 ***
 `凡心所向，素履以往。生如逆旅，一苇以航。----木心`
