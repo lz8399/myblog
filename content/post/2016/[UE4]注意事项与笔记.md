@@ -513,6 +513,9 @@ API：
 Particle Effect Emitter can't move or rotate in Editor.  
 解决办法：Emitter下的Required的属性Use Local Space设置为 true。
 
+【2018-10-27T20:47】  
+NewObject创建出来的Actor，如果没有放入场景中，其`BeginPlay()`、`Tick()`函数不会触发，即使设置了`PrimaryActorTick.bCanEverTick = true;`。
+
 
 
 ***

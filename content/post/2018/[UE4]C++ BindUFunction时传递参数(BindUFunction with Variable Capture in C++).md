@@ -80,6 +80,19 @@ https://answers.unrealengine.com/questions/109955/bind-delegate-with-one-paramet
 + BindUObject()：针对UObject类型Class的非UFUNCTION()函数。
 + BindUFunction：针对UObject类型Class的UFUNCTION()函数。
 
+BindRaw 示例：
 
+    FTimerDelegate TimerDel;
+    TimerDel.BindRaw(this, &MyClass::MyFunction);
+
+BindUObject 示例：
+
+    FTimerDelegate TimerDel;
+    TimerDel.BindUObject(this, &AMyCharacter::MyUFunction);
+
+BindUFunction 示例：
+
+    TimerDel.BindUFunction(this, FName("TestFun"));
+    
 ***
 `天上的神明和星辰，人间的艺术与真纯，我们所敬畏和景仰的，莫过于此。`
