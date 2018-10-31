@@ -66,7 +66,7 @@ tags:
 
 ### C++方式
 
-C++方式也需要上面蓝图的前面步骤，从第7步开始，后面的步骤都不需要了。
+C++方式也需要上面蓝图的前面步骤，{{< hl-text red >}}从第7步开始，后面的步骤都不需要了{{< /hl-text >}}。
 具体代码如下：
 
     UParticleSystemComponent* PSC = UGameplayStatics::SpawnEmitterAtLocation(GameMode->GetWorld(), EmitterTemplate, Location, FRotator::ZeroRotator, true);
@@ -76,9 +76,9 @@ C++方式也需要上面蓝图的前面步骤，从第7步开始，后面的步�
     FLinearColor OutColor;
     PSC->GetColorParameter(FName(TEXT("ParamFireColor ")), OutColor);
 
-`注意：要Get参数之前，必须先Set一次，否则无法Get。`
-
-
+{{< alert danger >}}
+注意：要Get参数之前，必须先Set一次，否则无法Get。
+{{< /alert >}}
 
 
 相关参考：
