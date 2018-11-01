@@ -93,3 +93,17 @@ cpp:
         }
     }
     
+    void AMyActor::PostLoad()
+    {
+        Super::PostLoad();
+        
+        if (TestComponent)
+        {
+            TestComponent->SetRelativeLocation(RelativeLoc);
+            TestComponent->SetRelativeRotation(RelativeRot);
+        }
+    }
+        
+{{< alert warning >}}
+If not override PostLoad, modification of properties would not take effect when start Editor at first time.
+{{< /alert >}}
