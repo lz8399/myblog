@@ -5,16 +5,24 @@ categories= ["Maya"]
 tags= ["Modeling"]
 +++
 
+##### 创建Parent
 
 打开Outliner，选中需要执行Parent操作的物体。
 {{< figure src="/img/20170830-[Maya]Parent/[Maya]Parent-01.jpg">}}
 
-<font color=red>需要同时选中多个，如果只选择一个无法执行Parent。且最先选中的哪个物体，则该物体会被当作父节点，其他物体当作子节点。</font>
+{{< alert info >}}
+如果是两个物体，则第一个被选中的物体会被作为子物体；  
+如果是三个及三个以上物体，则第一个被选中物体会被作为父物体，其他的作为子物体。
+{{< /alert >}}
 
-选中后在点击：Edit -》 Parent。
+选中后在点击：Edit -》 Parent（快捷键P）。
 {{< figure src="/img/20170830-[Maya]Parent/[Maya]Parent-02.jpg">}}
 {{< figure src="/img/20170830-[Maya]Parent/[Maya]Parent-03.jpg">}}
 子物体执行Transform，父物体不会变换，但父物体执行Transform，所有物体都会变换。
+
+##### 取消Parent
+
+选中父物体和子物体后，按：Shift + P。
 
 ***
 `东风夜放花千树，更吹落、是如雨。---辛弃疾《青玉案 元夕》`
