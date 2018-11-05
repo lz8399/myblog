@@ -10,7 +10,7 @@ keywords= ["UE4", "Root Motion", "Montage"]
 
 Root Motion 设置步骤：
 
-1. 先在 AnimSequence 的`Asset Detail`面板中勾选`EnableRootMotion`和`Force` Root Lock`。
+1. 先在 AnimSequence 的`Asset Detail`面板中勾选`EnableRootMotion`和`Force Root Lock`。
 2. 然后基于该 AnimSequence 新建一个 AnimMontage。
 3. 然后再在 AnimationBluerpint 中设置`Root Motion Mode`为 `Root Motion From Montages Only`（Class Defaults 面板下，不是Class Settings）。
 

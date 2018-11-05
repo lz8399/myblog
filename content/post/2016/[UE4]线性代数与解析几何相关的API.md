@@ -48,6 +48,14 @@ https://answers.unrealengine.com/questions/31058/how-to-get-an-angle-between-2-v
     
     bool UKismetMathLibrary::LinePlaneIntersection(const FVector& LineStart, const FVector& LineEnd, 
         const FPlane& APlane, float& T, FVector& Intersection);
+        
+计算平面外一点投射到平面的坐标点：
+        
+    FVector UKismetMathLibrary::ProjectPointOnToPlane(FVector Point, FVector PlaneBase, FVector PlaneNormal);
+
+计算平面外矢量投射到平面后的矢量：
+    
+    FVector UKismetMathLibrary::ProjectVectorOnToPlane(FVector V, FVector PlaneNormal);
 
 ##### 插值相关
 
