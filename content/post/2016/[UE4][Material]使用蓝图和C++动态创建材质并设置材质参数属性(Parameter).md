@@ -52,15 +52,14 @@ tags:
 {{< figure src="/img/20161127-[UE4][Material]使用蓝图和C++动态创建材质并设置材质参数属性(Parameter)/[UE4][Material]动态创建材质并设置材质参数属性(Parameter)-12.jpg">}}  
 
 #### C++方式：
-MaterialInstance.h
+MaterialInstanceDynamic.h
 
-    /**
-     * Internal interface for setting / updating values for material instances.
-     */
-    void SetVectorParameterValueInternal(FName ParameterName, FLinearColor Value);
-    bool SetVectorParameterByIndexInternal(int32 ParameterIndex, FLinearColor Value);
-    bool SetScalarParameterByIndexInternal(int32 ParameterIndex, float Value);
-    void SetScalarParameterValueInternal(FName ParameterName, float Value);
-    void SetTextureParameterValueInternal(FName ParameterName, class UTexture* Value);
-    void SetFontParameterValueInternal(FName ParameterName, class UFont* FontValue, int32 FontPage);
-    void ClearParameterValuesInternal(const bool bAllParameters = true);
+    void SetVectorParameterValue(FName ParameterName, FLinearColor Value);
+    
+    bool SetScalarParameterValue(FName ParameterName,, float Value);
+    
+    void SetTextureParameterValue(FName ParameterName, class UTexture* Value);
+    
+    void SetFontParameterValue(const FMaterialParameterInfo& ParameterInfo, class UFont* FontValue, int32 FontPage);
+    
+    void ClearParameterValuesInternal();

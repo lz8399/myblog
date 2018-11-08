@@ -516,5 +516,17 @@ Particle Effect Emitter can't move or rotate in Editor.
 【2018-10-27T20:47】  
 NewObject创建出来的Actor，如果没有放入场景中，其`BeginPlay()`、`Tick()`函数不会触发，即使设置了`PrimaryActorTick.bCanEverTick = true;`。
 
+【2018-11-08T20:54】  
+
+SpawnActor时如何延迟执行Actor的构造函数？  
+先执行`UGameplayStatics::BeginDeferredActorSpawnFromClass()`，然后执行`UGameplayStatics::FinishSpawningActor()`。
+
+    /** Spawns an instance of an actor class, but does not automatically run its construction script.  */
+    static class AActor* BeginDeferredActorSpawnFromClass(const UObject* WorldContextObject, TSubclassOf<AActor> ActorClass, const FTransform& SpawnTransform, ESpawnActorCollisionHandlingMethod CollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::Undefined, AActor* Owner = nullptr);
+
+	/** 'Finish' spawning an actor.  This will run the construction script. */
+	static class AActor* FinishSpawningActor(class AActor* Actor, const FTransform& SpawnTransform);
+
+
 ***
 `凡心所向，素履以往。生如逆旅，一苇以航。----木心`

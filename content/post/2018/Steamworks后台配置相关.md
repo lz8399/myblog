@@ -75,3 +75,16 @@ E:\SteamSdk\tools\ContentBuilder\builder
 也可以一次行执行两个操作：
 
     Steamcmd.exe +login "用户名带双引号" "密码带双引号" +run_app_build E:\SteamSdk\tools\ContentBuilder\scripts\app_build_xxxxxx.vdf
+
+##### DLC上传
+
+DLC上传的方式与游戏主程序包体的上传方式有点类似
+
+Downloadable Content (DLC)  
+https://partner.steamgames.com/doc/store/application/dlc
+
+判断是否已经安装了DLC：
+
+    bool ISteamApps::BIsDlcInstalled( AppId_t appID );
+    
+    
