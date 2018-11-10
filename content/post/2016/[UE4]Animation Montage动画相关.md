@@ -52,6 +52,10 @@ keywords：UE4, C++, AnimSequence, AnimMontage, Slot, 动态创建, 播放动画
 使用 UAnimInstance::PlaySlotAnimationAsDynamicMontage() 播放Montage时，参数 Animation Sequence 中 Notify 仍然对动态生成的 Montage 有效，即：Montage 也会触发同样的Notify。
 {{< /alert >}}
 
+{{< alert danger >}}
+使用PlaySlotAnimationAsDynamicMontage()播放Montage时，如果不是循环播放的Montage，播放完毕后一定要执行 UAnimInstance::Montage_Stop() 停掉当前Montage，否则会干扰蓝图动画的逻辑，导致切换其他Montage时无效。
+{{< /alert >}}
+
 ##### 播放Montage动画时让动作停留在最后一帧
 
 keywords：UE4、Montage、C++、播放速度、播放速率、加速播放、减速播放
@@ -139,6 +143,10 @@ https://answers.unrealengine.com/questions/172537/montage-unwanted-section-switc
 如果要停止当前正在播放的Montage，则执行`StopAnimMontage()`：
 
     void ACharacter::StopAnimMontage(class UAnimMontage* AnimMontage);
+    
+或者
+
+    void UAnimInstance::Montage_Stop(float InBlendOutTime, const UAnimMontage* Montage = NULL);
     
 {{< alert warning >}}
 如果希望停止播放Montage时有动画融合效果，记得将Montage的Blend Out Time设置为大于0，比如默认值 0.25 。
