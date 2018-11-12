@@ -160,6 +160,13 @@ Montage 的参数`Blend In`被设置为了0。
 解决办法：  
 将Montage 的参数`Blend In`（Blend Option -> Blend In -> Blend Time）改成大于0，比如默认值0.25。
 
+##### 设置Montage播放结束和融合结束后的回调函数
+
+    //设置Montage播放完毕后的回调
+    void UAnimInstance::Montage_SetEndDelegate(FOnMontageEnded & InOnMontageEnded, UAnimMontage* Montage = NULL);
+	
+    //设置Montage融合完毕后的回调
+	void UAnimInstance::Montage_SetBlendingOutDelegate(FOnMontageBlendingOutStarted & InOnMontageBlendingOut, UAnimMontage* Montage = NULL);
 
 ***
 `人生如逆旅，我亦是行人。----苏轼《临江仙》`
