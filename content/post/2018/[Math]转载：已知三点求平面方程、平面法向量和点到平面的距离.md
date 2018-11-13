@@ -52,6 +52,18 @@ tags= ["Math"]
     {
         return f_abs(a * pt.x + b * pt.y + c * pt.z + d) / sqrt(a * a + b * b + c * c);
     }
+    
+UE4提供的工具函数：
+
+    /**
+	* Calculate the projection of a point on the plane defined by PlaneBase and PlaneNormal.
+	*
+	* @param Point The point to project onto the plane
+	* @param PlaneBase Point on the plane
+	* @param PlaneNorm Normal of the plane (assumed to be unit length).
+	* @return Projection of Point onto plane
+	*/
+	static FVector FVector::PointPlaneProject(const FVector& Point, const FVector& PlaneBase, const FVector& PlaneNormal);
 
 ##### 参考
 

@@ -73,3 +73,8 @@ UNavigationSystem::FindPathSync也可以判断，但是他会返回寻路结果�
 其他的API还有：
 
     UNavigationSystem::ProjectPointToNavigation
+    
+4.20版本获取`NavigationSystem`方法：
+
+    UNavigationSystemV1* UNavigationSystemV1::GetNavigationSystem(UObject* WorldContextObject);
+    

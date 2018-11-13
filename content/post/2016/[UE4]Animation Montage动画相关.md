@@ -168,5 +168,18 @@ Montage 的参数`Blend In`被设置为了0。
     //设置Montage融合完毕后的回调
 	void UAnimInstance::Montage_SetBlendingOutDelegate(FOnMontageBlendingOutStarted & InOnMontageBlendingOut, UAnimMontage* Montage = NULL);
 
+##### 动画状态机切换动画时让动画停留在最后一帧
+
+动画蓝图中的State内部播放动画的节点属性`Loop`修改为`false`：
+{{< figure src="/img/20160218-[UE4]Animation Montage动画相关/[UE4]Animation Montage动画相关-04.jpg">}}
+{{< figure src="/img/20160218-[UE4]Animation Montage动画相关/[UE4]Animation Montage动画相关-05.jpg">}}
+
+如果想让动画停留在最后一帧，另一种方式是在动画的结尾添加Notify事件，在事件中修改动画的播放速率为0。
+
+##### Montage播放完毕后自动停止在最后一帧
+
+将`Enable Auto Blend Out`属性设置为false，这样当Montage播放到结尾时不会自动Blend Out，而是停留在最后一帧直到手动Stop。
+{{< figure src="/img/20160218-[UE4]Animation Montage动画相关/[UE4]Animation Montage动画相关-06.jpg">}}
+    
 ***
 `人生如逆旅，我亦是行人。----苏轼《临江仙》`
