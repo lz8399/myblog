@@ -6,7 +6,7 @@ tags= ["UE4"]
 keywords= ["UE4", "BoundsBox"]
 +++
 
-可能是场景的StaticMesh的Bounds Box范围有问题，需要在Max或者Maya中修改Bounds Box
+可能是场景的StaticMesh的Bounds Box范围有问题，需要在Max或者Maya中修改 Collision 。
 
 {{< figure src="/img/20171216-[UE4]角色悬在半空的问题（BoundsBox）/[UE4]角色悬在半空的问题（BoundsBox）-01.jpg">}}
 
