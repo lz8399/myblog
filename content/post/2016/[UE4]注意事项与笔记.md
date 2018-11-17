@@ -527,6 +527,9 @@ SpawnActor时如何延迟执行Actor的构造函数？
 	/** 'Finish' spawning an actor.  This will run the construction script. */
 	static class AActor* FinishSpawningActor(class AActor* Actor, const FTransform& SpawnTransform);
 
+【2018-11-17T16:23】  
+4.20打包安卓版时有个bug，如果使用了Post Process Volume，里面改了某些特定参数后，会导致游戏启动时一直卡在奇怪的画面：一块灰色墙的画面，即使测试场是一个空白场景。  
+具体是Post Process Volume的哪个参数影响了，没有具体去测。使用默认参数没有问题。
 
 ***
 `凡心所向，素履以往。生如逆旅，一苇以航。----木心`

@@ -154,8 +154,9 @@ https://answers.unrealengine.com/questions/523891/414-servertravel-with-more-tha
 How can I change the level for all connected clients in a multiplayer game?  
 https://answers.unrealengine.com/questions/50860/bp-change-level-map-in-multiplayer.html
 
-UE4流关卡与无缝地图切换总结  
+UE4流关卡与无缝地图切换总结（推荐，两篇文章为同一个作者）  
 http://blog.csdn.net/u012999985/article/details/78484511
+https://zhuanlan.zhihu.com/p/34397446
 
 ***
 `白日不到处，青春恰自来。`  
