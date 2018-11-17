@@ -13,5 +13,10 @@ This paper focuses on how the answer to this question changes depending on the s
 论文地址：Projectile Motion: Finding the Optimal Launch Angle  
 https://www.whitman.edu/Documents/Academics/Mathematics/2016/Henelsmith.pdf
 
+##### UE4实现：如何绕开障碍物并投掷到指定位置
+
+Projectile: How to avoid obstacle & hit target  
+https://www.reddit.com/r/unrealengine/comments/9xfdei/projectile_how_to_avoid_obstacle_hit_target/
+
 ***
 `所有的战争都是内战，因为所有的人类都是同胞。——弗朗索瓦·费奈隆（FrancoisFenelon）`

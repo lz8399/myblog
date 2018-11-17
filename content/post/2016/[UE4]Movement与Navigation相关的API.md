@@ -1,5 +1,5 @@
 +++
-title= "[UE4]Movement相关的API"
+title= "[UE4]Movement与Navigation相关的API"
 date= "2016-06-19T17:33:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4", "API"]
@@ -74,7 +74,32 @@ UNavigationSystem::FindPathSync也可以判断，但是他会返回寻路结果�
 
     UNavigationSystem::ProjectPointToNavigation
     
-4.20版本获取`NavigationSystem`方法：
+**4.20版本**获取`NavigationSystem`方法：
 
     UNavigationSystemV1* UNavigationSystemV1::GetNavigationSystem(UObject* WorldContextObject);
+    
+##### 寻路移动结束时的回调事件
+
+代码：
+
+    UPathFollowingComponent::OnMoveFinished
+
+##### 如何获取两点之间的寻路路径(Vector数组)
+
+代码：
+    
+    //4.20之前版本用法：UNavigationSystem* NavSys = UNavigationSystem::GetCurrent(GetWorld());
+    UNavigationSystemV1* NavSys = UNavigationSystemV1::GetNavigationSystem(GetWorld());
+     
+    UNavigationPath *tpath = NavSys->FindPathToLocationSynchronously(GetWorld(), GetActorLocation(), end_point);
+         
+    if (tpath != NULL)
+    {
+         for (int pointiter = 0; pointiter < tpath->PathPoints.Num(); pointiter++)
+         {
+             DrawDebugSphere(GetWorld(), tpath->PathPoints[pointiter], 10.0f, 12, FColor(255, 0, 0));
+         }
+    }
+
+参考：https://answers.unrealengine.com/questions/102126/how-do-i-get-the-navigation-path-to-a-point.html
     
