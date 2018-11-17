@@ -50,5 +50,11 @@ https://www.youtube.com/watch?v=-u1uzJxa94Q
 Ue4: Post Processing Volume - Bloom and Lens Flare  
 https://www.youtube.com/watch?v=7CU5_gLIJBs
 
+
+##### 移动端的Post Process Volume 问题
+
+4.20打包安卓版时有个问题：`Post Process Volume` 添加了一个Post Process Materials，这个Material在PC端没有问题，但是在安卓上会遮挡整个摄像机。  
+但不是每个Material都有这种问题，具体是Material中什么的逻辑导致这种问题，没详细严重过。
+
 ***
 `抱必死的心，走永远的路。`
