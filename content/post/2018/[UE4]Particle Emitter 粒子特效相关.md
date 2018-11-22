@@ -12,3 +12,6 @@ UParticleSystemComponent 有个EmitterInstances属性，里面包含了特效中
 
     TArray<struct FParticleEmitterInstance*> EmitterInstances;
 
+##### 粒子循环播放
+
+打开特效编辑器 -》 选中要循环播放的粒子(Emitter) -》 Spawn -》修改 `Emitter Loops` 为0，表示循环播放。
