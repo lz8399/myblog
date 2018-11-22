@@ -12,11 +12,12 @@ tags= ["UE4", "API"]
 
 
 
-将FString转换为char*：
+将FString转换为 TCHAR*：
 
-    FString s;  
-    char *c = *s;  
+    FString str;  
+    TCHAR *c1 = *str;  
 
+    TCHAR* c2 = str.GetCharArray().GetData();  
 
 
 将string转换为int或者float：
@@ -75,15 +76,22 @@ tags= ["UE4", "API"]
 
     
 ##### TCHAR*、wchar_t*、char* 转换相关
+    
+    //char 转换为 TCHAR 
+    TCHAR* msg = ANSI_TO_TCHAR("dddd");  
+    TCHAR* msg2 = UTF8_TO_TCHAR("dddd");  
+
+    
+    //TCHAR 转换为 char
+    char* Str4 = TCHAR_TO_UTF8(*Str);
+    char* Str4 = TCHAR_TO_ANSI(*Str);
 
     //TCHAR 转换为 wchar_t
     FSting Str;
     wchar_t* Str2 = TCHAR_TO_WCHAR(*Str);
-
-    //TCHAR 转换为 char
-    char* Str4 = TCHAR_TO_UTF8(*Str);
-    char* Str4 = TCHAR_TO_ANSI(*Str);
     
+    //wchar_t 转换为 TCHAR 
     wchar_t Str5[] = L"sss";
     TCHAR* Str6 = (TCHAR*)Str5;
+    
     

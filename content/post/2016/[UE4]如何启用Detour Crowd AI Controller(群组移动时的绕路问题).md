@@ -29,6 +29,26 @@ cpp：
     {        
     }
 
+**注意事项：**  
+使用默认的UCrowdFollowingComponent，角色在转向时会抖动，要解决这个问题，需要将属性`UCrowdFollowingComponent::bSuspendCrowdSimulation`设置为true。  
+完整代码：
+
+    #include "Navigation/CrowdFollowingComponent.h"
+
+    AMyAIController::AMyAIController(const FObjectInitializer& ObjectInitializer)
+        : Super(ObjectInitializer.SetDefaultSubobjectClass<UCrowdFollowingComponent>(TEXT("PathFollowingComponent")))
+    {
+        if (UCrowdFollowingComponent* CrowdComp = Cast<UCrowdFollowingComponent>(GetComponentByClass(UCrowdFollowingComponent::StaticClass())))
+        {
+            CrowdComp->SuspendCrowdSteering(true);
+            //CrowdComp->SetCrowdAnticipateTurns(true);
+            //CrowdComp->SetCrowdSeparation(true);
+            //CrowdComp->SetCrowdPathOffset(true);
+            //CrowdComp->SetCrowdAvoidanceQuality(ECrowdAvoidanceQuality::High);
+        }
+    }
+
+
 
 ##### Crowd Manager 配置
 Project Settings -》Engine -》 Navigation System -》 Crowd Manager Class

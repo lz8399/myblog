@@ -17,10 +17,23 @@ tags:
 再勾选Dynamic Obstacle（默认是勾选的）
 ![This is an image](/img/20160801-[UE4]引擎提供的避让动态障碍物的寻路功能/[UE4]引擎提供的避让动态障碍物的寻路功能-03.jpg)
 
-但这里有个问题，胶囊体上下部分是半球形的，整个胶囊体与地面接触时只有一个点，对NavMesh来说不是一个障碍物，如果要让物体成为NavMesh中的障碍物，那么需要增加一个box类型的刚体：
+##### Epic官方讲解的动态避让AI方案
+
+Dynamic Navigation Mesh  
+https://answers.unrealengine.com/questions/223395/dynamic-navigation-mesh.html
+
+Unreal Engine 4 Support Twitch Broadcast: AI  
+https://www.youtube.com/watch?v=7LaazCv4rB0
+
+
+##### Static Mesh 动态遮挡
+
+添加一个box类型的刚体：
 ![This is an image](/img/20160801-[UE4]引擎提供的避让动态障碍物的寻路功能/[UE4]引擎提供的避让动态障碍物的寻路功能-04.jpg)
 
 然后再设置这个box的属性值Dynamic Obstacle为true：
 ![This is an image](/img/20160801-[UE4]引擎提供的避让动态障碍物的寻路功能/[UE4]引擎提供的避让动态障碍物的寻路功能-05.jpg)
 
-这样当有box collistion的角色在场景移动时，NavMesh会实时更新。这种操作可能对服务端性能影响较大，具体还没测过。
+这样当有box collistion的角色在场景移动时，NavMesh会实时更新。  
+如果针对Character也使用这种方式，那么Character的移动只能通过SetActorLocation()处理，MavigateSystem的MoveTo接口会失效。
+

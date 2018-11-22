@@ -13,11 +13,11 @@ tags:
 
 如果用C++，则如下：
 
-    UBoxComponent* CollisionMesh = CreateDefaultSubobject<UBoxComponent>(TEXT("TestCollision"));
-    CollisionMesh->SetBoxExtent(FVector(32.f, 32.f, 96.f));
-    CollisionMesh->bDynamicObstacle = true;
+    UBoxComponent* CollisionBox = CreateDefaultSubobject<UBoxComponent>(TEXT("TestCollision"));
+    CollisionBox->SetBoxExtent(FVector(32.f, 32.f, 96.f));
+    CollisionBox->bDynamicObstacle = true;
 
-    CollisionMesh->SetupAttachment(GetRootComponent());
+    CollisionBox->SetupAttachment(GetRootComponent());
     
 注：
 `使用CreateDefaultSubobject必须在构造函数中`，如果是其他成员函数，则形式为

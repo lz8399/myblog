@@ -35,3 +35,7 @@ bUseLoggingInShipping = true; 只对源码编译的引擎版本有效，Launcher
 我们希望这句话在Android Device Monitor中能也能够打印出来，默认情况下，需要在将设备的Config设置为DebugGame或者Development，Shipping下则不会打印。
 
 {{< figure src="/img/20161016-[UE4]Shipping版本中开启UE_LOG的注意事项/[UE4]Shipping版本中开启UE_LOG的注意事项-01.jpg">}}
+
+{{< alert warning >}}
+Android Device Monitor中显示的游戏UE_LOG，统一都是Debug级别的蓝色，即使是UE_LOG的级别为Error，显示的也是蓝色。
+{{< /alert >}}
