@@ -10,20 +10,22 @@ keywords：UE4性能优化、Performance Optimization
 
 ##### 零散记录
 
-1，GPUProfile来统计性能消耗的时候，在editor模式下不是很准，因为编辑器的消耗也算进去了，如果要用，最好以Game模式来查看。
+1. GPUProfile来统计性能消耗的时候，在editor模式下不是很准，因为编辑器的消耗也算进去了，如果要用，最好以Game模式来查看。
 
-2，UE4不支持640X480的分辨率，如果在这个分辨率下运行程序，会导致程序崩溃。
+2. UE4不支持640X480的分辨率，如果在这个分辨率下运行程序，会导致程序崩溃（4.4版本，不知最新版本是否仍有此问题）。
 
-3，如果角色身上有很多Component需要Attach，尽量在使用时Attach，不要一加载就全部attach，否则当场景中角色很多时，会有严重性能问题。  
+3. 如果角色身上有很多Component需要Attach，尽量在使用时Attach，不要一加载就全部attach，否则当场景中角色很多时，会有严重性能问题。  
 比如：场景中有几百个角色，但不是每个角色都需要摄像机和弹簧臂，那么在构造函数中就不要创建摄像机和弹簧臂组件。
 
-4，面数对UE4来说不敏感，即使在移动端。ipad 4上，50万的三角面，也能够以30fps帧率稳定运行，移动端主要对贴图大小、材质复杂度较为敏感。
+4. 面数对UE4来说不敏感，即使在移动端。ipad 4上，50万的三角面，也能够以30fps帧率稳定运行，移动端主要对贴图大小、材质复杂度较为敏感。
 
-5，地形编辑时，使用Instanced Static Meshes。Intancing会增加GPU的开销，但是可以显著降低CPU的开销。注意：Instancing不会减少CPU draw call次数，要减少draw call次数，需要减少材质种类，提供材质复用率。
+5. 地形编辑时，使用Instanced Static Meshes。Intancing会增加GPU的开销，但是可以显著降低CPU的开销。注意：Instancing不会减少CPU draw call次数，要减少draw call次数，需要减少材质种类，提供材质复用率。
 
-6，C++ 比 蓝图快100到1000倍  
+6. C++ 比 蓝图快100到1000倍  
 [Test] Blueprint vs C++ Performance vs Nativized BP  
 https://www.reddit.com/r/unrealengine/comments/6qtxy3/test_blueprint_vs_c_performance_vs_nativized_bp/
+
+7. 
 
 ##### 灯光优化
 

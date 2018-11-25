@@ -12,11 +12,11 @@ keywords: Occlusion Culling, 遮挡剔除, 场景优化, Scene Optimization
 
 Unreal Engine 4 uses an automatic process for culling that uses Scene Depth and the bounds of an object.
 
-When using the Wireframe viewmode, this is not a good method for testing if an object is occluded in UE4. You can use the (Editor only) console command r.visualizeOccludedPrimitives 1 to view the occluded objects. This will render a green bounds box for any objects that are occluded. Adjusting the bounds scale will increase the green bounding box and can cause the mesh to be rendered even when it's not in view.
+When using the Wireframe viewmode, this is not a good method for testing if an object is occluded in UE4. You can use the (Editor only) console command `r.visualizeOccludedPrimitives 1` to view the occluded objects. This will render a green bounds box for any objects that are occluded. Adjusting the bounds scale will increase the green bounding box and can cause the mesh to be rendered even when it's not in view.
 
 In the project settings you can disable Occlusion Culling completely if you need, but in most cases this is not needed.
 
-There is an alternative method of occlusion in the engine that is not on by default. It's less strict than the currently default method. You can enable this by using the console command r.HZBOcclusion 1
+There is an alternative method of occlusion in the engine that is not on by default. It's less strict than the currently default method. You can enable this by using the console command `r.HZBOcclusion 1`
 
 This uses an approximation with occlusion culling. It will occlude the mesh dependent more on size and bounds scale than strictly on bounds scale. This can be useful in some instances, but problematic in others where it would cause meshes to be rendered that you wouldn't necessarily wan to be when hidden. This is largely why it's not on by default at the moment.
 

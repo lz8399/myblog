@@ -33,5 +33,10 @@ https://answers.unrealengine.com/questions/579186/what-about-visual-studio-2017-
 官方文档：  
 https://docs.unrealengine.com/latest/INT/Programming/UnrealBuildSystem/ProjectFileGenerator/index.html
 
+##### Visual Studio 所需的最低 Windows SDK 版本
+【2018-11-25】  
+4.18需要安装 Windows SDK 8.1，否则无法 Generate VS project file；  
+4.20不需要安装 Windows SDK 8.1，只需点选最新版本的 Windows SDK 即可。
+
 ***
 `琵琶弦上说相思，当时明月在，曾照彩云归。---晏几道《临江仙》`

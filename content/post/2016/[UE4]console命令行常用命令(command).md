@@ -90,6 +90,10 @@ Camera [modename]
                            469.638ms (   3)  -  LoadObject - STAT_LoadObject - STATGROUP_Object - STATCAT_Advanced
                              377.887ms (   3)  -  Self
                              26.688ms ( 533)  -  STAT_FArchiveAsync2_WaitRead - STATGROUP_Quick - STATCAT_Advanced
+                             
+查看遮挡剔除：
+                             
+    r.visualizeOccludedPrimitives 1
 
 ##### 性能统计图工具 Session Frontend
 用于记录某段时间内的性能分析数据。
