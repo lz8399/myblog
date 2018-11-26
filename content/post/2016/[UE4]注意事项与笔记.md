@@ -517,7 +517,6 @@ Particle Effect Emitter can't move or rotate in Editor.
 NewObject创建出来的Actor，如果没有放入场景中，其`BeginPlay()`、`Tick()`函数不会触发，即使设置了`PrimaryActorTick.bCanEverTick = true;`。
 
 【2018-11-08T20:54】  
-
 SpawnActor时如何延迟执行Actor的构造函数？  
 先执行`UGameplayStatics::BeginDeferredActorSpawnFromClass()`，然后执行`UGameplayStatics::FinishSpawningActor()`。
 
@@ -527,6 +526,10 @@ SpawnActor时如何延迟执行Actor的构造函数？
 	/** 'Finish' spawning an actor.  This will run the construction script. */
 	static class AActor* FinishSpawningActor(class AActor* Actor, const FTransform& SpawnTransform);
 
+【2018-11-26T10:23】  
+UMG 的文本动换行  
+TextBox 控件：然后修改`Auto Warp Text`为：true。
+TextBox(Multi-Line) 控件：然后修改`Warpping Policy`为：`Allow Per Character Warpping`。
 
 ***
 `凡心所向，素履以往。生如逆旅，一苇以航。----木心`

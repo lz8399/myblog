@@ -25,7 +25,10 @@ keywords：UE4性能优化、Performance Optimization
 [Test] Blueprint vs C++ Performance vs Nativized BP  
 https://www.reddit.com/r/unrealengine/comments/6qtxy3/test_blueprint_vs_c_performance_vs_nativized_bp/
 
-7. 
+7. 开启`Occlusion Culling` (Project Settings -> Engine -> Rendering -> Occlusion Culling，默认已开启)。如果需要强化遮挡剔除的力度（代价是剔除效果比较突兀）以提升渲染效率，将以下属性值增大：  
+Min Screen Radius for Lights  
+Min Screen Radius for Early Z Pass  
+Min Screen Radius for Cascaded Shadow Maps
 
 ##### 灯光优化
 
