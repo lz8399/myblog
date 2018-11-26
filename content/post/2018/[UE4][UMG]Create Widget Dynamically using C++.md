@@ -1,5 +1,5 @@
 +++
-title= "[UE4]Create Widget Dynamically using C++ in UMG"
+title= "[UE4][UMG]Create Widget Dynamically using C++"
 date= "2018-03-31T19:03:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
