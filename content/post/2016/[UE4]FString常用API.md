@@ -66,7 +66,7 @@ tags= ["UE4", "API"]
     int LenW = wcslen(s1);
     int LenC = LenW * 2;
 
-    //先转换为 char*, 比如 protobuf 不支持 wchar_t，那么可以将中文转换char储存再protobuf内部。
+    //先转换为 char*, 比如 protobuf 不支持 wchar_t，那么可以将中文转换为char，然后储存在protobuf内部。
     char* buf = new char[LenC + 1]();
     memcpy(buf, s1, LenC);
 
@@ -77,7 +77,7 @@ tags= ["UE4", "API"]
     
 ##### TCHAR*、wchar_t*、char* 转换相关
     
-    //char 转换为 TCHAR 
+    //char 转换为 TCHAR
     TCHAR* msg = ANSI_TO_TCHAR("dddd");  
     TCHAR* msg2 = UTF8_TO_TCHAR("dddd");  
 
@@ -94,4 +94,6 @@ tags= ["UE4", "API"]
     wchar_t Str5[] = L"sss";
     TCHAR* Str6 = (TCHAR*)Str5;
     
-    
+{{< alert danger >}}
+如果 char* 字符串有中文，转换为 FString 时，必须使用 ANSI_TO_TCHAR() 或者 UTF8_TO_TCHAR()，例如：FString Text = UTF8_TO_TCHAR("牛鼻"); 。否则会出现乱码。
+{{< /alert >}}
