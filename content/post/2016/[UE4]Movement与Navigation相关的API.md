@@ -78,9 +78,9 @@ UNavigationSystem::FindPathSync也可以判断，但是他会返回寻路结果�
 
     UNavigationSystemV1* UNavigationSystemV1::GetNavigationSystem(UObject* WorldContextObject);
 
-获取指定坐标投射到NavMesh上的坐标；获取指定半径内可以行走的NavMesh的坐标点（随机获取）（4.20版本）：
+获取指定坐标投射到NavMesh上的坐标；获取指定半径内可以行走的NavMesh的坐标点（随机获取）（4.20及之前老版本）：
 
-UNavigationSystemV1.h：
+UNavigationSystem.h：
 
     /** Project a point onto the NavigationData */
 	UFUNCTION(BlueprintPure, Category = "AI|Navigation", meta = (WorldContext = "WorldContextObject", DisplayName = "ProjectPointToNavigation", ScriptName = "ProjectPointToNavigation"))
@@ -96,6 +96,11 @@ UNavigationSystemV1.h：
 	UFUNCTION(BlueprintPure, Category = "AI|Navigation", meta = (WorldContext = "WorldContextObject", DisplayName = "GetRandomPointInNavigableRadius", ScriptName = "GetRandomPointInNavigableRadius"))
 	static bool K2_GetRandomPointInNavigableRadius(UObject* WorldContextObject, const FVector& Origin, FVector& RandomLocation, float Radius, ANavigationData* NavData = NULL, TSubclassOf<UNavigationQueryFilter> FilterClass = NULL);
 	
+新版本函数（4.20非shipping版本可用，估计4.21正式版可用）：
+
+    bool ProjectPointToNavigation(const FVector& Point, FNavLocation& OutLocation, const FVector& Extent = INVALID_NAVEXTENT, const FNavAgentProperties* AgentProperties = NULL, FSharedConstNavQueryFilter QueryFilter = NULL);
+    
+    bool ProjectPointToNavigation(const FVector& Point, FNavLocation& OutLocation, const FVector& Extent = INVALID_NAVEXTENT, const ANavigationData* NavData = NULL, FSharedConstNavQueryFilter QueryFilter = NULL) const;
     
 ##### 寻路移动结束时的回调事件
 

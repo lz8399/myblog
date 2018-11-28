@@ -6,6 +6,8 @@ tags= ["UE4"]
 keywords= ["UMG", "Drag", "C++", "Native"]
 +++
 
+override NativeOnDragDetected() in the class which is draping from.
+
 example source:
 
     void UItemSlotWidget::NativeOnDragDetected(const FGeometry& InGeometry,
