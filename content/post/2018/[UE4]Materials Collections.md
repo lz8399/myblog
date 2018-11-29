@@ -20,3 +20,6 @@ https://www.tomlooman.com/the-many-uses-of-custom-depth-in-unreal-4/
 
 Free Giveaways + Introduction + Patreon  
 https://www.youtube.com/watch?v=T_YNgqt00H0
+
+UE4: Animated Raindrops Material  
+https://gumroad.com/l/AflqH
