@@ -98,6 +98,11 @@ keyworkds：UE4、C++动态创建Widget、Runtime Create Widget
 		}
 		index++;
 	}
+    
+##### 运行时期间修改Widget屏幕位置
+Modify widget's screen position at run-time:
+
+    void UWidget::SetRenderTranslation(FVector2D Translation)
 
 ##### 其他参考
 Create widget in pure C++  
