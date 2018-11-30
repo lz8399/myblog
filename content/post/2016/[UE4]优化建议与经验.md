@@ -32,11 +32,15 @@ Min Screen Radius for Cascaded Shadow Maps
 
 ##### 灯光优化
 
-1，3种光源的性能消耗从低到高：  
+1, 3种光源的性能消耗从低到高：  
 定向光/平行光(Directional Light) < 点光源(Point Light) < 聚光灯(Spot Light)。  
 这个标准不局限于UE4，其他引擎也是这样。当光源数量在场景中达到一定量级时，3种灯光的性能差距也是数量级上差距。
 
-2，在建构光照贴图时，若场景中没有给予Lightmass Importance Volume，会对整个场景做间接光照的采样，产生Indirect Lighting Cache，这对大型游戏场景是相当的浪费，像是游戏角色到不了的中、远景不需要产生Indirect Lighting Cache，这时候就可以在场景中置入Lightmass Importance Volume，指定特定区域内才会产生Indirect Lighting Cache，节省不少建构光照的时间。
+2, 在建构光照贴图时，若场景中没有给予Lightmass Importance Volume，会对整个场景做间接光照的采样，产生Indirect Lighting Cache，这对大型游戏场景是相当的浪费，像是游戏角色到不了的中、远景不需要产生Indirect Lighting Cache，这时候就可以在场景中置入Lightmass Importance Volume，指定特定区域内才会产生Indirect Lighting Cache，节省不少建构光照的时间。
+
+3, 点光源和聚光灯尽量不要开启`Cast Volumetric Shadow`。开启后的性能消耗为不开启的性能消耗三倍。
+
+4, 如果开启体积雾，建议将灯光改成静态光，这样在Build Lighting时会生成预计算的体积雾相关数据，这样可以显著提升体积雾性能。体积雾性能消耗巨大。
 
 ##### 阴影优化
 
@@ -81,6 +85,9 @@ http://youxiputao.com/articles/11743
 ##### 位移优化
 
 1，海量Pawn（比如500个）单位移动，如果是在 Tick 中使用 AddMovementInput 移动，帧率直接下降一半（比如从90帧下降到40多帧）。对于无法移动的单位，最好停止执行 AddMovementInput() ，以提升性能。
+
+##### 特效优化
+1, 尽量不要使用 Volume domain，使用后会显著增加GPU开销。可以通过 `profilegpu` 检测 Volume 开销。
 
 ##### AI优化
 
