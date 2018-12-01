@@ -6,11 +6,11 @@ tags= ["UE4"]
 keywords= ["UE4", "Packaging", "Error"]
 +++
 
-Package Error:
+##### Package Error
 
     PackagingResults: Error: Bad name index -1/47
     
-Solution:  
+##### Solution 1
 You can find the asset causing this by building the engine from source and adding breakpoints in these two place:
     
 LinkerLoad.cpp
@@ -57,3 +57,9 @@ PackageReader.cpp
 
 What does "bad name index -1/43" error mean in the context of a failed packaging attempt?
 https://answers.unrealengine.com/questions/796763/what-does-bad-name-index-143-error-mean-in-the-con.html
+
+##### Solution 2
+
+Change `Cooker Progress Display Mode` to `Names and Remaining Packages` in **Project Setttings -> Engine -> Cooker**.  
+than see the files name around the `Error: Bad name index`, check these files if is invaild.
+
