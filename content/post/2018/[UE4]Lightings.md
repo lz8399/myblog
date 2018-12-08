@@ -42,7 +42,7 @@ https://docs.unrealengine.com/en-us/Engine/Rendering/LightingAndShadows/Lighting
 另外：Lighting Channels不支持运行时修改，就是说Lighting Channels在Actor创建时(比如BeginPlay)设置好以后，之后就无法再修改。
 
 ##### Occlusion Culling 光源距离裁剪
-Project Settings -》 Engine -》 Rendering -》 Culling
+Project Settings -》 Engine -》 Rendering -》 Culling -》 Min Screen Radius for Lights  
 
 Lights view distance  
 https://forums.unrealengine.com/unreal-engine/feedback-for-epic/54065-lights-view-distance

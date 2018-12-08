@@ -75,7 +75,7 @@ Camera [modename]
 
     stat Hitches    //或者stat DumpHitches 记录log文件
     
-程序运行时一旦某帧耗时超过`t.HitchThreshold`指定的时长，则函数堆栈就会被打印出来。例如，以下 hitchdump 显示LoadObject耗时较长，则表示是加载资源导致顿卡
+程序运行时一旦某帧耗时超过`t.HitchThreshold`指定的时长，则函数堆栈就会被打印出来。例如，以下 hitchdump 显示LoadObject耗时较长（当前行行首的时长减去下一行行首的时长就是当前行函数的耗时），则表示是加载资源导致顿卡
 
        477.514ms (   4)  -  Thread_4118_0 - GameThread - STATGROUP_Threads - STATCAT_Advanced
          477.510ms (   2)  -  FrameTime - STAT_FrameTime - STATGROUP_Engine - STATCAT_Advanced

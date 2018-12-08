@@ -25,7 +25,7 @@ add `const` to `std::string&` which is a parameter of function, like this:
         TestFun01("abcd");
     }
 
-this would produce compiling error:
+this would produce compilation error:
 
     void TestFun01(std::string& text)
     {

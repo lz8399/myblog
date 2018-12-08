@@ -1,11 +1,11 @@
 +++
-title= "[UE4]线性代数与解析几何相关的API"
+title= "[UE4]Linear Algebra & Plane Geometry API"
 date= "2016-06-23T23:35:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4", "API"]
 +++
 
-keywords：UE4、Linear Algebra、Plane Geometry
+keywords：UE4、Linear Algebra、Plane Geometry、线性代数、解析几何
 
 
 ##### 范围判定
@@ -37,6 +37,11 @@ https://answers.unrealengine.com/questions/31058/how-to-get-an-angle-between-2-v
     
     void UKismetMathLibrary::GetSlopeDegreeAngles(const FVector& MyRightYAxis, const FVector& FloorNormal, const FVector& UpVector, 
         float& OutSlopePitchDegreeAngle, float& OutSlopeRollDegreeAngle);
+        
+计算方向向量与坐标轴的夹角 (-180, 180)
+
+    FRotator Rot = UKismetMathLibrary::MakeRotFromX(TestVector);
+    float Angle = Rot.Yaw;  //(-180, 180)
 
 ##### 点坐标计算
 

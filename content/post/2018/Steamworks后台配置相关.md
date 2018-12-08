@@ -42,7 +42,7 @@ app_build_2000.vdf、depot_build_2001.vdf。
 然后修改 app_build_2000.vdf 中的内容，改成正式的 appid 和 depotid
 {{< figure src="/img/20180904-Steamworks后台配置相关/Steamworks后台配置相关-07.jpg">}}
 
-修改 depot_build_2001.vdf ，注掉 “ContentRoot”。注掉则会使用 app_build_2000.vdf 中的 contentroot 配置。然后修改LocalPath，指定windows或者mac的包体所在目录，{{< hl-text red >}} 注意：路径末尾一定要加星号，否则上传的文件为空。{{< /hl-text >}}
+修改 depot_build_2001.vdf ，注掉 “ContentRoot”。注掉则会使用 app_build_2000.vdf 中的 contentroot 配置（{{< hl-text red >}}也可以修改为本地的打包目录，这样就不用拷贝到content目录{{< /hl-text >}}）。然后修改LocalPath，指定windows或者mac的包体所在目录，{{< hl-text red >}} 注意：路径末尾一定要加星号，否则上传的文件为空。{{< /hl-text >}}
 {{< figure src="/img/20180904-Steamworks后台配置相关/Steamworks后台配置相关-08.jpg">}}
 
 3，把steamcmd.exe所在的目录加入环境变量
