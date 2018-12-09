@@ -18,12 +18,18 @@ keywords：UE4、Linear Algebra、Plane Geometry、线性代数、解析几何
     
 ##### 角度计算
 
-计算两个向量的夹角(Get an angle between 2 Vectors)
+计算两个向量的夹角(Get an angle between 2 Vectors)，范围：(0, 180)
 
     float AimAtAngle = FMath::RadiansToDegrees(acosf(FVector::DotProduct(PlayerDirection, MouseDirection)));
     
 参考：How to get an angle between 2 Vectors?  
 https://answers.unrealengine.com/questions/31058/how-to-get-an-angle-between-2-vectors.html
+
+        
+计算方向向量与坐标轴的夹角，范围：(-180, 180)
+
+    FRotator Rot = UKismetMathLibrary::MakeRotFromX(TestVector);
+    float Angle = Rot.Yaw;  //(-180, 180)
 
 计算方向向量 InDirection 相对 ReferenceFrame 的方位俯仰角(Azimuth-Elevation)
     
@@ -37,11 +43,7 @@ https://answers.unrealengine.com/questions/31058/how-to-get-an-angle-between-2-v
     
     void UKismetMathLibrary::GetSlopeDegreeAngles(const FVector& MyRightYAxis, const FVector& FloorNormal, const FVector& UpVector, 
         float& OutSlopePitchDegreeAngle, float& OutSlopeRollDegreeAngle);
-        
-计算方向向量与坐标轴的夹角 (-180, 180)
 
-    FRotator Rot = UKismetMathLibrary::MakeRotFromX(TestVector);
-    float Angle = Rot.Yaw;  //(-180, 180)
 
 ##### 点坐标计算
 

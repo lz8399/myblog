@@ -66,6 +66,10 @@ Using CachedGeometry:
     
     ImgIcon->GetCachedGeometry().GetAbsolutePosition();
     
+##### How to set the position of widget
+
+    void UWidget::SetRenderTranslation(FVector2D Translation)
+    
 ##### How to get the screen size
 
     auto geometry = MyWidget->GetCachedGeometry();
