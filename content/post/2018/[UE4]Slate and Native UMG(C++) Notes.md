@@ -70,6 +70,19 @@ Using CachedGeometry:
 
     void UWidget::SetRenderTranslation(FVector2D Translation)
     
+##### How to get the position of widget
+    
+    //ImgIcon is a UImage widget.
+    if (UCanvasPanelSlot* cpSlot = Cast<UCanvasPanelSlot>(ImgIcon->Slot))
+    {
+        BgSize = cpSlot->GetSize();
+        BgInitPos = cpSlot->GetPosition();		
+    }
+    
+##### How to scale the widget
+
+    void UWidget::SetRenderScale(FVector2D Scale)
+    
 ##### How to get the screen size
 
     auto geometry = MyWidget->GetCachedGeometry();

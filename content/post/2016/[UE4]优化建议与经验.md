@@ -80,7 +80,7 @@ https://docs.unrealengine.com/latest/INT/Engine/Performance/Guidelines/
 ##### UI优化
 
 1. 能用HUD解决的就不要用UMG，等到需要显示时才创建Widget对象，不显示时则销毁，UMG对象较多时性能消耗巨大。  
-比如场景内有一千个单位，每个单位上都创建有WidgetComponent，即使这些WidgetComponent没有显示任何东西，也会才生巨大的GPU开销。
+比如场景内有一千个单位，每个单位上都创建有WidgetComponent，即使这些WidgetComponent没有显示任何东西，也会产生巨大的GPU开销。
 
 Epic Games工程师分享：如何在移动平台上做UE4的UI优化？  
 http://youxiputao.com/articles/11743
