@@ -25,6 +25,12 @@ https://forums.unrealengine.com/community/community-content-tools-and-tutorials/
 ##### Lighting Channels
 https://docs.unrealengine.com/en-us/Engine/Rendering/LightingAndShadows/LightingChannels
 
+实际应用：  
+假设场景中只有一个平行光，且光照强度较大时，那么角色身上接收不到直接光照的部位（比如脖子），会明显发黑，如果增大 SkyBox 光照强度，那么会影响整个场景的亮度。有没办法只增加角色身上的光照亮度？让阴影区域变亮？解决办法是：Lighting Channels。  
+解决办法：  
+场景中添加两个平行光，A平行光的 Lighting Channels 只开启Channel 0，B平行光只开启Channel 1，然后角色的 Mesh 同时开启 Channel 0 和 Channel 1。
+
+
 注意事项：
 
 + Lighting Channels是动态的，意思是：静态光(Static Lights)或者Mobility为Static的Static Mesh Actor不受Lighting Channels影响。要使用Lighting Channels，Static Mesh Actor和Lights的Mobility必须设置为Stationary或者Movable。

@@ -32,7 +32,22 @@ then the part outside CanvasPanel of your target widget would be clipped.
 Get actual size of widget:
 
     FVector2D UWidget::GetDesiredSize() const
-  
+    
+Usage of `GetDesiredSize`:
+
+    void UMyWidget::AddToScreen(ULocalPlayer* LocalPlayer, int32 ZOrder)
+    {
+        Super::AddToScreen(LocalPlayer, ZOrder);
+
+        Super::ForceLayoutPrepass();
+
+        FVector2D Size = GetDesiredSize();
+    }
+    
+{{< alert danger >}}
+`GetDesiredSize()` isn't usable before `NativeTick()` triggered, if you want to get the widget size when widget initilized, you need to call function ` Super::ForceLayoutPrepass()`. If you add a child in widget and want to show it on viewport in this frame, you also need to call this function too.
+{{< /alert >}}
+
 Get size using slot:
 
     //ImgIcon is a UImage widget.
