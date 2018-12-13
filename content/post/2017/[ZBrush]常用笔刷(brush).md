@@ -8,13 +8,13 @@ tags:
 - Modeling
 - Sculpting
 ---
-Stand。默认笔刷，表面突起，按住Alt则是凹陷，反向操作。
+Standard。默认笔刷，表面突起，按住Alt则是凹陷，反向操作。
 {{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-01.png">}}
 
-Dam_Standard。Standard的加强版，且与Standard方向相反，默认是凹陷操作，如果想突起按住Alt键。同样参数下，Dam_Standard突起或者开挖的强度更大。
+Dam_Standard。Standard 的加强版，且与Standard方向相反，默认是凹陷操作，如果想突起按住Alt键。同样参数下，Dam_Standard突起或者开挖的强度更大。
 {{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-02.png">}}
 
-Move。讲表面隆起或下压，或者拖动某个局部位置。
+Move。将表面隆起或下压，或者拖动某个局部位置。
 {{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-03.png">}}
 
 Smooth。适用场景：进行局部的光滑。默认快捷键是按住shift键不放。
@@ -26,7 +26,7 @@ Clay。适用场景：填充和堆叠表面。
 ClayBuildup。适用场景：方块状的填充和堆叠表面
 {{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-06.png">}}
 
-ClayTubes。和ClayBuildup类似，但是不会累计堆叠起来，连续在一个位置刷多次，只会堆叠一层，而ClayBuildup没刷一次就会叠加一层。
+ClayTubes。和ClayBuildup类似，但是不会累计堆叠起来，连续在一个位置刷多次，只会堆叠一层，而ClayBuildup每刷一次就会叠加一层。
 {{< figure src="/img/20170102-[ZBrush]常用笔刷(brush)/[ZBrush]常用笔刷(brush)-06-2.png">}}
 
 TrimDynamic。适用场景：对大块的凹凸表面进行抹平

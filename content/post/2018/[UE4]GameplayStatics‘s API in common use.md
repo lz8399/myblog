@@ -1,5 +1,5 @@
 +++
-title= "[UE4]GameplayStatics常用API"
+title= "[UE4]GameplayStatics‘s API in common use"
 date= "2018-11-22T15:08:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
