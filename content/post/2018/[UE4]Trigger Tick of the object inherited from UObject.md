@@ -29,9 +29,18 @@ header:
         virtual bool IsTickable() const override;
         virtual TStatId GetStatId() const override;
         // End FTickableGameObject Interface.
+        
+    private:
+        
+        //Because engine would construct inner object when game load package (before game start), so we need to add a flag to identify which one is construct on game running.
+        bool bIsCreateOnRunning = false;
     };
     
 cpp:
+    UCoolDownMgr::UCoolDownMgr()
+    {
+        bIsCreateOnRunning = GIsRunning;
+    }
 
     void UCoolDownMgr::Tick(float DeltaTime)
     {
@@ -41,12 +50,17 @@ cpp:
      
     bool UCoolDownMgr::IsTickable() const
     {
-        return true;
+        //notify engine to ingore Tick of the object constructed before game running.
+        return bIsCreateOnRunning;
     }
     TStatId UCoolDownMgr::GetStatId() const
     {
         return UObject::GetStatID();
     }
+    
+{{< alert danger >}}
+Because engine would construct inner object when game load package (before game start), so we need to add a flag (`bIsCreateOnRunning`) to identify which one is construct on game running.
+{{< /alert >}}
 
 Origin Text:  
 https://blog.csdn.net/yangxuan0261/article/details/52093573
