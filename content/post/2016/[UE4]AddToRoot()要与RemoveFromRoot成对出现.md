@@ -54,6 +54,7 @@ override 父类`BeginDestroy()`函数并在其内部执行`RemoveFromRoot()`导�
 	}
 
     
-建议重写`GameModeBase::Logout()`并在其内部执行`RemoveFromRoot`。这样即使在PIE模式下也不会崩溃
+建议重写`AActor::EndPlay()`并在其内部执行`RemoveFromRoot`。这样即使在PIE模式下也不会崩溃
     
-    void AGameModeBase::Logout(AController* Exiting)
+    void AActor::EndPlay(const EEndPlayReason::Type EndPlayReason)
+    

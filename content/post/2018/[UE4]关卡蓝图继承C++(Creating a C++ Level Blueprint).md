@@ -16,5 +16,15 @@ keywords= ["UE4", "Level Blueprint"]
 
 参考：http://orfeasel.com/creating-a-c-level-blueprint/
 
+##### 获取 Actor 所在的 Level
+
+    if (ULevel* Level = MyActor->GetLevel())
+	{
+		if (AMyLevelScriptActor* LevelActor = Cast<AMyLevelScriptActor>(Level->GetLevelScriptActor()))
+		{
+			
+		}
+	}
+
 ***
 `天之道利而无害，人之道为而不争。 ----《道德经》`
