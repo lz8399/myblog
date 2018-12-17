@@ -8,6 +8,10 @@ keywords= ["UE4", "UGameplayStatics", "GameplayStatics"]
 
 keywords：UGameplayStatics, GameplayStatics
 
+{{< alert danger >}}
+Parameter `WorldContextObject` must be an UObject that can get UWorld, otherwise the following gameplay's functions would not work.
+{{< /alert >}}
+
     /**
 	* Counts how many grass foliage instances overlap a given sphere.
 	*
@@ -39,3 +43,19 @@ keywords：UGameplayStatics, GameplayStatics
 	 */
 	UFUNCTION(BlueprintPure, Category = "Utilities")
 	static bool ProjectWorldToScreen(APlayerController const* Player, const FVector& WorldPosition, FVector2D& ScreenPosition, bool bPlayerViewportRelative = false);
+    
+    /**
+	 * Plays a sound directly with no attenuation, perfect for UI sounds.
+	 *
+	 * * Fire and Forget.
+	 * * Not Replicated.
+	 * @param Sound - Sound to play.
+	 * @param VolumeMultiplier - Multiplied with the volume to make the sound louder or softer.
+	 * @param PitchMultiplier - Multiplies the pitch.
+	 * @param ConcurrencySettings - Override concurrency settings package to play sound with
+	 * @param StartTime - How far in to the sound to begin playback at
+	 * @param ConcurrencySettings - Override concurrency settings package to play sound with
+	 * @param OwningActor - The actor to use as the "owner" for concurrency settings purposes. Allows PlaySound calls to do a concurrency limit per owner.
+	 */
+	UFUNCTION(BlueprintCallable, BlueprintCosmetic, Category="Audio", meta=( WorldContext="WorldContextObject", AdvancedDisplay = "2", UnsafeDuringActorConstruction = "true" ))
+	static void PlaySound2D(const UObject* WorldContextObject, USoundBase* Sound, float VolumeMultiplier = 1.f, float PitchMultiplier = 1.f, float StartTime = 0.f, USoundConcurrency* ConcurrencySettings = nullptr, AActor* OwningActor = nullptr);
