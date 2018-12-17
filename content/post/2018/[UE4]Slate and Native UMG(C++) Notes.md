@@ -69,6 +69,18 @@ Using CachedGeometry:
     const FVector2D& IconLocSize = ImgIcon->GetCachedGeometry().GetLocalSize();
     const FVector2D& IconAbsSize = ImgIcon->GetCachedGeometry().GetAbsoluteSize();
     
+##### How to set the size of widget
+    
+    //ImgIcon is a UImage widget.
+    if (UCanvasPanelSlot* Slot = Cast<UCanvasPanelSlot>(ImgIcon->Slot))
+	{
+		Slot->SetSize(FVector2D(100.f, 100.f));
+	}
+    
+##### How to set the size of UserWidget(whole UMG UI)
+
+    void UUserWidget::SetDesiredSizeInViewport(FVector2D DesiredSize);
+    
 ##### How to get the position of widget
 
     //ImgIcon is a UImage widget.
@@ -84,15 +96,6 @@ Using CachedGeometry:
 ##### How to set the position of widget
 
     void UWidget::SetRenderTranslation(FVector2D Translation)
-    
-##### How to get the position of widget
-    
-    //ImgIcon is a UImage widget.
-    if (UCanvasPanelSlot* cpSlot = Cast<UCanvasPanelSlot>(ImgIcon->Slot))
-    {
-        BgSize = cpSlot->GetSize();
-        BgInitPos = cpSlot->GetPosition();		
-    }
     
 ##### How to scale the widget
 
