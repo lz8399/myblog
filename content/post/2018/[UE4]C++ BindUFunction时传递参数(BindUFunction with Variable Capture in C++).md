@@ -94,5 +94,34 @@ BindUFunction 示例：
 
     TimerDel.BindUFunction(this, FName("TestFun"));
     
+### TScriptDelegate 与 DECLARE_DELEGATE 区别
+
+引擎提供了两种用于绑定函数的代理对象：
+
++ FScriptDelegate
++ FMulticastScriptDelegate
+
+这两种对象只能使用`BindUFunction`一种方式绑定，因为他们使用的是`DECLARE_DYNAMIC_MULTICAST_DELEGATE`，这种代理对象支持转化为stream，可以在网络中传递。  
+FTimerDelegate 之所以能有三种方式绑定，是因为它是由`DECLARE_DELEGATE`定义。
+
+
+### Event 和 Delegate 区别
+
+Delegate 只能绑定一个回调函数，Delegate执行Execute()函数时，只会触发事先绑定的一个函数；Event可以绑定任意个函数，一旦执行Event的Broadcast()函数，所有回调函数按Add顺序依次执行。
+
+Dynamic Multicast Delegate也可以同时绑定多个回调函数，但是其运行效率要比 Event 慢。
+
+### Event 和 Delegate 共同点
+
+回调函数都不能有返回值。
+
+### Dynamic Delegate 与 常规 Delegate 区别
+
+1, Dynamic Delegates 可以被序列化：即他们的注册函数可以通过名称查找获取，代价是比普通Delegate速度慢。
+2, 普通Delegate定义参数时，如果使用引用类型，函数执行时传递的实际参数无效，如果要使用引用类型的参数，则要使用Dynamic Delegates。
+例如，以TArray的引用类型为例：
+
+    DECLARE_DYNAMIC_DELEGATE_OneParam(FMyDelegate, const TArray<FString>& MyArray);  
+    
 ***
 `天上的神明和星辰，人间的艺术与真纯，我们所敬畏和景仰的，莫过于此。`
