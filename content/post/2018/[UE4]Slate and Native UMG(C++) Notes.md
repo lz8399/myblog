@@ -128,5 +128,31 @@ code:
         return FReply::Handled();
     }
     
+### UWidgetLayoutLibrary
 
+##### How to get the viewport size
 
+    FVector2D UWidgetLayoutLibrary::GetViewportScale(UObject* WorldContextObject);
+    
+##### How to get the scale of viewport
+
+    FVector2D UWidgetLayoutLibrary::GetViewportSize(UObject* WorldContextObject);
+
+##### How to get the Geometry of all widgets in Viewport or PlayerScreen
+
+    FGeometry UWidgetLayoutLibrary::GetViewportWidgetGeometry(UObject* WorldContextObject);
+    
+    FGeometry UWidgetLayoutLibrary::GetPlayerScreenWidgetGeometry(APlayerController* PlayerController);
+    
+##### How to get mouse position
+
+    //Gets the platform's mouse cursor position.  This is the 'absolute' desktop location of the mouse.
+    FVector2D UWidgetLayoutLibrary::GetMousePositionOnPlatform();
+    
+    //Gets the platform's mouse cursor position in the local space of the viewport widget.
+    FVector2D UWidgetLayoutLibrary::GetMousePositionOnViewport(UObject* WorldContextObject);
+    
+##### How to removes all widgets from the viewport
+    
+    void UWidgetLayoutLibrary::RemoveAllWidgets(UObject* WorldContextObject);
+   

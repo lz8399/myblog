@@ -531,5 +531,9 @@ UMG 的文本动换行
 TextBox 控件：然后修改`Auto Warp Text`为：true。
 TextBox(Multi-Line) 控件：然后修改`Warpping Policy`为：`Allow Per Character Warpping`。
 
+【2018-12-19T12:09】  
+如何让一个材质始终朝向摄像机？  
+使用：BillboardComponent
+
 ***
 `凡心所向，素履以往。生如逆旅，一苇以航。----木心`
