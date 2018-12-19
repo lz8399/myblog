@@ -37,6 +37,7 @@ header:
     };
     
 cpp:
+
     UCoolDownMgr::UCoolDownMgr()
     {
         bIsCreateOnRunning = GIsRunning;
@@ -62,5 +63,5 @@ cpp:
 Because engine would construct inner object when game load package (before game start), so we need to add a flag (`bIsCreateOnRunning`) to identify which one is construct on game running.
 {{< /alert >}}
 
-Origin Text:  
+Reference:  
 https://blog.csdn.net/yangxuan0261/article/details/52093573

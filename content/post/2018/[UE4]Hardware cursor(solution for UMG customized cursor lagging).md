@@ -12,4 +12,4 @@ Steps
 
 2, Project Settings -> Engine -> User Interface -> Hardware Cursors -> add element and set `Default`, set `Cursor Path` as `Asset/Cursor/mouse`.
 
-3, If the click response position of PNG cursor isn't the top-left corner, you can modify the `Hot Spot`, e.g. you can set Hot Spot as (0.5, 0.5) if the click response position is the center of PNG.
+3, If the click response position of .PNG cursor isn't the top-left corner, you can modify the `Hot Spot`, e.g. you can set Hot Spot as (0.5, 0.5) if the click response position is the center of .PNG.

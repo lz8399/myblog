@@ -24,26 +24,26 @@ tags= ["UE4"]
 
 崩溃日志：
 
-[2018.01.12-16.47.12:367][ 94]LogTemp: SpawnMainRole 11111
-[2018.01.12-16.47.12:367][ 94]LogTemp: SpawnMainRole 22222
-[2018.01.12-16.47.15:359][ 94]LogWindows: Error: === Critical error: ===
-[2018.01.12-16.47.15:359][ 94]LogWindows: Error: 
-[2018.01.12-16.47.15:359][ 94]LogWindows: Error: Fatal error!
-[2018.01.12-16.47.15:359][ 94]LogWindows: Error: 
-[2018.01.12-16.47.15:359][ 94]LogWindows: Error: Unhandled Exception: EXCEPTION_ACCESS_VIOLATION reading address 0xffffffff
-[2018.01.12-16.47.15:359][ 94]LogWindows: Error: 
-[2018.01.12-16.47.15:359][ 94]LogWindows: Error: [Callstack] 0x00000000204CA74A UE4Editor-CoreUObject.dll!UStruct::IsChildOf() [c:\unrealengine-4.18.2-release\engine\source\runtime\coreuobject\public\uobject\class.h:375]
-[2018.01.12-16.47.15:359][ 94]LogWindows: Error: [Callstack] 0x000000000AA97137 UE4Editor-TestProj-Win64-DebugGame.dll!AReleaseGameMode::SpawnMainRole() [f:\source\work\project\ue4_proj\TestProj\source\TestProj\graphics\world\releasegamemode.cpp:182]
-[2018.01.12-16.47.15:359][ 94]LogWindows: Error: [Callstack] 0x000000000AA94C5D UE4Editor-TestProj-Win64-DebugGame.dll!AReleaseGameMode::BeginPlay() [f:\source\work\project\ue4_proj\TestProj\source\TestProj\graphics\world\releasegamemode.cpp:81]
-[2018.01.12-16.47.15:359][ 94]LogWindows: Error: [Callstack] 0x000000001B31C8AB UE4Editor-Engine.dll!AActor::DispatchBeginPlay() [c:\unrealengine-4.18.2-release\engine\source\runtime\engine\private\actor.cpp:3160]
-[2018.01.12-16.47.15:359][ 94]LogWindows: Error: [Callstack] 0x000000001C517480 UE4Editor-Engine.dll!AWorldSettings::NotifyBeginPlay() [c:\unrealengine-4.18.2-release\engine\source\runtime\engine\private\worldsettings.cpp:187]
-[2018.01.12-16.47.15:359][ 94]LogWindows: Error: [Callstack] 0x000000001BA6F4C1 UE4Editor-Engine.dll!AGameStateBase::HandleBeginPlay() [c:\unrealengine-4.18.2-release\engine\source\runtime\engine\private\gamestatebase.cpp:177]
-[2018.01.12-16.47.15:359][ 94]LogWindows: Error: [Callstack] 0x000000001C50372E UE4Editor-Engine.dll!UWorld::BeginPlay() [c:\unrealengine-4.18.2-release\engine\source\runtime\engine\private\world.cpp:3505]
-[2018.01.12-16.47.15:359][ 94]LogWindows: Error: [Callstack] 0x000000001C42B054 UE4Editor-Engine.dll!UEngine::LoadMap() [c:\unrealengine-4.18.2-release\engine\source\runtime\engine\private\unrealengine.cpp:10679]
-[2018.01.12-16.47.15:359][ 94]LogWindows: Error: [Callstack] 0x000000001C3E4648 UE4Editor-Engine.dll!UEngine::Browse() [c:\unrealengine-4.18.2-release\engine\source\runtime\engine\private\unrealengine.cpp:9948]
-[2018.01.12-16.47.15:359][ 94]LogWindows: Error: [Callstack] 0x000000000AA8CB20 UE4Editor-TestProj-Win64-DebugGame.dll!UCreateRoleWidget::OnBtnStartClick() 
+    [2018.01.12-16.47.12:367][ 94]LogTemp: SpawnMainRole 11111
+    [2018.01.12-16.47.12:367][ 94]LogTemp: SpawnMainRole 22222
+    [2018.01.12-16.47.15:359][ 94]LogWindows: Error: === Critical error: ===
+    [2018.01.12-16.47.15:359][ 94]LogWindows: Error: 
+    [2018.01.12-16.47.15:359][ 94]LogWindows: Error: Fatal error!
+    [2018.01.12-16.47.15:359][ 94]LogWindows: Error: 
+    [2018.01.12-16.47.15:359][ 94]LogWindows: Error: Unhandled Exception: EXCEPTION_ACCESS_VIOLATION reading address 0xffffffff
+    [2018.01.12-16.47.15:359][ 94]LogWindows: Error: 
+    [2018.01.12-16.47.15:359][ 94]LogWindows: Error: [Callstack] 0x00000000204CA74A UE4Editor-CoreUObject.dll!UStruct::IsChildOf() [c:\unrealengine-4.18.2-release\engine\source\runtime\coreuobject\public\uobject\class.h:375]
+    [2018.01.12-16.47.15:359][ 94]LogWindows: Error: [Callstack] 0x000000000AA97137 UE4Editor-TestProj-Win64-DebugGame.dll!AReleaseGameMode::SpawnMainRole() [f:\source\work\project\ue4_proj\TestProj\source\TestProj\graphics\world\releasegamemode.cpp:182]
+    [2018.01.12-16.47.15:359][ 94]LogWindows: Error: [Callstack] 0x000000000AA94C5D UE4Editor-TestProj-Win64-DebugGame.dll!AReleaseGameMode::BeginPlay() [f:\source\work\project\ue4_proj\TestProj\source\TestProj\graphics\world\releasegamemode.cpp:81]
+    [2018.01.12-16.47.15:359][ 94]LogWindows: Error: [Callstack] 0x000000001B31C8AB UE4Editor-Engine.dll!AActor::DispatchBeginPlay() [c:\unrealengine-4.18.2-release\engine\source\runtime\engine\private\actor.cpp:3160]
+    [2018.01.12-16.47.15:359][ 94]LogWindows: Error: [Callstack] 0x000000001C517480 UE4Editor-Engine.dll!AWorldSettings::NotifyBeginPlay() [c:\unrealengine-4.18.2-release\engine\source\runtime\engine\private\worldsettings.cpp:187]
+    [2018.01.12-16.47.15:359][ 94]LogWindows: Error: [Callstack] 0x000000001BA6F4C1 UE4Editor-Engine.dll!AGameStateBase::HandleBeginPlay() [c:\unrealengine-4.18.2-release\engine\source\runtime\engine\private\gamestatebase.cpp:177]
+    [2018.01.12-16.47.15:359][ 94]LogWindows: Error: [Callstack] 0x000000001C50372E UE4Editor-Engine.dll!UWorld::BeginPlay() [c:\unrealengine-4.18.2-release\engine\source\runtime\engine\private\world.cpp:3505]
+    [2018.01.12-16.47.15:359][ 94]LogWindows: Error: [Callstack] 0x000000001C42B054 UE4Editor-Engine.dll!UEngine::LoadMap() [c:\unrealengine-4.18.2-release\engine\source\runtime\engine\private\unrealengine.cpp:10679]
+    [2018.01.12-16.47.15:359][ 94]LogWindows: Error: [Callstack] 0x000000001C3E4648 UE4Editor-Engine.dll!UEngine::Browse() [c:\unrealengine-4.18.2-release\engine\source\runtime\engine\private\unrealengine.cpp:9948]
+    [2018.01.12-16.47.15:359][ 94]LogWindows: Error: [Callstack] 0x000000000AA8CB20 UE4Editor-TestProj-Win64-DebugGame.dll!UCreateRoleWidget::OnBtnStartClick() 
 
-原因：在Server端访问了一个在客户端赋值过的GameInstance变量。
+原因：在Server端访问了一个在客户端赋值过的GameInstance变量 `WSGI->CurrentCharacter`。
 
 解决办法：赋值逻辑放在Server端。因为GameInstance只存在于服务端且无法replicated。
 

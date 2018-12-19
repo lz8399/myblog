@@ -5,4 +5,4 @@ categories= ["Tools"]
 tags= ["Chrome"]
 +++
 
-Settings -> Advanced -> Privacy and security -> Disable `Use a prediction service to load pages more quickly`
+Settings -> Advanced -> Privacy and security -> Disable `Protects you and your device from dangerous sites`
