@@ -28,3 +28,6 @@ See? 11 short steps to have a fully animated load screen. How awesome is that?!
 
 Reference: Animated Loading Screen  
 https://wiki.unrealengine.com/Animated_Loading_Screen
+
+Blueprint Manual Level Streaming  
+https://wiki.unrealengine.com/Blueprint_Manual_Level_Streaming
