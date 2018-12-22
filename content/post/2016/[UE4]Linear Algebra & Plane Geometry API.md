@@ -31,9 +31,9 @@ https://answers.unrealengine.com/questions/31058/how-to-get-an-angle-between-2-v
     FRotator Rot = UKismetMathLibrary::MakeRotFromX(TestVector);
     float Angle = Rot.Yaw;  //(-180, 180)
     
-判断角色A在角色B的左边还是右边（或者角色A相对角色B的四个方向）
+判断角色A在角色B的左边还是右边（或者角色A相对角色B的四个方向），参考自引擎代码：`UAnimInstance::CalculateDirection()`
 
-    //-180到0表示 ActorA 在 ActorB 左边，0到180表示 ActorA 在 ActorB 在右边
+    //-180到0表示 ActorA 在 ActorB 左边，0到180表示 ActorA 在 ActorB 右边
     float CalculateDirecton(const AActor* ActorA, const AActor* ActorB)
     {
         FVector TestDire = ActorA->GetActorLocation() - ActorB->GetActorLocation();

@@ -97,6 +97,10 @@ Using CachedGeometry:
 
     void UWidget::SetRenderTranslation(FVector2D Translation)
     
+##### How to set the position of UserWidget
+
+    void UUserWidget::SetPositionInViewport(FVector2D Position, bool bRemoveDPIScale )
+    
 ##### How to scale the widget
 
     void UWidget::SetRenderScale(FVector2D Scale)
@@ -130,11 +134,11 @@ code:
     
 ### UWidgetLayoutLibrary
 
-##### How to get the viewport size
+##### How to get the scale of viewport
 
     FVector2D UWidgetLayoutLibrary::GetViewportScale(UObject* WorldContextObject);
     
-##### How to get the scale of viewport
+##### How to get the viewport size
 
     FVector2D UWidgetLayoutLibrary::GetViewportSize(UObject* WorldContextObject);
 
