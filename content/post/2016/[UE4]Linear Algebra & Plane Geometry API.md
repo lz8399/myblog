@@ -26,10 +26,37 @@ keywords：UE4、Linear Algebra、Plane Geometry、线性代数、解析几何
 https://answers.unrealengine.com/questions/31058/how-to-get-an-angle-between-2-vectors.html
 
         
-计算方向向量与坐标轴的夹角，范围：(-180, 180)
+计算方向向量与空间坐标轴（X、Y、Z）的夹角，范围：(-180, 180)
 
     FRotator Rot = UKismetMathLibrary::MakeRotFromX(TestVector);
     float Angle = Rot.Yaw;  //(-180, 180)
+    
+判断角色A在角色B的左边还是右边（或者角色A相对角色B的四个方向）
+
+    //-180到0表示 ActorA 在 ActorB 左边，0到180表示 ActorA 在 ActorB 在右边
+    float CalculateDirecton(const AActor* ActorA, const AActor* ActorB)
+    {
+        FVector TestDire = ActorA->GetActorLocation() - ActorB->GetActorLocation();
+
+        FMatrix RotMatrix = FRotationMatrix(ActorB->GetActorRotation());
+        FVector ForwardVector = RotMatrix.GetScaledAxis(EAxis::X);
+        FVector RightVector = RotMatrix.GetScaledAxis(EAxis::Y);
+        FVector NormalizedVel = TestDire.GetSafeNormal2D();
+
+        // get a cos(alpha) of forward vector vs velocity
+        float ForwardCosAngle = FVector::DotProduct(ForwardVector, NormalizedVel);
+        // now get the alpha and convert to degree
+        float ForwardDeltaDegree = FMath::RadiansToDegrees(FMath::Acos(ForwardCosAngle));
+
+        // depending on where right vector is, flip it
+        float RightCosAngle = FVector::DotProduct(RightVector, NormalizedVel);
+        if (RightCosAngle < 0)
+        {
+            ForwardDeltaDegree *= -1;
+        }
+        
+        return ForwardDeltaDegree;
+    }
 
 计算方向向量 InDirection 相对 ReferenceFrame 的方位俯仰角(Azimuth-Elevation)
     
