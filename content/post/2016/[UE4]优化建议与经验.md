@@ -44,12 +44,18 @@ Min Screen Radius for Cascaded Shadow Maps
 
 ##### 阴影优化
 
-1，开启 `Dynamic Shadow Distance`  
-测试用例： 500 个  Actor 同屏，摄像机高度4000，DirectionalLight 的属性`Dynamic Shadow Distance StationaryLight`（默认为0，表示关闭）的值要大于摄像机到Actor的直线距离（注意：是到每个Actor的直线距离，所以值尽量要设置的大一些），否则帧率从200 fps 下降到 100 fps。
+1，如果使用了Stationary Directional Light，场景中要大量单位时，一定要开启`Dynamic Shadow Distance StationaryLight`（默认为0，表示关闭）。  
+测试用例： 500 个 Actor 同屏，摄像机高度4000，DirectionalLight 的属性`Dynamic Shadow Distance StationaryLight`的值要大于摄像机到Actor的直线距离（注意：是到每个Actor的直线距离，所以值尽量要设置的大一些，比5000），否则帧率从200 fps 下降到 100 fps。
+
+`Dynamic Shadow Distance StationaryLight`开启后能提升性能的原因：  
+Dynamic Shadow Distance StationaryLight 表示在多少距离内使用动态阴影，超过这个距离之外Fade成静态阴影，而Fate成静态阴影后就可以提升性能
+
 
 ##### 材质优化
 
-1，材质类型的性能，从快到慢：Opaque -> Masked -> Translucent。
+1. 材质类型的性能，从快到慢：Opaque -> Masked -> Translucent。
+
+1. 若场景中有大量单位，比如500个，那么这些单位一定要做材质LOD，并尽可能多的去掉半透明材质（比如在最后两级直接去掉半透明效果），否则性能消耗呈指数级增长。
 
 Performance Guidelines for Artists and Designers  
 https://docs.unrealengine.com/latest/INT/Engine/Performance/Guidelines/

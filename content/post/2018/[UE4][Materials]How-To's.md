@@ -25,3 +25,13 @@ https://docs.unrealengine.com/en-us/Engine/Rendering/Materials/HowTo/ColoredTran
 
 Create a richly colored metallic surface in UE4  
 https://odederell3d.wordpress.com/2018/02/08/create-a-richly-colored-metallic-surface-in-ue4/
+
+##### How To Use The Spiral Blur Material Node
+
+How To Use The Spiral Blur Material Node  
+https://wiki.unrealengine.com/How_To_Use_The_Spiral_Blur_Material_Node
+
+##### Font Materials and Outlines
+
+Font Materials and Outlines  
+https://docs.unrealengine.com/en-us/Engine/UMG/UserGuide/Fonts/Materials

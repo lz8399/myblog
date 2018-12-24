@@ -52,7 +52,30 @@ tags:
 {{< figure src="/img/20161127-[UE4][Material]使用蓝图和C++动态创建材质并设置材质参数属性(Parameter)/[UE4][Material]动态创建材质并设置材质参数属性(Parameter)-12.jpg">}}  
 
 #### C++方式：
-MaterialInstanceDynamic.h
+
+加载材质并为 Image 空间设置材质资源
+
+	UMaterial* Mat = LoadObject<UMaterial>(nullptr, TEXT("Material'/Game/Asset/Materials/HUD/ProgressCircleRotate/M_ProgressCircleRot.M_ProgressCircleRot'"));
+	if (Mat && Img)
+	{
+		if (UMaterialInstanceDynamic* MatInstance = UMaterialInstanceDynamic::Create(Mat, this))
+		{
+			Img->SetBrushFromMaterial(MatInstance);
+		}
+	}
+
+设置动态参数
+	
+	if (Img)
+		{
+			if (UMaterialInstanceDynamic* MatInsDyna= Cast<UMaterialInstanceDynamic>(Img->Brush.GetResourceObject()))
+			{
+				MatInsDyna->SetScalarParameterValue("Alpha", 0.8);
+			}
+		}
+
+设置动态参数的其他接口（MaterialInstanceDynamic.h）
+
 
     void SetVectorParameterValue(FName ParameterName, FLinearColor Value);
     
