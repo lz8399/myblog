@@ -6,7 +6,7 @@ tags= ["UE4"]
 keywords= ["UE4", "UGameplayStatics", "GameplayStatics"]
 +++
 
-keywords：UGameplayStatics, GameplayStatics
+keywords: UGameplayStatics, GameplayStatics
 
 {{< alert danger >}}
 Parameter `WorldContextObject` must be an UObject that can get UWorld, otherwise the following gameplay's functions would not work.
@@ -59,3 +59,10 @@ Parameter `WorldContextObject` must be an UObject that can get UWorld, otherwise
 	 */
 	UFUNCTION(BlueprintCallable, BlueprintCosmetic, Category="Audio", meta=( WorldContext="WorldContextObject", AdvancedDisplay = "2", UnsafeDuringActorConstruction = "true" ))
 	static void PlaySound2D(const UObject* WorldContextObject, USoundBase* Sound, float VolumeMultiplier = 1.f, float PitchMultiplier = 1.f, float StartTime = 0.f, USoundConcurrency* ConcurrencySettings = nullptr, AActor* OwningActor = nullptr);
+
+##### The meaning of ProjectWorldToScreen's return value
+
+Even when the Actor is in **LEFT BACK** or **RIGHT BACK** of Camera, `ProjectWorldToScreen` still would return true,  
+when Actor is int **RIGHT BEHIND** of Camera, `ProjectWorldToScreen` still would return false.
+
+

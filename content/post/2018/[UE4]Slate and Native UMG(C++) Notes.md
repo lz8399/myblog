@@ -160,3 +160,8 @@ code:
     
     void UWidgetLayoutLibrary::RemoveAllWidgets(UObject* WorldContextObject);
    
+##### How to alter widget self's anchor to the center of itself.
+
+Put the widget into a UCanvasPanel, then set Alignment of this UCanvasPanel as (0.5f, 0.5f):
+
+	CanvasPanelSlot->SetAlignment(FVector2D(0.5f, 0.5f));

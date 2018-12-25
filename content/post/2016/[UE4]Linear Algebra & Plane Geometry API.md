@@ -71,7 +71,10 @@ https://answers.unrealengine.com/questions/31058/how-to-get-an-angle-between-2-v
     void UKismetMathLibrary::GetSlopeDegreeAngles(const FVector& MyRightYAxis, const FVector& FloorNormal, const FVector& UpVector, 
         float& OutSlopePitchDegreeAngle, float& OutSlopeRollDegreeAngle);
 
-
+计算指定 Rotator 的反向 Rotator
+		
+	FRotator FRotator::GetInverse()
+		
 ##### 点坐标计算
 
 计算直线外一点到该直线的最近的点（垂足的坐标）：
@@ -86,10 +89,23 @@ https://answers.unrealengine.com/questions/31058/how-to-get-an-angle-between-2-v
 计算平面外一点投射到平面的坐标点：
         
     FVector UKismetMathLibrary::ProjectPointOnToPlane(FVector Point, FVector PlaneBase, FVector PlaneNormal);
+	
+##### 向量（矢量）计算
+
+向量A投射到以Z轴为法线的平面的投射向量
+
+	/**
+	 * Projects 2D components of vector based on Z.
+	 *
+	 * @return Projected version of vector based on Z.
+	 */
+	FVector Projection() const;
 
 计算平面外矢量投射到平面后的矢量：
     
     FVector UKismetMathLibrary::ProjectVectorOnToPlane(FVector V, FVector PlaneNormal);
+	
+	static FVector VectorPlaneProject(const FVector& V, const FVector& PlaneNormal);
 
 ##### 插值相关
 

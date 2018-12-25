@@ -12,6 +12,10 @@ keywords: CameraComponent, PlayerController, PlayerCameraManager
 PlayerController构造函数中设置PlayerCameraManagerClass：
 
 	PlayerCameraManagerClass = AMyPlayerCameraManager::StaticClass();
+	
+##### How to Get PlayerCameraManager
+
+	APlayerCameraManager* UGameplayStatics::GetPlayerCameraManager(const UObject* WorldContextObject, int32 PlayerIndex)
 
 ##### 摄像机不跟随角色一起旋转
 
