@@ -63,6 +63,7 @@ Parameter `WorldContextObject` must be an UObject that can get UWorld, otherwise
 ##### The meaning of ProjectWorldToScreen's return value
 
 Even when the Actor is in **LEFT BACK** or **RIGHT BACK** of Camera, `ProjectWorldToScreen` still would return true,  
-when Actor is int **RIGHT BEHIND** of Camera, `ProjectWorldToScreen` still would return false.
+when Actor is int **RIGHT BEHIND** of Camera, `ProjectWorldToScreen` still would return false.  
+So we can use this value to check if is need to update icon's position on screen for Target Direction Tips logic (Navigation suggestion).
 
 
