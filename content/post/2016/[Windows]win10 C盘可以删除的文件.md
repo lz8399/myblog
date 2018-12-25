@@ -34,3 +34,9 @@ C盘中可以删除的VisualStudio相关的文件：
 具体参考：
 https://msdn.microsoft.com/zh-cn/library/windows/hardware/dn898501(v=vs.85).aspx
 
+##### UnrealEngine4 cache file directory
+
+	C:\Users\admin\AppData\Local\UnrealEngine\Common\DerivedDataCache
+
+	C:\Users\admin\AppData\Local\UnrealTournament\Common\DerivedDataCache
+

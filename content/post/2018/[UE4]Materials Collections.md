@@ -23,3 +23,14 @@ https://www.youtube.com/watch?v=T_YNgqt00H0
 
 UE4: Animated Raindrops Material  
 https://gumroad.com/l/AflqH
+
+UE4 Tutorial: Fire Effect (UV Animation)  
+https://www.youtube.com/watch?v=B8Gya38KkJY
+
+##### Circle range clip
+
+How can I make a 2D Material into a circle? ( circle range clip )  
+https://answers.unrealengine.com/questions/565198/how-can-i-make-a-2d-material-into-a-circle.html
+
+Make a square material into a circle  
+https://answers.unrealengine.com/questions/717609/make-a-square-material-into-a-circle.html

@@ -55,7 +55,7 @@ Dynamic Shadow Distance StationaryLight 表示在多少距离内使用动态阴�
 
 1. 材质类型的性能，从快到慢：Opaque -> Masked -> Translucent。
 
-1. 若场景中有大量单位，比如500个，那么这些单位一定要做材质LOD，并尽可能多的去掉半透明材质（比如在最后两级直接去掉半透明效果），否则性能消耗呈指数级增长。
+2. 若场景中有大量单位，比如500个，那么这些单位一定要做材质LOD，并尽可能多的去掉半透明材质（比如在最后两级直接去掉半透明效果），否则性能消耗呈指数级增长。
 
 Performance Guidelines for Artists and Designers  
 https://docs.unrealengine.com/latest/INT/Engine/Performance/Guidelines/

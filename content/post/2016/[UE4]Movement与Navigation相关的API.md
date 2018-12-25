@@ -77,6 +77,11 @@ UNavigationSystem::FindPathSync也可以判断，但是他会返回寻路结果�
 **4.20版本**获取`NavigationSystem`方法：
 
     UNavigationSystemV1* UNavigationSystemV1::GetNavigationSystem(UObject* WorldContextObject);
+	
+或者：
+
+	UNavigationSystemV1* NavSys = FNavigationSystem::GetCurrent<UNavigationSystemV1>(GetWorld());
+	
 
 获取指定坐标投射到NavMesh上的坐标；获取指定半径内可以行走的NavMesh的坐标点（随机获取）（4.20及之前老版本）：
 
@@ -84,23 +89,57 @@ UNavigationSystem.h：
 
     /** Project a point onto the NavigationData */
 	UFUNCTION(BlueprintPure, Category = "AI|Navigation", meta = (WorldContext = "WorldContextObject", DisplayName = "ProjectPointToNavigation", ScriptName = "ProjectPointToNavigation"))
-	static bool K2_ProjectPointToNavigation(UObject* WorldContextObject, const FVector& Point, FVector& ProjectedLocation, ANavigationData* NavData, TSubclassOf<UNavigationQueryFilter> FilterClass, const FVector QueryExtent = FVector::ZeroVector);
+	static bool UNavigationSystemV1::K2_ProjectPointToNavigation(UObject* WorldContextObject, const FVector& Point, FVector& ProjectedLocation, ANavigationData* NavData, TSubclassOf<UNavigationQueryFilter> FilterClass, const FVector QueryExtent = FVector::ZeroVector);
 
 	/** Generates a random location reachable from given Origin location.
 	 *	@return Return Value represents if the call was successful */
 	UFUNCTION(BlueprintPure, Category = "AI|Navigation", meta = (WorldContext = "WorldContextObject", DisplayName = "GetRandomReachablePointInRadius", ScriptName = "GetRandomReachablePointInRadius"))
-	static bool K2_GetRandomReachablePointInRadius(UObject* WorldContextObject, const FVector& Origin, FVector& RandomLocation, float Radius, ANavigationData* NavData = NULL, TSubclassOf<UNavigationQueryFilter> FilterClass = NULL);
+	static bool UNavigationSystemV1::K2_GetRandomReachablePointInRadius(UObject* WorldContextObject, const FVector& Origin, FVector& RandomLocation, float Radius, ANavigationData* NavData = NULL, TSubclassOf<UNavigationQueryFilter> FilterClass = NULL);
 
 	/** Generates a random location in navigable space within given radius of Origin.
 	 *	@return Return Value represents if the call was successful */
 	UFUNCTION(BlueprintPure, Category = "AI|Navigation", meta = (WorldContext = "WorldContextObject", DisplayName = "GetRandomPointInNavigableRadius", ScriptName = "GetRandomPointInNavigableRadius"))
-	static bool K2_GetRandomPointInNavigableRadius(UObject* WorldContextObject, const FVector& Origin, FVector& RandomLocation, float Radius, ANavigationData* NavData = NULL, TSubclassOf<UNavigationQueryFilter> FilterClass = NULL);
+	static bool UNavigationSystemV1::K2_GetRandomPointInNavigableRadius(UObject* WorldContextObject, const FVector& Origin, FVector& RandomLocation, float Radius, ANavigationData* NavData = NULL, TSubclassOf<UNavigationQueryFilter> FilterClass = NULL);
 	
-新版本函数（4.20非shipping版本可用，估计4.21正式版可用）：
+另外两个函数（4.20、4.21版本的非shipping打包模式可用，不知官方会不会在后续版本定为正式版的API）：
 
     bool ProjectPointToNavigation(const FVector& Point, FNavLocation& OutLocation, const FVector& Extent = INVALID_NAVEXTENT, const FNavAgentProperties* AgentProperties = NULL, FSharedConstNavQueryFilter QueryFilter = NULL);
     
     bool ProjectPointToNavigation(const FVector& Point, FNavLocation& OutLocation, const FVector& Extent = INVALID_NAVEXTENT, const ANavigationData* NavData = NULL, FSharedConstNavQueryFilter QueryFilter = NULL) const;
+	
+`K2_ProjectPointToNavigation`用法：
+
+	FVector SourceLoc(1000.f, 1000.f, 100.f);
+	FVector DestLoc;
+	
+	if (UNavigationSystemV1* NavSys = FNavigationSystem::GetCurrent<UNavigationSystemV1>(world))
+	{
+		if (ANavigationData* NavData = NavSys->GetDefaultNavDataInstance(FNavigationSystem::DontCreate))
+		{
+			NavSys->K2_ProjectPointToNavigation(world, SourceLoc, DestLoc, NavData, nullptr);
+		}
+	}
+	
+##### Difference between GetRandomReachablePointInRadius and GetRandomPointInNavigableRadius
+
+{{< alert info >}}
+OK, after some investigations and tests. I think I've got the idea.
+
+So bool UNavigationSystem::GetRandomPointInNavigableRadius(const FVector& Origin, float Radius, FNavLocation& ResultLocation, ANavigationData* NavData, FSharedConstNavQueryFilter QueryFilter) const
+
+will return a point on navmesh if succeed, but it doesn't check whether the point is on a connected navmesh which the Origin (first parameter) is on.
+
+So bool UNavigationSystem::GetRandomReachablePointInRadius(const FVector& Origin, float Radius, FNavLocation& ResultLocation, ANavigationData* NavData, FSharedConstNavQueryFilter QueryFilter) const
+
+will return a point on navmesh if succeed, and it will make sure the point in on a connected navmesh with the Origin.
+
+So if the Origin is off navmesh and we want to find a point on navmesh, we need to use GetRandomPointInNavigableRadius.
+
+If the Origin is on navmesh and we want to find a point to move to, we can use GetRandomReachablePointInRadius.
+{{< /alert >}}
+
+Reference: What's the difference between GetRandomReachablePointInRadius and GetRandomPointInNavigableRadius? In which case we should use which.  
+https://answers.unrealengine.com/questions/796996/whats-the-difference-between-getrandomreachablepoi.html?sort=oldest
     
 ##### 寻路移动结束时的回调事件
 
