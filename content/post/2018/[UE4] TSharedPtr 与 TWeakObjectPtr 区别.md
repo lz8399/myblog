@@ -26,11 +26,33 @@ Uobject 不能使用 TSharedPtr 进行引用计数，非UObject才可以；如�
 ##### TWeakObjectPtr
 `TWeakObjectPtr` 保持的对象不能防止被垃圾回收。若引用的对象在其他地方被销毁，则 `TWeakObjectPtr` 内部的指针自动将被置为NULL，TWeakObjectPtr::IsValid()会返回false。`TSharedPtr` 则没有这个作用。
 
-用法：
-    
-     TWeakObjectPtr<MyUObject> ObjPtr = NewObject<MyUObject>();
+**Usage:**  
+Assignment
 
-参考资料：  
+	TWeakObjectPtr<AActor> MyWeakActor;
+	MyWeakActor = MyActor;
+	
+Get value
+
+	AActor* Actor = MyWeakActor.Get();
+	
+if `MyActor` destroyed, `MyWeakActor.Get()` would return `nullptr`
+
+	MyActor->Destroy();
+	bool IsValid = MyWeakActor.Get()	//true
+	 
+##### Difference between TWeakPtr and TWeakObjectPtr
+
+{{< alert danger >}}
+TWeakObjectPtr is for weak pointers to UObjects, TWeakPtr for pointers to everything else.  
+Since UObjects are garbage collected and shared pointers are reference counted, we cannot have the same weak pointer type for all, unfortunately.
+{{< /alert >}}
+	
+
+Difference between TWeakPtr and TWeakObjectPtr?  
+https://answers.unrealengine.com/questions/298868/difference-between-tweakptr-and-tweakobjectptr.html
+
+#### 参考资料
 
 UE4 TSharedPtr和UObject的垃圾回收  
 http://www.v5xy.com/?p=808

@@ -165,3 +165,25 @@ code:
 Put the widget into a UCanvasPanel, then set Alignment of this UCanvasPanel as (0.5f, 0.5f):
 
 	CanvasPanelSlot->SetAlignment(FVector2D(0.5f, 0.5f));
+
+##### How to fade in / out widget
+
+Event for fade begin:
+
+	LerpTime = 0.f;
+	LerpDuration = 1.5f;
+
+	FLinearColor SrcColor = MyTextBlock->ColorAndOpacity.GetSpecifiedColor();
+	FLinearColor DestColor = SrcColor;
+	DestColor.A = 0.f;
+	
+in Tick()
+	
+	if (LerpTime < LerpDuration)
+	{
+		LerpTime += DeltaSeconds;
+
+		FLinearColor Color = FMath::Lerp<FLinearColor>(SrcColor, DestColor, LerpTime / LerpDuration);
+
+		MyTextBlock->SetColorAndOpacity(Color);
+	}

@@ -53,7 +53,7 @@ tags:
 
 #### C++方式：
 
-加载材质并为 Image 空间设置材质资源
+加载材质、创建动态材质、并为 Image 控制设置材质资源
 
 	UMaterial* Mat = LoadObject<UMaterial>(nullptr, TEXT("Material'/Game/Asset/Materials/HUD/ProgressCircleRotate/M_ProgressCircleRot.M_ProgressCircleRot'"));
 	if (Mat && Img)
@@ -67,12 +67,17 @@ tags:
 设置动态参数
 	
 	if (Img)
+	{
+		if (UMaterialInstanceDynamic* MatInsDyna= Cast<UMaterialInstanceDynamic>(Img->Brush.GetResourceObject()))
 		{
-			if (UMaterialInstanceDynamic* MatInsDyna= Cast<UMaterialInstanceDynamic>(Img->Brush.GetResourceObject()))
-			{
-				MatInsDyna->SetScalarParameterValue("Alpha", 0.8);
-			}
+			MatInsDyna->SetScalarParameterValue("Alpha", 0.8);
 		}
+	}
+	
+如果Image控件的资源已经设置了材质或者材质实例(MaterialInstance)，那么可以直接通过以下接口获取控件的动态材质实例：
+
+	UMaterialInstanceDynamic* UImage::GetDynamicMaterial();
+	
 
 设置动态参数的其他接口（MaterialInstanceDynamic.h）
 

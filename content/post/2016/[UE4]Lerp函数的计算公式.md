@@ -39,6 +39,15 @@ UnrealMathUnlity.h：
             FracY
             );
     }
+	
+	/** Interpolate vector from Current to Target. Scaled by distance to Target, so it has a strong start speed and ease out. */
+	static CORE_API FVector VInterpTo( const FVector& Current, const FVector& Target, float DeltaTime, float InterpSpeed );
+	
+	/** Interpolate rotator from Current to Target. Scaled by distance to Target, so it has a strong start speed and ease out. */
+	static CORE_API FRotator RInterpTo( const FRotator& Current, const FRotator& Target, float DeltaTime, float InterpSpeed);
+	
+	/** Interpolate float from Current to Target. Scaled by distance to Target, so it has a strong start speed and ease out. */
+	static CORE_API float FInterpTo( float Current, float Target, float DeltaTime, float InterpSpeed );
     
 ##### 使用实例
 先定义两个成员变量：
@@ -59,3 +68,7 @@ UnrealMathUnlity.h：
             MyCharacter->SetActorLocation(NewLoc);
         }
     }
+	
+FInterpTo 实例：
+
+	CurrHP = FMath::FInterpTo(CurrHP, FinalHP, DeltaTime, HPLerpSpeed);
