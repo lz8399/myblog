@@ -103,6 +103,18 @@ keyworkds：UE4、C++动态创建Widget、Runtime Create Widget
 Modify widget's screen position at run-time:
 
     void UWidget::SetRenderTranslation(FVector2D Translation)
+	
+##### NativeConstruct's trigger timing
+
+	if(UMyUserWidget* Widget = WidgetTree->ConstructWidget<UMyUserWidget>(UMyUserWidget::StaticClass()))
+	{
+		//UMyUserWidget::NativeConstruct() would trigger after be AddChild
+		MyCanvasPanel->AddChild(Widget);
+	}
+
+{{< alert info >}}
+`UMyUserWidget::NativeConstruct()` would trigger after be `AddChild`
+{{< /alert >}}
 
 ##### 其他参考
 Create widget in pure C++  
