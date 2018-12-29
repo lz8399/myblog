@@ -57,7 +57,7 @@ Uobject不能使用TSharedPtr进行引用计数，非UObject才可以；如果�
     }
     
 ##### GC 常见问题
-1. 官方论坛上有人说 NewObject() 或者 LoadObject() 创建的对象才会自动被 GC ， SpawnActor 创建的对象会被自动 AddToRoot ，不会被 GC。不知早期的版本是否确实如此，但是目前版本不是这样，即使时 SpawnActor ，默认也会被 GC。
+1. 官方论坛上有人说 NewObject() 或者 LoadObject() 创建的对象才会自动被 GC ， SpawnActor 创建的对象会被自动 AddToRoot ，不会被 GC。不知早期的版本是否确实如此，但是目前版本不是这样，{{< hl-text red >}}即使时 SpawnActor ，默认也会被 GC。{{< /hl-text>}}
 
 ##### 参考资料
 虚幻4垃圾回收剖析  

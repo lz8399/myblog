@@ -25,7 +25,7 @@ keywords= ["UE4", "API", "Error", "GC"]
      ntdll
 
 {{< alert danger >}}
-执行`RemoveFromRoot()`不要放在Actor自己对象的`Actor::BeginDestroy()`函数内（override 父类`BeginDestroy()`函数），即使是在`Super::BeginDestroy()`执行之前，否则在PIE模式（编辑器内运行游戏）下退出游戏时会导致崩溃。
+执行`RemoveFromRoot()`不要放在Actor自己对象的`Actor::BeginDestroy()`函数内（override 父类`BeginDestroy()`函数），即使是在`Super::BeginDestroy()`执行之前。否则退出游戏时（包括PIE模式（编辑器内运行游戏）下退出游戏）会导致崩溃。
 {{< /alert >}}
 
 override 父类`BeginDestroy()`函数并在其内部执行`RemoveFromRoot()`导致的崩溃堆栈：
@@ -54,7 +54,9 @@ override 父类`BeginDestroy()`函数并在其内部执行`RemoveFromRoot()`导�
 	}
 
     
-建议重写`AActor::EndPlay()`并在其内部执行`RemoveFromRoot`。这样即使在PIE模式下也不会崩溃
+{{< alert success >}}
+建议重写`AActor::EndPlay()`并在其内部执行`RemoveFromRoot`。这样即使在PIE模式下退出游戏或者Game模式退出游戏都不会崩溃
+{{< /alert >}}
     
     void AActor::EndPlay(const EEndPlayReason::Type EndPlayReason)
     

@@ -36,12 +36,26 @@ Get value
 
 	AActor* Actor = MyWeakActor.Get();
 	
-if `MyActor` destroyed, `MyWeakActor.Get()` would return `nullptr`
+or
+
+	if(MyWeakActor.Get())
+	{
+		ACharacter* Character = Cast<ACharacter>(MyWeakActor);
+	}
+	
+if `MyActor` has been destroyed, `MyWeakActor.Get()` would return `nullptr`
 
 	MyActor->Destroy();
-	bool IsValid = MyWeakActor.Get()	//true
+	bool IsValid = MyWeakActor.Get() != nullptr;	//false
+	
+{{< alert danger >}}
+if `MyActor` has been destroyed, `Cast<AMyCharacter>(MyActor)` would cause crash after a while, but `Cast<AMyCharacter>(MyWeakActor)` would not.
+{{< /alert >}}
+
 	 
-##### Difference between TWeakPtr and TWeakObjectPtr
+##### TWeakPtr
+
+Difference between TWeakPtr and TWeakObjectPtr:
 
 {{< alert danger >}}
 TWeakObjectPtr is for weak pointers to UObjects, TWeakPtr for pointers to everything else.  

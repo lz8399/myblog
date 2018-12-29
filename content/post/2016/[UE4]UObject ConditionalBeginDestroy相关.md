@@ -10,6 +10,7 @@ tags:
 
 ##### UObject ConditionalBeginDestroy()导致无法第二次重新Load的问题
 
+现象：  
 如果一个材质对象首次执行垃圾回收（ConditionalBeginDestroy是对BeginDestroy的封装，BeginDestroy是不管任何因素强制回收）：
 
     UObject::ConditionalBeginDestroy()
@@ -21,22 +22,39 @@ tags:
 
     UObject* Obj = LoadObject<UObject>(NULL, Path);
 
+原因：  
+在编辑器模式下，通过`LoadObject`加载出来的对象，如果执行了Destroy，那么在不重启编辑器模式的情况下，第二次执行`LoadObject<UObject>(NULL, Path);`会返回`NULL`，即使在编辑器模式下重新启动游戏也返回`NULL`
 
-因为这样只是在内存中扫描，不会从工程的资源Package文件中去加载(为什么首次这样执行可以加载成功？因为启动UE4Editor或程序首次启动时会加载被引用的资源)，所以这样不会加载成功，返回值为NULL。
-如果要从工程资源文件中加载，那么需要手动new一个UObject，作为LoadObject的第一个参数：
+解决办法：  
+上述情况只存在编辑器模式下，如果是打包版本，即使一开始 Destroy，第二次 LoadObject 的时候仍然可以加载成功。  
+
+如果非得希望在编辑器模式下，Destroy资源之后仍然能够正常第二次 LoadObject 该资源，方式如下：  
+{{< hl-text green>}}手动new一个UObject，作为LoadObject的第一个参数{{< /hl-text >}}
 
     UObject* Obj = NewObject<UTexture2D>();
     LoadObject<UObject>(Obj, Path);
 
 这样就能正确加载了。
-但是这样有个问题：会发现，过几秒以后，再次使用这个UObject时会出现指针非法的错误，原因是刚刚自己New的UObject被引擎从内存中回收了。
+
+通过上述表现可以推算出，编辑器和引擎的Runtime公用了同一个对象
+
++ 且该对象没有随着编辑器模式下退出游戏而被清理；
++ 且该对象在编辑器和Runtime分别存在一个是否已销毁的标记；
++ 且该对象在PIE（Play In Editor）模式下 Destroy 后，并没有标记该对象在编辑器中已非法；
+
+所以在PIE模式下第二次 LoadObject 时认为该对象还存在，并且直接返回了这个已经被Destroy的空对象。  
+如果UE4资源管理的引擎代码写的足够好，对于Destroy对象的操作，应该提供两个版本：一个PIE、一个Game Runtime。
+
+##### 内存持久化 (Memory Persistence)
+
+上述问题中，即使在第二次加载时手动 NewObject 创建一个对象，仍然存在问题：会发现，过几秒以后，再次使用这个UObject时会出现指针非法的错误，原因是刚刚自己New的UObject被引擎从内存中回收了。
 如何禁止引擎对该UObject自动垃圾回收，而是我们自己手动执行？执行下AddToRoot：
 
     Obj->AddToRoot();
 
-注：如果执行了`AddToRoot()`，那么退出程序前需要执行`RemoveFromRoot()`，否则在引擎在清理内存时会错误。(www.dawnarc.com)
+注：如果执行了`AddToRoot()`，那么退出程序前需要执行`RemoveFromRoot()`，否则在引擎在清理内存时会错误。
 
-如果一个UObject是SpawnActor创建出来的，那么执行Destroy()之后，再次执行Spawn是可以正常创建出来的。这点和LoadObject有区别。
+{{< hl-text red>}}如果一个UObject是SpawnActor创建出来的，那么执行Destroy()之后，再次执行Spawn是可以正常创建出来的。这点和LoadObject有区别。{{< /hl-text >}}
 
 ##### ConditionalBeginDestroy()并不推荐在业务逻辑中使用
 
@@ -49,7 +67,6 @@ UE4官方论坛上，很多帖子或资料告诉你，如果要销毁对象，�
 如果在 DedicatedServer 模式下，SpawnActor生成Actor，且这个Actor bReplicates 设置为true，执行 ConditionalBeginDestroy() ，一定时间后客户端会崩掉，但是使用 Destroy() 没问题。对于服务端生成的 Actor，销毁对象时绝对不要 ConditionalBeginDestroy()。
 {{< /alert >}}
 
-DedicatedServer 模式下，`SpawnActor`生成出的 Actor，且这个Actor bReplicates 设置为true， 执行`ConditionalBeginDestroy()`时，一定时间后客户端会崩掉。  
 解决办法：  
 `SpawnActor`生成出的 Actor，且 `AActor::bReplicates = true;` ，销毁时，不要用`ConditionalBeginDestroy()`，而要用`Destroy()`。Standalone 模式貌似没这种限制。
 
@@ -75,4 +92,6 @@ DedicatedServer 模式下，`SpawnActor`生成出的 Actor，且这个Actor bRep
 	ntdll
 
 ##### ConditionalBeginDestroy 和 Destroy区别
-ConditionalBeginDestroy 和 Destroy两者都是销毁对象，区别是：前者是在delay一定时间后执行销毁，Destroy是在当前帧结束时执行销毁。如果逻辑上每帧都有很多 Actor需要销毁，那么可以先把这些Actor隐藏，然后再调用ConditionalBeginDestroy，让引擎批量执行GC。
+ConditionalBeginDestroy 和 Destroy两者都是销毁对象，区别是：前者是在delay一定时间后执行销毁，Destroy是在当前帧结束时执行销毁。
+
+如果逻辑上每帧都有很多 Actor需要销毁，那么可以先把这些Actor隐藏，让对象失去引用（如果对象是被`URPOPERTY`属性保持的，那就让其所属的对象失去引用，比如：`RemoveFromRoot()`），不必手动执行 Destroy，让引擎批量执行GC。
