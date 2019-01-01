@@ -166,6 +166,14 @@ Put the widget into a UCanvasPanel, then set Alignment of this UCanvasPanel as (
 
 	CanvasPanelSlot->SetAlignment(FVector2D(0.5f, 0.5f));
 
+{{< alert danger >}}
+`Alignment` may not works properly in PIE(I think it's a bug), you'd better test it in package.
+{{< /alert >}}
+
+{{< alert danger >}}
+If UserWidget A is child of UserWidget B, UserWidget A's Alignment need to be set in UserWidget B, not UserWidget A!!!
+{{< /alert >}}
+
 ##### How to fade in / out widget
 
 Event for fade begin:
