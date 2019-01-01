@@ -27,3 +27,34 @@ https://gumroad.com/l/AflqH
 UE4 Tutorial: Fire Effect (UV Animation)  
 https://www.youtube.com/watch?v=B8Gya38KkJY
 
+##### Circular Progress Bar
+
+UE4 Tutorial - Circular (Ring-style) Health Bars  
+https://www.youtube.com/watch?v=k1dQtXArvcE
+
+Dynamic Circular Progress Bars ( UE4 )  
+https://www.youtube.com/watch?v=9NtSfPq95fQ
+
+https://github.com/MWadstein/wtf-hdi-files  
+
+UE4 Tutorial Radial Progress Bar  
+https://www.youtube.com/watch?v=hlJiM8kJNU8
+
+How to Make Circular Progress Bar?  
+https://gameenginebread.blogspot.com/2017/02/how-to-make-circular-progress-baror.html
+
+##### Sci-Fi Style
+
+Unreal 4 Holographic Shader Tutorial (SciFi scene)- Part 2  
+https://www.youtube.com/watch?v=JNIoD0jU6qw
+
+Recreated: Winston's Shield in Unreal Engine 4  
+https://www.youtube.com/watch?v=mx7dl6A2AvA
+
+unreal 4 dissolve shader effect  
+https://www.youtube.com/watch?v=O1CezXRJu5E
+
+##### Magical Style
+
+Setting up a ghost material in UE4 (university blog)  
+https://www.youtube.com/watch?v=gkghY8_tQVc
