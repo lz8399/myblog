@@ -56,5 +56,15 @@ https://www.youtube.com/watch?v=7CU5_gLIJBs
 4.20打包安卓版时有个问题：`Post Process Volume` 添加了一个Post Process Materials，这个Material在PC端没有问题，但是在安卓上会遮挡整个摄像机。  
 但不是每个Material都有这种问题，具体是Material中什么函数或选项导致这种问题，没详细验证过。
 
+##### Outliner
+
+Steps:
+
+1. Project Settings -> Engine -> Rendering -> Postprocessing -> set `Custom Depth-Stencil Pass` to `Enabled with Stencil`
+
+2. Add Post Process Volume in Level, Edit properties in Detail Panel -> Post Process Materials -> Array -> Add Asset Reference and set a material of outliner.
+
+3. Select target mesh in Level Editor, Edit properties in Detail Panel -> Override Materials -> enable `Render CustomDepth Pass`, and set value of `CustomDepth Stencil Value` as the material provide.
+
 ***
 `抱必死的心，走永远的路。`

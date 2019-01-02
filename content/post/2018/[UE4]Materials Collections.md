@@ -43,6 +43,9 @@ https://www.youtube.com/watch?v=hlJiM8kJNU8
 How to Make Circular Progress Bar?  
 https://gameenginebread.blogspot.com/2017/02/how-to-make-circular-progress-baror.html
 
+Matt Parkin: UE4 - Custom Shaped Health Bar!  
+https://www.youtube.com/watch?v=XWURS66kgWc
+
 ##### Sci-Fi Style
 
 Unreal 4 Holographic Shader Tutorial (SciFi scene)- Part 2  
@@ -58,3 +61,7 @@ https://www.youtube.com/watch?v=O1CezXRJu5E
 
 Setting up a ghost material in UE4 (university blog)  
 https://www.youtube.com/watch?v=gkghY8_tQVc
+
+##### UV Animation
+UE4 Tutorial: Fire Effect  
+https://www.youtube.com/watch?v=B8Gya38KkJY&t=5s
