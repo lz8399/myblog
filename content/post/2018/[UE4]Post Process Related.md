@@ -1,5 +1,5 @@
 +++
-title= "[UE4]Post Process(后处理)"
+title= "[UE4]Post Process Related"
 date= "2018-04-27T14:14:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
@@ -65,6 +65,18 @@ Steps:
 2. Add Post Process Volume in Level, Edit properties in Detail Panel -> Post Process Materials -> Array -> Add Asset Reference and set a material of outliner.
 
 3. Select target mesh in Level Editor, Edit properties in Detail Panel -> Override Materials -> enable `Render CustomDepth Pass`, and set value of `CustomDepth Stencil Value` as the material provide.
+
+code:
+
+	if (MyMeshComponent)
+	{
+		MyMeshComponent->SetRenderCustomDepth(true);
+		MyMeshComponent->SetCustomDepthStencilValue(1);
+	}
+	
+buleprint:
+
+	{{< figure src="/img/20180427-[UE4]Post Process Related/[UE4]Post Process Related-01.jpg">}}
 
 ***
 `抱必死的心，走永远的路。`
