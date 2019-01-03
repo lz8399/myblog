@@ -75,8 +75,7 @@ code:
 	}
 	
 buleprint:
-
-	{{< figure src="/img/20180427-[UE4]Post Process Related/[UE4]Post Process Related-01.jpg">}}
+{{< figure src="/img/20180427-[UE4]Post Process Related/[UE4]Post Process Related-01.jpg">}}
 
 ***
 `抱必死的心，走永远的路。`

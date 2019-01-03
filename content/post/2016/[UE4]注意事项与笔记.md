@@ -537,12 +537,17 @@ TextBox(Multi-Line) 控件：然后修改`Warpping Policy`为：`Allow Per Chara
 
 【2018-12-26T18:30】  
 UMG TextBlock alignment(justification)  
-1，TextBlock size auto adapt the content length: Detail Panel -> Slot -> Check`Size To Content`
+1，TextBlock size auto adapt the content length: Detail Panel -> Slot -> Uncheck`Size To Content`
 2，Alter TextBlock's content alignment to center: Detail Panel -> Appearance -> Justification -> Align Text Center.
 
 【2018-12-26T18:37】  
 How to alter keyboard shortcut of `Stop`(in PIE) to other key, default is Esc.  
 Edit -> Editor Preferences -> Keyboard Shortcuts -> Play World -> Stop -> Ctrl + Q
+
+【2019-01-03T21:29】  
+If a Character play a Montage which isn't same Skeleton, client may crash.
+
+	MyCharacter->PlayAnimMontage(MyMtg, 1.f, FName("Sec01"));
 
 ***
 `凡心所向，素履以往。生如逆旅，一苇以航。----木心`
