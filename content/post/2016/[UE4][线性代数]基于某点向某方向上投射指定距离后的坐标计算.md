@@ -16,6 +16,10 @@ tags:
 结果：
 
     Loc = {X=200.f, Y=200.f, Z=0.f}
+	
+{{< alert info >}}
+`FRotator::Vector()`对应的蓝图函数为`GetRotationXVector`
+{{< /alert >}}
 
 =================================
 

@@ -62,6 +62,13 @@ https://www.youtube.com/watch?v=O1CezXRJu5E
 Setting up a ghost material in UE4 (university blog)  
 https://www.youtube.com/watch?v=gkghY8_tQVc
 
+Disintegration Effect + Noise Textures for Unreal Engine 4  
+https://crystalgamedev.itch.io/disintegration-effect-noise-textures-for-unreal-engine-4
+
+UE4 Portal Material  
+https://www.youtube.com/watch?v=vApZMJYo0F0
+{{< figure src="/img/20180906-[UE4]Materials Collections/[UE4]Materials Collections-01.jpg">}}
+
 ##### UV Animation
 UE4 Tutorial: Fire Effect  
 https://www.youtube.com/watch?v=B8Gya38KkJY&t=5s
