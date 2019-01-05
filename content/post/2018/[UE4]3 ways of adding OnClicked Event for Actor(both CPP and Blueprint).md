@@ -1,5 +1,5 @@
 +++
-title= "[UE4]Character添加OnClicked事件（C++和蓝图两种方式）"
+title= "[UE4]3 ways of adding OnClicked Event for Actor(both CPP and Blueprint)"
 date= "2018-01-11T23:30:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]

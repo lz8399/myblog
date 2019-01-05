@@ -6,6 +6,8 @@ tags= ["UE4"]
 keywords= ["UE4", "Tick", "UObject", "NewObject"]
 +++
 
+### 1st way: FTickableGameObject
+
 The object inherited from UObject would not trigger Tick when instanced (NewObject<UObject>()), but AActor and the UActorComponent would trigger Tick.
 
 So how to trigger Tick of the object inherited from UObject?  
@@ -65,3 +67,25 @@ Because engine would construct inner object when game load package (before game 
 
 Reference:  
 https://blog.csdn.net/yangxuan0261/article/details/52093573
+
+### 2nd way: FTickerDelegate
+
+header:
+
+	/** Delegate for callbacks to Tick */
+	FTickerDelegate TickDelegate;
+	
+	/** Handle to various registered delegates */
+	FDelegateHandle TickDelegateHandle;
+	
+cpp:
+
+	TickDelegate = FTickerDelegate::CreateUObject(this, &UMyObject::MyTick);
+	TickDelegateHandle = FTicker::GetCoreTicker().AddTicker(TickDelegate);
+	
+Tick function:
+
+	bool UMyObject::MyTick(float DeltaSeconds)
+	{
+	
+	}

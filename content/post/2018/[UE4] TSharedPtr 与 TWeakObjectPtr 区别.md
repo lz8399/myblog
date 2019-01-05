@@ -8,7 +8,7 @@ keywords= ["UE4", "GarbageCollect", "TSharedPtr", "TWeakObjectPtr"]
 
 UE4 的 TSharedPtr、TWeakObjectPtr 模仿自 C++11 的 shared_ptr 、 weak_ptr 。
 
-##### TSharedPtr
+### TSharedPtr
 `TSharedPtr` 相当于对象的引用计数器。每当对 TSharedPtr 赋值一次，该 TSharedPtr 引用对象计数加一，当引用计数为0时，则该对象被自动销毁。TSharedPtr 可以防止 raw pointer 对象被垃圾回收，。
 
 用法：
@@ -23,10 +23,10 @@ UE4 的 TSharedPtr、TWeakObjectPtr 模仿自 C++11 的 shared_ptr 、 weak_ptr 
 Uobject 不能使用 TSharedPtr 进行引用计数，非UObject才可以；如果一个非UObject的类想加入GC，那么必须继承FGCObject类。
 {{< /alert >}}
 
-##### TWeakObjectPtr
+### TWeakObjectPtr
 `TWeakObjectPtr` 保持的对象不能防止被垃圾回收。若引用的对象在其他地方被销毁，则 `TWeakObjectPtr` 内部的指针自动将被置为NULL，TWeakObjectPtr::IsValid()会返回false。`TSharedPtr` 则没有这个作用。
 
-**Usage:**  
+##### Usage
 Assignment
 
 	TWeakObjectPtr<AActor> MyWeakActor;
@@ -52,8 +52,27 @@ if `MyActor` has been destroyed, `MyWeakActor.Get()` would return `nullptr`
 if `MyActor` has been destroyed, `Cast<AMyCharacter>(MyActor)` would cause crash after a while, but `Cast<AMyCharacter>(MyWeakActor)` would not.
 {{< /alert >}}
 
-	 
-##### TWeakPtr
+##### Remove in Array
+
+Examples:
+
+	APawn* TestPawn = GetWorld()->SpawnActor<APawn>(MyPawnClass, FVector(100.f, 100.f, 0.f), FRotator::ZeroRotator);
+	APawn* MyPawn = GetWorld()->SpawnActor<APawn>(MyPawnClass, FVector(200.f, 200.f, 0.f), FRotator::ZeroRotator);
+
+	TestArray.Add(TWeakObjectPtr<APawn>(TestPawn));
+	TestArray.Add(TWeakObjectPtr<APawn>(MyPawn));
+	
+	int Num = TestArray.Num();	// 2
+	
+	TWeakObjectPtr<APawn> WeakPtr1(TestPawn);
+	TestArray.Remove(WeakPtr1);
+	int Num = TestArray.Num();	// 1
+
+	TWeakObjectPtr<APawn> WeakPtr2(TestPawn);
+	TestArray.Remove(WeakPtr2);
+	int Num2 = TestArray.Num();	// 1
+	
+### TWeakPtr
 
 Difference between TWeakPtr and TWeakObjectPtr:
 

@@ -18,7 +18,7 @@ tags:
     C:\Users\<WindowsUsername>\AppData\Local\<ProjectName>\Saved\Logs
     
 {{< alert danger >}}
-bUseLoggingInShipping = true; 只对源码编译的引擎版本有效，Launcher版本无效。
+bUseLoggingInShipping = true; 只对源码编译的引擎版本有效，Launcher版本无效。Launcher版本无法在Shipping模式下开启log。
 {{< /alert >}}
 
 ##### VisualStudio中查看UE4 log
