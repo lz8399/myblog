@@ -4,7 +4,13 @@ date= "2018-11-26T16:22:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
 keywords= ["UMG", "Drag", "C++", "Native"]
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-018.jpg"
 +++
+
+override NativeOnDragDetected() in the class which is draping from.
+
+<!--more-->
 
 override NativeOnDragDetected() in the class which is draping from.
 

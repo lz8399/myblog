@@ -4,7 +4,14 @@ date= "2018-12-01T02:09:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
 keywords= ["UE4", "UMG", "zoom"]
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-015.jpg"
 +++
+
+How to scale or zoom a widget?  
+How to clip widget display area?  
+
+<!--more-->
 
 ##### How to scale or zoom a widget?
 

@@ -4,10 +4,14 @@ date= "2018-12-14T18:45:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
 keywords= ["UE4", "Global variables"]
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-011.jpg"
 +++
 
 File path:  
 Engine\Source\Runtime\Core\Private\Misc\CoreGlobals.cpp
+
+<!--more-->
 
 Source:
     

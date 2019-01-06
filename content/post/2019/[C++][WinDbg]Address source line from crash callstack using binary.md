@@ -3,7 +3,13 @@ title= "[C++]Address source line from crash callstack using binary"
 date= "2019-01-02T11:26:40+08:00"
 categories= ["C++"]
 tags= ["C++"]
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-001.jpg"
 +++
+
+Get the crash callstack.  
+
+<!--more-->
 
 keywords: Windows Debugging Tools, PDB file, Crash, Dump file
 
@@ -47,8 +53,9 @@ then WinDbg would search symbol file in this directory:
 3. Open Executable file:
 {{< figure src="/img/20190105-[C++]Address source line from crash callstack using binary/[C++]Address source line from crash callstack using binary-04.jpg">}}
 {{< figure src="/img/20190105-[C++]Address source line from crash callstack using binary/[C++]Address source line from crash callstack using binary-05.jpg">}}
-4. Execute command to address source line.  
-e.g. : ln TestTP2.exe+2c44aa2
+4. Execute command to address source line. e.g. 
+
+		ln TestTP2.exe+2c44aa2
 {{< figure src="/img/20190105-[C++]Address source line from crash callstack using binary/[C++]Address source line from crash callstack using binary-06.jpg">}}
 then would output the source line. In there, because SetActorLocation is the source of engine, and we didn't set the symbol file directory of engine binary, so it didn't display the engine source line.
 {{< figure src="/img/20190105-[C++]Address source line from crash callstack using binary/[C++]Address source line from crash callstack using binary-07.jpg">}}

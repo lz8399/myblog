@@ -4,7 +4,14 @@ date= "2018-12-06T17:39:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
 keywords= ["UE4", "Editor", "C++", "Module"]
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-013.jpg"
 +++
+
+Easy example of How to create menus in the editor  
+Customizing the editor's toolbar buttons menu via custom plugin  
+
+<!--more-->
 
 UE4 - Easy example of How to create menus in the editor  
 http://www.danielmayor.com/ue4-simple-menus

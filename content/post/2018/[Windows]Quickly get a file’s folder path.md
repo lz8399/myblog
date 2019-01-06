@@ -3,7 +3,14 @@ title= "[Windows]Quickly get a file’s folder path"
 date= "2018-12-22T23:24:02+08:00"
 categories= ["Windows"]
 tags= ["Windows"]
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-003.jpg"
 +++
+
+Shift + RMB Click the file  
+Choose `Copy As Path`
+
+<!--more-->
 
 Software:  
 Microsoft Windows 10

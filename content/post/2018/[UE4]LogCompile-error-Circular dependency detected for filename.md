@@ -4,14 +4,20 @@ date= "2018-11-27T21:57:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
 keywords= ["UE4"]
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-017.jpg"
 +++
+
+Circular dependency detected for filename
+
+<!--more-->
 
 Compilation Error：
 
     LogCompile : error : Circular dependency detected for filename D:\Library Storage\Documents\Unreal Projects\DistantHome\Source\DistantHome\Public\Game\DHGameInfo.h!
     
 Solution:  
-Don't include headers in header,  declare class in header and include headers in cpp.
+Don't include headers in header, declare class in header and include headers in cpp.
 
     class forwardedClass;
 

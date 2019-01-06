@@ -3,7 +3,12 @@ title= "[C++]const_cast"
 date= "2018-11-30T14:34:40+08:00"
 categories= ["C++"]
 tags= ["C++"]
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-016.jpg"
 +++
+You are not allowed to `const_cast` variables that are actually `const`. This results in undefined behavior. 
+
+<!--more-->
 
 You are not allowed to `const_cast` variables that are actually `const`. This results in undefined behavior. `const_cast` is used to remove the const-ness from references and pointers that ultimately refer to something that is not `const`.
 

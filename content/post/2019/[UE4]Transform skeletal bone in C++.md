@@ -4,7 +4,13 @@ date= "2019-01-05T21:29:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
 keywords= ["UE4", "skeletal bone", "Transform"]
+thumbnailImage= "/thumbnail/cover-japan-001.jpg"
+autoThumbnailImage= "true"
+thumbnailImagePosition= "top"
 +++
+Add `UPoseableMeshComponent` in your Actor class, and set Skeletal Mesh asset for it.  
+Modify bones transform by UPoseableMeshComponent's functions:
+<!--more-->
 
 ##### Blueprint Node
 
@@ -19,6 +25,9 @@ Steps
 1. Add `UPoseableMeshComponent` in your Actor class, and set Skeletal Mesh asset for it.
 {{< figure src="/img/20190105-[UE4]Transform skeletal bone in C++/[UE4]Transform skeletal bone in C++-02.jpg">}}
 {{< figure src="/img/20190105-[UE4]Transform skeletal bone in C++/[UE4]Transform skeletal bone in C++-03.jpg">}}
+{{< alert info >}}
+Because the transformation of PoseableMeshComponent is entirely be handle by user, so there's no property to set the Animation Blueprint.
+{{< /alert >}}
 2. Modify bones transform by UPoseableMeshComponent's functions:
 
 		UFUNCTION(BlueprintCallable, Category="Components|PoseableMesh")

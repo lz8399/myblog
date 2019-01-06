@@ -4,7 +4,13 @@ date= "2018-12-01T02:09:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
 keywords= ["UE4", "Packaging", "Error"]
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-014.jpg"
 +++
+
+You can find the asset causing this by building the engine from source and adding breakpoints in these two place
+
+<!--more-->
 
 ##### Package Error
 

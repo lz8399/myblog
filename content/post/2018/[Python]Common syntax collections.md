@@ -3,7 +3,13 @@ title= "[Python]Common syntax collections"
 date= "2018-12-20T21:07:40+08:00"
 categories= ["Python"]
 tags= ["Python"]
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-006.jpg"
 +++
+
+How to print like printf in Python3?   
+Case-insensitive string comparison  
+<!--more-->
 
 ### Print
 

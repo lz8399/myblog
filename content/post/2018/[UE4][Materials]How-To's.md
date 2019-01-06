@@ -4,7 +4,14 @@ date= "2018-12-22T22:41:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
 keywords= ["UE4", "Materials", "metal part"]
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-004.jpg"
 +++
+
+How to metal only for a part of mesh  
+How to make a stained glass window effect  
+
+<!--more-->
 
 ### UE4 Materials How-To's
 

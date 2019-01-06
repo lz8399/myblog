@@ -3,7 +3,13 @@ title= "[Windows]Getting the convenient automatic folder navigation tree expansi
 date= "2018-12-22T23:29:02+08:00"
 categories= ["Windows"]
 tags= ["Windows"]
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-002.jpg"
 +++
+
+In the folder toolbar, Click the View tab.
+
+<!--more-->
 
 Software:  
 Microsoft Windows 10

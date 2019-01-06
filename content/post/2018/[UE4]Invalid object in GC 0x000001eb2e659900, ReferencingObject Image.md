@@ -4,7 +4,12 @@ date= "2018-12-19T21:46:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
 keywords= ["UE4", "GC", "LoadObject", "Memory"]
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-008.jpg"
 +++
+
+Runtime\CoreUObject\Private\UObject\GarbageCollection.cpp
+<!--more-->
 
 Exception Throw:
 

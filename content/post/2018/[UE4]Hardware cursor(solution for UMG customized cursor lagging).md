@@ -4,7 +4,13 @@ date= "2018-12-17T12:05:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
 keywords= ["UE4", "UMG", "cursor", "lagged"]
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-010.jpg"
 +++
+
+Put a PNG in game content directory
+
+<!--more-->
 
 Steps
 

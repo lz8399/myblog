@@ -4,7 +4,12 @@ date= "2018-12-20T17:03:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
 keywords= ["UE4", "Loading Screen", "Animated"]
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-007.jpg"
 +++
+
+I Went into Window > Levels
+<!--more-->
 
 keywords: UE4, Stream Level, Loading Screen, Async Open Level, Async Change Level
 

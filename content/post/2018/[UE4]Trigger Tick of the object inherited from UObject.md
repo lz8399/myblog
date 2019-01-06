@@ -4,7 +4,13 @@ date= "2018-12-13T22:24:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
 keywords= ["UE4", "Tick", "UObject", "NewObject"]
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-012.jpg"
 +++
+
+The object inherited from UObject would not trigger Tick when instanced
+
+<!--more-->
 
 ### 1st way: FTickableGameObject
 
