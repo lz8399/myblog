@@ -202,3 +202,20 @@ in Tick()
 
 		MyTextBlock->SetColorAndOpacity(Color);
 	}
+	
+##### Why UMG's Event OnKeyDown/OnKeyUp not generated
+
+Solution:  
+Set `Is Focusable` enable, and execute `SetKeyboardFocus()`.
+	
+	void UMyUserWidget::NativeConstruct()
+	{
+		Super::NativeConstruct();
+
+		bIsFocusable = true;
+		SetKeyboardFocus();
+
+	}
+
+Reference:  
+https://answers.unrealengine.com/questions/409215/ui-widget-key-events-onkeydownonkeyup-not-generate.html

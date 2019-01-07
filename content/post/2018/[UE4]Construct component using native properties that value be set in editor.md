@@ -48,7 +48,9 @@ Thus, We can modify the size of component in UE4Editor.
 
 overwirte function `PostEditChangeProperty` of AActor:
 
+	#if WITH_EDITOR
     virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
+	#endif
 
 ##### Attention
     

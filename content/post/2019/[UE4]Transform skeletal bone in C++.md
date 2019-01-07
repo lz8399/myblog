@@ -8,8 +8,10 @@ thumbnailImage= "/thumbnail/cover-japan-001.jpg"
 autoThumbnailImage= "true"
 thumbnailImagePosition= "top"
 +++
+
 Add `UPoseableMeshComponent` in your Actor class, and set Skeletal Mesh asset for it.  
 Modify bones transform by UPoseableMeshComponent's functions:
+
 <!--more-->
 
 ##### Blueprint Node
