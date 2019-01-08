@@ -4,17 +4,12 @@ date= "2019-01-05T21:29:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
 keywords= ["UE4", "skeletal bone", "Transform"]
-thumbnailImage= "/thumbnail/cover-japan-001.jpg"
-autoThumbnailImage= "true"
-thumbnailImagePosition= "top"
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-018.jpg"
 +++
 
-Add `UPoseableMeshComponent` in your Actor class, and set Skeletal Mesh asset for it.  
-Modify bones transform by UPoseableMeshComponent's functions:
-
-<!--more-->
-
 ##### Blueprint Node
+<!--more-->
 
 	Transform from Bone Space
 	
