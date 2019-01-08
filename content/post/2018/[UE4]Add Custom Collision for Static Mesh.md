@@ -27,9 +27,11 @@ Static Mesh默认打开后：
 {{< figure src="/img/20181109-[UE4]Add Custom Collision for Static Mesh/[UE4]Add Custom Collision for Static Mesh-06.jpg">}}
 {{< figure src="/img/20181109-[UE4]Add Custom Collision for Static Mesh/[UE4]Add Custom Collision for Static Mesh-07.jpg">}}
 
-由于缩放比例是按倍数调整的，所以一个box很难完整包裹物体，这个时候可以使用多个Box组合，例如：
-{{< figure src="/img/20181109-[UE4]Add Custom Collision for Static Mesh/[UE4]Add Custom Collision for Static Mesh-08.jpg">}}
+缩放比例默认是0.5倍，也可以调整为更小的比例：
+{{< figure src="/img/20181109-[UE4]Add Custom Collision for Static Mesh/[UE4]Add Custom Collision for Static Mesh-07-01.jpg">}}
 
+如果一个box无法恰好包裹整个物体，可以使用多个Box组合，例如：
+{{< figure src="/img/20181109-[UE4]Add Custom Collision for Static Mesh/[UE4]Add Custom Collision for Static Mesh-08.jpg">}}
 
 官方文档：  
 Setting Up Collisions With Static Meshes  
