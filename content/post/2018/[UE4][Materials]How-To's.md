@@ -72,7 +72,10 @@ Side node: If you want different x and y tiling, you can append 2 Scalar Paramet
 Reference   
 https://answers.unrealengine.com/questions/17303/how-to-manipulate-texture-repeat-uv-on-a-material.html
 
-##### How to set UV Coordinate offset of Texture
+##### How to set UV Coordinate offset of Texture and zoom in / out it
 
-UV Coordinate offset  
-https://forums.unrealengine.com/development-discussion/rendering/14848-uv-coordinate-offset?32512-UV-Coordinate-offset=
+{{< figure src="/img/20181222-[UE4][Materials]How-To's/[UE4][Materials]How-To's-01.jpg">}}
+
+Can texture coordinate parameters be applied to material instances?  
+https://answers.unrealengine.com/questions/19412/can-texture-coordinate-parameters-be-applied-to-ma.html
+
