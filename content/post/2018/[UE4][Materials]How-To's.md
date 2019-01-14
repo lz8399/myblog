@@ -79,3 +79,7 @@ https://answers.unrealengine.com/questions/17303/how-to-manipulate-texture-repea
 Can texture coordinate parameters be applied to material instances?  
 https://answers.unrealengine.com/questions/19412/can-texture-coordinate-parameters-be-applied-to-ma.html
 
+
+##### Dissolve effects in UE4
+
+http://martiancraft.com/blog/2015/02/disintegrating-baddies/

@@ -60,6 +60,8 @@ The PlayerCameraManager's default parameters are overridden by a CameraComponent
 
 ##### Get Camera Location and Rotation
 
+PlayerCameraManager.h
+
 	/**
 	 * Master function to retrieve Camera's actual view point.
 	 * Consider calling PlayerController::GetPlayerViewPoint() instead.

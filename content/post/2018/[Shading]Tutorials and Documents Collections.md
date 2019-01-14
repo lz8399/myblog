@@ -6,6 +6,17 @@ tags= ["Shading", "Tutorial"]
 keywords= ["Shading"]
 +++
 
-The complete shader development course(Unity)  
+### The complete shader development course(Unity)  
+
 https://shaderdev.com/
 
+### Forward Rendering vs. Deferred Rendering
+
+https://gamedevelopment.tutsplus.com/articles/forward-rendering-vs-deferred-rendering--gamedev-12342
+
+### Learn OpenGL
+
+https://learnopengl.com/
+
+Deferred Shading  
+https://learnopengl.com/Advanced-Lighting/Deferred-Shading

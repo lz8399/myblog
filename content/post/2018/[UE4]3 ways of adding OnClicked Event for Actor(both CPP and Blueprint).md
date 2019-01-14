@@ -91,7 +91,7 @@ Steps:
 
 		GetCapsuleComponent()->SetCollisionProfileName("BlockAllDynamic");
 		
-If want to use Character's default CollisionProfile "Pawn" to receive Clicked Event, `Visibility` must to be set as `Block`.
+If want to use Character's default CollisionProfile "Pawn" to receive Clicked Event, `Visibility` must to be set as `Block`( Project Settings -> Engine -> Collision -> Preset -> Pawn -> Trace Type -> Visibility).
 {{< figure src="/img/20180111-[UE4]Character添加OnClick事件（C++和蓝图两种方式）/[UE4]Character添加OnClick事件（C++和蓝图两种方式）-11.jpg">}}
 		
 ### Methd 3: Use OnClicked Delegate
