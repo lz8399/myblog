@@ -197,25 +197,81 @@ SetCollisionProfileName 如果要完全生效，必须在 Actor 的构造函数�
 在非构造函数中修改 CollisionProfile ，可以修改当前物体的Collision Channel，即：当前物体对其他 Object Type物体是 Ignore、Overlap 还是 Block。 但是无法修改当前物体的 CollisionEnabled ，即：是否启用物理、是否启用碰撞等设置无法生效。
 {{< /hl-text >}}
 
-### Actor的Hit事件
-##### 1，C++代码的编写
+### Actor的Hit事件（两种方式）
+##### 方式1：OnActorHit 代理
+
+1. C++代码的编写  
 Actor的Hit事件不需要BoxComponent，只需要注册回调即可，回调函数的签名与上面例子的函数签名一样。
 
     FScriptDelegate DelegateHit;
     DelegateHit.BindUFunction(this, "OnTestHit");
     this->OnActorHit.Add(DelegateHit);
-
-##### 2，场景中的碰撞对象需要设置的选项
+2. 场景中的碰撞对象需要设置的选项  
 只要默认即可，不需要设置属性。
 
 ##### 注意事项：
 如果是用BoxComponent去碰撞其他物体，且想触发BoxComponent的Hit事件（通过BoxComponent.OnComponentHit.Add()注册），那么<font color=red>其他物体的Simulate Physics属性必须设置为true，且Collision Presets属性不要设置为NoCollision</font>；
 如果是用Actor去碰撞其他物体，且想触发Actor的Hit事件（通过Actor.OnActorHit.Add()注册），那么<font color=red>其他物体的Simulate Physics属性设置为true或false均可，且Collision Presets属性不要设置为NoCollision</font>。
 
-### Actor的Overlap事件
-Overlap事件开关
+##### 方式2：重写 NotifyHit 函数
 
-	void AActor::UpdateOverlaps(bool bDoNotifies)
+	/** 
+	 * Event when this actor bumps into a blocking object, or blocks another actor that bumps into it.
+	 * This could happen due to things like Character movement, using Set Location with 'sweep' enabled, or physics simulation.
+	 * For events when objects overlap (e.g. walking into a trigger) see the 'Overlap' event.
+	 *
+	 * @note For collisions during physics simulation to generate hit events, 'Simulation Generates Hit Events' must be enabled.
+	 * @note When receiving a hit from another object's movement (bSelfMoved is false), the directions of 'Hit.Normal' and 'Hit.ImpactNormal'
+	 * will be adjusted to indicate force from the other object against this object.
+	 */
+	virtual void AActor::NotifyHit(class UPrimitiveComponent* MyComp, AActor* Other, class UPrimitiveComponent* OtherComp, bool bSelfMoved, FVector HitLocation, FVector HitNormal, FVector NormalImpulse, const FHitResult& Hit);
+
+### Actor的Overlap事件（两种方式）
+
+##### 方式1：OnActorBeginOverlap 注册回调
+
+1. 注册回调
+
+		void AMyCharacter::BeginPlay()
+		{
+			Super::BeginPlay();
+
+			FScriptDelegate Del;
+			Del.BindUFunction(this, TEXT("OnOverlap"));
+			OnActorBeginOverlap.Add(Del);
+		}
+		
+2. 编写回调函数
+	
+	header
+	
+		UFUNCTION()
+		void OnOverlap(AActor* OverlappedActor, AActor* OtherActor);
+		
+	cpp
+		
+		void ATestTD2Character::OnOverlap(AActor* OverlappedActor, AActor* OtherActor)
+		{
+			GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("%s  %s  %s"), *GetName(), *OverlappedActor->GetName(), *OtherActor->GetName()));
+		}
+
+##### 方式2：重写 NotifyActorBeginOverlap 函数
+	
+	/** 
+	 *	Event when this actor overlaps another actor, for example a player walking into a trigger.
+	 *	For events when objects have a blocking collision, for example a player hitting a wall, see 'Hit' events.
+	 *	@note Components on both this and the other Actor must have bGenerateOverlapEvents set to true to generate overlap events.
+	 */
+	virtual void AActor::NotifyActorBeginOverlap(AActor* OtherActor);
+	
+{{< alert warning >}}
+注意：要启用Overlap事件，必须将目标对象的相应`Object Responses`类型设置为`Overlap`
+{{< figure src="/img/20170515-[UE4]C++创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数/[UE4]C++创建BoxCollision(BoxComponent)并注册Overlap和Hit事件回调函数-13.jpg">}}
+{{< /alert >}}
+	
+##### Overlap事件开关
+
+	void UPrimitiveComponent::SetGenerateOverlapEvents(bool bInGenerateOverlapEvents)
 
 ### 其他与碰撞相关：
 
@@ -224,33 +280,17 @@ Component自身提供的检测函数有：
     UPrimitiveComponent::LineTraceComponent();
     UPrimitiveComponent::SweepComponent();
     UPrimitiveComponent::ComponentOverlapComponent();
-    UPrimitiveComponent::OverlapComponent();
+    UPrimitiveComponent::OverlapComponent(); 
 
-蓝图对应这两个函数的节点分别为：
+	
+C++ AActor::OnActorBeginOverlap 对应的蓝图节点为：
 
     EventActorBeginOverlap
+	
+C++ AActor::NotifyHit() 对应的蓝图节点为：
+
     EventHit
-
-除了使用Actor的OnActorHit属性来注册回调，也可以重写Actor的相关函数：
-
-    /** 
-     *  Called when another actor begins to overlap this actor, for example a player walking into a trigger.
-     *  For events when objects have a blocking collision, for example a player hitting a wall, see 'Hit' events.
-     *  @note Components on both this and the other Actor must have bGenerateOverlapEvents set to true to generate overlap events.
-     */
-    Actor::OnActorBeginOverlap()
-
-
-    /** 
-     * Event when this actor bumps into a blocking object, or blocks another actor that bumps into it.
-     * This could happen due to things like Character movement, using Set Location with 'sweep' enabled, or physics simulation.
-     * For events when objects overlap (e.g. walking into a trigger) see the 'Overlap' event.
-     *
-     * @note For collisions during physics simulation to generate hit events, 'Simulation Generates Hit Events' must be enabled.
-     * @note When receiving a hit from another object's movement (bSelfMoved is false), the directions of 'Hit.Normal' and 'Hit.ImpactNormal'
-     * will be adjusted to indicate force from the other object against this object.
-     */
-    Actor::ReceiveHit()
+	
 
 更多参考：
 https://docs.unrealengine.com/latest/INT/Engine/Blueprints/UserGuide/Events/index.html#eventhit

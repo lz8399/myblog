@@ -548,6 +548,11 @@ Edit -> Editor Preferences -> Keyboard Shortcuts -> Play World -> Stop -> Ctrl +
 If a Character play a Montage which isn't same Skeleton, client may crash.
 
 	MyCharacter->PlayAnimMontage(MyMtg, 1.f, FName("Sec01"));
+	
+【2019-01-14T21:49】  
+How to distinguish special Actor from a group of Actors?  
+Actor Has Tag in Unreal Engine 4 
+https://www.youtube.com/watch?v=_SjhBlj4Mu8
 
 ***
 `凡心所向，素履以往。生如逆旅，一苇以航。----木心`

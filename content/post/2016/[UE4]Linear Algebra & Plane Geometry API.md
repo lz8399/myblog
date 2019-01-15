@@ -106,6 +106,41 @@ https://answers.unrealengine.com/questions/31058/how-to-get-an-angle-between-2-v
     FVector UKismetMathLibrary::ProjectVectorOnToPlane(FVector V, FVector PlaneNormal);
 	
 	static FVector VectorPlaneProject(const FVector& V, const FVector& PlaneNormal);
+	
+
+获取Rotator A 对应的3个方向向量：
+    
+    void UKismetMathLibrary::GetAxes(FRotator A, FVector& X, FVector& Y, FVector& Z);
+    
+获取 Rotator 对应坐标系3个方向向量：
+    
+    FVector UKismetMathLibrary::GetForwardVector(FRotator InRot);
+	FVector UKismetMathLibrary::GetRightVector(FRotator InRot);
+	FVector UKismetMathLibrary::GetUpVector(FRotator InRot);
+
+计算一组向量的平均向量：
+    
+    FVector GetVectorArrayAverage(const TArray<FVector>& Vectors);
+	
+获取反向方向 / 获取A向量相对B向量的镜像向量
+
+	/** 
+	 * Given a direction vector and a surface normal, returns the vector reflected across the surface normal.
+	 * Produces a result like shining a laser at a mirror!
+	 *
+	 * @param Direction Direction vector the ray is coming from.
+	 * @param SurfaceNormal A normal of the surface the ray should be reflected on.
+	 *
+	 * @returns Reflected vector.
+	 */
+	static CORE_API FVector GetReflectionVector(const FVector& Direction, const FVector& SurfaceNormal);
+	
+以Rotator自身朝向为X轴，获取对应的Y、Z轴方向的世界坐标系方向
+
+	FMatrix RotMatrix = FRotationMatrix(ActorB->GetActorRotation());
+	FVector ForwardVector = RotMatrix.GetScaledAxis(EAxis::X);
+	FVector RightVector = RotMatrix.GetScaledAxis(EAxis::Y);
+	FVector TopVector = RotMatrix.GetScaledAxis(EAxis::Z);
 
 ##### 插值相关
 
@@ -122,18 +157,4 @@ Transform 插值计算：
         
     FTransform UKismetMathLibrary::TInterpTo(const FTransform& Current, const FTransform& Target, float DeltaTime, float InterpSpeed);
         
-##### 向量相关
-
-获取Rotator A 对应的3个方向向量：
-    
-    void UKismetMathLibrary::GetAxes(FRotator A, FVector& X, FVector& Y, FVector& Z);
-    
-获取 Rotator 对应坐标系3个方向向量：
-    
-    FVector UKismetMathLibrary::GetForwardVector(FRotator InRot);
-	FVector UKismetMathLibrary::GetRightVector(FRotator InRot);
-	FVector UKismetMathLibrary::GetUpVector(FRotator InRot);
-
-计算一组向量的平均向量：
-    
-    FVector GetVectorArrayAverage(const TArray<FVector>& Vectors);
+	
