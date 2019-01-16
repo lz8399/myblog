@@ -151,6 +151,11 @@ https://docs.unrealengine.com/en-us/Engine/Performance/GPU
 使用stat相关命令检测性能时，需要关闭Smooth Frame Rate来保证检测结果更精准：Project Settings -》 Engine -》 General Settings -》 Framerate -》 Smooth Frame Rate。
 {{< /alert >}}
 
+##### 运行时期间用C++执行console命名
+
+	UKismetSystemLibrary::ExecuteConsoleCommand(UObject* WorldContextObject, 
+		const FString& Command, class APlayerController* SpecificPlayer = NULL )
+
 ##### 运行时期间修改画质级别
 
 Unreal Engine 4 Save and Load Graphics Settings using Blueprints Tutorial  
@@ -163,7 +168,7 @@ Scalability Reference
 https://docs.unrealengine.com/en-us/Engine/Performance/Scalability/ScalabilityReference
 
 {{< alert success >}}
-蓝图的 Execute Console Command 节点在 Shipping 模式下仍然有效。
+蓝图`Execute Console Command`节点（C++接口：`UKismetSystemLibrary::ExecuteConsoleCommand()`）在 Shipping 模式下仍然有效。
 {{< /alert >}}
 
 ##### 官方文档

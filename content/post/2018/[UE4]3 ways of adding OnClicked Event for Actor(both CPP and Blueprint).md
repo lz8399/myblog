@@ -6,7 +6,7 @@ tags= ["UE4"]
 keywords= ["UE4", "Character", "OnClick", "C++", "Blueprint"]
 +++
 
-keywords：如何获取鼠标点击时的物体对象、鼠标悬停事件
+keywords：如何获取鼠标点击时的物体对象、鼠标悬停事件、鼠标点击事件、鼠标单击事件
 
 # Mouse Clicked Event
 

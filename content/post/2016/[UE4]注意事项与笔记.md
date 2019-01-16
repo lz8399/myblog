@@ -551,7 +551,7 @@ If a Character play a Montage which isn't same Skeleton, client may crash.
 	
 【2019-01-14T21:49】  
 How to distinguish special Actor from a group of Actors?  
-Actor Has Tag in Unreal Engine 4 
+Actor Has Tag in Unreal Engine 4  
 https://www.youtube.com/watch?v=_SjhBlj4Mu8
 
 ***
