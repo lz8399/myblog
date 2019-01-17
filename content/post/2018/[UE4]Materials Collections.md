@@ -6,9 +6,6 @@ tags= ["UE4"]
 keywords= ["UE4", "Materials", "Tutorials"]
 +++
 
-Creating Interactive Grass in Unreal Engine 4  
-https://www.raywenderlich.com/6314-creating-interactive-grass-in-unreal-engine-4
-
 Creating Snow Trails in Unreal Engine 4  
 https://www.raywenderlich.com/5760-creating-snow-trails-in-unreal-engine-4
 
@@ -26,6 +23,17 @@ https://gumroad.com/l/AflqH
 
 UE4 Tutorial: Fire Effect (UV Animation)  
 https://www.youtube.com/watch?v=B8Gya38KkJY
+
+##### Grass 
+
+Dynamic Grass System  
+https://www.unrealengine.com/marketplace/dynamic-grass-system
+
+Creating Interactive Grass in Unreal Engine 4  
+https://www.raywenderlich.com/6314-creating-interactive-grass-in-unreal-engine-4
+
+Field Grass Package Vol. 1  
+https://www.unrealengine.com/marketplace/field-grass-package-vol
 
 ##### Circular Progress Bar
 
@@ -69,6 +77,9 @@ UE4 Portal Material
 https://www.youtube.com/watch?v=vApZMJYo0F0
 {{< figure src="/img/20180906-[UE4]Materials Collections/[UE4]Materials Collections-01.jpg">}}
 
+Planar Dissolve Effect - Material Tutorial - (Unreal Engine 4)  
+https://www.youtube.com/watch?v=HR3flKges_A
+
 ##### UV Animation
 UE4 Tutorial: Fire Effect  
 https://www.youtube.com/watch?v=B8Gya38KkJY&t=5s
@@ -76,4 +87,5 @@ https://www.youtube.com/watch?v=B8Gya38KkJY&t=5s
 ##### SkyBox
 
 Ultra Dynamic Sky  
-https://www.unrealengine.com/marketplace/ultra-dynamic-sky
+https://www.unrealengine.com/marketplace/ultra-dynamic-sky  
+https://www.youtube.com/watch?v=lwi4K4x0Q3k

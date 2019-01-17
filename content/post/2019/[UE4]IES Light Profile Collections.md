@@ -4,9 +4,8 @@ date= "2019-01-17T16:23:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
 keywords= ["UE4", "Light", "IES"]
-thumbnailImage= "/thumbnail/cover-japan-001.jpg"
-autoThumbnailImage= "true"
-thumbnailImagePosition= "top"
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-013.jpg"
 +++
 
 IES Light Profile  
