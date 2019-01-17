@@ -29,7 +29,7 @@ cpp：
     {        
     }
 
-**注意事项：**  
+##### 转向抖动问题
 使用默认的UCrowdFollowingComponent，角色在转向时会抖动，要解决这个问题，需要将属性`UCrowdFollowingComponent::bSuspendCrowdSimulation`设置为true。  
 完整代码：
 
@@ -48,7 +48,9 @@ cpp：
         }
     }
 
-
+{{< hl-text red >}}
+但是`SuspendCrowdSteering` 设置为true后，自动避让面前角色的功能就失效了，如果要处理这个问题，建议重写 UCrowdFollowingComponent 中的转向逻辑，因为其内部没有考虑慢速转向的问题。
+{{< /hl-text>}}
 
 ##### Crowd Manager 配置
 Project Settings -》Engine -》 Navigation System -》 Crowd Manager Class

@@ -8,12 +8,9 @@ thumbnailImagePosition= "left"
 thumbnailImage= "/thumbnail/thumbnail-japen-015.jpg"
 +++
 
-How to scale or zoom a widget?  
-How to clip widget display area?  
+##### How to scale or zoom a widget?
 
 <!--more-->
-
-##### How to scale or zoom a widget?
 
 For Mouse Zoom:
 

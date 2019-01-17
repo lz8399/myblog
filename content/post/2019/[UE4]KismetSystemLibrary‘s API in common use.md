@@ -4,9 +4,8 @@ date= "2019-01-16T15:42:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
 keywords= ["UE4", "KismetSystemLibrary", "UKismetSystemLibrary"]
-thumbnailImage= "/thumbnail/cover-japan-001.jpg"
-autoThumbnailImage= "true"
-thumbnailImagePosition= "top"
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-015.jpg"
 +++
 
 keywords: KismetSystemLibrary, UKismetSystemLibrary
