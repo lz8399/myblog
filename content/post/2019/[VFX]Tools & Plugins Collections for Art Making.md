@@ -1,5 +1,5 @@
 +++
-title= "[VFX]Tools & Plugins Collections"
+title= "[VFX]Tools & Plugins Collections for Art Making"
 date= "2019-01-17T18:28:40+08:00"
 categories= ["VFX"]
 tags= ["VFX"]
