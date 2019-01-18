@@ -3,9 +3,8 @@ title= "[VFX]Tools & Plugins Collections for Art Making"
 date= "2019-01-17T18:28:40+08:00"
 categories= ["VFX"]
 tags= ["VFX"]
-thumbnailImage= "/thumbnail/cover-japan-001.jpg"
-autoThumbnailImage= "true"
-thumbnailImagePosition= "top"
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-011.jpg"
 +++
 
 ##### Maya & 3DMax

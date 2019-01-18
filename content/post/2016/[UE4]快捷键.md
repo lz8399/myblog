@@ -32,6 +32,18 @@ F8
 
 操作方式：按下对应的字符不放，然后单击鼠标左键。例如按住3不放，然后点击鼠标左键，这样就可以快速创建一个Constant3Vector。
 
+##### 截屏
+F9
+
+#### 渲染相关
+运行时查看Mesh网格、灯光、材质复杂度等：  
+F1 ~ F5
+
+编辑器下查看Mesh网格、灯光、材质复杂度等：  
+Alt + 1 ~ 8
+
+##### 移动物体时，摄像机跟随一起移动（摄像机相对其静止）
+按住H键，在移动物体
 
 更多快捷键说明：
 http://docs.unrealengine.com/latest/INT/Engine/UI/LevelEditor/Viewports/ViewportControls/index.html
