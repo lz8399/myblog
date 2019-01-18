@@ -8,10 +8,9 @@ thumbnailImagePosition= "left"
 thumbnailImage= "/thumbnail/thumbnail-japen-007.jpg"
 +++
 
-I Went into Window > Levels
-<!--more-->
-
 keywords: UE4, Stream Level, Loading Screen, Async Open Level, Async Change Level
+
+<!--more-->
 
 11 Short Steps to Create an Animated Loading Screen
 

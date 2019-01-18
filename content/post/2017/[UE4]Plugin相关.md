@@ -30,7 +30,7 @@ keywords= ["UE4", "Plugin"]
       "Description": "",
       "Modules": [
         {
-          "Name": "TowerDefense",
+          "Name": "MyProj",
           "Type": "Runtime",
           "LoadingPhase": "Default",
           "AdditionalDependencies": [
@@ -39,7 +39,7 @@ keywords= ["UE4", "Plugin"]
             "CoreUObject",
             "AIModule",
             "ApexDestruction",
-            "RTSAI"
+            "MyPlugin"
           ]
         }
       ],
@@ -49,7 +49,7 @@ keywords= ["UE4", "Plugin"]
           "Enabled": true
         },
         {
-          "Name": "RTSAI",
+          "Name": "MyPlugin",
           "Enabled": true
         }
       ]

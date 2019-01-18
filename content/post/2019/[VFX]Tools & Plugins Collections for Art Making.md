@@ -10,6 +10,8 @@ thumbnailImagePosition= "top"
 
 ##### UE4 Tools and Plugins
 
+<!--more-->
+
 umeFX to UE4 Tutorial: Smoke/Grenade effect using flipbooks.  
 https://www.youtube.com/watch?v=CKbgMxLiRJM
 

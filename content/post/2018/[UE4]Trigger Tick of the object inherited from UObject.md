@@ -8,11 +8,9 @@ thumbnailImagePosition= "left"
 thumbnailImage= "/thumbnail/thumbnail-japen-012.jpg"
 +++
 
-The object inherited from UObject would not trigger Tick when instanced
+### 1st way: FTickableGameObject
 
 <!--more-->
-
-### 1st way: FTickableGameObject
 
 The object inherited from UObject would not trigger Tick when instanced (NewObject<UObject>()), but AActor and the UActorComponent would trigger Tick.
 

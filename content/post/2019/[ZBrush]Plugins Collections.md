@@ -7,7 +7,8 @@ thumbnailImagePosition= "left"
 thumbnailImage= "/thumbnail/thumbnail-japen-012.jpg"
 +++
 
-ZWrap Plugin for ZBrush  
+ZWrap Plugin for ZBrush
+<!--more-->
 https://www.russian3dscanner.com/zwrap/
 
 ***
