@@ -9,3 +9,6 @@ thumbnailImage= "/thumbnail/thumbnail-japen-012.jpg"
 
 ZWrap Plugin for ZBrush  
 https://www.russian3dscanner.com/zwrap/
+
+***
+`做学问要在不疑处有疑，做人要在有疑处不疑。`——胡适

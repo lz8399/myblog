@@ -53,3 +53,6 @@ https://answers.unrealengine.com/questions/237166/how-can-i-get-the-current-proj
 			r = RulesCompiler.CreateProjectRulesAssembly(CheckProjectFile);  
 		}  
 	}
+
+***
+`我年轻时，听一位教授讲：“人生都只有一个想法，终其一生不过是不断丰富它。”我当时觉得：“一辈子只围绕一个念头转？这未免也太反动了！”五十岁时，我明白他是对的：我这一辈子都在追随一个想法，问题是我从来都不知道是哪个。`──翁贝托·埃科《密涅瓦火柴盒》

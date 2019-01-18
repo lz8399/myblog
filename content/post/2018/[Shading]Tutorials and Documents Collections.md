@@ -20,3 +20,6 @@ https://learnopengl.com/
 
 Deferred Shading  
 https://learnopengl.com/Advanced-Lighting/Deferred-Shading
+
+***
+`如果有一天我离开你了，别多想，只是因为我觉得你身边不缺我一个人。`

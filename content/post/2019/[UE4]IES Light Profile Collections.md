@@ -17,3 +17,6 @@ https://www.unrealengine.com/marketplace/ies-texture-mega-pack-100-ies-textures
 
 IES Light Profile Pack  
 https://www.unrealengine.com/marketplace/ies-light-profile-pack
+
+***
+`他们如此单纯，以至于认为贫穷是一种罪过，还以为可以通过赚钱来遗忘。`——杰拉尔·萨利克

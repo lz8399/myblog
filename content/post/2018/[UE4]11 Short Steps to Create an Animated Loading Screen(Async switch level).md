@@ -36,3 +36,6 @@ https://wiki.unrealengine.com/Animated_Loading_Screen
 
 Blueprint Manual Level Streaming  
 https://wiki.unrealengine.com/Blueprint_Manual_Level_Streaming
+
+***
+`笳鼓动，渔阳弄，思悲翁，不请长缨，系取天骄种。剑吼西风。` ----贺铸·《六州歌头·节选》

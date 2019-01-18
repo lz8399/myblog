@@ -29,3 +29,6 @@ Some assets object in memory not persisted
 
 Solution:  
 Use `UPROPERTY()` or `AddToRoot()` to persist assets in memory.
+
+***
+`黄沙百战穿金甲，不破楼兰誓不还。——《王昌龄·从军行七首·其四》`

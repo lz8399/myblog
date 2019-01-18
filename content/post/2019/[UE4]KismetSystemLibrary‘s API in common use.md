@@ -994,3 +994,6 @@ keywords: KismetSystemLibrary, UKismetSystemLibrary
 	UFUNCTION(BlueprintPure, Category = "Utilities|Platform")
 	static bool GetVolumeButtonsHandledBySystem();
 	
+***
+`几个朋友祝我安乐，几个仇敌祝我灭亡。我却总是既不安乐，也不灭亡。不上不下地生活下来，都不能副任何一面的期望。`──鲁迅
+

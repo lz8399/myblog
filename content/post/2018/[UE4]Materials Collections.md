@@ -89,3 +89,6 @@ https://www.youtube.com/watch?v=B8Gya38KkJY&t=5s
 Ultra Dynamic Sky  
 https://www.unrealengine.com/marketplace/ultra-dynamic-sky  
 https://www.youtube.com/watch?v=lwi4K4x0Q3k
+
+***
+`我会记住生命中不期而遇的温暖，我也会记得大雨磅礴，没有带伞的日子。`

@@ -37,3 +37,6 @@ or
     
 Reference:How do you guys combat circular dependencies in your file heads?  
 https://forums.unrealengine.com/development-discussion/c-gameplay-programming/109582-how-do-you-guys-combat-circular-dependencies-in-your-file-heads
+
+***
+`在我眼里，钱比对象重要，朋友比对象重要，可你要是对我好，钱我都可以给你，就连我交什么样的朋友都是你说的算。`

@@ -75,3 +75,6 @@ http://mathinsight.org/distance_point_plane
 
 点到平面的垂足  
 http://blog.csdn.net/threewind/article/details/5980613
+
+***
+`我喜欢人甚于喜欢原则，我喜欢无原则的人甚于喜欢其余的一切。`──奥斯卡·王尔德（OscarWilde）《道连格雷的画像》

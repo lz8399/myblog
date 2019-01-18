@@ -16,3 +16,6 @@ git运行突然提示
 解决：  
 1.输入命令：`git fsck --lost-found`，可以看到好多“dangling commit”。  
 2.清空他们：`git gc --prune=now`，完成。  
+
+***
+`我们的生命被琐碎消耗至尽。` ──亨利·戴维·梭罗《瓦尔登湖》

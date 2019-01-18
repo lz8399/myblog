@@ -19,3 +19,6 @@ keywords= ["UE4", "Actor Lifecycle", "Garbage Collection"]
 
 官方文档  
 https://docs.unrealengine.com/en-us/Programming/UnrealArchitecture/Actors/ActorLifecycle
+
+***
+`乐观主义是一种别致的自我欺骗。`

@@ -29,3 +29,6 @@ https://answers.unrealengine.com/questions/312646/how-does-object-occlusion-and-
 
 Project Settings -> Engine -> Rendering -> Culling -> Occlusion Culling. It's checked by default.
 
+
+***
+`六盘山上高峰，红旗漫卷西风。今日长缨在手，何时缚住苍龙？` ----毛泽东《清平乐· 六盘山》

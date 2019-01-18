@@ -15,3 +15,6 @@ thumbnailImage= "/thumbnail/thumbnail-japen-017.jpg"
 Use `Set Frame Rate`
 
 {{< figure src="/img/20190108-[UE4]Sequencer Related/[UE4]Sequencer Related-01.jpg">}}
+
+***
+`爱在左，同情在右，走在生命的两旁，随时撒种，随时开花，将这一径长途，点缀得香花弥漫，使穿枝拂叶的行人，踏着荆棘，不觉得痛苦，有泪可落，却不是悲凉。` ──冰心

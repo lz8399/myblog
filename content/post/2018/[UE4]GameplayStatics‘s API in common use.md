@@ -66,4 +66,5 @@ Even when the Actor is in **LEFT BACK** or **RIGHT BACK** of Camera, `ProjectWor
 when Actor is in **RIGHT BEHIND** of Camera, `ProjectWorldToScreen` would return false.  
 So we can use this value to check if is need to update icon's position on screen for Target Direction Tips logic (Navigation suggestion).
 
-
+***
+`每当我们无能为力的时候，我们就总爱说顺其自然。`

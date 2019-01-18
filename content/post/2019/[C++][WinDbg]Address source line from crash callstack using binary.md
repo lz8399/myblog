@@ -94,3 +94,6 @@ Or
 
 Using gdb to convert addresses to lines  
 https://stackoverflow.com/questions/8545931/using-gdb-to-convert-addresses-to-lines
+
+***
+`人生中有些事是不得不做的，于不得不做中勉强去做，是毁灭；于不得不做中做的好，是勇敢。` ——叶弥《成长如蜕》

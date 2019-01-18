@@ -109,3 +109,6 @@ cpp:
 {{< alert warning >}}
 If not override PostLoad, modification of properties would not take effect when start Editor at first time.
 {{< /alert >}}
+
+***
+`失望并不可怕，可怕的是一次次失望过后，平静的安慰自己，心存侥幸试着继续相信。`

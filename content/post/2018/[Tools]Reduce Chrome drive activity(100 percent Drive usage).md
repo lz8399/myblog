@@ -8,3 +8,6 @@ thumbnailImage= "/thumbnail/thumbnail-japen-009.jpg"
 +++
 
 Settings -> Advanced -> Privacy and security -> Disable `Protects you and your device from dangerous sites`
+
+***
+`物是人非事事休 ，欲语泪先流。`

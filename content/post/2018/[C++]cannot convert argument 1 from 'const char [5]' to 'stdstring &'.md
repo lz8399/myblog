@@ -36,3 +36,6 @@ this would produce compilation error:
     {
         TestFun01("abcd");
     }
+	
+***
+`人，越有智慧越显得孤独苦恼。`

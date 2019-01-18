@@ -45,3 +45,6 @@ You should initialize constant data members in the constructor's initializers in
 
 Reference: how to use const_cast?  
 https://stackoverflow.com/questions/19554841/how-to-use-const-cast
+
+***
+`找不到你的时候，特别想把自己也藏到让任何人找不到。`

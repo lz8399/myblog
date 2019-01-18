@@ -62,3 +62,6 @@ UE4编辑器中虽然提供了添加自定义碰撞盒的功能，但是编辑�
 
 就可以看到3块自定义碰撞盒。
 {{< figure src="/img/20181109-[UE4]Add Custom Collision for Static Mesh/[UE4]Add Custom Collision for Static Mesh-15.jpg">}}
+
+***
+`小时候有无数个梦想，现在只想好好生活。`

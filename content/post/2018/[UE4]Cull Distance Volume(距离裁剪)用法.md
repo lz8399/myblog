@@ -16,9 +16,14 @@ keywords：UE4、Cull Distance Volume、距离裁剪、遮挡剔除
 ##### 常用的Distance级别设置
 {{< figure src="/img/20180304-[UE4]Cull Distance Volume(遮挡剔除)用法/[UE4]Cull Distance Volume(遮挡剔除)用法-02.jpg">}}
 
-{{< alert danger >}}
-Cull Distance Volume在游戏运行时才有效，在编辑器非运行期间拖拉摄像机无效。
-{{< /alert >}}
+##### 遮挡剔除没有效果的原因
+
+可能有3中原因：
+
+1. `Enabled`没有勾选；
+2. 体积设置的太小，物体不在`Cull Distance Volume`范围内；
+3. {{< hl-text red >}} 引擎的bug（切换引擎版本后导致。如果升级引擎版本，建议重新建一个空白场景），Cull Distance Volume在游戏运行时才有效，在编辑器非运行期间拖拉摄像机无效。 {{< /hl-text >}}
+
 
 ***
 `识不足则多虑；威不足则多怒；信不足则多言。----弘一法师`

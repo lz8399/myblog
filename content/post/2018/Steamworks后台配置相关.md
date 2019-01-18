@@ -87,4 +87,5 @@ https://partner.steamgames.com/doc/store/application/dlc
 
     bool ISteamApps::BIsDlcInstalled( AppId_t appID );
     
-    
+***
+`见地深刻的人经常没有听众。`

@@ -69,3 +69,5 @@ https://answers.unrealengine.com/questions/796763/what-does-bad-name-index-143-e
 Change `Cooker Progress Display Mode` to `Names and Remaining Packages` in **Project Setttings -> Engine -> Cooker**.  
 than see the files name around the `Error: Bad name index`, check these files if is invaild.
 
+***
+`不给身边的人带来负面影响，就是你的修养。`

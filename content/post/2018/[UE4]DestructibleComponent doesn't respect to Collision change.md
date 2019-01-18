@@ -75,3 +75,6 @@ Add a custom Component inherit from DestructibleComponent, then override two fun
 ##### Reference
 DestructibleComponent does not respect calls to UPrimitiveComponent::SetCollisionEnabled or AActor::SetActorEnableCollision at runtime  
 https://answers.unrealengine.com/questions/354110/view.html
+
+***
+`在黑暗的时代不反抗就意味着同谋。`——让-保罗·萨特（Jean-PaulSartre）

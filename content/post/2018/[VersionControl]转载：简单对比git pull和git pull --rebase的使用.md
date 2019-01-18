@@ -32,3 +32,6 @@ tags= ["Git"]
 
 在rebase的过程中，有时也会有conflict，这时Git会停止rebase并让用户去解决冲突，解决完冲突后，用git add命令去更新这些内容，然后不用执行git-commit,直接执行git rebase --continue,这样git会继续apply余下的补丁。
 在任何时候，都可以用git rebase --abort参数来终止rebase的行动，并且mywork分支会回到rebase开始前的状态。
+
+***
+`不能忍受无聊的一代人，将是平庸的一代人。不能忍耐无聊，生活就会变成持续的对无聊的逃离。`──罗素（Rusell）

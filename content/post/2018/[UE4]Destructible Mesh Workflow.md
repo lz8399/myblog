@@ -15,3 +15,6 @@ Take damage, destruct mesh if damage is enough:
 	// Take radius damage
 	UFUNCTION(BlueprintCallable, Category="Components|Destructible")
 	virtual void UDestructibleComponent::ApplyRadiusDamage(float BaseDamage, const FVector& HurtOrigin, float DamageRadius, float ImpulseStrength, bool bFullDamage) override;
+	
+***
+`卓尔不群的人必有一副不凡的相貌。`

@@ -43,3 +43,6 @@ Because the transformation of PoseableMeshComponent is entirely be handle by use
 
 Transform skeletal bone in C++  
 https://answers.unrealengine.com/questions/59010/transform-skeletal-bone-in-c.html
+
+***
+`发生过的事，以后还会发生；做过的事，将来还要再做。太阳底下没有新的事。有谁能说，看，这是新事？不，在我们出生之前早就有了。以往的事没有人去追忆，今后的事也没有人去掛念。` ──《旧约·传道书》

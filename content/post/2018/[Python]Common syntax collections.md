@@ -54,3 +54,6 @@ casefold() not only can be used for ASCII strings, but also for Non-ASCII string
 
 How do I do a case-insensitive string comparison?  
 https://stackoverflow.com/questions/319426/how-do-i-do-a-case-insensitive-string-comparison/29247821#29247821
+
+***
+`招取英灵毅魄，长绕贺兰山。` ---邓千江· 《望海潮》
