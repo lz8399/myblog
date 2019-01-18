@@ -8,20 +8,26 @@ thumbnailImagePosition= "left"
 thumbnailImage= "/thumbnail/thumbnail-japen-018.jpg"
 +++
 
-##### Blueprint Node
+##### Blueprint
 <!--more-->
 
-	Transform from Bone Space
+Blueprint Node
+
+	Transform Bone
 	
+Example
+
 {{< figure src="/img/20190105-[UE4]Transform skeletal bone in C++/[UE4]Transform skeletal bone in C++-01.jpg">}}
+{{< figure src="/img/20190105-[UE4]Transform skeletal bone in C++/[UE4]Transform skeletal bone in C++-02.jpg">}}
+{{< figure src="/img/20190105-[UE4]Transform skeletal bone in C++/[UE4]Transform skeletal bone in C++-03.jpg">}}
 	
 ##### C++ code
 
 Steps
 
 1. Add `UPoseableMeshComponent` in your Actor class, and set Skeletal Mesh asset for it.
-{{< figure src="/img/20190105-[UE4]Transform skeletal bone in C++/[UE4]Transform skeletal bone in C++-02.jpg">}}
-{{< figure src="/img/20190105-[UE4]Transform skeletal bone in C++/[UE4]Transform skeletal bone in C++-03.jpg">}}
+{{< figure src="/img/20190105-[UE4]Transform skeletal bone in C++/[UE4]Transform skeletal bone in C++-04.jpg">}}
+{{< figure src="/img/20190105-[UE4]Transform skeletal bone in C++/[UE4]Transform skeletal bone in C++-05.jpg">}}
 {{< alert info >}}
 Because the transformation of PoseableMeshComponent is entirely be handle by user, so there's no property to set the Animation Blueprint.
 {{< /alert >}}
@@ -44,5 +50,14 @@ Because the transformation of PoseableMeshComponent is entirely be handle by use
 Transform skeletal bone in C++  
 https://answers.unrealengine.com/questions/59010/transform-skeletal-bone-in-c.html
 
+Transform Bone  
+https://docs.unrealengine.com/en-us/Engine/Animation/NodeReference/SkeletalControls/TransformBone
+
+#### Bone Related
+
+Transform a location/rotation in bone relative space to world space.
+
+	Transform from Bone Space
+
 ***
-`发生过的事，以后还会发生；做过的事，将来还要再做。太阳底下没有新的事。有谁能说，看，这是新事？不，在我们出生之前早就有了。以往的事没有人去追忆，今后的事也没有人去掛念。` ──《旧约·传道书》
+`发生过的事，以后还会发生；做过的事，将来还要再做。太阳底下没有新的事。有谁能说，看，这是新事？不，在我们出生之前早就有了。以往的事没有人去追忆，今后的事也没有人去掛念。 ──《旧约·传道书》`
