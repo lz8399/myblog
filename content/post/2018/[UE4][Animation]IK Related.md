@@ -1,5 +1,5 @@
 +++
-title= "[UE4][Animation]IK动画"
+title= "[UE4][Animation]IK Related"
 date= "2018-05-30T13:41:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4", "Animation"]
@@ -33,5 +33,37 @@ https://www.youtube.com/watch?v=yTniZCOCY7o
 Advanced Locomotion System V3  
 https://www.unrealengine.com/marketplace/advanced-locomotion-system-v1
 
+##### FABRIK (Forward And Backward Reaching Inverse Kinematics)
+
+FABRIK  
+https://docs.unrealengine.com/en-us/Engine/Animation/NodeReference/Fabrik
+
+Adding of a rifle and fabrik node to fix left hand  
+https://www.youtube.com/watch?v=49MJWjlSHcw
+
+##### Look At
+
+Look At  
+https://docs.unrealengine.com/en-us/Engine/Animation/NodeReference/SkeletalControls/LookAt
+
+##### CCDIK (Cyclic Coordinate Descent Inverse Kinematics)
+
+CCDIK  
+https://docs.unrealengine.com/en-us/Engine/Animation/NodeReference/SkeletalControls/CCDIK
+
+##### Hand IK Retargeting
+
+Hand IK Retargeting  
+https://docs.unrealengine.com/en-us/Engine/Animation/NodeReference/SkeletalControls/HandIKRetargeting
+
+##### Two Bone IK
+
+Two Bone IK  
+https://docs.unrealengine.com/en-us/Engine/Animation/NodeReference/SkeletalControls/TwoBoneIK
+
+##### Spline IK
+
+Spline IK  
+https://docs.unrealengine.com/en-us/Engine/Animation/NodeReference/SkeletalControls/SplineIK
 ***
 `认识自己的无知是认识世界的最可靠的方法。---米歇尔·蒙田《随笔集》`
