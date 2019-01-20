@@ -11,7 +11,7 @@ Performance Guidelines for Artists and Designers
 <!--more-->
 https://docs.unrealengine.com/en-us/Engine/Performance/Guidelines
 
-但是官方文档写的太粗燥，对UE4没有一定了解，很难理解文档的意图。这里我在官方文档的基础上，结合自己遇到的问题，重新整理一了一下，适合对UE4不熟的人查阅。
+但是官方文档写的太粗燥，对UE4没有一定了解，很难理解文档的意图。这里我在官方文档的基础上，结合自己遇到的问题，重新整理了一下，适合对UE4不熟的美术查阅。
 
 以下是针对美术人员和关卡设计师的常规提升性能的指导意见
 

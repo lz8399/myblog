@@ -82,6 +82,17 @@ https://docs.unrealengine.com/latest/INT/Engine/Performance/Guidelines/
         
     默认是`AlwaysTickPoseAndRefreshBones`，表示不管是否被渲染（在可见区域内），都执行 Tick 和 RefreshBoneTransforms。  
     旧版本中`MeshComponentUpdateFlag`叫做`SkinnedMeshUpdateFlag`。  
+	
+3. 动画蓝图的逻辑尽量直接访问成员变量，引擎默认开启了优化选项：动画蓝图中的成员变量在编译时会被复制到Native Code中，从而避免在运行时进入蓝图虚拟机（Blueprint Virtual Machine）执行蓝图代码，因为蓝图VM运行效率低。  
+默认会被编译优化的参数类型包括：  
+member variables;  
+negated boolean member variables;  
+members of a nested structure;  
+具体说明见官方文档：  
+Animation Optimization  
+https://docs.unrealengine.com/en-us/Engine/Animation/Optimization  
+Animation Fast Path Optimization  
+https://docs.unrealengine.com/en-us/Engine/Animation/Optimization/FastPath
 
 ##### UI优化
 
