@@ -32,21 +32,20 @@ Min Screen Radius for Cascaded Shadow Maps
 
 ##### 灯光优化
 
-1, 3种光源的性能消耗从低到高：  
+1. 3种光源的性能消耗从低到高：  
 定向光/平行光(Directional Light) < 点光源(Point Light) < 聚光灯(Spot Light)。  
 这个标准不局限于UE4，其他引擎也是这样。当光源数量在场景中达到一定量级时，3种灯光的性能差距也是数量级上差距。
 
-2, 在建构光照贴图时，若场景中没有给予Lightmass Importance Volume，会对整个场景做间接光照的采样，产生Indirect Lighting Cache，这对大型游戏场景是相当的浪费，像是游戏角色到不了的中、远景不需要产生Indirect Lighting Cache，这时候就可以在场景中置入Lightmass Importance Volume，指定特定区域内才会产生Indirect Lighting Cache，节省不少建构光照的时间。
+2. 在建构光照贴图时，若场景中没有给予Lightmass Importance Volume，会对整个场景做间接光照的采样，产生Indirect Lighting Cache，这对大型游戏场景是相当的浪费，像是游戏角色到不了的中、远景不需要产生Indirect Lighting Cache，这时候就可以在场景中置入Lightmass Importance Volume，指定特定区域内才会产生Indirect Lighting Cache，节省不少建构光照的时间。
 
-3, 点光源和聚光灯尽量不要开启`Cast Volumetric Shadow`。开启后的性能消耗为不开启的性能消耗三倍。
+3. 点光源和聚光灯尽量不要开启`Cast Volumetric Shadow`。开启后的性能消耗为不开启的性能消耗三倍。
 
-4, 如果开启体积雾，建议将灯光改成静态光，这样在Build Lighting时会生成预计算的体积雾相关数据，这样可以显著提升体积雾性能。体积雾性能消耗巨大。
+4. 如果开启体积雾，建议将灯光改成静态光，这样在Build Lighting时会生成预计算的体积雾相关数据，这样可以显著提升体积雾性能。体积雾性能消耗巨大。
 
 ##### 阴影优化
 
-1，如果使用了Stationary Directional Light，场景中要大量单位时，一定要开启`Dynamic Shadow Distance StationaryLight`（默认为0，表示关闭）。  
-测试用例： 500 个 Actor 同屏，摄像机高度4000，DirectionalLight 的属性`Dynamic Shadow Distance StationaryLight`的值要大于摄像机到Actor的直线距离（注意：是到每个Actor的直线距离，所以值尽量要设置的大一些，比5000），否则帧率从200 fps 下降到 100 fps。
-
+1. 如果使用了Stationary Directional Light，场景中要大量单位时，一定要开启`Dynamic Shadow Distance StationaryLight`（默认为0，表示关闭）。  
+测试用例： 500 个 Actor 同屏，摄像机高度4000，DirectionalLight 的属性`Dynamic Shadow Distance StationaryLight`的值要大于摄像机到Actor的直线距离（注意：是到每个Actor的直线距离，所以值尽量要设置的大一些，比5000），否则帧率从200 fps 下降到 100 fps。  
 `Dynamic Shadow Distance StationaryLight`开启后能提升性能的原因：  
 Dynamic Shadow Distance StationaryLight 表示在多少距离内使用动态阴影，超过这个距离之外Fade成静态阴影，而Fate成静态阴影后就可以提升性能
 
@@ -55,22 +54,22 @@ Dynamic Shadow Distance StationaryLight 表示在多少距离内使用动态阴�
 
 1. 材质类型的性能，从快到慢：Opaque -> Masked -> Translucent。
 
-2. 若场景中有大量单位，比如500个，那么这些单位一定要做材质LOD，并尽可能多的去掉半透明材质（比如在最后两级直接去掉半透明效果），否则性能消耗呈指数级增长。
+2. 若场景中有大量单位，比如500个，那么这些单位一定要做材质LOD，并尽可能多的去掉半透明材质（比如在最后两级直接去掉半透明效果），否则性能消耗呈指数级增长。  
 
 Performance Guidelines for Artists and Designers  
 https://docs.unrealengine.com/latest/INT/Engine/Performance/Guidelines/
 
 ##### 物理与碰撞优化
 
-1，BoxComponent的 Generate Overlap Events 设置为false。如果不需要Overlap事件，那么就将该属性设置设置为false，默认为true。当BoxCompont达到一定量级时，开启Generate Overlap Events的性能消耗是关闭情况下的两倍。
+1. BoxComponent的 Generate Overlap Events 设置为false。如果不需要Overlap事件，那么就将该属性设置设置为false，默认为true。当BoxCompont达到一定量级时，开启Generate Overlap Events的性能消耗是关闭情况下的两倍。
 
-2，如果不需要物理，将 `Simulate Physics` 设置为false。
+2. 如果不需要物理，将 `Simulate Physics` 设置为false。
 
-3，如果不需要Hit事件，将 `Simulation Generates Hit Events` 设置为false。
+3. 如果不需要Hit事件，将 `Simulation Generates Hit Events` 设置为false。
 
-4，如果场景中物体类型（WorldStatic、WorldDynamic、Pawn等）很多，且每种数量也很多，则Collision 的 Object Response 通道设置的越少越好，把可以设置为 Ignore 的通道都设置为 Ignore 。如果场景中的物体类型比较单一，即使这种类型的物体在场景中有数百个，Object Response 即使都设置为Block 或者 Overlap，对性能也没有影响。
+4. 如果场景中物体类型（WorldStatic、WorldDynamic、Pawn等）很多，且每种数量也很多，则Collision 的 Object Response 通道设置的越少越好，把可以设置为 Ignore 的通道都设置为 Ignore 。如果场景中的物体类型比较单一，即使这种类型的物体在场景中有数百个，Object Response 即使都设置为Block 或者 Overlap，对性能也没有影响。
 
-5，如果是大型RTS游戏，场景有海量单位时（比如星际2中大规模的虫族小狗），能不用UE4的 Collision 就不要用 Collision，否则帧数狂泻。  
+5. 如果是大型RTS游戏，场景有海量单位时（比如星际2中大规模的虫族小狗），能不用UE4的 Collision 就不要用 Collision，否则帧数狂泻。  
 建议自己实现一个简易的自定义Collision，比如球形Collision，然后计算该 Collision 与单位之间的直线距离，来判断是否是否发生了碰撞，并且降低检测间隔，比如 0.1秒一次。
 
 ##### 动画优化
@@ -82,6 +81,7 @@ https://docs.unrealengine.com/latest/INT/Engine/Performance/Guidelines/
         
     默认是`AlwaysTickPoseAndRefreshBones`，表示不管是否被渲染（在可见区域内），都执行 Tick 和 RefreshBoneTransforms。  
     旧版本中`MeshComponentUpdateFlag`叫做`SkinnedMeshUpdateFlag`。  
+	{{< alert warning >}} 如果关闭动画Tick，和Tick相关的逻辑就会失效，比如`Transform (Modify) Bone`。{{< /alert >}}
 	
 3. 动画蓝图的逻辑尽量直接访问成员变量，引擎默认开启了优化选项：动画蓝图中的成员变量在编译时会被复制到Native Code中，从而避免在运行时进入蓝图虚拟机（Blueprint Virtual Machine）执行蓝图代码，因为蓝图VM运行效率低。  
 默认会被编译优化的参数类型包括：  
@@ -104,32 +104,29 @@ http://youxiputao.com/articles/11743
 
 ##### 位移优化
 
-1，海量Pawn（比如500个）单位移动，如果是在 Tick 中使用 AddMovementInput 移动，帧率直接下降一半（比如从90帧下降到40多帧）。对于无法移动的单位，最好停止执行 AddMovementInput() ，以提升性能。
+1. 海量Pawn（比如500个）单位移动，如果是在 Tick 中使用 AddMovementInput 移动，帧率直接下降一半（比如从90帧下降到40多帧）。对于无法移动的单位，最好停止执行 AddMovementInput() ，以提升性能。
 
 ##### 特效优化
-1, 尽量不要使用 Volume domain，使用后会显著增加GPU开销。可以通过 `profilegpu` 检测 Volume 开销。
+1. 尽量不要使用 Volume domain，使用后会显著增加GPU开销。可以通过 `profilegpu` 检测 Volume 开销。
 
 ##### AI优化
 
-1，如果角色不需要 Controller ，就不要给它 Spawn Controller。如果一个角色长时间停止，则先给他`Unpossesed()` ，等到可移动时再`PossessedBy()`。  
+1. 如果角色不需要 Controller ，就不要给它 Spawn Controller。如果一个角色长时间停止，则先给他`Unpossesed()` ，等到可移动时再`PossessedBy()`。  
 测试：500个角色，AI Controller Class 设置为：null、 AIController、PlayerController 的帧数分别为 120 fps、 100 fps、75 fps。
 
 ##### Dedicated Server优化
-1，服务端cook时剥离动画数据  
+1. 服务端cook时剥离动画数据  
 Project Settings -> Engine -> Animation -> 勾选 Strip Animation Data on Dedicated Server.  
 如果在动画中添加了触发修改数据的 Notify Event，勾选此选项会有问题。请确保动画中挂载的 Notify 只是表现相关，不涉及游戏逻辑。
 
-2，Server模式下禁用角色物理模拟  
-
-`FBodyInstance->bSimulatePhysics` 设置为false。默认为false。
-
+2. Server模式下禁用角色物理模拟  
+`FBodyInstance->bSimulatePhysics` 设置为false。默认为false。  
 `SkeletalMeshComponent::bEnablePhysicsOnDedicatedServer` 设置为 false ， 默认为 true 。但这样会导致物理验算以客户端为准，有被外挂hack的风险。bEnablePhysicsOnDedicatedServer 在 run-time 修改不生效。
 
-3，Server模式下禁用 Collision  
-
+3. Server模式下禁用 Collision  
 `UPrimitiveComponent->bGenerateOverlapEvents` 设置为false，角色蓝图中的 CollisionComponent 默认为true。
 
-4，Server模式下Detach角色身上所有的装饰性组件
+4. Server模式下Detach角色身上所有的装饰性组件
 
 ##### 参考资料
 
