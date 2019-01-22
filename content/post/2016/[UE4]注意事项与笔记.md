@@ -537,7 +537,7 @@ TextBox(Multi-Line) 控件：然后修改`Warpping Policy`为：`Allow Per Chara
 
 【2018-12-26T18:30】  
 UMG TextBlock alignment(justification)  
-1，TextBlock size auto adapt the content length: Detail Panel -> Slot -> Uncheck`Size To Content`
+1，TextBlock size auto adapt the content length: Detail Panel -> Slot -> Uncheck`Size To Content`  
 2，Alter TextBlock's content alignment to center: Detail Panel -> Appearance -> Justification -> Align Text Center.
 
 【2018-12-26T18:37】  
@@ -553,6 +553,13 @@ If a Character play a Montage which isn't same Skeleton, client may crash.
 How to distinguish special Actor from a group of Actors?  
 Actor Has Tag in Unreal Engine 4  
 https://www.youtube.com/watch?v=_SjhBlj4Mu8
+
+【2019-01-21T23:04】  
+How to get PlayerStart Point int Level?
+
+	AActor* AGameModeBase::ChoosePlayerStart(AController* Player);
+	
+	AActor* AGameModeBase::FindPlayerStart(AController* Player, const FString& IncomingName = TEXT(""));
 
 ***
 `凡心所向，素履以往。生如逆旅，一苇以航。----木心`

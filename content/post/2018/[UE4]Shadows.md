@@ -8,13 +8,70 @@ keywords= ["UE4", "Scene Optimization"]
 
 keywords：UE4、Shadows、Scene Optimization、阴影、场景优化
 
-##### Cascaded Shadow Maps related
+### Cascaded Shadow Maps related
 
-1，开启 `Dynamic Shadow Distance`  
-测试用例： 500 个  Actor 同屏，摄像机高度4000，DirectionalLight 的属性`Dynamic Shadow Distance StationaryLight`（默认为0，表示关闭）的值要大于摄像机到Actor的直线距离（注意：是到每个Actor的直线距离，所以值尽量要设置的大一些），否则帧率从200 fps 下降到 100 fps。
+##### Enable Dynamic Shadow Distance
 
+Test Case: 500 Actors are rendering in screen, Camera height is 4000, DirectionalLight's property `Dynamic Shadow Distance StationaryLight` (Default value is 0, which means disabled) should be larger than the straight-line distance from Camera to Actor (Beacause the distance need to cover all Actors, so the distance would be better be larger ), otherwise frame rate would drop down from 200 fps to 100 fps.
 
-##### 参考资料
+### How to Cast Shadow by Camera Distance
+
+Tow factors
+
++ RayTraced Distance Field Soft Shadows
++ Scalability of Shadow
+
+##### RayTraced Distance Field Soft Shadows
+
+1. Project Settings -> Engine -> Rendering -> Lighting -> enable `Generate Mesh Distance Fields` (Need to restart Editor)
+{{< figure src="/img/20180427-[UE4]Shadows/[UE4]Shadows-00.jpg">}}
+
+2. Modify DirectionalLight's properties: `DistanceField Shadow Distance` and `RayTraced DistanceField Shadows`
+{{< figure src="/img/20180427-[UE4]Shadows/[UE4]Shadows-01.jpg">}}
+Effect  
+{{< figure src="/img/20180427-[UE4]Shadows/[UE4]Shadows-02.jpg">}}
+
+##### Relationship between DistanceField Shadow Distance & Dynamic Shadow Distance
+
++ Stationary
+{{< figure src="/img/20180427-[UE4]Shadows/[UE4]Shadows-03.jpg">}}
+{{< figure src="/img/20180427-[UE4]Shadows/[UE4]Shadows-04.jpg">}}
+{{< figure src="/img/20180427-[UE4]Shadows/[UE4]Shadows-05.jpg">}}
+{{< figure src="/img/20180427-[UE4]Shadows/[UE4]Shadows-06.jpg">}}
+{{< figure src="/img/20180427-[UE4]Shadows/[UE4]Shadows-07.jpg">}}
+{{< figure src="/img/20180427-[UE4]Shadows/[UE4]Shadows-08.jpg">}}
+{{< figure src="/img/20180427-[UE4]Shadows/[UE4]Shadows-09.jpg">}}
+
++ Moveable
+{{< figure src="/img/20180427-[UE4]Shadows/[UE4]Shadows-10.jpg">}}
+{{< figure src="/img/20180427-[UE4]Shadows/[UE4]Shadows-11.jpg">}}
+{{< figure src="/img/20180427-[UE4]Shadows/[UE4]Shadows-12.jpg">}}
+{{< figure src="/img/20180427-[UE4]Shadows/[UE4]Shadows-13.jpg">}}
+{{< figure src="/img/20180427-[UE4]Shadows/[UE4]Shadows-14.jpg">}}
+{{< figure src="/img/20180427-[UE4]Shadows/[UE4]Shadows-15.jpg">}}
+{{< figure src="/img/20180427-[UE4]Shadows/[UE4]Shadows-16.jpg">}}
+
+Reference:RayTraced Distance Field Soft Shadows  
+https://docs.unrealengine.com/en-us/Engine/Rendering/LightingAndShadows/RayTracedDistanceFieldShadowing
+
+##### Scalability of Shadow
+
++ Cinematic
+{{< figure src="/img/20180427-[UE4]Shadows/[UE4]Shadows-17.jpg">}}
+{{< figure src="/img/20180427-[UE4]Shadows/[UE4]Shadows-18.jpg">}}
+
++ Medium
+{{< figure src="/img/20180427-[UE4]Shadows/[UE4]Shadows-19.jpg">}}
+{{< figure src="/img/20180427-[UE4]Shadows/[UE4]Shadows-20.jpg">}}
+
++ Low
+{{< figure src="/img/20180427-[UE4]Shadows/[UE4]Shadows-21.jpg">}}
+{{< figure src="/img/20180427-[UE4]Shadows/[UE4]Shadows-22.jpg">}}
+
+Scalability Reference  
+https://docs.unrealengine.com/en-US/engine/performance/scalability/scalabilityreference
+
+### Reference
 
 Dynamic Scene Shadows  
 https://docs.unrealengine.com/en-us/Resources/ContentExamples/DynamicSceneShadows
