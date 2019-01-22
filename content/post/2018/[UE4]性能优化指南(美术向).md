@@ -21,7 +21,7 @@ https://docs.unrealengine.com/en-us/Engine/Performance/Guidelines
 + 为了让元件的三角面数更合理（比如每个元件的面数为300+），建议相关模型合并起来。比如，如果游戏没有换装需求，那么就将角色的帽子、肩甲等身体部件和身体合并，以减少面数。
 + Opaque贴图（不透明贴图）速度最快，因为它的Z buffer裁切速度最快；Masked贴图（蒙版贴图）稍微慢一点；Translucent贴图（半透明贴图）最慢，因为其性能消耗巨大。
 + 限制UV接缝数量和硬边（Maya中叫软硬边、Max和Blender中叫光滑组）数量，因为这两项会在硬件中生成大量顶点。最坏的情况，带硬边的高模会生成3倍于建模软件统计的顶点数（比如：Maya中显示模型顶点数为1万，显卡中实际计算的顶点数为3万）。
-+ Skined Mesh（蒙皮网格物体）的顶点处理性能消耗比Static Mesh（静态网格物体）的高。比如，一个建筑从地面升起的动画，这种只是整个模型坐标的变化，就不要让动作美术去K动画，而应该使用UE4的Timeline去控制StaticMesh的坐标变化，以提升性能；再比如门打开关闭的动画，也不去手K，可以参考官方ContentExamples中的使用Timeline的做法。
++ Skined Mesh（蒙皮网格物体）的顶点处理性能消耗比Static Mesh（静态网格物体）的高。比如，一个建筑从地面升起的动画，这种只是整个模型坐标的变化，就不要让动作美术去K动画，而应该使用UE4的Timeline去控制StaticMesh的坐标变化，以提升性能；再比如门打开关闭的动画，也不要去手K，可以参考官方ContentExamples中的使用Timeline的做法。
 + 当使用了morph targets（比如表情动画）或者WorldPositionOffset（世界坐标偏移），顶点处理的消耗会大大增加。因为要做缓存，贴图的查找过程也会非常慢。
 UE4材质中的Morph Targets：
 {{< figure src="/img/20181122-[UE4]性能优化指南(美术向)/[UE4]性能优化指南(美术向)-01.jpg">}}
