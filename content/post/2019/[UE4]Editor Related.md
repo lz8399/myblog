@@ -20,5 +20,10 @@ thumbnailImage= "/thumbnail/thumbnail-japen-010.jpg"
 Right click component -> Add Event
 {{< figure src="/img/20190118-[UE4]Editor Related/[UE4]Editor Related-03.jpg">}}
 
+##### Reference
+
+Unreal Editor Manual  
+https://docs.unrealengine.com/en-us/Engine/Editor
+
 ***
 `善，没有理由战胜不了恶，只要天使们能像黑手党那样组织起来。──库尔特·冯内古特（KurtVonnegut）《没有国家的人》`

@@ -25,5 +25,8 @@ https://www.unrealengine.com/marketplace/interactive-tree-creator
 EasyActions  
 https://www.unrealengine.com/marketplace/easyactions
 
+WorldMachine + UE4: Full Workflow  
+https://80.lv/articles/worldmachine-ue4-full-workflow/
+
 ***
 `英雄之所以是英雄，是他不知道有一个阴谋在他身后。`——张锐锋《古战场》

@@ -133,6 +133,9 @@ Project Settings -> Engine -> Animation -> 勾选 Strip Animation Data on Dedica
 
 ##### 参考资料
 
+Performance and Profiling  
+https://docs.unrealengine.com/en-us/Engine/Performance
+
 通过优化在UE4中实现良好性能和高质量视觉效果  
 http://gad.qq.com/program/translateview/7160166
 
@@ -141,3 +144,18 @@ https://docs.unrealengine.com/en-us/Engine/Performance/CPU
 
 GPU Profiling  
 https://docs.unrealengine.com/en-us/Engine/Performance/GPU
+
+Unreal Engine 4 Optimization Tutorial, Part 1-4  
+https://software.intel.com/en-us/articles/unreal-engine-4-optimization-tutorial-part-1  
+https://software.intel.com/en-us/articles/unreal-engine-4-optimization-tutorial-part-2  
+https://software.intel.com/en-us/articles/unreal-engine-4-optimization-tutorial-part-3  
+https://software.intel.com/en-us/articles/unreal-engine-4-optimization-tutorial-part-4
+
+Optimizing and Profiling Games with Unreal Engine 4  
+http://vincentloignon.com/blog/optimizing-and-profiling-games-with-unreal-engine-4/
+
+Dynamic Lighting Portal System (Performance Booster)  
+https://www.unrealengine.com/marketplace/dynamic-lighting-portal-system-performance-booster
+
+Performance Optimization: Shadows Triggering Zones  
+https://www.unrealengine.com/marketplace/performance-optimization-shadows-triggering-zones

@@ -69,5 +69,9 @@ https://forums.unrealengine.com/unreal-engine/feedback-for-epic/54065-lights-vie
 参考：  
 https://answers.unrealengine.com/questions/707241/object-shadows-disappearing-too-early.html?sort=oldest
 
+##### Reference
+Lighting Passes  
+https://unrealartoptimization.github.io/book/profiling/passes-lighting/
+
 ***
 `我只担心一件事，我怕我配不上自己所受的苦难。----陀思妥耶夫斯基`

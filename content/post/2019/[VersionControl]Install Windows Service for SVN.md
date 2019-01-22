@@ -3,9 +3,8 @@ title= "[VersionControl]Install Windows Service for SVN"
 date= "2019-01-20T23:58:02+08:00"
 categories= ["VersionControl"]
 tags= ["SVN"]
-thumbnailImage= "/thumbnail/cover-seattle-002.jpg"
-autoThumbnailImage= "true"
-thumbnailImagePosition= "top"
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-009.jpg"
 +++
 
 Keywords: SVN, Windows Services, CMD
