@@ -16,5 +16,10 @@ Take damage, destruct mesh if damage is enough:
 	UFUNCTION(BlueprintCallable, Category="Components|Destructible")
 	virtual void UDestructibleComponent::ApplyRadiusDamage(float BaseDamage, const FVector& HurtOrigin, float DamageRadius, float ImpulseStrength, bool bFullDamage) override;
 	
+##### Reference
+
+Destructible Troubleshooting Guide  
+https://wiki.unrealengine.com/Destructible_Troubleshooting_Guide
+	
 ***
 `卓尔不群的人必有一副不凡的相貌。`

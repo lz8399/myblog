@@ -51,7 +51,7 @@ Reference by Engine source:
 
 Engine\Source\Editor\AnimGraph\Classes\AnimGraphNode_ModifyBone.h  
 {{< alert success >}}
-This is the GraphNode `Transform (Modify) Bone` in this Animation Blueprint Editor. The property `FAnimNode_ModifyBone` is the definite native class for transforming bones.
+This is the GraphNode `Transform (Modify) Bone` in Animation Blueprint Editor. The property `FAnimNode_ModifyBone` is the definite native class for transforming bones.
 {{< /alert >}}
 	
 	UCLASS(meta=(Keywords = "Modify Transform"))

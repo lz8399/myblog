@@ -26,6 +26,9 @@ https://www.unrealengine.com/marketplace/cartoon-fx-pack-4-4-in
 Stylized FX 2  
 https://www.unrealengine.com/marketplace/stylized-fx
 
+M5 VFX RPG1. Sword Trails  
+https://www.unrealengine.com/marketplace/m5-vfx-rpg1-sword-trails
+
 ##### Si-fi
 
 Scan FX  
