@@ -4,9 +4,8 @@ date= "2019-01-25T18:32:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
 keywords= ["UE4", "Rendering"]
-thumbnailImage= "/thumbnail/cover-seattle-002.jpg"
-autoThumbnailImage= "true"
-thumbnailImagePosition= "top"
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-005.jpg"
 +++
 
 ##### How to enable "Forward Rendering"
