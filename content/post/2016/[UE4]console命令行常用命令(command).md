@@ -171,6 +171,25 @@ https://docs.unrealengine.com/en-us/Engine/Performance/Scalability/ScalabilityRe
 蓝图`Execute Console Command`节点（C++接口：`UKismetSystemLibrary::ExecuteConsoleCommand()`）在 Shipping 模式下仍然有效。
 {{< /alert >}}
 
+##### 查询命令的参数值
+
+C++ 或者 蓝图中使用查询函数
+
+	float UKismetSystemLibrary::GetConsoleVariableFloatValue(UObject* WorldContextObject, const FString& VariableName)
+	
+	int32 UKismetSystemLibrary::GetConsoleVariableIntValue(UObject* WorldContextObject, const FString& VariableName)
+	
+例如：
+
+先在命令行执行
+
+	r.ScreenPercentage 200
+	
+然后通过蓝图或者C++查询
+	
+	float RetVal = KismetSystemLibrary::GetConsoleVariableIntValue(this, TEXT("r.ScreenPercentage"));
+	//RetVal is 200.f
+
 ##### 官方文档
 
 https://docs-origin.unrealengine.com/latest/INT/Engine/Performance/StatCommands/

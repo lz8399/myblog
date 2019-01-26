@@ -3,9 +3,8 @@ title= "[Maya]Import FBX Error - Unrecognized file type"
 date= "2019-01-24T22:03:40+08:00"
 categories= ["Maya"]
 tags= ["Modeling"]
-thumbnailImage= "/thumbnail/cover-seattle-002.jpg"
-autoThumbnailImage= "true"
-thumbnailImagePosition= "top"
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-006.jpg"
 +++
 
 Open Menu:  
