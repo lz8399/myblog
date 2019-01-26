@@ -69,6 +69,37 @@ https://forums.unrealengine.com/unreal-engine/feedback-for-epic/54065-lights-vie
 参考：  
 https://answers.unrealengine.com/questions/707241/object-shadows-disappearing-too-early.html?sort=oldest
 
+### Sky Light's API in common
+
+	/** Sets the cubemap used when SourceType is set to SpecifiedCubemap, and causes a skylight update on the next tick. */
+	UFUNCTION(BlueprintCallable, Category="SkyLight")
+	void SetCubemap(UTextureCube* NewCubemap);
+
+	/** 
+	 * Creates sky lighting from a blend between two cubemaps, which is only valid when SourceType is set to SpecifiedCubemap. 
+	 * This can be used to seamlessly transition sky lighting between different times of day.
+	 * The caller should continue to update the blend until BlendFraction is 0 or 1 to reduce rendering cost.
+	 * The caller is responsible for avoiding pops due to changing the source or destination.
+	 */
+	UFUNCTION(BlueprintCallable, Category="SkyLight")
+	void SetCubemapBlend(UTextureCube* SourceCubemap, UTextureCube* DestinationCubemap, float InBlendFraction);
+	
+	/** Indicates that the capture needs to recapture the scene, adds it to the recapture queue. */
+	void SetCaptureIsDirty();
+	void SetBlendDestinationCaptureIsDirty();
+	void SanitizeCubemapSize();
+
+	/** Whether sky occlusion is supported by current feature level */
+	bool IsOcclusionSupported() const;
+
+	/** 
+	 * Recaptures the scene for the skylight. 
+	 * This is useful for making sure the sky light is up to date after changing something in the world that it would capture.
+	 * Warning: this is very costly and will definitely cause a hitch.
+	 */
+	UFUNCTION(BlueprintCallable, Category="Rendering|Components|SkyLight")
+	void RecaptureSky();
+
 ##### Reference
 Lighting Passes  
 https://unrealartoptimization.github.io/book/profiling/passes-lighting/
