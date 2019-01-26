@@ -22,16 +22,16 @@ Texture2D'/Game/StarterContent/Textures/T_Ceramic_Tile_N.T_Ceramic_Tile_N'
 ##### 材质蓝图（总览）：
 {{< figure src="/img/20161127-[UE4][Material]基础材质练习01/[UE4][Material]基础材质练习01-01.jpg">}} 
  
-材质蓝图（局部1）：
+Base Color
 {{< figure src="/img/20161127-[UE4][Material]基础材质练习01/[UE4][Material]基础材质练习01-02.jpg">}} 
  
-材质蓝图（局部2）：
+Roughness
 {{< figure src="/img/20161127-[UE4][Material]基础材质练习01/[UE4][Material]基础材质练习01-03.jpg">}}  
  
-材质蓝图（局部3）：
+Emissive Color
 {{< figure src="/img/20161127-[UE4][Material]基础材质练习01/[UE4][Material]基础材质练习01-04.jpg">}}  
 
-材质蓝图（局部4）：
+Normal：
 {{< figure src="/img/20161127-[UE4][Material]基础材质练习01/[UE4][Material]基础材质练习01-05.jpg">}}  
 
 ##### 实际效果：
