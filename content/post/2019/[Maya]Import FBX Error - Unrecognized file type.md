@@ -7,8 +7,12 @@ thumbnailImagePosition= "left"
 thumbnailImage= "/thumbnail/thumbnail-japen-006.jpg"
 +++
 
-Open Menu:  
+Maya import FBX failed:  
 <!--more-->
+`Unrecognized file type`
+
+Solution  
+Open Menu:  
 Windows -> Settings / Preferences -> Plug-in Manager -> Check FBX plugin `Loaded`
 
 {{< figure src="/img/20190124-[Maya]Import FBX Error - Unrecognized file type/[Maya]Import FBX Error - Unrecognized file type-01.jpg">}}
