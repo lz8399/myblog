@@ -4,9 +4,8 @@ date= "2019-01-26T20:20:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
 keywords= ["UE4", "Materials"]
-thumbnailImage= "/thumbnail/cover-seattle-002.jpg"
-autoThumbnailImage= "true"
-thumbnailImagePosition= "top"
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-003.jpg"
 +++
 
 Material Editor UI  

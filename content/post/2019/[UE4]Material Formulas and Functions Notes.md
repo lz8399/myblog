@@ -20,6 +20,19 @@ keywords: Material, Formula, Function, Expression
 2nd way:
 	
 	class UMaterialInstanceDynamic* UKismetMaterialLibrary::CreateDynamicMaterialInstance(UObject* WorldContextObject, class UMaterialInterface* Parent, FName OptionalName)
+	
+##### Material Expressions
+
+SphereMask  
+
+Camera Vector  
+
+	
+##### Engine's Material Functions
+
+RadialGradientExponential  
+
+CustomRotator
 
 ***
 `回忆，是一种内心的谣言。──斯蒂芬·金（StephenEdwinKing）《杜马岛》`

@@ -8,6 +8,8 @@ keywords= ["UE4性能优化", "UE4", "Performance", "Optimization"]
 
 keywords：UE4性能优化、Performance Optimization
 
+内容都是处理项目问题的相关笔记，留给自己做备忘录，也分享出来让别人少走弯路。
+
 ##### 零散记录
 
 1. GPUProfile来统计性能消耗的时候，在editor模式下不是很准，因为编辑器的消耗也算进去了，如果要用，最好以Game模式来查看。
@@ -44,12 +46,13 @@ Min Screen Radius for Cascaded Shadow Maps
 
 ##### 阴影优化
 
-1. 如果使用了Stationary Directional Light，场景中有大量单位时，一定要开启`Dynamic Shadow Distance StationaryLight`（默认为0，表示关闭）。  
-测试用例： 500 个 Actor 同屏，摄像机高度4000，DirectionalLight 的属性`Dynamic Shadow Distance StationaryLight`的值要大于摄像机到Actor的直线距离（注意：是到每个Actor的直线距离，所以值尽量要设置的大一些，比5000），否则帧率从200 fps 下降到 100 fps。  
-`Dynamic Shadow Distance StationaryLight`开启后能提升性能的原因：  
-Dynamic Shadow Distance StationaryLight 表示在多少距离内使用动态阴影，超过这个距离之外Fade成静态阴影，而Fade成静态阴影后就可以提升性能。  
+1. 如果使用了非静态的Directional Light（Stationary 或者 Movable），场景中有大量单位时，一定要开启`Dynamic Shadow Distance`（默认为0，表示关闭）。  
+测试用例： 500 个 Actor 同屏，摄像机高度4000，Stationary类型的 Directional Light 的属性`Dynamic Shadow Distance StationaryLight`的值要大于摄像机到Actor的直线距离（注意：是到每个Actor的直线距离，所以值尽量要设置的大一些，比5000），否则帧率从200 fps 下降到 100 fps。  
+`Dynamic Shadow Distance`开启后能提升性能的原因：  
+Dynamic Shadow Distance 表示在多少距离内使用动态阴影，超过这个距离之外Fade成静态阴影，而Fade成静态阴影后就可以提升性能。  
 2. 逻辑控制Cast Shadow  
-虽然灯光提供了属性`DistanceField Shadow Distance`来控制阴影根据摄像机距离投射，但是这种做法是一刀切。比如：假设性能瓶颈是大量怪物的阴影投射，远处山体和建筑的树木的阴影投射对性能影响很小，此时使用`DistanceField Shadow Distance`就会导致场景的表现效果大打折扣。推荐做法是，程序逻辑上控制：如果是怪物对象，只对离摄像机一定距离内的怪物开启阴影。
+虽然灯光提供了属性`DistanceField Shadow Distance`来控制阴影根据摄像机距离投射，但是这种做法是一刀切。比如：假设性能瓶颈是大量怪物的阴影投射，远处山体和建筑的树木的阴影投射对性能影响很小，此时使用`DistanceField Shadow Distance`就会导致场景的表现效果大打折扣。推荐做法是，程序逻辑上控制：如果是怪物对象，只对离摄像机一定距离内的怪物开启阴影。  
+物体投射阴影的开关：
 
 		void UPrimitiveComponent::SetCastShadow(bool NewCastShadow)
 
