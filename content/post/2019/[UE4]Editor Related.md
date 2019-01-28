@@ -20,6 +20,14 @@ thumbnailImage= "/thumbnail/thumbnail-japen-010.jpg"
 Right click component -> Add Event
 {{< figure src="/img/20190118-[UE4]Editor Related/[UE4]Editor Related-03.jpg">}}
 
+##### How to open optimization Viewmodes
+
+{{< figure src="/img/20190118-[UE4]Editor Related/[UE4]Editor Related-04.jpg">}}
+
+##### How to open Buffer Visualization
+
+{{< figure src="/img/20190118-[UE4]Editor Related/[UE4]Editor Related-05.jpg">}}
+
 ##### Reference
 
 Unreal Editor Manual  

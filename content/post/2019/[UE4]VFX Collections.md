@@ -40,6 +40,13 @@ https://www.unrealengine.com/marketplace/cyberpunk-fx-pack
 Custom Lens Flare VFX  
 https://www.unrealengine.com/marketplace/custom-lens-flare-vfx
 
+##### Tutorials
+
+Building Transmutator in Unreal and Houdini  
+https://80.lv/articles/building-transmutator-in-unreal-and-houdini/
+
+https://80.lv/articles/building-transmutator-in-unreal-and-houdini/
+
 ***
 `最高贵的复仇是宽容。`──维克多·雨果（HugoVictor）
 
