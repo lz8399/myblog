@@ -35,10 +35,45 @@ Brushify.io
 https://www.brushify.io/
 https://www.unrealengine.com/marketplace/assets?lang=&q=Brushify
 
+##### Lane
+
+Middle East  
+https://www.unrealengine.com/marketplace/middle-east
+
+##### Wild and Forest
+
+Realistic Wild Pack 02  
+https://www.unrealengine.com/marketplace/realistic-wild-pack
+
+##### Deserts
+
+Cliff Lands (The Narrows)  
+https://www.unrealengine.com/marketplace/cliff-lands-the-narrows
+
+3D Scanned Canyon - Modular Cliffs + Rocks, Grass and more  
+https://www.unrealengine.com/marketplace/3d-scanned-canyon-modular-cliffs-rocks-grass-and-more
+
+##### Cliffs
+
+Quarry Cliffs  
+https://www.unrealengine.com/marketplace/quarry-cliffs
+
+3D Scanned Canyon - Modular Cliffs + Rocks, Grass and more  
+https://www.unrealengine.com/marketplace/3d-scanned-canyon-modular-cliffs-rocks-grass-and-more
+
+Modular Cliffs  
+https://www.unrealengine.com/marketplace/modular-cliffs
+
+White rocks  
+https://www.unrealengine.com/marketplace/white-rocks
+
 ##### Toturials
 
 Create 3D Landscapes with Brushify  
 https://80.lv/articles/create-3d-landscapes-with-brushify/
+
+Modular Photogrammetry in Environment Design  
+https://www.artstation.com/artwork/e2qbP
 
 ***
 `所谓的诗和远方，不过是要把眼前的苟且熬过了才有。`
