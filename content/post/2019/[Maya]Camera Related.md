@@ -17,8 +17,9 @@ Solution:
 open viewport menu: View -> Select Camera
 {{< figure src="/img/20190127-[Maya]Camera Related/[Maya]Camera Related-01.jpg">}}
 
-open Tab `perspShape`, modify `Far Clip Plane` (default is 10000.f)
+open Tab `perspShape`, increase `Far Clip Plane` (default is 10000.f)
 {{< figure src="/img/20190127-[Maya]Camera Related/[Maya]Camera Related-02.jpg">}}
+if object is too small, you can also decrease `Near Clip Plane`.
 
 Effect:
 {{< figure src="/img/20190127-[Maya]Camera Related/[Maya]Camera Related-03.jpg">}}
