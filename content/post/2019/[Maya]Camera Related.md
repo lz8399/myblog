@@ -3,7 +3,7 @@ title= "[Maya]Camera Related"
 date= "2019-01-27T21:52:40+08:00"
 categories= ["Maya"]
 tags= ["Modeling"]
-thumbnailImage= "/thumbnail/cover-seattle-002.jpg"
+thumbnailImage= "/thumbnail/cover-seattle-001.jpg"
 autoThumbnailImage= "true"
 thumbnailImagePosition= "top"
 +++

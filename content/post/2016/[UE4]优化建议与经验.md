@@ -44,6 +44,8 @@ Min Screen Radius for Cascaded Shadow Maps
 
 4. 如果开启体积雾，建议将灯光改成静态光，这样在Build Lighting时会生成预计算的体积雾相关数据，这样可以显著提升体积雾性能。体积雾性能消耗巨大。
 
+5. 如果场景没有静态光 Static Light（全是动态光 Movable Light 或者固定光 Stationary Light），则要禁用 Static Lighting，以节省 Static Lighting 相关的开销（比如 LightMaps和ShadowMaps的相关计算）。禁用方式：Project Settings -> Engine -> Rendering -> Lighting -> disable `Allow Static Lighting`。{{< alert success >}}当全动态灯光为性能瓶颈时，禁用Static Lighting可以提升10帧以上。测试用例：我的某个游戏场景，Lighting是瓶颈之一，`r.ScreenPercentage` 修改为400进行压力测试，关闭 Static Lighting 后帧率提升了20帧。因为没有静态光，禁用后光影效果亦无任何损失。{{< /alert >}}
+
 ##### 阴影优化
 
 1. 如果使用了非静态的Directional Light（Stationary 或者 Movable），场景中有大量单位时，一定要开启`Dynamic Shadow Distance`（默认为0，表示关闭）。  

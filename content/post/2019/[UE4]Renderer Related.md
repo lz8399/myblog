@@ -1,5 +1,5 @@
 +++
-title= "[UE4]Rendering Related"
+title= "[UE4]Renderer Related"
 date= "2019-01-25T18:32:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
