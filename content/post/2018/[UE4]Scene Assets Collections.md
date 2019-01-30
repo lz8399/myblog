@@ -58,7 +58,11 @@ https://www.unrealengine.com/marketplace/scanned-poplar-and-aspen-forest-with-se
 
 https://www.mawiunited.com/
 
+Gokhan Karadayi  
 https://www.unrealengine.com/marketplace/profile/Gokhan%20Karadayi
+
+Procedural Nature Seasons Pack  
+https://www.unrealengine.com/marketplace/procedural-nature-pack-vol-01
 
 ##### Deserts
 
@@ -91,6 +95,9 @@ https://www.unrealengine.com/marketplace/mansion-hall
 
 Stylized Lost Island  
 https://www.unrealengine.com/marketplace/stylized-lost-island
+
+Submerged City Asset Pack - Water World Edition - Full package UE4 and FBX  
+https://www.unrealengine.com/marketplace/submerged-city-asset-pack-water-world-edition-full-package-ue4-and-fbx
 
 ### Toturials
 

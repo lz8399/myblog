@@ -77,5 +77,9 @@ code:
 buleprint:
 {{< figure src="/img/20180427-[UE4]Post Process Related/[UE4]Post Process Related-01.jpg">}}
 
+##### Enable Alpha Channel support in Post Process
+
+Project Settings -> Engine -> Rendering -> Postprocessing -> Enable alpha channel support in post processing.
+
 ***
 `抱必死的心，走永远的路。`
