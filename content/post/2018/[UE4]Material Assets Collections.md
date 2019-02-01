@@ -24,6 +24,9 @@ https://gumroad.com/l/AflqH
 UE4 Tutorial: Fire Effect (UV Animation)  
 https://www.youtube.com/watch?v=B8Gya38KkJY
 
+Material Functions Kit  
+https://www.unrealengine.com/marketplace/material-functions-kit
+
 ##### Grass 
 
 Dynamic Grass System  
