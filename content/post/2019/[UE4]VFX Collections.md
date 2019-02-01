@@ -40,6 +40,17 @@ https://www.unrealengine.com/marketplace/cyberpunk-fx-pack
 Custom Lens Flare VFX  
 https://www.unrealengine.com/marketplace/custom-lens-flare-vfx
 
+##### Planet
+
+Star Creator  
+https://www.unrealengine.com/marketplace/star-creator
+
+Planet Creator 1  
+https://www.unrealengine.com/marketplace/planet-creator
+
+Planet Creator 2  
+https://www.unrealengine.com/marketplace/planet-creator-01
+
 ##### Tutorials
 
 Building Transmutator in Unreal and Houdini  

@@ -3,9 +3,9 @@ title= "[Maya]Camera Related"
 date= "2019-01-27T21:52:40+08:00"
 categories= ["Maya"]
 tags= ["Modeling"]
-thumbnailImage= "/thumbnail/cover-seattle-001.jpg"
-autoThumbnailImage= "true"
-thumbnailImagePosition= "top"
+keywords= ["UE4", "Materials"]
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-002.jpg"
 +++
 
 ##### How display an extreme large (too huge) object
