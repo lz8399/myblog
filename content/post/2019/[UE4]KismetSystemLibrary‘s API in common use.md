@@ -12,7 +12,7 @@ keywords: KismetSystemLibrary, UKismetSystemLibrary
 
 <!--more-->
 
-##### Direction and OS
+##### Directory and OS
 
 	/** Get the directory of the current project */
 	UFUNCTION(BlueprintPure, Category="Utilities|Paths", meta=(BlueprintThreadSafe))

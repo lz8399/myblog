@@ -1,5 +1,5 @@
 +++
-title= "[UE4]VFX Collections"
+title= "[UE4]VFX Assets Collections"
 date= "2019-01-17T15:55:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
@@ -50,6 +50,11 @@ https://www.unrealengine.com/marketplace/planet-creator
 
 Planet Creator 2  
 https://www.unrealengine.com/marketplace/planet-creator-01
+
+##### Fog
+
+Lazy Godray  
+https://www.unrealengine.com/marketplace/lazy-godray
 
 ##### Tutorials
 
