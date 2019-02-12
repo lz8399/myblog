@@ -22,7 +22,7 @@ keywords：UE4 Animation、Set Master Pose Component、customizable character、
 
 {{< figure src="/img/20180529-[UE4][Animation]Multiple skeleton meshes sharing same skeleton(多个SkeletonMesh共用一套骨骼)/[UE4][Animation]Multiple skeleton meshes sharing same skeleton(多个SkeletonMesh共用一套骨骼)-03.jpg">}}
 
-最后再在角色蓝图的Construction Script中Set Master Pose Component
+最后在BeginPlay事件中执行`Set Master Pose Component`
 
 {{< figure src="/img/20180529-[UE4][Animation]Multiple skeleton meshes sharing same skeleton(多个SkeletonMesh共用一套骨骼)/[UE4][Animation]Multiple skeleton meshes sharing same skeleton(多个SkeletonMesh共用一套骨骼)-04.jpg">}}
 
@@ -31,11 +31,20 @@ keywords：UE4 Animation、Set Master Pose Component、customizable character、
 参考自：How to Setup "Master Pose Component"  
 https://answers.unrealengine.com/questions/228601/how-to-setup-master-pose-component.html
 
+{{< alert danger >}}
+注意事项：不要在构造函数中执行`SetMasterPoseComponent`，否则会出现莫名其妙的问题，比如：Mesh的LOD失效。
+{{< /alert >}}
+
+How to make SetMasterPoseComponent work with skeletal meshes with LODs?  
+https://answers.unrealengine.com/questions/793802/how-to-make-setmasterposecomponent-work-with-skele.html
+
+
+
 ##### C++接口
 
 `Set Master Pose Component`蓝图节点对应的C++ API：
 
-    Child->SetMaseterPoseComponent(Body);
+    Child->SetMasterPoseComponent(Body);
 
 ***
 `有一个传说，说的是有那么一只鸟儿，它一生只唱一次，那歌声比世上所有一切生灵的歌声都更加优美动听。---《荆棘鸟》`

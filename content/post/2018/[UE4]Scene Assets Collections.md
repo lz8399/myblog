@@ -34,6 +34,9 @@ https://www.unrealengine.com/marketplace/post-apocalyptic-industrial-scene
 Futuristic modular top-down rooftop  
 https://cubebrush.co/matima-studio/products/cdfga-vJET/futuristic-modular-top-down-rooftop
 
+Sci-Fi Modular Environment  
+https://www.unrealengine.com/marketplace/sci-fi-modular-environment
+
 ##### Ruins
 
 Overgrown Ruins  
@@ -63,6 +66,9 @@ https://www.unrealengine.com/marketplace/profile/Gokhan%20Karadayi
 
 Procedural Nature Seasons Pack  
 https://www.unrealengine.com/marketplace/procedural-nature-pack-vol-01
+
+PLE - Procedural Landscape Ecosystem
+https://www.unrealengine.com/marketplace/procedural-landscape-ecosystem
 
 ##### Deserts
 
@@ -99,6 +105,14 @@ https://www.unrealengine.com/marketplace/stylized-lost-island
 Submerged City Asset Pack - Water World Edition - Full package UE4 and FBX  
 https://www.unrealengine.com/marketplace/submerged-city-asset-pack-water-world-edition-full-package-ue4-and-fbx
 
+##### Sky
+
+Ultra Dynamic Sky  
+https://www.unrealengine.com/marketplace/ultra-dynamic-sky
+
+Cloudscape Seasons  
+https://www.unrealengine.com/marketplace/cloudscape-seasons
+
 ### Toturials
 
 Create 3D Landscapes with Brushify  
@@ -109,6 +123,12 @@ https://www.artstation.com/artwork/e2qbP
 
 UE4 Scene: Materials, Lighting, Water  
 https://80.lv/articles/003qxl-ue4-scene-materials-lighting-water/
+
+Reimagining The Past of Hanamura from Overwatch  
+https://80.lv/articles/reimagining-the-past-of-hanamura-from-overwatch/
+
+UE4 Cloud Creation Tutorial  
+https://80.lv/articles/ue4-cloud-creation-tutorial/
 
 Reimagining The Past of Hanamura from Overwatch  
 https://80.lv/articles/reimagining-the-past-of-hanamura-from-overwatch/

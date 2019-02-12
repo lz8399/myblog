@@ -382,10 +382,15 @@ https://forums.unrealengine.com/development-discussion/c-gameplay-programming/96
 http://pan.baidu.com/s/1o7MzmRo
     
 ##### 参考文章
+
 属性同步：  
-http://blog.csdn.net/yangxuan0261/article/details/54766955  
+http://blog.csdn.net/yangxuan0261/article/details/54766955
+
 RPC：  
 http://blog.csdn.net/yangxuan0261/article/details/54766951
+
+How To Use Sessions In C++  
+https://wiki.unrealengine.com/How_To_Use_Sessions_In_C%2B%2B
 
 ***
 `天下事，成于精而败于众，立于诚而倾于奢。`

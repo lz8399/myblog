@@ -4,9 +4,8 @@ date= "2019-02-01T18:34:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
 keywords= ["UE4", "Animation", "Assets"]
-thumbnailImage= "/thumbnail/cover-seattle-001.jpg"
-autoThumbnailImage= "true"
-thumbnailImagePosition= "top"
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-018.jpg"
 +++
 
 .

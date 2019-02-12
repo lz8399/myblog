@@ -26,8 +26,13 @@ https://www.unrealengine.com/marketplace/cartoon-fx-pack-4-4-in
 Stylized FX 2  
 https://www.unrealengine.com/marketplace/stylized-fx
 
+##### Slash
+
 M5 VFX RPG1. Sword Trails  
 https://www.unrealengine.com/marketplace/m5-vfx-rpg1-sword-trails
+
+Elemental Slash FX  
+https://www.unrealengine.com/marketplace/elemental-slash-fx
 
 ##### Si-fi
 
@@ -61,7 +66,8 @@ https://www.unrealengine.com/marketplace/lazy-godray
 Building Transmutator in Unreal and Houdini  
 https://80.lv/articles/building-transmutator-in-unreal-and-houdini/
 
-https://80.lv/articles/building-transmutator-in-unreal-and-houdini/
+Destiny 2: VFX Production Tips  
+https://80.lv/articles/destiny-2-vfx-production-tips/
 
 ***
 `最高贵的复仇是宽容。`──维克多·雨果（HugoVictor）
