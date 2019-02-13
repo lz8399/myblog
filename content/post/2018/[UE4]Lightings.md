@@ -54,9 +54,11 @@ Lights view distance
 https://forums.unrealengine.com/unreal-engine/feedback-for-epic/54065-lights-view-distance
 
 
-##### 移动端的灯光问题
+##### Lighting Related on Mobile
 
-1，移动端不支持Movable的Spotlight，Spotlight在移动端只支持Static和Stationary；但是Movable的Pointlight在移动端也支持。
+1，`Static` and `Stationary` Spotlight support on Mobile, but `Movable` Spotlight not support on Mobile before v4.22;
+
+2, `Movable` Pointlight support on Mobile always;
 
 ##### 物体与摄像机距离超过一定范围时，阴影自动消失的问题
 

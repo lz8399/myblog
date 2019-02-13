@@ -1,12 +1,18 @@
----
-title: "[UE4]Performance Guidelines for Mobile Devices(移动端性能优化的官方文档)"
-date: "2017-06-11T23:36:40+08:00"
-categories:
-- UnrealEngine4
-tags:
-- UE4
----
++++
+title= "[UE4]Performance Guidelines for Mobile Devices"
+date= "2017-06-11T23:36:40+08:00"
+categories= ["UnrealEngine4"]
+tags= ["UE4"]
+keywords= ["UE4", "Mobile", "Optimization"]
++++
 
+keywords: Mobile Performance Optimization, Official Documents, 移动端, 性能优化, 官方文档
+
+##### LOD
+
+1, Dithered LOD Transitions support on Mobile, but it would increase rendering overhead.
+
+##### Reference
 
 Performance Guidelines for Mobile Devices  
 https://docs.unrealengine.com/latest/INT/Platforms/Mobile/Performance/index.html

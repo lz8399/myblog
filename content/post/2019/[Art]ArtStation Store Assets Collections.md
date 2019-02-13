@@ -77,10 +77,19 @@ https://www.artstation.com/dete/store/5jM1/desert-bedrock-substance-designer-tut
 Jungle Mud | Substance Designer Tutorial  
 https://www.artstation.com/dete/store/qDBO/jungle-mud-substance-designer-tutorial
 
+Collab Alphas - Rocks Vol.1  
+https://www.artstation.com/jronn/store/K3p7/collab-alphas-rocks-vol-1
+
 ##### Photography
 
 Reference: Grand Canyon National Park Pack 115  
 https://www.artstation.com/tashina/store/gXW/reference-grand-canyon-national-park-pack-115
+
+RIVENDELL REFERENCE V01  
+https://www.artstation.com/danielbayona/store/6gXK/rivendell-reference-v01
+
+Colonial V01  
+https://www.artstation.com/danielbayona/store/vl7n/colonial-v01
 
 ***
 `一个人并不是经常找到休息的机会，只有作为人的自我，作为一个楔形的内核，才能获得休息。抛弃了外表的个性，你就抛弃了那些烦恼、匆忙、骚动；当一切都集中到这种和平、安宁、永恒的境界之中，于是某种战胜了生活的凯旋的欢呼，就升腾到她的唇边。——弗吉尼亚·吴尔夫《到灯塔去》`
