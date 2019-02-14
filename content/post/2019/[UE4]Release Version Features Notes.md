@@ -16,7 +16,9 @@ https://docs.unrealengine.com/en-us/Engine/Animation/Sequences/Notifies
 
 ##### 4.22
 
-Run-time Instancing
+* Run-time Instancing
+* Movable Spotlight support on Mobile
+* Dithered LOD Transitions on Mobile
 
 ***
 `不降志，不屈身，不追赶时髦，也不回避危险。──胡适`
