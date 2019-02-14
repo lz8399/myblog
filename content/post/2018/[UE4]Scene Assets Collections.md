@@ -70,6 +70,9 @@ https://www.unrealengine.com/marketplace/procedural-nature-pack-vol-01
 PLE - Procedural Landscape Ecosystem
 https://www.unrealengine.com/marketplace/procedural-landscape-ecosystem
 
+Environment Set  
+https://www.unrealengine.com/marketplace/environment-set
+
 ##### Deserts
 
 Cliff Lands (The Narrows)  
@@ -78,7 +81,7 @@ https://www.unrealengine.com/marketplace/cliff-lands-the-narrows
 3D Scanned Canyon - Modular Cliffs + Rocks, Grass and more  
 https://www.unrealengine.com/marketplace/3d-scanned-canyon-modular-cliffs-rocks-grass-and-more
 
-##### Cliffs
+##### Rocks and Cliffs 
 
 Quarry Cliffs  
 https://www.unrealengine.com/marketplace/quarry-cliffs
@@ -91,6 +94,15 @@ https://www.unrealengine.com/marketplace/modular-cliffs
 
 White rocks  
 https://www.unrealengine.com/marketplace/white-rocks
+
+Weathered Rocks and Stones  
+https://www.unrealengine.com/marketplace/weathered-rocks-and-stones
+
+Stones and Rocks pack  
+https://www.unrealengine.com/marketplace/photogrammetry-3d-scan-of-rocks-and-stones-16xpack
+
+Real Rocks and Stones  
+https://www.unrealengine.com/marketplace/real-rocks-and-stones
 
 ##### Indoor
 

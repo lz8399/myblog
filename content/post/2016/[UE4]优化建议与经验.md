@@ -64,6 +64,8 @@ Dynamic Shadow Distance 表示在多少距离内使用动态阴影，超过这�
 
 2. 若场景中有大量单位，比如500个，那么这些单位一定要做材质LOD，并尽可能多的去掉半透明材质（比如在最后两级直接去掉半透明效果），否则性能消耗呈指数级增长。  
 
+3. 制作植被时，宁可增加面数，也不要使用 Translucent 材质，Masked酌情使用。比如一根草的面片，其整个形状全部使用三角面拼出来，而不要用两个三角面再加 Mask 或者 Translucent 材质的方式。
+
 Performance Guidelines for Artists and Designers  
 https://docs.unrealengine.com/latest/INT/Engine/Performance/Guidelines/
 

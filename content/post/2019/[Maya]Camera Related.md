@@ -8,7 +8,7 @@ thumbnailImagePosition= "left"
 thumbnailImage= "/thumbnail/thumbnail-japen-002.jpg"
 +++
 
-##### How display an extreme large (too huge) object
+##### How to display an extreme large (too huge) object
 <!--more-->
 Problem:  
 If an object is too huge, you can't see it in viewport event you scroll mouse wheel on and on.

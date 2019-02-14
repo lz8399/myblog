@@ -1,12 +1,11 @@
 +++
-title= "[Art]ArtStation Store Assets Collections"
+title= "[Art]Assets Collections"
 date= "2019-02-12T18:53:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
 keywords= ["UE4", "Animation", "Assets"]
-thumbnailImage= "/thumbnail/cover-seattle-001.jpg"
-autoThumbnailImage= "true"
-thumbnailImagePosition= "top"
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-017.jpg"
 +++
 
 ##### Scene Painting
@@ -41,6 +40,11 @@ https://www.artstation.com/wootha/store/Wr97/intro-to-3d-kitbashing-for-environm
 Illustration Process - October 17  
 https://www.artstation.com/waqasmalik/store/5Nzd/illustration-process-october-17
 
+##### Scene Rendering
+
+University_Entrance_PSD_File  
+https://www.artstation.com/goliatgashi/store/1gVw/university-entrance-psd-file
+
 ##### Character Painting
 
 Dephanie: Full video process + Brushes  
@@ -66,7 +70,7 @@ https://www.artstation.com/davidsu/store/yrL8/vdm-fur-brush-for-zbrush-2018
 Blender 2.8: Turn your 2D drawing into a 3D model using Grease Pencil  
 https://www.artstation.com/jama/store/9aDV/blender-2-8-turn-your-2d-drawing-into-a-3d-model-using-grease-pencil
 
-##### Materials
+##### Realistic Materials
 
 Melting Snow | Substance Designer Tutorial  
 https://www.artstation.com/dete/store/l1AY/melting-snow-substance-designer-tutorial
@@ -80,6 +84,23 @@ https://www.artstation.com/dete/store/qDBO/jungle-mud-substance-designer-tutoria
 Collab Alphas - Rocks Vol.1  
 https://www.artstation.com/jronn/store/K3p7/collab-alphas-rocks-vol-1
 
+##### Stylized Materials
+
+Magmaland - Stylized material collection  
+https://cubebrush.co/claymanstudio/products/6o5i5q/magmaland-stylized-material-collection
+
+IceLand  
+https://cubebrush.co/claymanstudio/products/zu4byw/iceland
+
+Stylized Alunar Materials  
+https://cubebrush.co/claymanstudio/products/qxefva/stylized-alunar-materials
+
+Outworld Cliff  
+https://cubebrush.co/claymanstudio/products/bn2arg/outworld-cliff
+
+Stylized Crystal Ore  
+https://cubebrush.co/claymanstudio/products/ztaqkg/stylized-crystal-ore
+
 ##### Photography
 
 Reference: Grand Canyon National Park Pack 115  
@@ -90,6 +111,25 @@ https://www.artstation.com/danielbayona/store/6gXK/rivendell-reference-v01
 
 Colonial V01  
 https://www.artstation.com/danielbayona/store/vl7n/colonial-v01
+
+##### Clouds Texture
+
+120 EPIC HQ ANIME SKY BACKGROUNDS - PACK 12  
+https://cubebrush.co/era7/products/heaceq/120-epic-hq-anime-sky-backgrounds-pack-12
+
+##### Galaxy Painting
+
+10 HQ SPACE PANORAMAS - PACK 41  
+https://cubebrush.co/era7/products/ldgjrg/10-hq-space-panoramas-pack-41
+
+10 HQ SPACE PANORAMAS - PACK 42  
+https://cubebrush.co/era7/products/bwe8sg/10-hq-space-panoramas-pack-42
+
+30 PREMIUM STAR TEXTURES - PACK 43  
+https://cubebrush.co/era7/products/ew4bew/30-premium-star-textures-pack-43
+
+20K HQ DARK SPIRIT NEBULA - PACK 48  
+https://cubebrush.co/era7/products/gpm3ig/20k-hq-dark-spirit-nebula-pack-48
 
 ***
 `一个人并不是经常找到休息的机会，只有作为人的自我，作为一个楔形的内核，才能获得休息。抛弃了外表的个性，你就抛弃了那些烦恼、匆忙、骚动；当一切都集中到这种和平、安宁、永恒的境界之中，于是某种战胜了生活的凯旋的欢呼，就升腾到她的唇边。——弗吉尼亚·吴尔夫《到灯塔去》`
