@@ -4,7 +4,7 @@ date= "2019-02-14T12:32:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
 keywords= ["UE4", "Features"]
-thumbnailImage= "/thumbnail/cover-seattle-001.jpg"
+thumbnailImage= "/thumbnail/cover-Tso Moriri Lake.jpg"
 autoThumbnailImage= "true"
 thumbnailImagePosition= "top"
 +++
