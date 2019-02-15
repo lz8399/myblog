@@ -53,7 +53,7 @@ Preferences -》 Config -》 Restore Custom UI或者Restore Standard UI，前者
 然后重启zb，再次打开quick pich，就可以在末尾看到新加入的笔刷
 {{< figure src="/img/20170702-[ZBrush]自定义菜单布局(Custom Interface Layout)/[ZBrush]自定义菜单布局(Custom Interface Layout)-11.jpg">}}
 
-这个使用就可以选择一次该笔刷后，在Brush菜单下看到最近使用的历史笔刷，然后就可以按住Ctrl+Alt键来拖抓到快捷栏中
+笔刷使用过一次后，在Brush菜单下看到最近使用的历史笔刷，然后就可以按住Ctrl+Alt键来拖抓到快捷栏中
 {{< figure src="/img/20170702-[ZBrush]自定义菜单布局(Custom Interface Layout)/[ZBrush]自定义菜单布局(Custom Interface Layout)-12.jpg">}}
 {{< figure src="/img/20170702-[ZBrush]自定义菜单布局(Custom Interface Layout)/[ZBrush]自定义菜单布局(Custom Interface Layout)-13.jpg">}}
 
