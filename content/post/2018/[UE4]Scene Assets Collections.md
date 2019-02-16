@@ -148,5 +148,8 @@ https://80.lv/articles/reimagining-the-past-of-hanamura-from-overwatch/
 Creating a Snowy Forest in UE4  
 https://80.lv/articles/001agt-004adk-creating-a-snowy-forest-in-ue4/
 
+Crafting an Scene inspired by RDR2  
+https://80.lv/articles/003qxl-crafting-an-scene-inspired-by-rdr2/
+
 ***
 `所谓的诗和远方，不过是要把眼前的苟且熬过了才有。`

@@ -40,10 +40,29 @@ https://www.artstation.com/wootha/store/Wr97/intro-to-3d-kitbashing-for-environm
 Illustration Process - October 17  
 https://www.artstation.com/waqasmalik/store/5Nzd/illustration-process-october-17
 
+Custom Brushes and Tools Presets  
+https://www.artstation.com/wootha/store/oGl/custom-brushes-and-tools-presets
+
+12 Square Landscapes / PSDs  
+https://www.artstation.com/shant/store/6NWq/12-square-landscapes-psds
+
+Rocky Brush Set For Procreate  
+https://www.artstation.com/mikebot/store/KXrP/rocky-brush-set-for-procreate
+
 ##### Scene Rendering
 
 University_Entrance_PSD_File  
 https://www.artstation.com/goliatgashi/store/1gVw/university-entrance-psd-file
+
+##### Scene Modeling
+
+Architectural Structures Kitbash Set  
+https://www.artstation.com/maciejdrabik/store/Bxm/architectural-structures-kitbash-set
+
+##### Foliage
+
+Flower Pack 01  
+https://www.artstation.com/immortalp/store/LOD7/flower-pack-01
 
 ##### Character Painting
 
@@ -84,6 +103,9 @@ https://www.artstation.com/dete/store/qDBO/jungle-mud-substance-designer-tutoria
 Collab Alphas - Rocks Vol.1  
 https://www.artstation.com/jronn/store/K3p7/collab-alphas-rocks-vol-1
 
+Ice Snow Glacier Arctic Environment Ground Water Seamless PBR Texture  
+https://www.artstation.com/ericagrenci/store/dN3q/ice-snow-glacier-arctic-environment-ground-water-seamless-pbr-texture
+
 ##### Stylized Materials
 
 Magmaland - Stylized material collection  
@@ -111,6 +133,9 @@ https://www.artstation.com/danielbayona/store/6gXK/rivendell-reference-v01
 
 Colonial V01  
 https://www.artstation.com/danielbayona/store/vl7n/colonial-v01
+
+AERIAL SKIES PACK  
+https://www.artstation.com/gaelleseguillon/store/Kwv/aerial-skies-pack
 
 ##### Clouds Texture
 
