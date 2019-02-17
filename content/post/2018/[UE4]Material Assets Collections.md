@@ -83,6 +83,9 @@ https://www.youtube.com/watch?v=vApZMJYo0F0
 Planar Dissolve Effect - Material Tutorial - (Unreal Engine 4)  
 https://www.youtube.com/watch?v=HR3flKges_A
 
+Dragon's Breath Glass Shader  
+https://www.artstation.com/artwork/QdlKE
+
 ##### UV Animation
 UE4 Tutorial: Fire Effect  
 https://www.youtube.com/watch?v=B8Gya38KkJY&t=5s
