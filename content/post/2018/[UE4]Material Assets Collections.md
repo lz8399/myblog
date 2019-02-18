@@ -38,6 +38,9 @@ https://www.raywenderlich.com/6314-creating-interactive-grass-in-unreal-engine-4
 Field Grass Package Vol. 1  
 https://www.unrealengine.com/marketplace/field-grass-package-vol
 
+[FREE] Advanced Cinematic Grass Blueprint with 3D Imposter Sprite foliage  
+https://forums.unrealengine.com/community/community-content-tools-and-tutorials/69039-free-advanced-cinematic-grass-blueprint-with-3d-imposter-sprite-foliage
+
 ##### Circular Progress Bar
 
 UE4 Tutorial - Circular (Ring-style) Health Bars  

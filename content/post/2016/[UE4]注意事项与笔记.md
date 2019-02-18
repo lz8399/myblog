@@ -532,8 +532,8 @@ TextBox 控件：然后修改`Auto Warp Text`为：true。
 TextBox(Multi-Line) 控件：然后修改`Warpping Policy`为：`Allow Per Character Warpping`。
 
 【2018-12-19T12:09】  
-如何让一个材质始终朝向摄像机？  
-使用：BillboardComponent
+How to keep a plane facing to Camera?  
+Answer: BillboardComponent
 
 【2018-12-26T18:30】  
 UMG TextBlock alignment(justification)  
@@ -560,6 +560,15 @@ How to get PlayerStart Point int Level?
 	AActor* AGameModeBase::ChoosePlayerStart(AController* Player);
 	
 	AActor* AGameModeBase::FindPlayerStart(AController* Player, const FString& IncomingName = TEXT(""));
+	
+【2019-02-16T16:12】  
+UE4 Editor bug: GameThread time cost increased heavily when there're some uninitialized properties in Blueprint.  
+
+Problem:  
+there're some Object Reference type properties in Blueprint that are uninitialized, e.g. ParticleComponent, and these properties are referenced in Tick Function of Blueprint, when game running, GameThread time cost increased heavily.   
+
+Solution:  
+Remove those uninitialized properties in Blueprint.
 
 ***
 `凡心所向，素履以往。生如逆旅，一苇以航。----木心`
