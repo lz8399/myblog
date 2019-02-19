@@ -55,7 +55,7 @@ Mip Gen Settings 设置为 NoMipmaps表示禁用。
 #### 面向关卡设计
 
 + 限制Stationary（固定光源，不是静态光源）和 Dynamic（动态光源） 灯光的数量。
-+ 尽量避免使用区域光源（Area light）。4.20提供了区域光源 Rect Light。
++ 尽量避免使用区域光源（Area light）。4.20提供了片光源 Rect Light，在特定场景下可以做出假的区域光。
 {{< figure src="/img/20181122-[UE4]性能优化指南(美术向)/[UE4]性能优化指南(美术向)-12.jpg">}}
 + 对场景中较小的物体，编辑其属性draw distance来获得更佳的LOD裁切效果
 {{< figure src="/img/20181122-[UE4]性能优化指南(美术向)/[UE4]性能优化指南(美术向)-13.jpg">}}

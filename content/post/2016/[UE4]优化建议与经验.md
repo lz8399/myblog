@@ -21,7 +21,7 @@ keywords：UE4性能优化、Performance Optimization
 
 4. 面数对UE4来说不敏感，即使在移动端。ipad 4上，50万的三角面，也能够以30fps帧率稳定运行，移动端主要对贴图大小、材质复杂度较为敏感。
 
-5. 地形编辑时，使用Instanced Static Meshes。Intancing会增加GPU的开销，但是可以显著降低CPU的开销。注意：Instancing不会减少CPU draw call次数，要减少draw call次数，需要减少材质种类，提供材质复用率。
+5. 地形编辑时，使用Instanced Static Meshes。Intancing会增加GPU的开销，但是可以显著降低CPU的开销。注意：Instancing不会减少CPU draw call次数，要减少draw call次数，需要减少材质种类，提高材质复用率。
 
 6. C++ 比 蓝图快100到1000倍  
 [Test] Blueprint vs C++ Performance vs Nativized BP  
@@ -36,7 +36,15 @@ Min Screen Radius for Cascaded Shadow Maps
 
 1. 3种光源的性能消耗从低到高：  
 定向光/平行光(Directional Light) < 点光源(Point Light) < 聚光灯(Spot Light)。  
-这个标准不局限于UE4，其他引擎也是这样。当光源数量在场景中达到一定量级时，3种灯光的性能差距也是数量级上差距。
+当光源数量在场景中达到一定量级时，3种灯光的性能差距也是数量级上差距。  
+{{< alert info >}}
+Point Light 和 Spot Light 的消耗到底谁高谁低，UE4官方文档上貌似没找到明确解释。可能两种灯光在不同使用场景下，消耗对比也不一样。Unity早期官方文档给出了两种灯光在GPU上的消耗说明：  
+Point Light: They have an average cost on the graphics processor (though point light shadows are the most expensive).  
+Spot Light: They are the most expensive on the graphics processor.  
+不考虑显存等其他因素的开销，单考虑GPU消耗，Spot Light 比 Point Light贵。
+{{< /alert >}}
+Unity早期文档：灯光 Light  
+http://www.ceeger.com/Components/class-Light.html
 
 2. 在建构光照贴图时，若场景中没有给予Lightmass Importance Volume，会对整个场景做间接光照的采样，产生Indirect Lighting Cache，这对大型游戏场景是相当的浪费，像是游戏角色到不了的中、远景不需要产生Indirect Lighting Cache，这时候就可以在场景中置入Lightmass Importance Volume，指定特定区域内才会产生Indirect Lighting Cache，节省不少建构光照的时间。
 
@@ -64,7 +72,7 @@ Dynamic Shadow Distance 表示在多少距离内使用动态阴影，超过这�
 
 2. 若场景中有大量单位，比如500个，那么这些单位一定要做材质LOD，并尽可能多的去掉半透明材质（比如在最后两级直接去掉半透明效果），否则性能消耗呈指数级增长。  
 
-3. 制作植被时，宁可增加面数，也不要使用 Translucent 材质，Masked酌情使用。比如一根草的面片，其整个形状全部使用三角面拼出来，而不要用两个三角面再加 Mask 或者 Translucent 材质的方式。
+3. 制作植被时，如果植被材质消耗成为瓶颈时，宁可增加面数，也不要使用 Translucent 材质，Masked酌情使用。比如一根草的面片，其整个形状全部使用三角面拼出来，而不要用两个三角面再加 Mask 或者 Translucent 材质的方式。
 
 Performance Guidelines for Artists and Designers  
 https://docs.unrealengine.com/latest/INT/Engine/Performance/Guidelines/
