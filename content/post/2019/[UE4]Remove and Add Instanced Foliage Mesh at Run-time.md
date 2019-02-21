@@ -4,14 +4,15 @@ date= "2019-02-18T22:00:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
 keywords= ["UE4", "InstancedFoliageActor", "InstancedStaticMeshComponent"]
-thumbnailImage= "/thumbnail/cover-Tso Moriri Lake.jpg"
-autoThumbnailImage= "true"
-thumbnailImagePosition= "top"
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-013.jpg"
 +++
 
 Keywords：InstancedFoliageActor, AInstancedFoliageActor, 
 <!--more-->
 UInstancedStaticMeshComponent, InstancedStaticMeshComponent, Instanced Foliage, Instanced Static Mesh, Remove and Add at Run-time
+
+##### Add and Remove Instance
 
 1, Use Foliage Painter to create Instanced Foliage Mesh
 
@@ -104,8 +105,12 @@ Remove all Foliage
 			}
 		}
 	}
-	
+
 {{< figure src="/img/20190218-[UE4]Remove and Add Instanced Foliage Mesh at Run-time/[UE4]Remove and Add Instanced Foliage Mesh at Run-time-04.jpg">}}
+
+{{< alert success >}}
+Another way to hide Instance: set Scale of Instance to Zero, using `UInstancedStaticMeshComponent::UpdateInstanceTransform(int32 InstanceIndex, const FTransform& NewInstanceTransform)`
+{{< /alert >}}
 
 Add all Foliage
 
@@ -128,6 +133,69 @@ Add all Foliage
 		}
 	}
 {{< figure src="/img/20190218-[UE4]Remove and Add Instanced Foliage Mesh at Run-time/[UE4]Remove and Add Instanced Foliage Mesh at Run-time-05.jpg">}}
+
+{{< alert success >}}
+These code are applicable to not only Foliage Painter, but also ProceduralFoliageVolume.
+{{< /alert >}}
+
+##### How to get StaticMesh and Materials of Instaced Mesh
+
+e.g. code:
+
+	void ATestProjGameMode::BeginPlay()
+	{
+		Super::BeginPlay();
+
+		for (TActorIterator<AInstancedFoliageActor> Iter(GetWorld()); Iter; ++Iter)
+		{
+			if (*Iter)
+			{
+				//Get the all InstancedStaticMeshComponent in current Level.
+				TArray<UActorComponent*> InstancedStaticMeshCompArray = Iter->GetComponentsByClass(UInstancedStaticMeshComponent::StaticClass());
+				
+				for (UActorComponent* ActorComp : InstancedStaticMeshCompArray)
+				{
+					if (UInstancedStaticMeshComponent* InstancedComp = Cast<UInstancedStaticMeshComponent>(ActorComp))
+					{
+						UStaticMesh* Mesh = InstancedComp->GetStaticMesh();
+
+						TArray<UMaterialInterface*> Materials = InstancedComp->GetMaterials();
+					}
+				}
+				break;
+			}
+		}
+	}
+	
+##### How to set Transform of Instaced Mesh
+
+	void ATestProjGameMode::BeginPlay()
+	{
+		Super::BeginPlay();
+
+		for (TActorIterator<AInstancedFoliageActor> Iter(GetWorld()); Iter; ++Iter)
+		{
+			if (*Iter)
+			{
+				//Get the all InstancedStaticMeshComponent in current Level.
+				TArray<UActorComponent*> InstancedStaticMeshCompArray = Iter->GetComponentsByClass(UInstancedStaticMeshComponent::StaticClass());
+				
+				for (UActorComponent* ActorComp : InstancedStaticMeshCompArray)
+				{
+					if (UInstancedStaticMeshComponent* InstancedComp = Cast<UInstancedStaticMeshComponent>(ActorComp))
+					{
+						for (int i = InstancedComp->GetInstanceCount() - 1; i >= 0; i--)
+						{
+							//Set Transform of Instance
+							FTransform NewTransform;
+							InstancedComp->UpdateInstanceTransform(i, NewTransform);
+						}
+					}
+				}
+				break;
+			}
+		}
+	}
 
 ##### Reference
 

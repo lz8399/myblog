@@ -118,6 +118,9 @@ https://www.unrealengine.com/marketplace/planet-creator-01
 Custom Shader  
 https://www.unrealengine.com/marketplace/custom-shader
 
+Magma Land - Stylized material collection.  
+https://www.unrealengine.com/marketplace/magma-land-stylized-material-collection
+
 ##### Water
 
 Aquatic Surface  
@@ -127,6 +130,21 @@ https://www.unrealengine.com/marketplace/aquatic-surface
 
 UE4 Tutorial - Local Volumetric Fog 1/3 - Basics - Unreal Engine 4  
 https://www.youtube.com/watch?v=McBiRCSWM9Q
+
+##### Ice
+
+How to Build Cracked Ice in Material Editor  
+https://80.lv/articles/how-to-build-cracked-ice-in-material-editor/
+
+##### Tools
+
+Custom Terrain Blending Tool for UE4  
+https://80.lv/articles/custom-terrain-blending-tool-for-ue4/
+
+##### Houdini For UE4
+
+Building Transmutator in Unreal and Houdini  
+https://80.lv/articles/building-transmutator-in-unreal-and-houdini/
 
 ***
 `我会记住生命中不期而遇的温暖，我也会记得大雨磅礴，没有带伞的日子。`

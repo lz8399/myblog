@@ -54,6 +54,15 @@ http://www.ceeger.com/Components/class-Light.html
 
 5. 如果场景没有静态光 Static Light（全是动态光 Movable Light 或者固定光 Stationary Light），则要禁用 Static Lighting，以节省 Static Lighting 相关的开销（比如 LightMaps和ShadowMaps的相关计算）。禁用方式：Project Settings -> Engine -> Rendering -> Lighting -> disable `Allow Static Lighting`。{{< alert success >}}当全动态灯光为性能瓶颈时，禁用Static Lighting可以提升10帧以上。测试用例：我的某个游戏场景，Lighting是瓶颈之一，`r.ScreenPercentage` 修改为400进行压力测试，关闭 Static Lighting 后帧率提升了20帧。因为没有静态光，禁用后光影效果亦无任何损失。{{< /alert >}}
 
+6. AO性能优化。默认AO是关闭的，在超大型场景中，一般灯光会是性能瓶颈之一，此时关闭AO可以大幅提高帧率。开启AO后（Project Settings -> Engine -> Rendering -> Default Settings -> `Ambient Occlusion`），引擎默认的AO为SSAO(Screen Space Ambient Occlusion), SSAO无法进行预计算，所以GPU性能开销较大，可以修改为DFAO(Distance Field Ambient Occlusion)以提升性能，因为DFAO可以预计算，代价是增加显存开销。  
+DFAO开启方式：  
+Distance Field Ambient Occlusion  
+https://docs.unrealengine.com/en-us/Engine/Rendering/LightingAndShadows/DistanceFieldAmbientOcclusion  
+DFAO相关的两个优化选项：  
+	+ Compress Mesh Distance Fields: 通过压缩`Distance Fields volume texture`来减少显存占用，代价是当使用Level Streaming时会出现Hitch
+	+ Eight Bit Mesh Distance Fields: 将`Distance Fields volume texture`从16位格式压缩为8位格式，代价是AO视觉效果变粗燥。
+	
+
 ##### 阴影优化
 
 1. 如果使用了非静态的Directional Light（Stationary 或者 Movable），场景中有大量单位时，一定要开启`Dynamic Shadow Distance`（默认为0，表示关闭）。  
@@ -73,6 +82,8 @@ Dynamic Shadow Distance 表示在多少距离内使用动态阴影，超过这�
 2. 若场景中有大量单位，比如500个，那么这些单位一定要做材质LOD，并尽可能多的去掉半透明材质（比如在最后两级直接去掉半透明效果），否则性能消耗呈指数级增长。  
 
 3. 制作植被时，如果植被材质消耗成为瓶颈时，宁可增加面数，也不要使用 Translucent 材质，Masked酌情使用。比如一根草的面片，其整个形状全部使用三角面拼出来，而不要用两个三角面再加 Mask 或者 Translucent 材质的方式。
+
+4. 如果GPUVisualizer的`BasePass`耗时较高，那么很大一部分原因是材质复杂度过高。
 
 Performance Guidelines for Artists and Designers  
 https://docs.unrealengine.com/latest/INT/Engine/Performance/Guidelines/

@@ -243,8 +243,37 @@ Properties:
 	 */
 	UPROPERTY(BlueprintReadOnly, interp, Category=DirectionalInscattering)
 	FLinearColor DirectionalInscatteringColor;
+	
+### Ambient Occlusion
 
-##### Reference
+DFAO can be used with precomputed lighting, but SSAO can not. DFAO can save GPU cost but would memory usage would increase.
+
+##### Screen Space Ambient Occlusion (SSAO) 
+
+Ambient Occlusion  
+https://docs.unrealengine.com/en-us/Engine/Rendering/LightingAndShadows/AmbientOcclusion
+
+##### Distance Field Ambient Occlusion (DFAO)
+
+How to enable DFAO
+
+1. Start by navigating to the Modes window, then in the Lights section, select and drag a Sky Light into the Level Viewport.
+2. With the Sky Light selected, navigate over to its Details panel and set its Mobility to Movable.
+3. Project Settings -> Engine -> Rendering -> Default Settings -> check `Ambient Occlusion`  
+or  
+Place a post process volume into your level, enable `Unbound` in it's properties and then modify `Intensity` of `AO intensity`.  
+4. Project Settings -> Engine -> Rendering -> Lighting -> check `Generate Mesh Distance Fields`
+
+Distance Field Ambient Occlusion  
+https://docs.unrealengine.com/en-us/Engine/Rendering/LightingAndShadows/DistanceFieldAmbientOcclusion
+
+Using Distance Field Ambient Occlusion  
+https://docs.unrealengine.com/en-US/Engine/Rendering/LightingAndShadows/MeshDistanceFields/HowTo/DFHT_2
+
+Mesh Distance Fields  
+https://docs.unrealengine.com/en-US/Engine/Rendering/LightingAndShadows/MeshDistanceFields#EnablingDistanceFields
+
+### Reference
 Lighting Passes  
 https://unrealartoptimization.github.io/book/profiling/passes-lighting/
 

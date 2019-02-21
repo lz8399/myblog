@@ -6,9 +6,9 @@ tags= ["UE4"]
 keywords= ["UE4", "Performance", "Optimization"]
 +++
 
-参考自官方文档：  
-Performance Guidelines for Artists and Designers  
+参考自官方文档：
 <!--more-->
+Performance Guidelines for Artists and Designers  
 https://docs.unrealengine.com/en-us/Engine/Performance/Guidelines
 
 但是官方文档写的太粗燥，对UE4没有一定了解，很难理解文档的意图。这里我在官方文档的基础上，结合自己遇到的问题，重新整理了一下，适合对UE4不熟的美术查阅。

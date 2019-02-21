@@ -26,6 +26,9 @@ https://www.unrealengine.com/marketplace/cartoon-fx-pack-4-4-in
 Stylized FX 2  
 https://www.unrealengine.com/marketplace/stylized-fx
 
+Cartoony Impact FX - Second Edition  
+https://www.unrealengine.com/marketplace/cartoony-impact-fx-second-edition
+
 ##### Slash
 
 M5 VFX RPG1. Sword Trails  
@@ -44,6 +47,9 @@ https://www.unrealengine.com/marketplace/cyberpunk-fx-pack
 
 Custom Lens Flare VFX  
 https://www.unrealengine.com/marketplace/custom-lens-flare-vfx
+
+Force Shields  
+https://www.unrealengine.com/marketplace/force-shields
 
 ##### Planet
 
@@ -70,5 +76,5 @@ Destiny 2: VFX Production Tips
 https://80.lv/articles/destiny-2-vfx-production-tips/
 
 ***
-`最高贵的复仇是宽容。`──维克多·雨果（HugoVictor）
+`最高贵的复仇是宽容。──维克多·雨果（HugoVictor）`
 

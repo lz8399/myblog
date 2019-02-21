@@ -28,5 +28,20 @@ https://answers.unrealengine.com/questions/25609/customizing-the-editors-toolbar
 UE4 Editor Toolbar Extention  
 https://blog.csdn.net/hui211314ddhui/article/details/79375548
 
+##### Editor Programming Related
+
+Properties changed event
+
+	#if WITH_EDITOR
+	virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent) override;
+	#endif
+
+Actor moved event
+
+	#if WITH_EDITOR
+	/** Called after an actor has been moved in the editor */
+	virtual void PostEditMove(bool bFinished);
+	#endif
+
 ***
 `因为太爱一个人，所以不敢做真实的自己，反而越容易分手。`

@@ -87,5 +87,10 @@ http://martiancraft.com/blog/2015/02/disintegrating-baddies/
 Planar Dissolve Effect - Material Tutorial - (Unreal Engine 4)  
 https://www.youtube.com/watch?v=HR3flKges_A
 
+##### Stylized Fire VFX
+
+Simon Trümpler: Sketch #20 WIP  
+https://realtimevfx.com/t/simon-trumpler-sketch-20-wip/7654
+
 ***
 `渐渐的知道了，很多东西可遇而不可求，不属于自己的，何必拼了命去在乎，你在意什么，什么就会折磨你，期待是所有心痛的根源。`

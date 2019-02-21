@@ -37,6 +37,9 @@ https://cubebrush.co/matima-studio/products/cdfga-vJET/futuristic-modular-top-do
 Sci-Fi Modular Environment  
 https://www.unrealengine.com/marketplace/sci-fi-modular-environment
 
+Scifi Kitbash Level Builder  
+https://www.unrealengine.com/marketplace/scifi-kitbash-level-builder
+
 ##### Ruins
 
 Overgrown Ruins  
@@ -117,6 +120,12 @@ https://www.unrealengine.com/marketplace/stylized-lost-island
 Submerged City Asset Pack - Water World Edition - Full package UE4 and FBX  
 https://www.unrealengine.com/marketplace/submerged-city-asset-pack-water-world-edition-full-package-ue4-and-fbx
 
+Aurora Island  
+https://www.artstation.com/artwork/RYKk4m
+
+Animated Pond Fish  
+https://www.unrealengine.com/marketplace/animated-pond-fish
+
 ##### Sky
 
 Ultra Dynamic Sky  
@@ -124,6 +133,11 @@ https://www.unrealengine.com/marketplace/ultra-dynamic-sky
 
 Cloudscape Seasons  
 https://www.unrealengine.com/marketplace/cloudscape-seasons
+
+##### Town
+
+Modular Seaside Town  
+https://www.unrealengine.com/marketplace/modular-seaside-town
 
 ### Toturials
 
@@ -142,9 +156,6 @@ https://80.lv/articles/reimagining-the-past-of-hanamura-from-overwatch/
 UE4 Cloud Creation Tutorial  
 https://80.lv/articles/ue4-cloud-creation-tutorial/
 
-Reimagining The Past of Hanamura from Overwatch  
-https://80.lv/articles/reimagining-the-past-of-hanamura-from-overwatch/
-
 Creating a Snowy Forest in UE4  
 https://80.lv/articles/001agt-004adk-creating-a-snowy-forest-in-ue4/
 
@@ -153,6 +164,9 @@ https://80.lv/articles/003qxl-crafting-an-scene-inspired-by-rdr2/
 
 Brushify - Using Procedural Foliage in Unreal Engine 4 (Tutorial)  
 https://www.youtube.com/watch?v=N1QeIRp66p8
+
+Woodbound: Making a Living World with Wind in UE4  
+https://80.lv/articles/woodbound-making-a-living-world-with-wind-in-ue4/
 
 ***
 `所谓的诗和远方，不过是要把眼前的苟且熬过了才有。`
