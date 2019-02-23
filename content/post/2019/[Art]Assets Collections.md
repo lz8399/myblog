@@ -59,6 +59,11 @@ https://www.artstation.com/goliatgashi/store/1gVw/university-entrance-psd-file
 Architectural Structures Kitbash Set  
 https://www.artstation.com/maciejdrabik/store/Bxm/architectural-structures-kitbash-set
 
+##### Animation
+
+Lou Rig  
+https://gumroad.com/l/ikrQP
+
 ##### Foliage
 
 Flower Pack 01  

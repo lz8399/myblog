@@ -3,10 +3,9 @@ title= "[UE4]Texture Related"
 date= "2019-02-21T21:45:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
-keywords= ["UE4", "Features"]
-thumbnailImage= "/thumbnail/cover-Tso Moriri Lake.jpg"
-autoThumbnailImage= "true"
-thumbnailImagePosition= "top"
+keywords= ["UE4", "Texture"]
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-012.jpg"
 +++
 
 ##### Is it need to make Texture LODs?

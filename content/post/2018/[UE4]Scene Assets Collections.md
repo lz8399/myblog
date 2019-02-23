@@ -84,6 +84,9 @@ https://www.unrealengine.com/marketplace/cliff-lands-the-narrows
 3D Scanned Canyon - Modular Cliffs + Rocks, Grass and more  
 https://www.unrealengine.com/marketplace/3d-scanned-canyon-modular-cliffs-rocks-grass-and-more
 
+Brushify - Canyons Pack  
+https://www.unrealengine.com/marketplace/brushify-canyons-pack
+
 ##### Rocks and Cliffs 
 
 Quarry Cliffs  
