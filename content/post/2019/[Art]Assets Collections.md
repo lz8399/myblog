@@ -59,6 +59,14 @@ https://www.artstation.com/goliatgashi/store/1gVw/university-entrance-psd-file
 Architectural Structures Kitbash Set  
 https://www.artstation.com/maciejdrabik/store/Bxm/architectural-structures-kitbash-set
 
+##### Scene Assets
+
+RPG Medieval Kingdom - Unity3D Asset  
+https://gumroad.com/l/GgySc
+
+The Hunt - Unity3D  
+https://gumroad.com/l/GrklF
+
 ##### Animation
 
 Lou Rig  
@@ -111,6 +119,12 @@ https://www.artstation.com/jronn/store/K3p7/collab-alphas-rocks-vol-1
 Ice Snow Glacier Arctic Environment Ground Water Seamless PBR Texture  
 https://www.artstation.com/ericagrenci/store/dN3q/ice-snow-glacier-arctic-environment-ground-water-seamless-pbr-texture
 
+Glacier Ice  
+https://gumroad.com/l/LdwFV
+
+Rusty Paint Substance  
+https://gumroad.com/l/XxvCE
+
 ##### Stylized Materials
 
 Magmaland - Stylized material collection  
@@ -127,6 +141,12 @@ https://cubebrush.co/claymanstudio/products/bn2arg/outworld-cliff
 
 Stylized Crystal Ore  
 https://cubebrush.co/claymanstudio/products/ztaqkg/stylized-crystal-ore
+
+Stylized Desert Tiles SBS file  
+https://gumroad.com/l/FWhWY
+
+Stylized Metal Plates - Substance Designer  
+https://gumroad.com/l/DesignerMetal
 
 ##### Photography
 
@@ -160,6 +180,11 @@ https://cubebrush.co/era7/products/ew4bew/30-premium-star-textures-pack-43
 
 20K HQ DARK SPIRIT NEBULA - PACK 48  
 https://cubebrush.co/era7/products/gpm3ig/20k-hq-dark-spirit-nebula-pack-48
+
+##### Tutorials
+
+Tutorial - Texture Creation with ZBrush & Substance Designer  
+https://gumroad.com/l/mPndu
 
 ***
 `一个人并不是经常找到休息的机会，只有作为人的自我，作为一个楔形的内核，才能获得休息。抛弃了外表的个性，你就抛弃了那些烦恼、匆忙、骚动；当一切都集中到这种和平、安宁、永恒的境界之中，于是某种战胜了生活的凯旋的欢呼，就升腾到她的唇边。——弗吉尼亚·吴尔夫《到灯塔去》`
