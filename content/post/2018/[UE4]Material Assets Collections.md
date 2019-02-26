@@ -146,5 +146,10 @@ https://80.lv/articles/custom-terrain-blending-tool-for-ue4/
 Building Transmutator in Unreal and Houdini  
 https://80.lv/articles/building-transmutator-in-unreal-and-houdini/
 
+##### UE4 Material Tutorials
+
+UE4 Master Materials  
+https://www.artstation.com/disting/store/JKq/ue4-master-materials
+
 ***
 `我会记住生命中不期而遇的温暖，我也会记得大雨磅礴，没有带伞的日子。`

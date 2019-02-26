@@ -181,7 +181,14 @@ https://cubebrush.co/era7/products/ew4bew/30-premium-star-textures-pack-43
 20K HQ DARK SPIRIT NEBULA - PACK 48  
 https://cubebrush.co/era7/products/gpm3ig/20k-hq-dark-spirit-nebula-pack-48
 
-##### Tutorials
+##### VFX
+
+Fantastic Cartoon VFX  
+https://assetstore.unity.com/packages/vfx/particles/spells/fantastic-cartoon-vfx-100604
+
+### Tutorials
+
+##### Material
 
 Tutorial - Texture Creation with ZBrush & Substance Designer  
 https://gumroad.com/l/mPndu

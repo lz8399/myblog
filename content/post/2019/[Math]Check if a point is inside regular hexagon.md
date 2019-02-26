@@ -3,9 +3,8 @@ title= "[Math]Check if a point is inside regular hexagon"
 date= "2019-02-25T18:12:02+08:00"
 categories= ["Math"]
 tags= ["Math"]
-thumbnailImage= "/thumbnail/cover-Tso Moriri Lake.jpg"
-autoThumbnailImage= "true"
-thumbnailImagePosition= "top"
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-010.jpg"
 +++
 
 Keywords: 计算坐标点是否在六边形内部
@@ -19,8 +18,8 @@ code:
 	
 	boolean IsInsideHexagon(float hX, float hY, float d, float pX, float pY) 
 	{
-		float dx = Math.abs(pX - hX)/d;
-		float dy = Math.abs(pY - hY)/d;
+		float dx = Math.abs(pX - hX) / d;
+		float dy = Math.abs(pY - hY) / d;
 		float a = 0.25 * Math.sqrt(3.0);
 		return (dy <= a) && (a * dx + 0.25 * dy <= 0.5 * a);
 	}

@@ -1,5 +1,5 @@
 ---
-title: "[ZBrush]教程视频收集"
+title: "[ZBrush]Tutorials Collections"
 date: "2017-06-25T17:02:40+08:00"
 categories:
 - ZBrush
