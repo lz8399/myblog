@@ -72,6 +72,8 @@ https://gumroad.com/l/GrklF
 Lou Rig  
 https://gumroad.com/l/ikrQP
 
+http://www.3dfiggins.com/Store/#AnimRigs
+
 ##### Foliage
 
 Flower Pack 01  
@@ -186,12 +188,32 @@ https://cubebrush.co/era7/products/gpm3ig/20k-hq-dark-spirit-nebula-pack-48
 Fantastic Cartoon VFX  
 https://assetstore.unity.com/packages/vfx/particles/spells/fantastic-cartoon-vfx-100604
 
+AAA Stylized Projectiles Vol.1  
+https://assetstore.unity.com/packages/vfx/particles/aaa-stylized-projectiles-vol-1-130378
+
+AAA Magic Circles and Shields Vol.2  
+https://assetstore.unity.com/packages/vfx/particles/spells/aaa-magic-circles-and-shields-vol-2-136847
+
 ### Tutorials
 
 ##### Material
 
 Tutorial - Texture Creation with ZBrush & Substance Designer  
 https://gumroad.com/l/mPndu
+
+How to Master Substance Designer?  
+https://80.lv/articles/how-to-master-substance-designer-001agt/
+
+### The Art of
+
+Project 77  
+https://www.amazon.com/dp/1775070700
+
+Howling at the Moon - Special Edition  
+https://www.amazon.com/dp/1775070727
+
+Dreaming in Mech: The Art of Nivanh Chanthara  
+https://www.artstationmedia.com/books/dreaming-in-mech/
 
 ***
 `一个人并不是经常找到休息的机会，只有作为人的自我，作为一个楔形的内核，才能获得休息。抛弃了外表的个性，你就抛弃了那些烦恼、匆忙、骚动；当一切都集中到这种和平、安宁、永恒的境界之中，于是某种战胜了生活的凯旋的欢呼，就升腾到她的唇边。——弗吉尼亚·吴尔夫《到灯塔去》`

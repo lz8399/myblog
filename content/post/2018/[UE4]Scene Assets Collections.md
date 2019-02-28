@@ -110,6 +110,9 @@ https://www.unrealengine.com/marketplace/photogrammetry-3d-scan-of-rocks-and-sto
 Real Rocks and Stones  
 https://www.unrealengine.com/marketplace/real-rocks-and-stones
 
+Optimized Rocks  
+https://www.unrealengine.com/marketplace/en-US/optimized-rocks
+
 ##### Indoor
 
 Mansion Hall  
@@ -170,6 +173,9 @@ https://www.youtube.com/watch?v=N1QeIRp66p8
 
 Woodbound: Making a Living World with Wind in UE4  
 https://80.lv/articles/woodbound-making-a-living-world-with-wind-in-ue4/
+
+Environment in Unreal: Finding the Perfect Look  
+https://80.lv/articles/001agt-003qxl-3d-environment-in-unreal-breakdown/
 
 ***
 `所谓的诗和远方，不过是要把眼前的苟且熬过了才有。`
