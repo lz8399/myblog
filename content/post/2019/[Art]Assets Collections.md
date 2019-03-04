@@ -54,6 +54,9 @@ https://www.artstation.com/shant/store/6NWq/12-square-landscapes-psds
 Rocky Brush Set For Procreate  
 https://www.artstation.com/mikebot/store/KXrP/rocky-brush-set-for-procreate
 
+Illustration Pack 40  
+https://www.artstation.com/andreasrocha/store/JmWq/illustration-pack-40
+
 ##### Scene Rendering
 
 University_Entrance_PSD_File  
