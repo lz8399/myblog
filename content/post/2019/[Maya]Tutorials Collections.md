@@ -4,9 +4,8 @@ date= "2019-02-26T14:20:40+08:00"
 categories= ["Maya"]
 tags= ["Modeling"]
 keywords= ["UE4", "Materials"]
-thumbnailImage= "/thumbnail/cover-Tso Moriri Lake.jpg"
-autoThumbnailImage= "true"
-thumbnailImagePosition= "top"
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-009.jpg"
 +++
 
 Get Faster in Maya

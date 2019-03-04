@@ -7,7 +7,7 @@ thumbnailImagePosition= "left"
 thumbnailImage= "/thumbnail/thumbnail-japen-010.jpg"
 +++
 
-Keywords: 计算坐标点是否在六边形内部
+Keywords: Calculate point location to check if it's inside hexagon, 计算坐标点是否在六边形内部
 <!--more-->
 
 Diagram

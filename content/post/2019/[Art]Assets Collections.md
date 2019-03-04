@@ -8,6 +8,11 @@ thumbnailImagePosition= "left"
 thumbnailImage= "/thumbnail/thumbnail-japen-017.jpg"
 +++
 
+### Sites
+
+Top 12 Sites To Find 3D Models (Free + Premium)  
+https://conceptartempire.com/sites-for-3d-models/
+
 ##### Scene Painting
 <!--more-->
 Full-size ILLUSTRATION 5PACK  
@@ -203,6 +208,19 @@ https://gumroad.com/l/mPndu
 
 How to Master Substance Designer?  
 https://80.lv/articles/how-to-master-substance-designer-001agt/
+
+Billy Three Arrows - Stylized Texturing Tutorial  
+https://www.artstation.com/nimlot/store/Bam/billy-three-arrows-stylized-texturing-tutorial
+
+##### Fur & Hair
+
+Real time hair tutorial  
+https://www.artstation.com/nimlot/store/k0z/real-time-hair-tutorial
+
+##### Next-Gen Workflow
+
+Amunet - real time character tutorial  
+https://www.artstation.com/nimlot/store/VGzy/amunet-real-time-character-tutorial
 
 ### The Art of
 

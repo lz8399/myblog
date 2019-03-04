@@ -6,7 +6,12 @@ tags= ["Shading", "Tutorial", "Graphics", "Documents", "Tools"]
 keywords= ["Shading", "Graphics"]
 +++
 
-keywords: Graphics, Shading, Shader, Tools and Frameworks, Tutorials and Documents
+keywords: Graphics, Shading, Shader, Rendering, Tools and Frameworks, Tutorials and Documents
+
+### Blog
+
+Tuxedolabs Blog  
+http://blog.tuxedolabs.com/
 
 ### Tutorials
 
