@@ -19,7 +19,13 @@ PlayerController构造函数中设置PlayerCameraManagerClass：
 
 ##### 摄像机不跟随角色一起旋转
 
+CPP
+
 	USpringArmComponent::bAbsoluteRotation = true;
+	
+Blueprint
+
+{{< figure src="/img/20180112-[UE4]Camera related/[UE4]Camera related-01.jpg">}}
     
 ##### 摄像机视角范围限定
 

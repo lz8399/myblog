@@ -17,6 +17,10 @@ Project Settings -> Rendering -> "Forward Shading" Checkbox (now you can use tha
 Default Rendering Mode is Deferred Shading.
 {{< /alert >}}
 
+##### How to enable fogging on mobile
+
+Project Settings -> Engine -> Rendering -> Mobile -> Uncheck `Disable vertex fogging in mobile shaders`
+
 ##### Reference
 
 Rendering Overview  

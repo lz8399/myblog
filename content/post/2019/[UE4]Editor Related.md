@@ -28,6 +28,12 @@ Right click component -> Add Event
 
 {{< figure src="/img/20190118-[UE4]Editor Related/[UE4]Editor Related-05.jpg">}}
 
+##### Move directory in Editor
+
+{{< alert danger >}}
+Right clicking on the folder and selecting "Fix Up Redirectors in Folder" before trying to move it, otherwise reference of assets would be lost.
+{{< /alert >}}
+	
 ##### Reference
 
 Unreal Editor Manual  

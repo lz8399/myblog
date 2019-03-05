@@ -196,6 +196,10 @@ e.g. code:
 			}
 		}
 	}
+	
+##### Optimization
+
+1, If execute `RemoveInstance` or `UpdateInstanceTransform` multiple times at one frame, set `bAutoRebuildTreeOnInstanceChanges` to false would improve performance.
 
 ##### Reference
 

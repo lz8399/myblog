@@ -60,6 +60,8 @@ https://forums.unrealengine.com/unreal-engine/feedback-for-epic/54065-lights-vie
 
 2, `Movable` Pointlight support on Mobile always;
 
+3, in version 4.21, Static and Stationary Point Light not work on Android Vulakn, but Movable Point works right, I think its' a bug.
+
 ##### 物体与摄像机距离超过一定范围时，阴影自动消失的问题
 
 这个问题受两个因素影响：

@@ -1,5 +1,5 @@
 +++
-title= "[UE4]Input Related"
+title= "[UE4]Controller and Input Related"
 date= "2017-12-15T14:16:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
@@ -27,6 +27,16 @@ https://github.com/getsetgames/Swipe
 
 Ultimate Touch Components  
 https://www.unrealengine.com/marketplace/custom-touch-controls
+
+##### Controller Rotation
+
+{{< alert warning >}}
+By default, Controller Rotation is equal to PlayerStart Actor Rotation. So if you change the Rotation of PlayerStart Actor, Controller Rotation would be affected.
+{{< /alert >}}
+
+How to set the rotation of Controller:
+
+	void AController::SetControlRotation(const FRotator& NewRotation)
 
 ***
 `三十功名尘与土，八千里路云和月。----岳飞《满江红》`

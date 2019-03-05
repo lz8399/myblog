@@ -21,13 +21,11 @@ keywords：UE4性能优化、Performance Optimization
 
 4. 面数对UE4来说不敏感，即使在移动端。ipad 4上，50万的三角面，也能够以30fps帧率稳定运行，移动端主要对贴图大小、材质复杂度较为敏感。
 
-5. 地形编辑时，使用Instanced Static Meshes。Intancing会增加GPU的开销，但是可以显著降低CPU的开销。注意：Instancing不会减少CPU draw call次数，要减少draw call次数，需要减少材质种类，提高材质复用率。
-
-6. C++ 比 蓝图快100到1000倍  
+5. C++ 比 蓝图快100到1000倍  
 [Test] Blueprint vs C++ Performance vs Nativized BP  
 https://www.reddit.com/r/unrealengine/comments/6qtxy3/test_blueprint_vs_c_performance_vs_nativized_bp/
 
-7. 开启`Occlusion Culling` (Project Settings -> Engine -> Rendering -> Occlusion Culling，默认已开启)。如果需要强化遮挡剔除的力度（代价是剔除效果比较突兀）以提升渲染效率，将以下属性值增大：  
+6. 开启`Occlusion Culling` (Project Settings -> Engine -> Rendering -> Occlusion Culling，默认已开启)。如果需要强化遮挡剔除的力度（代价是剔除效果比较突兀）以提升渲染效率，将以下属性值增大：  
 Min Screen Radius for Lights  
 Min Screen Radius for Early Z Pass  
 Min Screen Radius for Cascaded Shadow Maps
@@ -81,12 +79,18 @@ Dynamic Shadow Distance 表示在多少距离内使用动态阴影，超过这�
 
 2. 若场景中有大量单位，比如500个，那么这些单位一定要做材质LOD，并尽可能多的去掉半透明材质（比如在最后两级直接去掉半透明效果），否则性能消耗呈指数级增长。  
 
-3. 制作植被时，如果植被材质消耗成为瓶颈时，宁可增加面数，也不要使用 Translucent 材质，Masked酌情使用。比如一根草的面片，其整个形状全部使用三角面拼出来，而不要用两个三角面再加 Mask 或者 Translucent 材质的方式。
-
-4. 如果GPUVisualizer的`BasePass`耗时较高，那么很大一部分原因是材质复杂度过高。
+3. 如果GPUVisualizer的`BasePass`耗时较高，那么很大一部分原因是材质复杂度过高。
 
 Performance Guidelines for Artists and Designers  
 https://docs.unrealengine.com/latest/INT/Engine/Performance/Guidelines/
+
+#### 植被优化
+
+1. 地形编辑时，使用Instanced Static Meshes。Intancing会增加GPU的开销，但是可以显著降低CPU的开销。注意：Instancing不会减少CPU draw call次数，要减少draw call次数，需要减少材质种类，提高材质复用率。
+
+2. 当Instanced Mesh的数量较多时（比如数十万），将`UHierarchicalInstancedStaticMeshComponent::bAutoRebuildTreeOnInstanceChanges`设置为false，可以提高渲染性能。
+
+3. 如果植被材质消耗成为瓶颈时，宁可增加面数，也不要使用 Translucent 材质，Masked酌情使用。比如一根草的面片，其整个形状全部使用三角面拼出来，而不要用一个三角面再加 Mask 或者 Translucent 材质的方式。
 
 ##### 物理与碰撞优化
 
