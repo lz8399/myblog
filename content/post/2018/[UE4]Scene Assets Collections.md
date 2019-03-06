@@ -110,9 +110,6 @@ https://www.unrealengine.com/marketplace/en-US/photorealistic-landscape-bundle
 
 ##### Deserts
 
-Cliff Lands (The Narrows)  
-https://www.unrealengine.com/marketplace/cliff-lands-the-narrows
-
 3D Scanned Canyon - Modular Cliffs + Rocks, Grass and more  
 https://www.unrealengine.com/marketplace/3d-scanned-canyon-modular-cliffs-rocks-grass-and-more
 
@@ -123,6 +120,9 @@ Desert Town
 https://www.unrealengine.com/marketplace/en-US/desert-town-01
 
 ##### Rocks and Cliffs 
+
+Cliff Lands (The Narrows)  
+https://www.unrealengine.com/marketplace/cliff-lands-the-narrows
 
 Quarry Cliffs  
 https://www.unrealengine.com/marketplace/quarry-cliffs
@@ -147,6 +147,9 @@ https://www.unrealengine.com/marketplace/real-rocks-and-stones
 
 Optimized Rocks  
 https://www.unrealengine.com/marketplace/en-US/optimized-rocks
+
+Mega Rock Pack  
+https://www.unrealengine.com/marketplace/en-US/mega-rock-pack
 
 ##### Island
 
@@ -227,6 +230,9 @@ https://www.unrealengine.com/marketplace/ultra-dynamic-sky
 
 Cloudscape Seasons  
 https://www.unrealengine.com/marketplace/cloudscape-seasons
+
+Sky Pack: 25 Skies  
+https://www.unrealengine.com/marketplace/en-US/25-photorealistic-skies
 
 ##### Painting
 

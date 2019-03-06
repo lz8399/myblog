@@ -135,6 +135,8 @@ https://gumroad.com/l/LdwFV
 Rusty Paint Substance  
 https://gumroad.com/l/XxvCE
 
+https://www.artstation.com/enricot/store/nzvW/substance-designer-material-pack
+
 ##### Stylized Materials
 
 Magmaland - Stylized material collection  

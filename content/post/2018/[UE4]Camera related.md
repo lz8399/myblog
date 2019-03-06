@@ -8,8 +8,9 @@ keywords= ["UE4", "PlayerCameraManager"]
 
 keywords: CameraComponent, PlayerController, PlayerCameraManager
 
-##### 设置默认的PlayerCameraManager
-PlayerController构造函数中设置PlayerCameraManagerClass：
+##### Set default PlayerCameraManager
+
+Set PlayerCameraManagerClass in constructor of PlayerController:
 
 	PlayerCameraManagerClass = AMyPlayerCameraManager::StaticClass();
 	
@@ -17,7 +18,7 @@ PlayerController构造函数中设置PlayerCameraManagerClass：
 
 	APlayerCameraManager* UGameplayStatics::GetPlayerCameraManager(const UObject* WorldContextObject, int32 PlayerIndex)
 
-##### 摄像机不跟随角色一起旋转
+##### Enable camera rorate by controller, not keep the same rotation of character
 
 CPP
 
@@ -27,10 +28,10 @@ Blueprint
 
 {{< figure src="/img/20180112-[UE4]Camera related/[UE4]Camera related-01.jpg">}}
     
-##### 摄像机视角范围限定
+##### Limit rotate range of camera
 
-默认情况下，执行 `APlayerController->AddPitchInput()` 上下旋转摄像机视角时，会有范围限制：最上不能超过90度，最下不能超过-90度。  
-这个范围限定是`PlayerCameraManager`的属性控制的，视角范围限定的六个属性：
+When execute `APlayerController->AddPitchInput()`, Camera would look up in limited range by default: from -90 degrees down to 90 degrees up.  
+This limited range is affected by properties of `PlayerCameraManager`, there're 6 properties to limit the range of camera rotation:
 
     /** Minimum view pitch, in degrees. */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=PlayerCameraManager)
@@ -84,6 +85,25 @@ PlayerCameraManager.h
 	/** @return Returns camera's current location. */
 	UFUNCTION(BlueprintCallable, Category = "Camera")
 	FVector GetCameraLocation() const;
+	
+##### How to set offset of SpringArm and CameraComponent
+
+Set `SocketOffset` or `TargetOffset`, `SocketOffset` is at end of spring arm, `TargetOffset` is at start of spring. 
+
+	/** offset at end of spring arm; use this instead of the relative offset of the attached component to ensure the line trace works as desired */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Camera)
+	FVector SocketOffset;
+
+	/** Offset at start of spring, applied in world space. Use this if you want a world-space offset from the parent component instead of the usual relative-space offset. */
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Camera)
+	FVector TargetOffset; 
+	
+	
+##### How to disable collision detect of SpringArm
+
+Set `bDoCollisionTest` to false,
+
+	USpringArmComponent::bDoCollisionTest = false;
 
 ##### Reference
 
