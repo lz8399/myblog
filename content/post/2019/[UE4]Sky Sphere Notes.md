@@ -12,6 +12,11 @@ Engine Default Sky Sphere:
 <!--more-->
 {{< hl-text green >}}Blueprint'/Engine/EngineSky/BP_Sky_Sphere.BP_Sky_Sphere'{{< /hl-text >}}
 
+##### How to set up Sky Sphere
+
+{{< figure src="/img/20190216-[UE4]Sky Sphere Notes/[UE4]Sky Sphere Notes-00-01.jpg">}}
+{{< figure src="/img/20190216-[UE4]Sky Sphere Notes/[UE4]Sky Sphere Notes-00-02.jpg">}}
+
 ##### How to change Sky Color
 
 Uncheck `Colors Determined By Sun Position`, and change `Zenith Color`
