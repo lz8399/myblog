@@ -11,8 +11,20 @@ thumbnailImage= "/thumbnail/thumbnail-japen-018.jpg"
 ### Character
 <!--more-->
 
+##### Cartoon
+
 Modular RPG Heroes Polyart  
 https://www.unrealengine.com/marketplace/en-US/modular-rpg-heroes-polyart
+
+##### Sci-Fi
+
+Modular Sci-Fi Heroes HP  
+https://www.unrealengine.com/marketplace/en-US/modular-sci-fi-heroes-hp
+
+##### Realism
+
+Warrior  
+https://www.unrealengine.com/marketplace/en-US/warrior
 
 ### Animation
 

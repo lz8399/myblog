@@ -26,5 +26,13 @@ https://www.youtube.com/watch?v=4BWhp_iNEsc
 Kingdom of Light Premium Edition  
 https://www.unrealengine.com/marketplace/en-US/kingdom-of-light-premium-edition
 
+##### Monster
+
+Disturbed Creature  
+https://www.unrealengine.com/marketplace/en-US/disturbed-creature-monster-sounds
+
+Monster Screams  
+https://www.unrealengine.com/marketplace/en-US/monster-screams
+
 ***
 `抱怨是在讲述你不要的东西，而不是你要的东西。——威尔·鲍温（WillBowen）《不抱怨的世界》`

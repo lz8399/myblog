@@ -10,19 +10,19 @@ keywords：UE4、Lighting、灯光
 
 以下问题都是基于4.18，不排除后续新版本变动。
 
-##### Lighting Content Examples
+### Lighting Content Examples
 
 https://docs.unrealengine.com/en-us/Resources/ContentExamples/Lighting
 
 
-##### Light Propagation Volumes
+### Light Propagation Volumes
 Light Propagation Volumes  
 https://docs.unrealengine.com/en-us/Engine/Rendering/LightingAndShadows/LightPropagationVolumes
 
 Dynamic GI : Getting the Most out of LPV ( Light Propagation Volume )  
 https://forums.unrealengine.com/community/community-content-tools-and-tutorials/103572-dynamic-gi-getting-the-most-out-of-lpv-light-propagation-volume
 
-##### Lighting Channels
+### Lighting Channels
 https://docs.unrealengine.com/en-us/Engine/Rendering/LightingAndShadows/LightingChannels
 
 实际应用：  
@@ -47,22 +47,23 @@ https://docs.unrealengine.com/en-us/Engine/Rendering/LightingAndShadows/Lighting
 
 另外：Lighting Channels不支持运行时修改，就是说Lighting Channels在Actor创建时(比如BeginPlay)设置好以后，之后就无法再修改。
 
-##### Occlusion Culling 光源距离裁剪
+### Occlusion Culling 光源距离裁剪
 Project Settings -》 Engine -》 Rendering -》 Culling -》 Min Screen Radius for Lights  
 
 Lights view distance  
 https://forums.unrealengine.com/unreal-engine/feedback-for-epic/54065-lights-view-distance
 
 
-##### Lighting Related on Mobile
+### Lighting Related on Mobile
 
-1，`Static` and `Stationary` Spotlight support on Mobile, but `Movable` Spotlight not support on Mobile before v4.22;
+1, `Static` and `Stationary` Spotlight support on Mobile, but `Movable` Spotlight not support on Mobile before v4.22;
 
 2, `Movable` Pointlight support on Mobile always;
 
-3, in version 4.21, Static and Stationary Point Light not work on Android Vulakn, but Movable Point works right, I think its' a bug.
+3, {{< hl-text red >}} Testing in v4.21: Static and Stationary Point Light not work on Android Vulkan without building lighting.  
+Setting up your lighting in SM5, then building lighting, then switch to Android Vulkan, when start game, lighting would works right.{{< hl-text red >}}
 
-##### 物体与摄像机距离超过一定范围时，阴影自动消失的问题
+### 物体与摄像机距离超过一定范围时，阴影自动消失的问题
 
 这个问题受两个因素影响：
 
@@ -274,6 +275,14 @@ https://docs.unrealengine.com/en-US/Engine/Rendering/LightingAndShadows/MeshDist
 
 Mesh Distance Fields  
 https://docs.unrealengine.com/en-US/Engine/Rendering/LightingAndShadows/MeshDistanceFields#EnablingDistanceFields
+
+### Lighting Issues
+
+Issue:  
+Point Light intensity is very low event set `Intensity` to large value.
+
+Solution:  
+Remove Point Light and add a new Point Light into scene and setting up it.
 
 ### Reference
 Lighting Passes  

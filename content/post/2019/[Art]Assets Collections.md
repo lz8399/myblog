@@ -101,6 +101,9 @@ https://www.artstation.com/robotpencil/store/ajVN/setting-up-lights-in-a-paintin
 How to Draw Females  
 https://www.artstation.com/robotpencil/store/1g2o/how-to-draw-females
 
+Lime chan Artstation debut discount - photoshop painting tutorial  
+https://www.artstation.com/gui/store/8gGe/lime-chan-artstation-debut-discount-photoshop-painting-tutorial
+
 ##### Character Modeling
 
 Kat - girl in swimsuit. 3d Realtime chracter with 4k PBR textures.  
