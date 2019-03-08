@@ -88,7 +88,8 @@ https://docs.unrealengine.com/latest/INT/Engine/Performance/Guidelines/
 
 1. 地形编辑时，使用Instanced Static Meshes。Intancing会增加GPU的开销，但是可以显著降低CPU的开销。注意：Instancing不会减少CPU draw call次数，要减少draw call次数，需要减少材质种类，提高材质复用率。
 
-2. 当Instanced Mesh的数量较多时（比如数十万），将`UHierarchicalInstancedStaticMeshComponent::bAutoRebuildTreeOnInstanceChanges`设置为false，可以提高渲染性能。
+2. 当Instanced Mesh的数量较多时（比如百万级），执行`RemoveInstance`或者`UpdateInstanceTransform`，帧率会狂泻。  
+优化办法：操作Instanced Mesh之前，将`UHierarchicalInstancedStaticMeshComponent::bAutoRebuildTreeOnInstanceChanges`设置为false，然后执行你需要的各种Instanced Mesh操作，操作玩之后，然后将`bAutoRebuildTreeOnInstanceChanges`设置为true，然后执行`BuildTreeIfOutdated(true, false);`，这样可以显著减少因操作百万级Instanced Mesh而导致的性能损失。
 
 3. 如果植被材质消耗成为瓶颈时，宁可增加面数，也不要使用 Translucent 材质，Masked酌情使用。比如一根草的面片，其整个形状全部使用三角面拼出来，而不要用一个三角面再加 Mask 或者 Translucent 材质的方式。
 

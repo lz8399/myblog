@@ -163,6 +163,27 @@ https://answers.unrealengine.com/questions/796996/whats-the-difference-between-g
              DrawDebugSphere(GetWorld(), tpath->PathPoints[pointiter], 10.0f, 12, FColor(255, 0, 0));
          }
     }
+	
+##### Notice
+
+Compilation Error:
+
+	 error LNK2019: unresolved external symbol "__declspec(dllimport) public: static class UNavigationSystemV1 * __cdecl UNavigationSystemV1::GetNavigationSystem(class UObject *)" (__imp_?GetNavigationSystem@UNavigationSystemV1@@SAPEAV1@PEAVUObject@@@Z) referenced in function "protected: void __cdecl AMyPlayerController::SetNewMoveDestination(struct FVector)" (?SetNewMoveDestination@AMyPlayerController@@IEAAXUFVector@@@Z)
+	1>SkillJoystickPlayerController.cpp.obj : error LNK2019: unresolved external symbol "__declspec(dllimport) public: static void __cdecl UNavigationSystemV1::SimpleMoveToLocation(class AController *,struct FVector const &)" (__imp_?SimpleMoveToLocation@UNavigationSystemV1@@SAXPEAVAController@@AEBUFVector@@@Z) referenced in function "protected: void __cdecl AMyPlayerController::SetNewMoveDestination(struct FVector)" (?SetNewMoveDestination@AMyPlayerController@@IEAAXUFVector@@@Z)
+	
+Solution:  
+Add `NavigationSystem` into DependencyModule. e.g.:
+
+	public class SkillJoystick : ModuleRules
+	{
+		public SkillJoystick(ReadOnlyTargetRules Target) : base(Target)
+		{
+			PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
+
+			PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "NavigationSystem" });
+		}
+	}
+
 
 参考：https://answers.unrealengine.com/questions/102126/how-do-i-get-the-navigation-path-to-a-point.html
     

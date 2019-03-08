@@ -33,7 +33,21 @@ Right click component -> Add Event
 {{< alert danger >}}
 Right clicking on the folder and selecting "Fix Up Redirectors in Folder" before trying to move it, otherwise reference of assets would be lost.
 {{< /alert >}}
-	
+
+{{< figure src="/img/20190118-[UE4]Editor Related/[UE4]Editor Related-06.jpg">}}
+
+##### How to customize screen size of LOD
+
+1st way:  
+Screen Size that can't be modify
+{{< figure src="/img/20190118-[UE4]Editor Related/[UE4]Editor Related-07.jpg">}}
+Uncheck `Auto Compute LOD Distance` allow to modify `Screen Size`
+{{< figure src="/img/20190118-[UE4]Editor Related/[UE4]Editor Related-08.jpg">}}
+
+2nd way:  
+Uncheck `Auto Compute LOD Distance` when import FBX asset.
+{{< figure src="/img/20190118-[UE4]Editor Related/[UE4]Editor Related-09.jpg">}}
+
 ##### Reference
 
 Unreal Editor Manual  

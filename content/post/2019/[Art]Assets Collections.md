@@ -62,6 +62,9 @@ https://www.artstation.com/andreasrocha/store/JmWq/illustration-pack-40
 University_Entrance_PSD_File  
 https://www.artstation.com/goliatgashi/store/1gVw/university-entrance-psd-file
 
+Creating A Landscape Shot  
+https://gumroad.com/l/dzFr
+
 ##### Scene Modeling
 
 Architectural Structures Kitbash Set  
@@ -74,18 +77,6 @@ https://gumroad.com/l/GgySc
 
 The Hunt - Unity3D  
 https://gumroad.com/l/GrklF
-
-##### Animation
-
-Lou Rig  
-https://gumroad.com/l/ikrQP
-
-http://www.3dfiggins.com/Store/#AnimRigs
-
-##### Foliage
-
-Flower Pack 01  
-https://www.artstation.com/immortalp/store/LOD7/flower-pack-01
 
 ##### Character Painting
 
@@ -100,6 +91,9 @@ https://www.artstation.com/robotpencil/store/ajVN/setting-up-lights-in-a-paintin
 
 How to Draw Females  
 https://www.artstation.com/robotpencil/store/1g2o/how-to-draw-females
+
+Painting with Confidence Course  
+https://www.artstation.com/robotpencil/store/jNJM/painting-with-confidence-course
 
 Lime chan Artstation debut discount - photoshop painting tutorial  
 https://www.artstation.com/gui/store/8gGe/lime-chan-artstation-debut-discount-photoshop-painting-tutorial
@@ -206,6 +200,23 @@ https://assetstore.unity.com/packages/vfx/particles/aaa-stylized-projectiles-vol
 
 AAA Magic Circles and Shields Vol.2  
 https://assetstore.unity.com/packages/vfx/particles/spells/aaa-magic-circles-and-shields-vol-2-136847
+
+##### Foliage
+
+Flower Pack 01  
+https://www.artstation.com/immortalp/store/LOD7/flower-pack-01
+
+### Animation
+
+##### Rigging
+
+Lou Rig  
+https://gumroad.com/l/ikrQP
+
+http://www.3dfiggins.com/Store/#AnimRigs
+
+Judy Hopps Free Rig Free 3D model - Tutorial  
+https://www.cgtrader.com/free-3d-models/character-people/fantasy/judy-hopps-free-rig
 
 ### Tutorials
 

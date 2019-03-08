@@ -8,12 +8,23 @@ thumbnailImagePosition= "left"
 thumbnailImage= "/thumbnail/thumbnail-japen-009.jpg"
 +++
 
+##### Synthesis
+
 Get Faster in Maya
 <!--more-->
 https://www.artstation.com/disting/store/rgv/get-faster-in-maya
 
 Get Faster in Maya Part 2.0  
 https://www.artstation.com/disting/store/px3/get-faster-in-maya-part-2-0
+
+##### Rigging
+
+Maya 2018: Quick Rig  
+https://www.youtube.com/watch?v=mnwRFMAaFGs  
+Question:  
+how to add more bones on top of the quickrig, since its not a typical bone system. I need hands, tails, eye bones ect.  
+Answer:  
+In the Step-By-Step process in Step 4 create `Skeleton Only`. Then you can add your own skeleton parts, like hands. After Skinning (maybe you need to increase the resolution for the Geodesic Voxel Binding) you need to add the HIK Rig in the HumanIK Window.﻿
 
 
 ***

@@ -35,6 +35,9 @@ https://learnopengl.com/Advanced-Lighting/Deferred-Shading
 Forward Rendering vs. Deferred Rendering  
 https://gamedevelopment.tutsplus.com/articles/forward-rendering-vs-deferred-rendering--gamedev-12342
 
+The Computer Graphics Group of Charles University  
+https://cgg.mff.cuni.cz/
+
 ### Tools and Frameworks
 
 ##### Ray Tracing
