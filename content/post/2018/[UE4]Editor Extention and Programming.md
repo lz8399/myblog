@@ -1,5 +1,5 @@
 +++
-title= "[UE4]Editor Extention Related"
+title= "[UE4]Editor Extention and Programming"
 date= "2018-12-06T17:39:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
@@ -28,7 +28,9 @@ https://answers.unrealengine.com/questions/25609/customizing-the-editors-toolbar
 UE4 Editor Toolbar Extention  
 https://blog.csdn.net/hui211314ddhui/article/details/79375548
 
-##### Editor Programming Related
+### Editor Programming Related
+
+##### Editor Event
 
 Properties changed event
 
@@ -42,6 +44,36 @@ Actor moved event
 	/** Called after an actor has been moved in the editor */
 	virtual void PostEditMove(bool bFinished);
 	#endif
+	
+##### How customize Transform of Actor in Editor
+
+Header: Add `VisibleAnywhere` on properties.
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = CameraEvent)
+		UBoxComponent* BoxComp;
+		
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = CameraEvent)
+		UArrowComponent* DirectionComp;
+		
+Constructor:
+
+	BoxComp = CreateDefaultSubobject<UBoxComponent>(TEXT("BoxComp"));
+	BoxComp->SetupAttachment(GetDefaultAttachComponent());
+
+	DirectionComp = CreateDefaultSubobject<UArrowComponent>(TEXT("TriggerDirectionComp"));
+	DirectionComp->SetupAttachment(BoxComp);
+	
+In Bluerpint Editor:
+{{< figure src="/img/20181206-[UE4]Editor Extention and Programming/[UE4]Editor Extention and Programming-01.jpg">}}
+{{< figure src="/img/20181206-[UE4]Editor Extention and Programming/[UE4]Editor Extention and Programming-02.jpg">}}
+{{< figure src="/img/20181206-[UE4]Editor Extention and Programming/[UE4]Editor Extention and Programming-03.jpg">}}
+
+In Level Editor:
+{{< figure src="/img/20181206-[UE4]Editor Extention and Programming/[UE4]Editor Extention and Programming-04.jpg">}}
+
+{{< alert info >}}
+In Bluerpint Editor, you can't modify Location and Rotation of RootComponent, but you can modify them in Level Editor.
+{{< /alert >}}
 
 ***
 `因为太爱一个人，所以不敢做真实的自己，反而越容易分手。`

@@ -151,6 +151,9 @@ https://www.unrealengine.com/marketplace/en-US/optimized-rocks
 Mega Rock Pack  
 https://www.unrealengine.com/marketplace/en-US/mega-rock-pack
 
+Rock Pack Pro (Snow And Moss Options available now)  
+https://www.unrealengine.com/marketplace/en-US/rock-pack-pro
+
 ##### Island
 
 Island Landscape - A  
@@ -233,6 +236,9 @@ https://www.unrealengine.com/marketplace/cloudscape-seasons
 
 Sky Pack: 25 Skies  
 https://www.unrealengine.com/marketplace/en-US/25-photorealistic-skies
+
+Fantastic Skies  
+https://www.unrealengine.com/marketplace/en-US/fantastic-skies
 
 ##### Painting
 

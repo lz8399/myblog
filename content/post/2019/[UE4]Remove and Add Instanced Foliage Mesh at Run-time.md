@@ -199,7 +199,11 @@ e.g. code:
 	
 ##### Optimization
 
-1, If execute `RemoveInstance` or `UpdateInstanceTransform` multiple times at one frame, set `bAutoRebuildTreeOnInstanceChanges` to false would improve performance.
+1, Issue:  
+If Instanced Mesh count is too large, e.g. one million, execute `RemoveInstance` or `UpdateInstanceTransform` multiple times at one frame, frame rate would drop violently.  
+Solution:  
+Set `bAutoRebuildTreeOnInstanceChanges` to false before manipulate Instanced Mesh, then execute all the operation of Instanced Mesh you want, then set `bAutoRebuildTreeOnInstanceChanges` to true, then execute `BuildTreeIfOutdated(true, false);`, thus frame rate dropping isn't as violent as before.
+
 
 ##### Reference
 
