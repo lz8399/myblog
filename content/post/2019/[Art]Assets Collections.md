@@ -109,6 +109,15 @@ https://www.artstation.com/davidsu/store/yrL8/vdm-fur-brush-for-zbrush-2018
 Blender 2.8: Turn your 2D drawing into a 3D model using Grease Pencil  
 https://www.artstation.com/jama/store/9aDV/blender-2-8-turn-your-2d-drawing-into-a-3d-model-using-grease-pencil
 
+2B - Nier: Automata  
+https://www.artstation.com/nlsinh/store/DBe9/2b-nier-automata
+
+Realistic High detailed Face  
+https://www.artstation.com/softedge/store/kV3l/realistic-high-detailed-face
+
+Human Basemeshes - Source Bundle  
+https://www.artstation.com/hev/store/yly8/human-basemeshes-source-bundle
+
 ##### Realistic Materials
 
 Melting Snow | Substance Designer Tutorial  

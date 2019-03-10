@@ -17,6 +17,9 @@ https://www.artstation.com/disting/store/rgv/get-faster-in-maya
 Get Faster in Maya Part 2.0  
 https://www.artstation.com/disting/store/px3/get-faster-in-maya-part-2-0
 
+Top 10 Maya Hotkeys  
+https://www.youtube.com/watch?v=wCrC4ypg8ms
+
 ##### Rigging
 
 Maya 2018: Quick Rig  
