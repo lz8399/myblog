@@ -141,6 +141,9 @@ https://80.lv/articles/how-to-build-cracked-ice-in-material-editor/
 Custom Terrain Blending Tool for UE4  
 https://80.lv/articles/custom-terrain-blending-tool-for-ue4/
 
+UE4 Auto Landscape Master Materials  
+https://gumroad.com/l/mBjSf
+
 ##### Houdini For UE4
 
 Building Transmutator in Unreal and Houdini  

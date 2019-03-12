@@ -52,7 +52,9 @@ http://www.ceeger.com/Components/class-Light.html
 
 5. 如果场景没有静态光 Static Light（全是动态光 Movable Light 或者固定光 Stationary Light），则要禁用 Static Lighting，以节省 Static Lighting 相关的开销（比如 LightMaps和ShadowMaps的相关计算）。禁用方式：Project Settings -> Engine -> Rendering -> Lighting -> disable `Allow Static Lighting`。{{< alert success >}}当全动态灯光为性能瓶颈时，禁用Static Lighting可以提升10帧以上。测试用例：我的某个游戏场景，Lighting是瓶颈之一，`r.ScreenPercentage` 修改为400进行压力测试，关闭 Static Lighting 后帧率提升了20帧。因为没有静态光，禁用后光影效果亦无任何损失。{{< /alert >}}
 
-6. AO性能优化。默认AO是关闭的，在超大型场景中，一般灯光会是性能瓶颈之一，特别是动态光场景下。此时关闭AO可以大幅提高帧率。开启AO后（Project Settings -> Engine -> Rendering -> Default Settings -> `Ambient Occlusion`），引擎默认的AO为SSAO(Screen Space Ambient Occlusion), SSAO无法进行预计算，所以GPU性能开销较大，可以修改为DFAO(Distance Field Ambient Occlusion)以提升性能，因为DFAO可以预计算，代价是增加显存开销。  
+6. 关闭`Support Global clip plane for Planar Reflections`，默认关闭，开启后消耗巨大。
+
+7. AO性能优化。默认AO是关闭的，在超大型场景中，一般灯光会是性能瓶颈之一，特别是动态光场景下。此时关闭AO可以大幅提高帧率。开启AO后（Project Settings -> Engine -> Rendering -> Default Settings -> `Ambient Occlusion`），引擎默认的AO为SSAO(Screen Space Ambient Occlusion), SSAO无法进行预计算，所以GPU性能开销较大，可以修改为DFAO(Distance Field Ambient Occlusion)以提升性能，因为DFAO可以预计算，代价是增加显存开销。  
 DFAO开启方式：  
 Distance Field Ambient Occlusion  
 https://docs.unrealengine.com/en-us/Engine/Rendering/LightingAndShadows/DistanceFieldAmbientOcclusion  
@@ -190,3 +192,6 @@ https://www.unrealengine.com/marketplace/dynamic-lighting-portal-system-performa
 
 Performance Optimization: Shadows Triggering Zones  
 https://www.unrealengine.com/marketplace/performance-optimization-shadows-triggering-zones
+
+***
+`嗜欲深者天机浅 ---《庄子·大宗师》`

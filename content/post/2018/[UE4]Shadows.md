@@ -3,10 +3,10 @@ title= "[UE4]Shadows"
 date= "2018-04-27T14:14:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4"]
-keywords= ["UE4", "Scene Optimization"]
+keywords= ["UE4", "Scene Optimization", "Shadow Optimization"]
 +++
 
-keywords：UE4、Shadows、Scene Optimization、阴影、场景优化
+keywords：UE4, Shadow Optimization, Scene Optimization, 阴影, 场景, 优化
 
 ### Cascaded Shadow Maps related
 
@@ -70,6 +70,26 @@ https://docs.unrealengine.com/en-us/Engine/Rendering/LightingAndShadows/RayTrace
 
 Scalability Reference  
 https://docs.unrealengine.com/en-US/engine/performance/scalability/scalabilityreference
+
+##### How to cast character shadow on mobile device
+
+**1st way: Movable Directional Light**
+
+{{< figure src="/img/20180427-[UE4]Shadows/[UE4]Shadows-23.jpg">}}
+
+How to Enable Dynamic Shadows & Correct Reflection Maps on Mobile  
+https://forums.unrealengine.com/development-discussion/android-development/41661-tip-how-to-enable-dynamic-shadows-correct-reflection-maps-on-mobile
+
+Lighting for Mobile Platforms  
+https://docs.unrealengine.com/latest/INT/Platforms/Mobile/Lighting/
+
+4.7 release mobile shadows  
+https://answers.unrealengine.com/questions/180482/47-release-mobile-shadows.html
+
+**2nd way: Stationary Directional Light**  
+Enable `Cast Modulated Shadows`
+{{< figure src="/img/20180427-[UE4]Shadows/[UE4]Shadows-24.jpg">}}
+
 
 ### Reference
 

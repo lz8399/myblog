@@ -24,6 +24,9 @@ https://www.youtube.com/watch?v=CKbgMxLiRJM
 EasyActions  
 https://www.unrealengine.com/marketplace/easyactions
 
+Yellow Subs Machine  
+https://www.unrealengine.com/marketplace/en-US/yellow-subs-machine
+
 ##### UE4 Procedural 
 
 Dungeon Architect  

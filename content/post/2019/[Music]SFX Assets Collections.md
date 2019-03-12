@@ -26,6 +26,11 @@ https://www.youtube.com/watch?v=4BWhp_iNEsc
 Kingdom of Light Premium Edition  
 https://www.unrealengine.com/marketplace/en-US/kingdom-of-light-premium-edition
 
+##### Human
+
+Human Vocalizations  
+https://cubebrush.co/contact168/products/2ontaq/human-vocalizations
+
 ##### Monster
 
 Disturbed Creature  

@@ -65,6 +65,9 @@ https://www.artstation.com/goliatgashi/store/1gVw/university-entrance-psd-file
 Creating A Landscape Shot  
 https://gumroad.com/l/dzFr
 
+Realistic Octane fog  
+https://www.artstation.com/antoinecollignon/store/Aa1b/realistic-octane-fog
+
 ##### Scene Modeling
 
 Architectural Structures Kitbash Set  

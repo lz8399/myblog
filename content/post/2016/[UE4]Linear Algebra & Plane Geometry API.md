@@ -7,7 +7,6 @@ tags= ["UE4", "API"]
 
 keywords：UE4、Linear Algebra、Plane Geometry、线性代数、解析几何
 
-
 ##### 范围判定
     
 检测一个点是否在一个多边形(或矩形)的内部(2D和3D)
@@ -141,6 +140,52 @@ https://answers.unrealengine.com/questions/31058/how-to-get-an-angle-between-2-v
 	FVector ForwardVector = RotMatrix.GetScaledAxis(EAxis::X);
 	FVector RightVector = RotMatrix.GetScaledAxis(EAxis::Y);
 	FVector TopVector = RotMatrix.GetScaledAxis(EAxis::Z);
+	
+Local space (Position, Direction or rotation) to world space:
+	
+	/** 
+	 *	Transform a position by the supplied transform.
+	 *	For example, if T was an object's transform, this would transform a position from local space to world space.
+	 */
+	UFUNCTION(BlueprintPure, Category="Math|Transform", meta=(Keywords="location"))
+	static FVector UKismetMathLibrary::TransformLocation(const FTransform& T, FVector Location);
+
+	/** 
+	 *	Transform a direction vector by the supplied transform - will not change its length. 
+	 *	For example, if T was an object's transform, this would transform a direction from local space to world space.
+	 */
+	UFUNCTION(BlueprintPure, Category="Math|Transform")
+	static FVector UKismetMathLibrary::TransformDirection(const FTransform& T, FVector Direction);
+
+	/** 
+	 *	Transform a rotator by the supplied transform. 
+	 *	For example, if T was an object's transform, this would transform a rotation from local space to world space.
+	 */
+	UFUNCTION(BlueprintPure, Category="Math|Transform")
+	static FRotator UKismetMathLibrary::TransformRotation(const FTransform& T, FRotator Rotation);
+	
+World space (Position, Direction or rotation) to local space:
+
+	/** 
+	 *	Transform a position by the inverse of the supplied transform.
+	 *	For example, if T was an object's transform, this would transform a position from world space to local space.
+	 */
+	UFUNCTION(BlueprintPure, Category="Math|Transform", meta=(Keywords="location"))
+	static FVector UKismetMathLibrary::InverseTransformLocation(const FTransform& T, FVector Location);
+
+	/** 
+	 *	Transform a direction vector by the inverse of the supplied transform - will not change its length.
+	 *	For example, if T was an object's transform, this would transform a direction from world space to local space.
+	 */
+	UFUNCTION(BlueprintPure, Category="Math|Transform")
+	static FVector UKismetMathLibrary::InverseTransformDirection(const FTransform& T, FVector Direction);
+
+	/** 
+	 *	Transform a rotator by the inverse of the supplied transform. 
+	 *	For example, if T was an object's transform, this would transform a rotation from world space to local space.
+	 */
+	UFUNCTION(BlueprintPure, Category="Math|Transform")
+	static FRotator UKismetMathLibrary::InverseTransformRotation(const FTransform& T, FRotator Rotation);
 
 ##### 插值相关
 

@@ -45,6 +45,9 @@ https://www.unrealengine.com/marketplace/sci-fi-modular-environment
 Scifi Kitbash Level Builder  
 https://www.unrealengine.com/marketplace/scifi-kitbash-level-builder
 
+Modular Sci-Fi Laboratory  
+https://www.unrealengine.com/marketplace/en-US/modular-sci-fi-laboratory
+
 ##### Ruins
 
 Overgrown Ruins  
@@ -154,6 +157,9 @@ https://www.unrealengine.com/marketplace/en-US/mega-rock-pack
 Rock Pack Pro (Snow And Moss Options available now)  
 https://www.unrealengine.com/marketplace/en-US/rock-pack-pro
 
+Raw Quartz Rock Pack  
+https://www.unrealengine.com/marketplace/en-US/raw-quartz-rock-pack
+
 ##### Island
 
 Island Landscape - A  
@@ -197,7 +203,7 @@ https://www.unrealengine.com/marketplace/en-US/top-down-dungeons
 Cave Of Tessellation  
 https://www.unrealengine.com/marketplace/en-US/cave-of-tessellation
 
-##### Stylized
+### Stylized
 
 Stylized Lost Island  
 https://www.unrealengine.com/marketplace/stylized-lost-island
@@ -226,7 +232,7 @@ https://www.unrealengine.com/marketplace/en-US/medieval-stylized-modular-dungeon
 POLYGON - Dungeon Pack  
 https://www.unrealengine.com/marketplace/en-US/polygon-dungeon-pack
 
-##### Sky
+### Sky
 
 Ultra Dynamic Sky  
 https://www.unrealengine.com/marketplace/ultra-dynamic-sky
@@ -240,10 +246,15 @@ https://www.unrealengine.com/marketplace/en-US/25-photorealistic-skies
 Fantastic Skies  
 https://www.unrealengine.com/marketplace/en-US/fantastic-skies
 
-##### Painting
+### Painting
 
 Modern Paintings Pack Vol. 1  
 https://www.unrealengine.com/marketplace/en-US/modern-paintings-pack-vol
+
+### Modular 
+
+Modular Convenience Store With Products  
+https://www.unrealengine.com/marketplace/en-US/modular-convenience-store-with-products
 
 ### Toturials
 

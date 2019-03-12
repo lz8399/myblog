@@ -45,6 +45,11 @@ https://www.unrealengine.com/marketplace/en-US/gr-female-heroine
 Character Customizer  
 https://www.unrealengine.com/marketplace/en-US/character-customizer
 
+##### Fighter
+
+Fighter 1 (Unarmed)  
+https://www.unrealengine.com/marketplace/en-US/fighter-1-unarmed
+
 ***
 `很不幸的是，任何一种负面的生活都能产生很多烂七八糟的细节，使它变得蛮有趣的；人就在这种有趣中沉沦下去，从根本上忘记了这种生活需要改进。──王小波`
 
