@@ -194,6 +194,8 @@ Unload之后如果需要立即回收，可以执行ForceGC：
 
 + bManageActiveHandle为true时，即使切换关卡，该资源也不会被销毁，类似AddToRoot()的效果。
 
++ 加载角色蓝图时，蓝图中引用的SkeletalMesh等资源并不会被加载，而是在SpawnActor时才会去加载。在移动端上，如果角色蓝图引用的资源（SkeletalMeshes、Materials、Textures等）体积较大时，首次SpawnActor时会出现hitch。
+
 ##### 参考
 《Fortnite》开发经验分享之运行时资源管理：Runtime Asset Management  
 https://answers.unrealengine.com/storage/temp/136465-runtimeassetmanagementin416.pdf

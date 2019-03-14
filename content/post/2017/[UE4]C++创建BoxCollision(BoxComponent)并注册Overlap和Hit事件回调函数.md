@@ -203,9 +203,9 @@ SetCollisionProfileName 如果要完全生效，必须在 Actor 的构造函数�
 1. C++代码的编写  
 Actor的Hit事件不需要BoxComponent，只需要注册回调即可，回调函数的签名与上面例子的函数签名一样。
 
-    FScriptDelegate DelegateHit;
-    DelegateHit.BindUFunction(this, "OnTestHit");
-    this->OnActorHit.Add(DelegateHit);
+		FScriptDelegate DelegateHit;
+		DelegateHit.BindUFunction(this, "OnTestHit");
+		this->OnActorHit.Add(DelegateHit);
 2. 场景中的碰撞对象需要设置的选项  
 只要默认即可，不需要设置属性。
 

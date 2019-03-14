@@ -253,6 +253,12 @@ https://www.artstation.com/nimlot/store/k0z/real-time-hair-tutorial
 Amunet - real time character tutorial  
 https://www.artstation.com/nimlot/store/VGzy/amunet-real-time-character-tutorial
 
+Zbrush 2019, Maya 2019, Substance Painter - Stylized Candles  
+https://gumroad.com/l/StylizedCandles
+
+Alien gun creation full Bundle - Modeling & Texturing Complete Workflow  
+https://gumroad.com/l/discount123
+
 ### The Art of
 
 Project 77  
