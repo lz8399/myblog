@@ -49,7 +49,7 @@ UnrealMathUnlity.h：
 	/** Interpolate float from Current to Target. Scaled by distance to Target, so it has a strong start speed and ease out. */
 	static CORE_API float FInterpTo( float Current, float Target, float DeltaTime, float InterpSpeed );
     
-##### 使用实例
+##### 使用实例：匀速计算模式
 先定义两个成员变量：
 
     float LerpTime = 0.f;
@@ -68,6 +68,8 @@ UnrealMathUnlity.h：
             MyCharacter->SetActorLocation(NewLoc);
         }
     }
+	
+##### 使用实例：阻尼计算模式（减震模式：先加强，后柔和）
 	
 FInterpTo 实例：
 

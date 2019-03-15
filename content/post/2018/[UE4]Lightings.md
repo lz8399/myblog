@@ -106,11 +106,15 @@ https://docs.unrealengine.com/en-US/Engine/Rendering/LightingAndShadows/MeshDist
 
 ### Lighting Issues
 
-Issue:  
-Point Light intensity is very low event set `Intensity` to large value.
-
+Issue 1:  
+Point Light intensity is very low event set `Intensity` to large value.  
 Solution:  
 Remove Point Light and add a new Point Light into scene and setting up it.
+
+Issue 2:  
+There're some strange block on lighting maps even building lighting again.  
+Solution:  
+Build -> Lighting Quality -> Production, then building lighting again. There're some bug in Preview level of Lighting Quality.
 
 ### Reference
 Lighting Passes  
