@@ -104,6 +104,13 @@ Set `SocketOffset` or `TargetOffset`, `SocketOffset` is at end of spring arm, `T
 Set `bDoCollisionTest` to false,
 
 	USpringArmComponent::bDoCollisionTest = false;
+	
+##### How to disable WASD for camera movement
+
+Set `bAddDefaultMovementBindings` to false in the constructor, default value is true.
+
+Reference  
+https://answers.unrealengine.com/questions/193289/is-there-a-way-to-disable-wasd-for-camera-movement.html
 
 ##### Reference
 

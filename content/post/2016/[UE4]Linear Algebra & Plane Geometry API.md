@@ -70,9 +70,6 @@ https://answers.unrealengine.com/questions/31058/how-to-get-an-angle-between-2-v
     void UKismetMathLibrary::GetSlopeDegreeAngles(const FVector& MyRightYAxis, const FVector& FloorNormal, const FVector& UpVector, 
         float& OutSlopePitchDegreeAngle, float& OutSlopeRollDegreeAngle);
 
-计算指定 Rotator 的反向 Rotator
-		
-	FRotator FRotator::GetInverse()
 		
 ##### 点坐标计算
 
@@ -201,5 +198,39 @@ World space (Position, Direction or rotation) to local space:
 Transform 插值计算：
         
     FTransform UKismetMathLibrary::TInterpTo(const FTransform& Current, const FTransform& Target, float DeltaTime, float InterpSpeed);
-        
 	
+##### 坐标系相关
+
+世界坐标系转局部（本地）坐标系（World To Local），以Rotation为例：
+
+	FQuat InverseTransformRotation(const FQuat& Q) const;
+	
+示例代码：
+
+	FRotator DestWorldRot(100.f, 100.f, 0.f);
+	FQuat QuatWorld = DestWorldRot.Quaternion();
+	FQuat QuatLocal = MyActor->GetComponentTransform().InverseTransformRotation(QuatWorld);
+	FRotator RotOffset = QuatLocal.Rotator();
+        
+局部（本地）坐标系转世界坐标系（Local To World），以Rotation为例：
+
+	FQuat FTransform::TransformRotation(const FQuat& Q) const;
+	
+示例代码：
+
+	FRotator DestRotOffset(100.f, 100.f, 0.f);
+	FRotator DestWorldRot = FTransform(CameraRotOrig).TransformRotation(DestRotOffset.Quaternion()).Rotator();
+	
+##### 曲线相关
+
+贝塞尔曲线
+
+	/**
+	 * Generates a list of sample points on a Bezier curve defined by 2 points.
+	 *
+	 * @param ControlPoints	Array of 4 FVectors (vert1, controlpoint1, controlpoint2, vert2).
+	 * @param NumPoints Number of samples.
+	 * @param OutPoints Receives the output samples.
+	 * @return The path length.
+	 */
+	static CORE_API float FVector::EvaluateBezier(const FVector* ControlPoints, int32 NumPoints, TArray<FVector>& OutPoints);
