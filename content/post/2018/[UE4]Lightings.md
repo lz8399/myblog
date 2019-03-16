@@ -61,7 +61,7 @@ https://forums.unrealengine.com/unreal-engine/feedback-for-epic/54065-lights-vie
 2, `Movable` Pointlight support on Mobile always;
 
 3, {{< hl-text red >}} Testing in v4.21: Static and Stationary Point Light not work on Android Vulkan without building lighting.  
-Setting up your lighting in SM5, then building lighting, then switch to Android Vulkan, when start game, lighting would works right.{{< hl-text red >}}
+Setting up your lighting in SM5, then building lighting, then switch to Android Vulkan, when start game, lighting would works right.{{< /hl-text>}}
 
 ### 物体与摄像机距离超过一定范围时，阴影自动消失的问题
 
