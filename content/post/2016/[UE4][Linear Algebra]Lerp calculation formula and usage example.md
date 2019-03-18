@@ -1,5 +1,5 @@
 +++
-title= "[UE4]Lerp函数的计算公式"
+title= "[UE4][Linear Algebra]Lerp calculation formula and usage example"
 date= "2016-11-26T18:17:02+08:00"
 categories= ["UnrealEngine4"]
 tags= ["UE4", "Math"]
@@ -49,13 +49,13 @@ UnrealMathUnlity.h：
 	/** Interpolate float from Current to Target. Scaled by distance to Target, so it has a strong start speed and ease out. */
 	static CORE_API float FInterpTo( float Current, float Target, float DeltaTime, float InterpSpeed );
     
-##### 使用实例：匀速计算模式
-先定义两个成员变量：
+##### Usage example: Uniform velocity mode
+Define two member variables:
 
     float LerpTime = 0.f;
     const float LerpDuration = 2.5f;
 
-再在Tick中计算：
+Then calculate in Tick：
 
     void Tick(float DeltaSecond)
     {
@@ -69,8 +69,13 @@ UnrealMathUnlity.h：
         }
     }
 	
-##### 使用实例：阻尼计算模式（减震模式：先加强，后柔和）
-	
-FInterpTo 实例：
+##### Usage example: Damping mode (Cushion mode: strong at first, then soft)
 
-	CurrHP = FMath::FInterpTo(CurrHP, FinalHP, DeltaTime, HPLerpSpeed);
+`Lerp` Example：
+
+	NewLoc = FMath::Lerp<FVector>(NewLoc, DistLoc, LerpTime / LerpDuration);
+	
+`FInterpTo` Example：
+
+	NewLoc = FMath::FInterpTo(NewLoc, DistLoc, DeltaTime, LocLerpSpeed);
+	
