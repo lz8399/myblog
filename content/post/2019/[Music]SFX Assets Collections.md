@@ -4,9 +4,8 @@ date= "2019-03-03T14:20:40+08:00"
 categories= ["Maya"]
 tags= ["Modeling"]
 keywords= ["UE4", "Materials"]
-thumbnailImage= "/thumbnail/cover-Tso Moriri Lake.jpg"
-autoThumbnailImage= "true"
-thumbnailImagePosition= "top"
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-007.jpg"
 +++
 
 ### Sites
@@ -38,6 +37,11 @@ https://www.unrealengine.com/marketplace/en-US/disturbed-creature-monster-sounds
 
 Monster Screams  
 https://www.unrealengine.com/marketplace/en-US/monster-screams
+
+##### Magic
+
+Magic Sound FX Pack 1  
+https://www.unrealengine.com/marketplace/en-US/magic-sound-fx-pack
 
 ***
 `抱怨是在讲述你不要的东西，而不是你要的东西。——威尔·鲍温（WillBowen）《不抱怨的世界》`

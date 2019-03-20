@@ -116,6 +116,11 @@ There're some strange block on lighting maps even building lighting again.
 Solution:  
 Build -> Lighting Quality -> Production, then building lighting again. There're some bug in Preview level of Lighting Quality.
 
+##### Lighting Troubleshooting Guide
+
+LightingTroubleshootingGuide  
+https://wiki.unrealengine.com/LightingTroubleshootingGuide#Shadow_Seams.2FShading_Differences_with_Indirect_Lighting
+
 ### Reference
 Lighting Passes  
 https://unrealartoptimization.github.io/book/profiling/passes-lighting/

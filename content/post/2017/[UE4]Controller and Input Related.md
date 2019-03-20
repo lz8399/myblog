@@ -37,6 +37,25 @@ By default, Controller Rotation is equal to PlayerStart Actor Rotation. So if yo
 How to set the rotation of Controller:
 
 	void AController::SetControlRotation(const FRotator& NewRotation)
+	
+##### How create and get Spectator
+
+**1st way**
+
+Create Spectator:
+
+	AMyGameModeBase::AMyGameModeBase()
+	{
+		DefaultPawnClass = ASpectatorPawn::StaticClass();
+	}
+	
+Get Spectator:
+
+	ASpectatorPawn* APlayerController::GetSpectatorPawn() const;
+	
+**2nd way**
+
+	GetWorld()->SpawnActor<ASpectatorPawn>(ASpectatorPawn::StaticClass());
 
 ***
 `三十功名尘与土，八千里路云和月。----岳飞《满江红》`

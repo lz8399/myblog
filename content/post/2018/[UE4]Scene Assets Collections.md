@@ -111,6 +111,9 @@ https://www.unrealengine.com/marketplace/en-US/forest-trees-plants-and-grass-res
 Photorealistic Landscape Bundle 1  
 https://www.unrealengine.com/marketplace/en-US/photorealistic-landscape-bundle
 
+3D-Scanned, Photo-Realistic Mauritius Asset Pack  
+https://www.unrealengine.com/marketplace/en-US/3d-scanned-photo-realistic-mauritius-asset-pack
+
 ##### Deserts
 
 3D Scanned Canyon - Modular Cliffs + Rocks, Grass and more  

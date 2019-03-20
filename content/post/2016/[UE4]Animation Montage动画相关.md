@@ -138,6 +138,10 @@ https://answers.unrealengine.com/questions/172537/montage-unwanted-section-switc
 {{< alert danger >}}
 这种方式是否可行：不设置Montage循环播放，而是在Tick中不停检测上一次Montage的累计播放时长，当播完时马上执行下一次播放。答案是不可行！！实际效果是：两次的Montage播放之间会有短暂时间切换到Idle状态动画。
 {{< /alert >}}
+
+##### 获取当前正在播放的Montage
+
+	UAnimMontage* UAnimInstance::GetCurrentActiveMontage() const
     
 ##### 停止Montage播放
 如果要停止当前正在播放的Montage，则执行`StopAnimMontage()`：
@@ -151,6 +155,11 @@ https://answers.unrealengine.com/questions/172537/montage-unwanted-section-switc
 {{< alert warning >}}
 如果希望停止播放Montage时有动画融合效果，记得将Montage的Blend Out Time设置为大于0，比如默认值 0.25 。
 {{< /alert >}}
+
+{{< alert success >}}
+一旦通过StopAnimMontage停止正在播放的Montage，角色就会恢复到待机动作。
+{{< /alert >}}
+
 
 ##### Montage 切换时没有融合的问题
 
