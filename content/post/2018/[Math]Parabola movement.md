@@ -54,5 +54,5 @@ cpp
         FVector MoveDist = CurrSpeed * DeltaSeconds;
 
         //set relative location.
-        TestCube->AddActorLocalOffset(MoveDist, true);
+        TestCube->AddActorWorldOffset(MoveDist, true);
     }

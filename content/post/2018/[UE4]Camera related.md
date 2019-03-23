@@ -98,6 +98,10 @@ Set `SocketOffset` or `TargetOffset`, `SocketOffset` is at end of spring arm, `T
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category=Camera)
 	FVector TargetOffset; 
 	
+{{< alert danger >}}
+If want to relative location of CameraComponent, don't use SetRelativeLocation or AddRelativeLocation on SpringArmComponent, otherwise there is jolt on camera where character moving.
+{{< /alert >}}
+	
 	
 ##### How to disable collision detect of SpringArm
 
