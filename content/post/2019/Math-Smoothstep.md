@@ -4,9 +4,8 @@ date= "2019-03-20T18:12:02+08:00"
 categories= ["Math"]
 tags= ["Math"]
 mathjax= ["ture"]
-thumbnailImage= "/thumbnail/cover-Tso Moriri Lake.jpg"
-autoThumbnailImage= "true"
-thumbnailImagePosition= "top"
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-005.jpg"
 +++
 
 Origin Text:  
