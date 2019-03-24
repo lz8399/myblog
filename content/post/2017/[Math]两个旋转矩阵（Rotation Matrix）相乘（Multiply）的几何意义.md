@@ -35,6 +35,8 @@ tags= ["UE4", "Math"]
 此时的计算公式就是：
 
     (FRotationMatrix(Rr) * FRotationMatrix(Rw)).Rotator()
+	
+一个典型应用：以UE4为例，当角色始终是背对摄像机时，此时接收输入，不能将默认`MoveForward`的实参（比如`(1.0, 0.f, 0.f)`）和`MoveRight`的实参（比如`(0.0, 1.f, 0.f)`）传递给`AddMovementInput`，否则当按下W键，期望角色摄像机正对方向移动，但实际是侧向移动。此时就可以通过旋转矩阵相乘来获取当前摄像机朝向方向下的`MoveForward`和`MoveRight`方向。
 
 
 注意：`矩阵相乘时，两个乘数的前后位置不同则计算的结果也不同`，比如上面例子，如果是( FRotationMatrix(Rot2) * FRotationMatrix(Rot1)).Rotator，则结果是Rotation(90, -90, -180)。

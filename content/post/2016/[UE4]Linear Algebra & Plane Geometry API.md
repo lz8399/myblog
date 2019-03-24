@@ -7,7 +7,7 @@ tags= ["UE4", "API"]
 
 keywords：UE4、Linear Algebra、Plane Geometry、线性代数、解析几何
 
-##### 范围判定
+### 范围判定
     
 检测一个点是否在一个多边形(或矩形)的内部(2D和3D)
 
@@ -15,7 +15,7 @@ keywords：UE4、Linear Algebra、Plane Geometry、线性代数、解析几何
     FBox::IsInside(const FVector& TestPoint)
     FIntRect::Contains( FIntPoint P )
     
-##### 角度计算
+### 角度计算
 
 计算两个向量的夹角(Get an angle between 2 Vectors)，范围：(0, 180)
 
@@ -71,7 +71,7 @@ https://answers.unrealengine.com/questions/31058/how-to-get-an-angle-between-2-v
         float& OutSlopePitchDegreeAngle, float& OutSlopeRollDegreeAngle);
 
 		
-##### 点坐标计算
+### 点坐标计算
 
 计算直线外一点到该直线的最近的点（垂足的坐标）：
     
@@ -86,7 +86,7 @@ https://answers.unrealengine.com/questions/31058/how-to-get-an-angle-between-2-v
         
     FVector UKismetMathLibrary::ProjectPointOnToPlane(FVector Point, FVector PlaneBase, FVector PlaneNormal);
 	
-##### 向量（矢量）计算
+### 向量（矢量）计算
 
 向量A投射到以Z轴为法线的平面的投射向量
 
@@ -184,7 +184,7 @@ World space (Position, Direction or rotation) to local space:
 	UFUNCTION(BlueprintPure, Category="Math|Transform")
 	static FRotator UKismetMathLibrary::InverseTransformRotation(const FTransform& T, FRotator Rotation);
 
-##### 插值相关
+### 插值相关
 
 使用简单弹簧模型来 interpolate 浮点数值（范围从 Current 到 Target）
 
@@ -199,11 +199,12 @@ Transform 插值计算：
         
     FTransform UKismetMathLibrary::TInterpTo(const FTransform& Current, const FTransform& Target, float DeltaTime, float InterpSpeed);
 	
-##### 坐标系相关
+### 坐标系相关
 
-世界坐标系转局部（本地）坐标系（World To Local），以Rotation为例：
+##### Rotation变换
+世界坐标系转局部（本地）坐标系（World To Local）：
 
-	FQuat InverseTransformRotation(const FQuat& Q) const;
+	FORCEINLINE FQuat FTransform::InverseTransformRotation(const FQuat& Q) const;
 	
 示例代码：
 
@@ -212,16 +213,55 @@ Transform 插值计算：
 	FQuat QuatLocal = MyActor->GetComponentTransform().InverseTransformRotation(QuatWorld);
 	FRotator RotOffset = QuatLocal.Rotator();
         
-局部（本地）坐标系转世界坐标系（Local To World），以Rotation为例：
+局部（本地）坐标系转世界坐标系（Local To World）：
 
-	FQuat FTransform::TransformRotation(const FQuat& Q) const;
+	FORCEINLINE FQuat FTransform::TransformRotation(const FQuat& Q) const;
 	
 示例代码：
 
 	FRotator DestRotOffset(100.f, 100.f, 0.f);
 	FRotator DestWorldRot = FTransform(CameraRotOrig).TransformRotation(DestRotOffset.Quaternion()).Rotator();
 	
-##### 曲线相关
+##### Location变换
+
+World To Local:
+
+	FORCEINLINE FVector FTransform::InverseTransformPositionNoScale(const FVector &V) const;
+	
+Local To World:
+
+	FORCEINLINE FVector FTransform::TransformPositionNoScale(const FVector& V) const;
+	
+##### Direction变换
+
+World To Local:
+
+	FORCEINLINE FVector FTransform::InverseTransformVectorNoScale(const FVector &V) const
+	
+示例代码：
+
+	//返回摄像机Rotation相对角色Rotation的偏移量Offset
+	FRotator ASBaseCharacter::GetAimOffsets() const
+	{
+		const FVector AimDirWS = GetBaseAimRotation().Vector();
+		const FVector AimDirLS = ActorToWorld().InverseTransformVectorNoScale(AimDirWS);
+		const FRotator AimRotLS = AimDirLS.Rotation();
+
+		return AimRotLS;
+	}
+	
+代码出处：  
+https://github.com/tomlooman/EpicSurvivalGameSeries/blob/4a6ee9a6081529fadbe0f693b2e4e6729d5ec08d/SurvivalGame/Source/SurvivalGame/Private/Player/SBaseCharacter.cpp#L374
+	
+Local To World:
+	
+	FORCEINLINE FVector FTransform::TransformVectorNoScale(const FVector& V) const
+	
+{{< alert warning >}}
+如果想获取两个Rotation之间的Offset，更简单的办法是做相减：`FRotator Offset = R2 - R1;`。但这种直接相减的方式，返回的结果Rotation，度数可能会小于-180 或 大于 180，需要手动处理范围限定，但是效率远高于`InverseTransformVector`
+{{< /alert >}}
+	
+### 曲线相关
 
 贝塞尔曲线
 
@@ -234,3 +274,5 @@ Transform 插值计算：
 	 * @return The path length.
 	 */
 	static CORE_API float FVector::EvaluateBezier(const FVector* ControlPoints, int32 NumPoints, TArray<FVector>& OutPoints);
+	
+`无欲则刚，关心则乱。----《论语》`
