@@ -3,9 +3,8 @@ title= "[VersionControl]git push error-Java heap space"
 date= "2019-03-23T17:53:02+08:00"
 categories= ["VersionControl"]
 tags= ["Git"]
-thumbnailImage= "/thumbnail/cover-Tso Moriri Lake.jpg"
-autoThumbnailImage= "true"
-thumbnailImagePosition= "top"
+thumbnailImagePosition= "left"
+thumbnailImage= "/thumbnail/thumbnail-japen-004.jpg"
 +++
 
 Keywords: Git

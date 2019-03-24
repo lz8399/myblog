@@ -48,6 +48,16 @@ Uncheck `Auto Compute LOD Distance` allow to modify `Screen Size`
 Uncheck `Auto Compute LOD Distance` when import FBX asset.
 {{< figure src="/img/20190118-[UE4]Editor Related/[UE4]Editor Related-09.jpg">}}
 
+##### How to add Exec Pin on Macro in Blueprint
+
+By default, Blueprint Macro has no `Exec` Pin:
+{{< figure src="/img/20190118-[UE4]Editor Related/[UE4]Editor Related-10.jpg">}}
+{{< figure src="/img/20190118-[UE4]Editor Related/[UE4]Editor Related-11.jpg">}}
+You can add an input and output parameter which type is `Exec`:
+{{< figure src="/img/20190118-[UE4]Editor Related/[UE4]Editor Related-12.jpg">}}
+{{< figure src="/img/20190118-[UE4]Editor Related/[UE4]Editor Related-13.jpg">}}
+
+
 ##### Reference
 
 Unreal Editor Manual  

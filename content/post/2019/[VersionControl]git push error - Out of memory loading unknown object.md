@@ -2,7 +2,7 @@
 title= "[VersionControl]git push error - Out of memory loading unknown object"
 date= "2019-03-01T20:00:02+08:00"
 categories= ["VersionControl"]
-tags= ["git"]
+tags= ["Git"]
 thumbnailImagePosition= "left"
 thumbnailImage= "/thumbnail/thumbnail-japen-008.jpg"
 +++
