@@ -57,6 +57,8 @@ You can add an input and output parameter which type is `Exec`:
 {{< figure src="/img/20190118-[UE4]Editor Related/[UE4]Editor Related-12.jpg">}}
 {{< figure src="/img/20190118-[UE4]Editor Related/[UE4]Editor Related-13.jpg">}}
 
+Macros  
+https://docs.unrealengine.com/en-us/Engine/Blueprints/UserGuide/Macros
 
 ##### Reference
 

@@ -112,9 +112,14 @@ Solution:
 Remove Point Light and add a new Point Light into scene and setting up it.
 
 Issue 2:  
-There're some strange block on lighting maps even building lighting again.  
+There're some strange block on lightmaps even building lighting again.  
 Solution:  
 Build -> Lighting Quality -> Production, then building lighting again. There're some bug in Preview level of Lighting Quality.
+
+Issue 3:  
+There're some seams on the junction of two StaticMeshActor after lighting building.  
+Solution:  
+Rotating the StaticMesh 180 degrees, or up lightmap resolution to 128 rather than 64, or disable cascaded shadow maps and use either the `Detail Lighting` or `Lighting Only` view modes to see the baked result.
 
 ##### Lighting Troubleshooting Guide
 
