@@ -74,7 +74,7 @@ https://answers.unrealengine.com/questions/736999/simulate-physics-and-projectil
 	StaticMeshComp->SetCollisionEnabled(ECollisionEnabled::Type::PhysicsOnly);
     
 {{< alert success >}}
-4.16版本存在这种问题，但是最新4.20.1版本，即使放射物体在角色 CapsuleComponent 内部，且 CapsuleComponent 的 Object Response 对发射物体为 Block，发射时物体也不会存在乱窜的问题，不知是不是引擎把这种情况自动处理了。4.16到4.20之间的版本是否仍然存在这个问题，没有测试过。
+4.16版本存在这种问题，但是最新4.20.1版本，即使发射物体在角色 CapsuleComponent 内部，且 CapsuleComponent 的 Object Response 对发射物体为 Block，发射时物体也不会存在乱窜的问题，不知是不是引擎把这种情况自动处理了。4.16到4.20之间的版本是否仍然存在这个问题，没有测试过。
 {{< /alert >}}
 	
 ##### 不使用 MovementComponent 情况下设置 Gravity 大小

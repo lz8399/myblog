@@ -7,6 +7,8 @@ thumbnailImagePosition= "left"
 thumbnailImage= "/thumbnail/thumbnail-japen-009.jpg"
 +++
 
+Steps:  
+<!--more-->
 Settings -> Advanced -> Privacy and security -> Disable `Protects you and your device from dangerous sites`
 
 ***

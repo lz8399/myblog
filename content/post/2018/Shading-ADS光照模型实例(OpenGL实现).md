@@ -1,5 +1,5 @@
 +++
-title= "【Shading】ADS光照模型实例(OpenGL实现)"
+title= "Shading-ADS光照模型实例(OpenGL实现)"
 date= "2018-06-03T22:30:40+08:00"
 categories= ["Shading"]
 tags= ["Shading", "OpenGL"]

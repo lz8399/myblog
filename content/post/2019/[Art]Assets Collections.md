@@ -9,12 +9,12 @@ thumbnailImage= "/thumbnail/thumbnail-japen-017.jpg"
 +++
 
 ### Sites
-
+<!--more-->
 Top 12 Sites To Find 3D Models (Free + Premium)  
 https://conceptartempire.com/sites-for-3d-models/
 
 ##### Scene Painting
-<!--more-->
+
 Full-size ILLUSTRATION 5PACK  
 https://www.artstation.com/kvacm/store/We5G/full-size-illustration-5pack
 
